@@ -10,60 +10,88 @@
     "country": "GLOBAL",
     "query": "global"
   },
-  "statement": "Pre-Seed Climatetech startups showing a technical moat, design partners or pilots, found through indirect signals before wide press coverage.",
+  "statement": "Pre-Seed Climatetech startups showing chemistry OR hardware OR physics, utility OR grid, scalable, found through indirect signals before wide press coverage.",
   "keywords": {
     "core": [
-      "climatetech",
-      "climate tech",
-      "climate",
-      "open source",
-      "benchmark",
-      "patent",
-      "pilot",
-      "design partner"
+      "direct air capture sorbent",
+      "solid-state battery electrolyte",
+      "green hydrogen electrolyzer",
+      "next-gen geothermal binary",
+      "methane pyrolysis reactor",
+      "biochar carbon removal",
+      "long-duration energy storage",
+      "carbon mineralisation aggregate",
+      "synthetic biology nitrogen fixation",
+      "offshore wind mooring sensor",
+      "pilot plant",
+      "bench-scale reactor",
+      "trl 4",
+      "utility-scale",
+      "municipal contract",
+      "interconnection queue",
+      "contract manufacturing",
+      "asset-light",
+      "outsourced r&d"
     ],
-    "adjacent": [],
+    "adjacent": [
+      "climate fintech carbon accounting",
+      "supply chain carbon tracking",
+      "smart grid demand response",
+      "building energy retrofitting",
+      "precision agriculture soil health",
+      "circular economy textile recycling",
+      "fleet electrification telematics"
+    ],
     "negative": [
       "tutorial",
       "course",
-      "awesome",
-      "template",
-      "boilerplate",
-      "homework",
-      "portfolio",
-      "demo app"
+      "consulting",
+      "agency",
+      "nonprofit",
+      "blog",
+      "bootcamp",
+      "offset broker"
     ]
   },
   "search_terms": [
-    "climatetech",
-    "climate tech",
-    "climate"
+    "direct air capture sorbent",
+    "solid-state battery electrolyte",
+    "green hydrogen electrolyzer",
+    "next-gen geothermal binary",
+    "methane pyrolysis reactor",
+    "biochar carbon removal"
   ],
   "must_have": [
-    "a technical moat",
-    "design partners or pilots"
+    "chemistry OR hardware OR physics",
+    "utility OR grid",
+    "scalable"
   ],
-  "anti_signals": [],
+  "anti_signals": [
+    "saas only",
+    "marketplace",
+    "consumer goods",
+    "gigafactory"
+  ],
   "weights": {
-    "fit": 0.292,
-    "verification": 0.292,
-    "momentum": 0.208,
-    "stealth": 0.208
+    "fit": 0.414,
+    "verification": 0.241,
+    "momentum": 0.172,
+    "stealth": 0.172
   },
-  "design_provider": "fallback",
-  "llm_status": "LLM call failed: no Gemini model worked. Tried gemini-3.8-flash: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:ge; gemini-3.7-flash: POST https://generativelanguage.googleapis.com/v1bet",
+  "design_provider": "gemini",
+  "llm_status": "ok, model gemini-3.5-flash-lite",
   "qa": [
     {
-      "question": "What kind of edge should an early Climatetech company have?",
-      "answer": "Technical or IP moat"
+      "question": "What is the primary technical risk profile of the pre-seed climatetech startup you are looking to source?",
+      "answer": "Deeptech hardware / novel chemistry requiring lab validation"
     },
     {
-      "question": "Before product-market fit, which demand signal do you trust most?",
-      "answer": "Design partners or paid pilots"
+      "question": "Which deployment and go-to-market motion aligns best with your thesis?",
+      "answer": "Decentralized deployment via grid operators or municipalities"
     },
     {
-      "question": "How under-the-radar should the companies be?",
-      "answer": "Unknown to press and databases"
+      "question": "What is the capital intensity expectation for the founding team at the pre-seed stage?",
+      "answer": "Asset-light model leveraging contract manufacturing and labs"
     }
   ]
 }

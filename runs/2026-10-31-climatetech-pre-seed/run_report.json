@@ -3,12 +3,12 @@
   "sources": {
     "github": {
       "status": "ok",
-      "signals": 38,
+      "signals": 0,
       "maturity": "tested"
     },
     "hn": {
       "status": "ok",
-      "signals": 14,
+      "signals": 0,
       "maturity": "experimental"
     },
     "producthunt": {
@@ -20,15 +20,15 @@
       "reason": "only for UK"
     }
   },
-  "signals": 52,
-  "companies": 52,
-  "verified_attempted": 40,
-  "filtered_out": 30,
-  "llm_status": "LLM call failed: no Gemini model worked. Tried gemini-3.8-flash: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:ge; gemini-3.7-flash: POST https://generativelanguage.googleapis.com/v1bet",
+  "signals": 0,
+  "companies": 0,
+  "verified_attempted": 0,
+  "filtered_out": 0,
+  "llm_status": "ok, model gemini-3.5-flash-lite",
   "review_queue": [],
   "tiers": {
     "Verified-operating": 0,
-    "Likely": 1,
-    "Unverified": 39
+    "Likely": 0,
+    "Unverified": 0
   }
 }
