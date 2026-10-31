@@ -2,7 +2,7 @@
 
 **Thesis:** Pre-Seed Climatetech startups showing a technical moat, design partners or pilots, found through indirect signals before wide press coverage.
 
-**Thesis design:** fallback (LLM call failed: HTTP 404 for https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent)
+**Thesis design:** fallback (LLM call failed: no Gemini model worked. Tried gemini-3.8-flash: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:ge; gemini-3.7-flash: POST https://generativelanguage.googleapis.com/v1bet)
 
 ## Sources
 | Source | Status | Detail |
