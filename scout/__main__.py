@@ -8,11 +8,11 @@ def _answers(s):
 
 
 def cmd_thesis(a):
-    dsn, prov = thesis.design(a.industry, a.stage, a.location)
+    dsn, prov, status = thesis.design(a.industry, a.stage, a.location)
     ans = thesis.ask(dsn["questions"], _answers(a.answers))
-    t = thesis.build(a.industry, a.stage, a.location, dsn, ans, prov)
+    t = thesis.build(a.industry, a.stage, a.location, dsn, ans, prov, status)
     p = thesis.save(t, pathlib.Path("runs") / t["id"])
-    print(f"thesis saved: {p}\n{t['statement']}\nweights: {t['weights']}  (design: {prov})")
+    print(f"thesis saved: {p}\n{t['statement']}\nweights: {t['weights']}  (design: {prov}; {status})")
     return t
 
 

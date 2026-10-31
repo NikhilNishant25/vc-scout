@@ -9,6 +9,10 @@ BLOCK = {"github.com", "gitlab.com", "twitter.com", "x.com", "producthunt.com", 
          "vercel.app", "netlify.app", "herokuapp.com", "github.io", "linkedin.com", "youtube.com", "substack.com",
          "huggingface.co", "pages.dev", "streamlit.app", "replit.app", "wixsite.com", "carrd.co", "webflow.io",
          "ycombinator.com", "news.ycombinator.com", "apps.apple.com", "play.google.com", "chromewebstore.google.com",
+         "onrender.com", "fly.dev", "railway.app", "web.app", "firebaseapp.com", "glitch.me", "repl.co", "replit.dev",
+         "azurewebsites.net", "cloudfront.net", "amazonaws.com", "appspot.com", "ngrok.io", "ngrok-free.app",
+         "trycloudflare.com", "workers.dev", "deno.dev", "surge.sh", "gitbook.io", "bubbleapps.io", "framer.website",
+         "framer.app", "lovable.app", "bolt.host", "base44.app", "hf.space", "gradio.live", "supabase.co",
          "google.com", "t.me", "discord.gg", "facebook.com", "instagram.com", "reddit.com", "pypi.org", "npmjs.com"}
 MULTI = {"co.uk", "org.uk", "ac.uk", "co.in", "org.in", "com.au", "co.nz", "com.br", "co.jp", "com.sg"}
 LEGAL = re.compile(r"\b(inc|ltd|limited|llc|llp|pvt|private|plc|corp|corporation|gmbh|co)\b")

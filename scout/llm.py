@@ -5,6 +5,7 @@ import json, os, re
 from . import http
 
 MONTH = 30 * 86400
+LAST_ERROR = None
 
 
 def provider():
@@ -69,11 +70,16 @@ def extract_json(text):
 
 def complete_json(prompt):
     """Returns parsed JSON or None. One repair attempt, never raises."""
+    global LAST_ERROR
+    LAST_ERROR = None
     try:
         out = extract_json(complete(prompt, json_mode=True))
         if out is None and provider():
             out = extract_json(complete(prompt + "\n\nReturn ONLY valid JSON, no prose.", json_mode=True))
+        if out is None and provider():
+            LAST_ERROR = "model replied but not with valid JSON"
         return out
-    except Exception as e:  # network/quota: caller falls back
+    except Exception as e:  # network/quota/bad key: caller falls back
+        LAST_ERROR = str(e)[:200]
         print(f"[warn] LLM call failed: {e}")
         return None

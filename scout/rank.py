@@ -12,7 +12,7 @@ def _clip(x):
 def _blob(c):
     site = c.evidence.get("site", {})
     parts = [c.name] + [str(s.data.get("description") or s.data.get("tagline") or s.data.get("title") or "") for s in c.signals]
-    return " ".join(parts + [site.get("title", ""), site.get("text", "")[:3000]]).lower()
+    return " ".join(parts + [site.get("title", ""), site.get("text", "")[:3000], c.evidence.get("github", {}).get("readme_excerpt", "")]).lower()
 
 
 def fit(c, thesis):

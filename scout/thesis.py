@@ -54,7 +54,11 @@ def fallback_design(industry, stage):
         {"label": "Unknown to press and databases", "weight_shift": {"stealth": 0.10}},
         {"label": "Some coverage is fine", "weight_shift": {"stealth": -0.05, "fit": 0.05}}]}
     long_words = [w for w in words if len(w) >= 5][:3]
-    return {"keywords": {"core": _dedupe([industry] + long_words)[:8], "adjacent": [], "negative": DEFAULT_NEG},
+    extra = []
+    for w in words:
+        if w.endswith("tech") and len(w) > 7:
+            extra += [f"{w[:-4]} tech", w[:-4]]
+    return {"keywords": {"core": _dedupe([industry] + extra + long_words)[:8], "adjacent": [], "negative": DEFAULT_NEG},
             "questions": [q1, q2, q3]}
 
 
@@ -90,8 +94,14 @@ def design(industry, stage, location):
     raw = llm.complete_json(PROMPT.format(industry=industry, stage=stage, location=location))
     d = validate_design(raw)
     if d:
-        return d, llm.provider()
-    return validate_design(fallback_design(industry, stage)), "fallback"
+        return d, llm.provider(), "ok"
+    if llm.provider() is None:
+        why = "no LLM key visible to this run (check the secret is named exactly GEMINI_API_KEY)"
+    elif raw is None:
+        why = f"LLM call failed: {llm.LAST_ERROR}"
+    else:
+        why = "LLM output rejected: no valid keywords or no MCQ options that change the search"
+    return validate_design(fallback_design(industry, stage)), "fallback", why
 
 
 def ask(questions, answers=None):
@@ -112,7 +122,7 @@ def ask(questions, answers=None):
     return chosen
 
 
-def build(industry, stage, location, dsn, answers, provider):
+def build(industry, stage, location, dsn, answers, provider, llm_status=""):
     kws = {k: list(v) for k, v in dsn["keywords"].items()}
     search_terms = list(kws["core"])[:6]
     anti, must, shift = [], [], dict.fromkeys(BASE_WEIGHTS, 0.0)
@@ -128,13 +138,13 @@ def build(industry, stage, location, dsn, answers, provider):
     total = sum(w.values())
     w = {k: round(v / total, 3) for k, v in w.items()}
     g = geo.resolve(location)
-    where = f" in {location}" if location else ""
+    where = f" in {location}" if location and g["country"] != "GLOBAL" and location.lower() != "global" else ""
     stmt = (f"{stage.title()} {industry} startups{where} showing {', '.join(must) or 'verifiable early traction'}, "
             f"found through indirect signals before wide press coverage.")
     return {"id": f"{dt.date.today()}-{re.sub(r'[^a-z0-9]+', '-', industry.lower()).strip('-')}-{stage}",
             "created": dt.date.today().isoformat(), "inputs": {"industry": industry, "stage": stage, "location": location},
             "geo": g, "statement": stmt, "keywords": kws, "search_terms": search_terms, "must_have": must, "anti_signals": _dedupe(anti),
-            "weights": w, "design_provider": provider,
+            "weights": w, "design_provider": provider, "llm_status": llm_status,
             "qa": [{"question": q["text"], "answer": q["options"][a - 1]["label"]} for q, a in zip(dsn["questions"], answers)]}
 
 

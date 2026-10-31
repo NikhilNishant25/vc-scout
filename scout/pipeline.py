@@ -59,17 +59,24 @@ def run(thesis, outdir, top=15, memos=5, verify_top=40):
             c.flags.append(f"verify-error:{str(e)[:60]}")
         rank.score(c, thesis, known)
         rank.save_snapshot(c)
-    ranked = rank.order(to_verify)[:top]
+    for c in to_verify:
+        if c.scores.get("fit", 0) < 0.1 and "off-thesis" not in c.flags:
+            c.flags.append("off-thesis")
+    DROP = ("negative-keyword", "off-thesis", "site-name-mismatch", "parked", "archived")
+    filtered = [c for c in to_verify if any(f.startswith(DROP) for f in c.flags)]
+    keep = [c for c in to_verify if c not in filtered]
+    ranked = rank.order(keep)[:top]
     for i, c in enumerate(ranked[:memos]):
         if c.tier != "Unverified":
             (out / "memos" / f"{i+1:02d}-{c.id}.md").write_text(memo.write(c, thesis))
     (out / "candidates.json").write_text(json.dumps([_clean(c) for c in ranked], indent=2, default=str))
     report = {"thesis_id": thesis["id"], "sources": status, "signals": len(signals), "companies": len(companies),
-              "verified_attempted": len(to_verify), "review_queue": review,
+              "verified_attempted": len(to_verify), "filtered_out": len(filtered), "llm_status": thesis.get("llm_status"), "review_queue": review,
               "tiers": {t: sum(c.tier == t for c in to_verify) for t in rank.TIER}}
     (out / "run_report.json").write_text(json.dumps(report, indent=2))
     reg = yaml.safe_load(REG.read_text()).get(thesis["geo"]["country"], {})
     L = [f"# Scout digest: {thesis['id']}", "", f"**Thesis:** {thesis['statement']}", "",
+         f"**Thesis design:** {thesis.get('design_provider')} ({thesis.get('llm_status', '')})", "",
          "## Sources", "| Source | Status | Detail |", "|---|---|---|"]
     for k, v in status.items():
         L.append(f"| {k} | {v['status']} | {v.get('signals', v.get('reason', v.get('error', '')))} |")
@@ -77,6 +84,9 @@ def run(thesis, outdir, top=15, memos=5, verify_top=40):
           "## Ranked (tier first, then score)", "| # | Company | Tier | Score | Conf | Domain | Evidence | Flags |", "|---|---|---|---|---|---|---|---|"]
     for i, c in enumerate(ranked, 1):
         L.append(f"| {i} | {c.name} | {c.tier} | {c.rank_score} | {c.confidence} | {', '.join(c.domains[:1])} | {_summary(c)} | {', '.join(c.flags)} |")
+    if filtered:
+        L += ["", "## Filtered out (checked, rejected)", "| Company | Why |", "|---|---|"]
+        L += [f"| {c.name} | {', '.join(f for f in c.flags if f.startswith(DROP))} |" for c in filtered]
     if reg.get("access", "").startswith("manual"):
         L += ["", f"Registry for {thesis['geo']['country']}: no free API. Check legal entities manually: {reg['link']}"]
     if review:

@@ -164,6 +164,12 @@ def verify(c, thesis):
     if ev["registry"].get("matched"):
         families.add("registry")
     flags = anti_flags(c, ev, thesis)
+    if ev["site"].get("live"):
+        site_norm = re.sub(r"[^a-z0-9]", "", (ev["site"].get("title", "") + " " + ev["site"].get("text", "")[:8000]).lower())
+        owners = [s.data["full_name"].split("/")[0] for s in c.signals if s.source == "github" and s.data.get("full_name")]
+        tokens = {norm_name(c.name), norm_name(dom.split(".")[0] if dom else ""), *[norm_name(o) for o in owners]} - {""}
+        if tokens and not any(t in site_norm for t in tokens if len(t) >= 4):
+            flags.append("site-name-mismatch")
     tier, conf = assess({"live": ev["site"].get("live", False), "parked": ev["site"].get("parked", False),
                          "product": ev["site"].get("product", False), "team": ev["site"].get("team", False),
                          "recent": recent, "hiring": bool(ev["hiring"]), "registry": bool(ev["registry"].get("matched")),

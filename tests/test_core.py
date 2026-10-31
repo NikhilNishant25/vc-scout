@@ -95,3 +95,19 @@ def test_unknown_commits_do_not_count_as_zero_activity_evidence():
     c = Company("a", "A", signals=[_s("github", "x/y", stars=10)])
     c.evidence = {"github": {"commits_30d": None, "age_days": 30}}
     assert 0 <= rank.momentum(c) <= 1  # no TypeError on None
+
+
+def test_hosting_platform_domains_are_not_company_domains():
+    for u in ("https://startup-finder.onrender.com", "https://x.fly.dev", "https://app.up.railway.app", "https://a.lovable.app"):
+        assert resolve.reg_domain(u) is None
+
+
+def test_fallback_splits_tech_compounds():
+    d = thesis.fallback_design("Climatetech", "pre-seed")
+    assert "climate tech" in d["keywords"]["core"] and "climate" in d["keywords"]["core"]
+
+
+def test_global_location_not_in_statement():
+    dsn = thesis.validate_design(thesis.fallback_design("Climatetech", "pre-seed"))
+    t = thesis.build("Climatetech", "pre-seed", "global", dsn, [1, 1, 1], "fallback", "x")
+    assert "in global" not in t["statement"]
