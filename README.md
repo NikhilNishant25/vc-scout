@@ -24,6 +24,9 @@ python -m scout run --top 15 --memos 5
 A GitHub Action (`.github/workflows/weekly.yml`) runs it every Monday and commits the digest.
 `GITHUB_TOKEN` is automatic in Actions; add `ANTHROPIC_API_KEY` as a repo secret.
 
+## LLM provider
+Set **either** `ANTHROPIC_API_KEY` or `GEMINI_API_KEY` (Google AI Studio key, free tier works). If both are set, Anthropic is used. With neither, memos are facts-only. A failed LLM call degrades to facts-only for that memo instead of crashing the run.
+
 ## Make it yours
 Everything opinionated lives in `config/thesis.yaml`: topics, star band, weights, red-flag patterns,
 and the thesis statement the memo is judged against. Change the angle there, not in code.

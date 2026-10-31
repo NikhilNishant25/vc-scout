@@ -28,17 +28,45 @@ def facts(e, total, signals, hits):
     }
 
 
-def write_memo(e, total, signals, hits, cfg):
-    f = facts(e, total, signals, hits)
-    key = os.getenv("ANTHROPIC_API_KEY")
-    if not key:
-        return (f"# {f['repo']}\n\nScore {total}\n\n(No ANTHROPIC_API_KEY set: facts only)\n\n"
-                f"```json\n{json.dumps({k: v for k, v in f.items() if k != 'readme_excerpt'}, indent=2)}\n```\n")
+def _anthropic(prompt):
     import anthropic
-    client = anthropic.Anthropic(api_key=key)
+    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     msg = client.messages.create(
         model=os.getenv("SCOUT_MODEL", "claude-sonnet-5-5"), max_tokens=1500,
-        messages=[{"role": "user", "content": PROMPT.format(thesis=cfg["thesis"], facts=json.dumps(f, indent=2))}],
+        messages=[{"role": "user", "content": prompt}],
     )
-    body = "".join(b.text for b in msg.content if b.type == "text")
+    return "".join(b.text for b in msg.content if b.type == "text")
+
+
+def _gemini(prompt):
+    import requests
+    model = os.getenv("SCOUT_GEMINI_MODEL", "gemini-2.5-flash")
+    r = requests.post(
+        f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+        headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"], "Content-Type": "application/json"},
+        json={"contents": [{"parts": [{"text": prompt}]}]},
+        timeout=90,
+    )
+    r.raise_for_status()
+    parts = r.json()["candidates"][0]["content"]["parts"]
+    return "".join(p.get("text", "") for p in parts)
+
+
+def write_memo(e, total, signals, hits, cfg):
+    f = facts(e, total, signals, hits)
+    prompt = PROMPT.format(thesis=cfg["thesis"], facts=json.dumps(f, indent=2))
+    try:
+        if os.getenv("ANTHROPIC_API_KEY"):
+            body = _anthropic(prompt)
+        elif os.getenv("GEMINI_API_KEY"):
+            body = _gemini(prompt)
+        else:
+            body = None
+    except Exception as ex:  # one bad memo must not kill the run
+        body = None
+        print(f"[warn] memo generation failed for {f['repo']}: {ex}")
+    if body is None:
+        slim = {k: v for k, v in f.items() if k != "readme_excerpt"}
+        return (f"# {f['repo']}\n\nScore {total}\n\n(No LLM memo: no key set or call failed)\n\n"
+                f"```json\n{json.dumps(slim, indent=2)}\n```\n")
     return f"# {f['repo']}  (score {total})\n{f['url']}\n\n{body}\n"
