@@ -1,0 +1,4 @@
+UK: {name: Companies House, access: free API key, link: "https://find-and-update.company-information.service.gov.uk/"}
+US: {name: SEC EDGAR Form D plus state registries, access: free search (needs SEC_USER_AGENT), link: "https://www.sec.gov/search-filings"}
+IN: {name: MCA company master data / Startup India, access: manual lookup (no free bulk API), link: "https://www.mca.gov.in/mcafoportal/viewCompanyMasterData.do"}
+GLOBAL: {name: none configured, access: manual, link: "https://opencorporates.com/"}

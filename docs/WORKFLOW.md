@@ -135,3 +135,14 @@ Notes:
 1. Interface: CLI first, web UI later (decided).
 2. First registry countries: US, UK, India (decided).
 3. Benchmark: draft in `benchmark/candidates.csv`, pending approval. Needs negative controls (look-alike projects that never raised) to avoid survivorship bias, plus non-software examples. See `docs/TOOLBOX.md` for free tools.
+
+## 10. Implementation status (updated)
+| Milestone | Status |
+|---|---|
+| M1 thesis builder + MCQs + registries/source config | built; offline-tested; LLM path untested live |
+| M2 collectors: GitHub (live-tested), HN, Product Hunt, Companies House | built; HN/PH/CH endpoint shapes unverified live |
+| M3 entity resolution + verification tiers | built; tier logic unit-tested; site/job-board/registry checks untested live |
+| M4 stealth, momentum snapshots, scoring, memos | built; unit-tested |
+| M5 eval harness (E1 to E6) | NOT built; needs approved benchmark + negative controls |
+| M6 feedback loop + web UI | NOT built |
+Known gaps: SEC Form D check is best-effort; ecosyste.ms endpoint shape is inferred; no fuzzy review UI; Gemini-designed MCQs not yet reviewed on real runs.

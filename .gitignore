@@ -1,3 +1,6 @@
 .env
 __pycache__/
 *.pyc
+data/cache.db
+data/known_domains.json
+.pytest_cache/

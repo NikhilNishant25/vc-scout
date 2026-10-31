@@ -1,51 +1,41 @@
 # vc-scout
 
-A lightweight, opinionated sourcing agent. It does **not** try to be a database (that's Harmonic's job).
-It watches GitHub for *behavioral intent* from early technical builders, scores them against your thesis,
-and writes a skeptical one-page memo for the survivors.
-
-```
-discover (GitHub search by thesis topics)
-   -> enrich (commit cadence, releases, external pull, commercial intent, builder obscurity)
-   -> score (weights in config/thesis.yaml)
-   -> memo (Claude, skepticism-first; template fallback without an API key)
-   -> memos/YYYY-MM-DD/*.md + digest.md
-```
-
-See [docs/WORKFLOW.md](docs/WORKFLOW.md) for the v2 design and eval plan.
-
-## Run
+A command-line sourcing engine for early, under-the-radar startups. Pick an industry, a stage and a location;
+it generates keywords and up to 3 industry/stage-specific MCQs, builds a thesis from your answers, collects
+candidates from free sources, **verifies** they are real operating companies, ranks them, and writes
+evidence-linked memos.
 
 ```bash
 pip install -r requirements.txt
-cp .env.example .env   # add GITHUB_TOKEN and ANTHROPIC_API_KEY
+cp .env.example .env            # add GEMINI_API_KEY (free: https://aistudio.google.com/apikey)
 export $(grep -v '^#' .env | xargs)
-python -m scout run --top 15 --memos 5
+
+python -m scout go --industry "AI agent infrastructure" --stage pre-seed --location "Bengaluru"
+# answer the MCQs, or skip prompts with --answers 2,1,1
 ```
+Outputs land in `runs/<id>/`: `thesis.json`, `digest.md`, `candidates.json`, `run_report.json`, `memos/`.
 
-A GitHub Action (`.github/workflows/weekly.yml`) runs it every Monday and commits the digest.
-`GITHUB_TOKEN` is automatic in Actions; add `ANTHROPIC_API_KEY` as a repo secret.
+Other commands: `thesis` (build only), `run --thesis runs/<id>/thesis.json`, `rerun-all` (every thesis in `theses/`),
+`refresh-known` (loads the already-known company list used to score stealth).
 
-## LLM provider
-Set **either** `ANTHROPIC_API_KEY` or `GEMINI_API_KEY` (Google AI Studio key, free tier works). If both are set, Anthropic is used. With neither, memos are facts-only. A failed LLM call degrades to facts-only for that memo instead of crashing the run.
+## How it works
+1. **Thesis builder** (Gemini or fallback): keywords + up to 3 MCQs; an option is only allowed if it changes search, weights or must-haves.
+2. **Source planner**: stage and location choose sources; skipped sources say why in the digest.
+3. **Collectors**: GitHub, Hacker News (Show HN), Product Hunt (token), Companies House (UK, key).
+4. **Entity resolution**: one record per domain; fuzzy-only matches go to a review queue, never auto-merged.
+5. **Verification**: live site, product page, team page, job boards (Greenhouse/Lever/Ashby), registry match, GitHub activity, package adoption (ecosyste.ms).
+   Tiers: **Verified-operating**, **Likely**, **Unverified**. Unverified never outranks a higher tier.
+6. **Scoring**: thesis fit, verification confidence, momentum (uses your own weekly snapshots in `data/snapshots/`), stealth.
+7. **Memos**: skeptical one-pagers where every claim carries a source link or is marked inferred.
 
-## Make it yours
-Everything opinionated lives in `config/thesis.yaml`: topics, star band, weights, red-flag patterns,
-and the thesis statement the memo is judged against. Change the angle there, not in code.
+## Run in GitHub Actions
+Actions tab > **scout** > Run workflow (industry, stage, location, MCQ picks). Weekly schedule re-runs every thesis in `theses/`.
+Secrets: `GEMINI_API_KEY` (recommended); optional `PRODUCTHUNT_TOKEN`, `COMPANIES_HOUSE_KEY`, `SEC_USER_AGENT`.
 
-## Signals
-| Signal | Why it matters |
-|---|---|
-| Star velocity | Pull relative to age, not total stars |
-| Commit cadence (30d) | Is someone actually shipping |
-| Recent release | Crossed from "project" to "product" |
-| Commercial intent | Waitlist/pricing/hosted/cloud language, homepage set |
-| External pull | Forks/stars ratio and issues from strangers |
-| Obscurity | Low-follower owners are likelier un-sourced |
-| Contributor breadth | More than one author in 30d |
+## Honest limits
+- Every collector reports `ok / failed / skipped` per run. Sources marked `experimental` in `config/sources.yaml` have endpoint shapes that were not live-verified when written.
+- Without an LLM key the thesis uses a generic fallback design (weaker keywords) and memos are facts-only.
+- India has no free bulk company-registry API; the digest links the manual lookup instead of claiming a registry match.
+- No paid data (Harmonic, Crunchbase, PitchBook) and no LinkedIn scraping. See `docs/WORKFLOW.md` for the design and eval plan.
 
-Red flags (awesome-lists, tutorials, forks, thin READMEs) are filtered before scoring.
-
-## Limits
-GitHub is a partial view of a builder. Treat the score as a reason to look, never a reason to invest.
-Unauthenticated API calls hit rate limits fast; use a token.
+Tests: `pip install -r requirements-dev.txt && pytest`

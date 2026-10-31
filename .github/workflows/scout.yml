@@ -1,0 +1,44 @@
+name: scout
+on:
+  schedule: [{cron: "0 3 * * 1"}]   # weekly: re-run every saved thesis in theses/
+  workflow_dispatch:
+    inputs:
+      industry: {description: "Industry, e.g. 'AI agent infrastructure'", required: true}
+      stage: {description: "Stage", required: true, type: choice, options: [idea, pre-seed, seed, series-a]}
+      location: {description: "Target location, e.g. Bengaluru, London, global", required: false, default: ""}
+      answers: {description: "MCQ picks, e.g. 1,2,1 (leave blank for 1,1,1)", required: false, default: ""}
+permissions:
+  contents: write
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt
+      - run: python -m scout refresh-known || echo "known-company refresh failed (non-fatal)"
+      - name: Run
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PRODUCTHUNT_TOKEN: ${{ secrets.PRODUCTHUNT_TOKEN }}
+          COMPANIES_HOUSE_KEY: ${{ secrets.COMPANIES_HOUSE_KEY }}
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+          IND: ${{ inputs.industry }}
+          STG: ${{ inputs.stage }}
+          LOC: ${{ inputs.location }}
+          ANS: ${{ inputs.answers }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python -m scout go --industry "$IND" --stage "$STG" --location "$LOC" --answers "${ANS:-1,1,1}"
+          else
+            python -m scout rerun-all
+          fi
+      - run: |
+          git config user.name "scout-bot"
+          git config user.email "scout-bot@users.noreply.github.com"
+          git add runs data/snapshots theses
+          git diff --staged --quiet || git commit -m "scout: run $(date -u +%F)"
+          git push

@@ -1,0 +1,5 @@
+# status: tested = logic exercised end to end before; experimental = endpoint shape not live-verified, failures are reported not hidden
+github:          {stages: [idea, pre-seed, seed, series-a], countries: [any], needs_env: [], status: tested}
+hn:              {stages: [idea, pre-seed, seed], countries: [any], needs_env: [], status: experimental}
+producthunt:     {stages: [pre-seed, seed, series-a], countries: [any], needs_env: [PRODUCTHUNT_TOKEN], status: experimental}
+companies_house: {stages: [pre-seed, seed, series-a], countries: [UK], needs_env: [COMPANIES_HOUSE_KEY], status: experimental}

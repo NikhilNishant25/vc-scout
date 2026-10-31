@@ -1,48 +1,61 @@
-import argparse
-import datetime as dt
-import pathlib
-import yaml
-from .github_signals import discover, enrich
-from .scoring import red_flagged, score
-from .memo import write_memo
+from __future__ import annotations
+import argparse, datetime as dt, glob, json, pathlib
+from . import known, pipeline, thesis
 
 
-def run(args):
-    cfg = yaml.safe_load(open(args.config))
-    repos = discover(cfg)
-    print(f"discovered {len(repos)} candidates")
-    ranked = []
-    for repo in repos:
-        e = enrich(repo)
-        if red_flagged(e, cfg):
-            continue
-        total, sig, hits = score(e, cfg)
-        ranked.append((total, e, sig, hits))
-    ranked.sort(key=lambda x: x[0], reverse=True)
-    ranked = ranked[: args.top]
+def _answers(s):
+    return [int(x) for x in s.split(",") if x.strip().isdigit()] if s else None
 
-    out = pathlib.Path("memos") / dt.date.today().isoformat()
-    out.mkdir(parents=True, exist_ok=True)
-    lines = [f"# Scout digest {dt.date.today()}\n", "| # | Repo | Score | Stars | Commits 30d |", "|---|---|---|---|---|"]
-    for i, (total, e, sig, hits) in enumerate(ranked, 1):
-        r = e["repo"]
-        lines.append(f"| {i} | [{r['full_name']}]({r['html_url']}) | {total} | {r['stargazers_count']} | {e['commits_30d']} |")
-        if i <= args.memos:
-            (out / f"{r['full_name'].replace('/', '__')}.md").write_text(write_memo(e, total, sig, hits, cfg))
-    (out / "digest.md").write_text("\n".join(lines) + "\n")
-    print(f"wrote {out}/digest.md and {min(args.memos, len(ranked))} memos")
+
+def cmd_thesis(a):
+    dsn, prov = thesis.design(a.industry, a.stage, a.location)
+    ans = thesis.ask(dsn["questions"], _answers(a.answers))
+    t = thesis.build(a.industry, a.stage, a.location, dsn, ans, prov)
+    p = thesis.save(t, pathlib.Path("runs") / t["id"])
+    print(f"thesis saved: {p}\n{t['statement']}\nweights: {t['weights']}  (design: {prov})")
+    return t
+
+
+def cmd_run(a):
+    t = json.loads(pathlib.Path(a.thesis).read_text())
+    pipeline.run(t, pathlib.Path(a.thesis).parent, a.top, a.memos, a.verify_top)
+
+
+def cmd_go(a):
+    t = cmd_thesis(a)
+    pipeline.run(t, pathlib.Path("runs") / t["id"], a.top, a.memos, a.verify_top)
+
+
+def cmd_rerun_all(a):
+    for f in sorted(glob.glob("theses/*.json")):
+        t = json.loads(pathlib.Path(f).read_text())
+        out = pathlib.Path("runs") / f"{dt.date.today()}-{pathlib.Path(f).stem}"
+        out.mkdir(parents=True, exist_ok=True)
+        pipeline.run(t, out, a.top, a.memos, a.verify_top)
 
 
 def main():
     p = argparse.ArgumentParser(prog="scout")
     sub = p.add_subparsers(dest="cmd", required=True)
-    r = sub.add_parser("run")
-    r.add_argument("--config", default="config/thesis.yaml")
-    r.add_argument("--top", type=int, default=15)
-    r.add_argument("--memos", type=int, default=5)
-    r.set_defaults(fn=run)
+
+    def common(sp, spec=True):
+        if spec:
+            sp.add_argument("--industry", required=True)
+            sp.add_argument("--stage", required=True, choices=thesis.STAGES)
+            sp.add_argument("--location", default="")
+            sp.add_argument("--answers", default="", help="e.g. 1,2,1 (skips the prompts)")
+        sp.add_argument("--top", type=int, default=15)
+        sp.add_argument("--memos", type=int, default=5)
+        sp.add_argument("--verify-top", type=int, default=40)
+
+    t = sub.add_parser("thesis"); common(t); t.set_defaults(fn=cmd_thesis)
+    g = sub.add_parser("go"); common(g); g.set_defaults(fn=cmd_go)
+    r = sub.add_parser("run"); r.add_argument("--thesis", required=True); common(r, spec=False); r.set_defaults(fn=cmd_run)
+    ra = sub.add_parser("rerun-all"); common(ra, spec=False); ra.set_defaults(fn=cmd_rerun_all)
+    k = sub.add_parser("refresh-known"); k.set_defaults(fn=lambda a: print(f"known domains: {known.refresh()}"))
     a = p.parse_args()
     a.fn(a)
 
 
-main()
+if __name__ == "__main__":
+    main()
