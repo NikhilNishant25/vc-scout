@@ -1,0 +1,213 @@
+[
+  {
+    "id": "dbcddd5720",
+    "name": "startup-finder",
+    "domains": [
+      "onrender.com"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "SakshiGaikwad05/startup-finder",
+        "url": "https://github.com/SakshiGaikwad05/startup-finder",
+        "domain": "onrender.com",
+        "ts": "2026-10-05T06:43:51Z",
+        "data": {
+          "full_name": "SakshiGaikwad05/startup-finder",
+          "stars": 24,
+          "forks": 7,
+          "description": "Find startups hiring for your skills. Upload your resume and get Pune or remote startup jobs from YC, job boards and funding news, with the reason for every match.",
+          "language": "TypeScript",
+          "matched": "climatetech"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 44,
+        "authors_30d": 2,
+        "errors": [],
+        "last_release": null,
+        "owner_followers": 37,
+        "owner_location": "Pune, Maharashtra",
+        "owner_blog": "https://sakshii.tech/",
+        "owner_company": null,
+        "readme_len": 9919,
+        "archived": false,
+        "stars": 24,
+        "age_days": 26,
+        "repo": "SakshiGaikwad05/startup-finder",
+        "url": "https://github.com/SakshiGaikwad05/startup-finder"
+      },
+      "site": {
+        "live": true,
+        "url": "https://render.com",
+        "title": "Render | The cloud for builders",
+        "parked": false,
+        "product": true,
+        "team": true,
+        "copyright_year": null
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: SakshiGaikwad05/startup-finder",
+          "url": "https://github.com/SakshiGaikwad05/startup-finder"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Likely",
+    "confidence": 0.45,
+    "scores": {
+      "fit": 0.0,
+      "verification": 0.45,
+      "momentum": 0.427,
+      "stealth": 0.8
+    },
+    "rank_score": 0.3866,
+    "flags": []
+  },
+  {
+    "id": "80fc5b7d5d",
+    "name": "awesome-developer-conferences",
+    "domains": [],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "Infrasity-Labs/awesome-developer-conferences",
+        "url": "https://github.com/Infrasity-Labs/awesome-developer-conferences",
+        "domain": null,
+        "ts": "2026-06-18T10:06:56Z",
+        "data": {
+          "full_name": "Infrasity-Labs/awesome-developer-conferences",
+          "stars": 71,
+          "forks": 9,
+          "description": "A daily updated directory of developer, DevRel, cloud native, and platform engineering conferences taking place all over the world, separated by regions. It is an open source repository covering B2B SaaS, DevOps, and API events with dates, formats, and registration links.",
+          "language": "Python",
+          "matched": "climatetech"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 49,
+        "authors_30d": 4,
+        "errors": [],
+        "last_release": null,
+        "owner_followers": 7,
+        "owner_location": null,
+        "owner_blog": "",
+        "owner_company": null,
+        "readme_len": 200000,
+        "archived": false,
+        "stars": 71,
+        "age_days": 135,
+        "repo": "Infrasity-Labs/awesome-developer-conferences",
+        "url": "https://github.com/Infrasity-Labs/awesome-developer-conferences"
+      },
+      "site": {
+        "live": false,
+        "reason": "no domain found"
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: Infrasity-Labs/awesome-developer-conferences",
+          "url": "https://github.com/Infrasity-Labs/awesome-developer-conferences"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.15,
+    "scores": {
+      "fit": 0.017,
+      "verification": 0.15,
+      "momentum": 0.394,
+      "stealth": 0.735
+    },
+    "rank_score": 0.2836,
+    "flags": [
+      "negative-keyword:awesome"
+    ]
+  },
+  {
+    "id": "798b1c06c6",
+    "name": "News about positive advances in medicine, climate tech, research",
+    "domains": [
+      "thegoodreport.co"
+    ],
+    "signals": [
+      {
+        "source": "hn",
+        "kind": "show_hn",
+        "name": "News about positive advances in medicine, climate tech, research",
+        "url": "https://news.ycombinator.com/item?id=48343310",
+        "domain": "thegoodreport.co",
+        "ts": "2026-05-31T05:37:54Z",
+        "data": {
+          "title": "Show HN: News about positive advances in medicine, climate tech, research",
+          "points": 6,
+          "comments": 0,
+          "author": "dreadsword",
+          "hn_id": "48343310",
+          "matched": "climatetech"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {},
+      "site": {
+        "live": true,
+        "url": "https://thegoodreport.co/",
+        "title": "All Stories | The Good Report",
+        "parked": false,
+        "product": false,
+        "team": false,
+        "copyright_year": null
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "hn: News about positive advances in medicine, climate tech, research",
+          "url": "https://news.ycombinator.com/item?id=48343310"
+        }
+      ],
+      "families": [
+        "hn"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.15,
+    "scores": {
+      "fit": 0.0,
+      "verification": 0.15,
+      "momentum": 0.004,
+      "stealth": 0.995
+    },
+    "rank_score": 0.2516,
+    "flags": []
+  }
+]

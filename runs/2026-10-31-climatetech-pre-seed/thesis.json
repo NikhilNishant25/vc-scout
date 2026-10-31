@@ -1,0 +1,64 @@
+{
+  "id": "2026-10-31-climatetech-pre-seed",
+  "created": "2026-10-31",
+  "inputs": {
+    "industry": "Climatetech",
+    "stage": "pre-seed",
+    "location": "global"
+  },
+  "geo": {
+    "country": "GLOBAL",
+    "query": "global"
+  },
+  "statement": "Pre-Seed Climatetech startups in global showing a technical moat, design partners or pilots, found through indirect signals before wide press coverage.",
+  "keywords": {
+    "core": [
+      "climatetech",
+      "open source",
+      "benchmark",
+      "patent",
+      "pilot",
+      "design partner"
+    ],
+    "adjacent": [],
+    "negative": [
+      "tutorial",
+      "course",
+      "awesome",
+      "template",
+      "boilerplate",
+      "homework",
+      "portfolio",
+      "demo app"
+    ]
+  },
+  "search_terms": [
+    "climatetech"
+  ],
+  "must_have": [
+    "a technical moat",
+    "design partners or pilots"
+  ],
+  "anti_signals": [],
+  "weights": {
+    "fit": 0.292,
+    "verification": 0.292,
+    "momentum": 0.208,
+    "stealth": 0.208
+  },
+  "design_provider": "fallback",
+  "qa": [
+    {
+      "question": "What kind of edge should an early Climatetech company have?",
+      "answer": "Technical or IP moat"
+    },
+    {
+      "question": "Before product-market fit, which demand signal do you trust most?",
+      "answer": "Design partners or paid pilots"
+    },
+    {
+      "question": "How under-the-radar should the companies be?",
+      "answer": "Unknown to press and databases"
+    }
+  ]
+}
