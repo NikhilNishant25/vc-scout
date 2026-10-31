@@ -12,6 +12,8 @@ discover (GitHub search by thesis topics)
    -> memos/YYYY-MM-DD/*.md + digest.md
 ```
 
+See [docs/WORKFLOW.md](docs/WORKFLOW.md) for the v2 design and eval plan.
+
 ## Run
 
 ```bash
