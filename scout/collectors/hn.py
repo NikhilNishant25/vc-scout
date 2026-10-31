@@ -4,13 +4,15 @@ from urllib.parse import urlparse
 from .. import http
 from ..models import RawSignal
 from ..resolve import reg_domain
+from ..terms import variants
 
 
 def collect(thesis):
     days = {"idea": 120, "pre-seed": 180, "seed": 365, "series-a": 540}[thesis["inputs"]["stage"]]
     since = int(time.time() - days * 86400)
     out, seen, errors = [], set(), []
-    for kw in (thesis.get("search_terms") or thesis["keywords"]["core"])[:6]:
+    terms = [v for t in (thesis.get("search_terms") or thesis["keywords"]["core"])[:8] for v in variants(t)]
+    for kw in list(dict.fromkeys(terms)):
         try:
             r = http.request("GET", "https://hn.algolia.com/api/v1/search",
                              params={"query": kw, "tags": "show_hn", "numericFilters": f"created_at_i>{since}", "hitsPerPage": 30},

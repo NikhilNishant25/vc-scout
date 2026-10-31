@@ -124,7 +124,7 @@ def ask(questions, answers=None):
 
 def build(industry, stage, location, dsn, answers, provider, llm_status=""):
     kws = {k: list(v) for k, v in dsn["keywords"].items()}
-    search_terms = list(kws["core"])[:6]
+    search_terms = list(kws["core"])[:8]
     anti, must, shift = [], [], dict.fromkeys(BASE_WEIGHTS, 0.0)
     for q, a in zip(dsn["questions"], answers):
         o = q["options"][a - 1]

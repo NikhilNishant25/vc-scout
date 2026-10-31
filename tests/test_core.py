@@ -143,3 +143,17 @@ def test_http_error_carries_provider_message():
     from scout import http
     e = http.HttpError(429, "https://x", "quota exceeded for this model")
     assert e.code == 429 and "quota exceeded" in str(e)
+
+
+def test_term_variants_broaden_long_phrases():
+    from scout.terms import variants
+    assert variants("direct air capture sorbent") == ["direct air capture sorbent", "direct air", "capture sorbent"]
+    assert variants("climate tech") == ["climate tech"]
+
+
+def test_phrase_score_rewards_partial_matches_but_not_noise():
+    from scout.rank import phrase_score
+    assert phrase_score("direct air capture sorbent", "a new sorbent for direct air capture of co2") == 0.6
+    assert phrase_score("direct air capture sorbent", "benq screenbar halo esphome") == 0.0
+    assert phrase_score("biochar", "biochar production tracking") == 1.0
+    assert phrase_score("green hydrogen electrolyzer", "green hydrogen plant simulator") == 0.3
