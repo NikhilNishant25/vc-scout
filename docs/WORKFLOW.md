@@ -131,7 +131,7 @@ Notes:
 - Beware ground-truth leakage in E2: only use timestamps that existed before the funding date.
 - Freeze the benchmark set before tuning. Do not tune on it.
 
-## 9. Open decisions
-1. Interface: CLI first, or web UI first?
-2. Which 3 to 5 countries should the registry catalog cover first? (India, US, UK suggested)
-3. Seed benchmark: a list of 30 to 50 known early startups to use for E2.
+## 9. Decisions
+1. Interface: CLI first, web UI later (decided).
+2. First registry countries: US, UK, India (decided).
+3. Benchmark: draft in `benchmark/candidates.csv`, pending approval. Needs negative controls (look-alike projects that never raised) to avoid survivorship bias, plus non-software examples. See `docs/TOOLBOX.md` for free tools.
