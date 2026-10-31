@@ -18,14 +18,54 @@ def provider():
     return None
 
 
+GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta"
+_SKIP = ("tts", "image", "live", "audio", "transcribe", "omni", "embed", "lyria", "veo", "imagen", "robotics",
+         "computer-use", "deep-research", "gemma", "aqa", "learnlm", "vision")
+LAST_MODEL = None
+
+
+def _version(name):
+    import re
+    m = re.search(r"gemini-(\d+(?:\.\d+)?)", name)
+    return float(m.group(1)) if m else 0.0
+
+
+def gemini_candidates(names):
+    """Rank usable text models: newest generation first, full Flash before Flash-Lite, stable before preview."""
+    ok = [n for n in names if n.startswith("gemini-") and "flash" in n and not any(x in n for x in _SKIP)]
+    return sorted(ok, key=lambda n: (-_version(n), "lite" in n, "preview" in n, n))[:4]
+
+
+def _gemini_models(key):
+    r = http.request("GET", f"{GEMINI_BASE}/models", params={"pageSize": 200}, headers={"x-goog-api-key": key}, ttl=86400)
+    names = [m["name"].removeprefix("models/") for m in r.get("models", [])
+             if "generateContent" in m.get("supportedGenerationMethods", [])]
+    return gemini_candidates(names)
+
+
 def _gemini(prompt, json_mode):
-    model = os.getenv("SCOUT_GEMINI_MODEL", "gemini-2.5-flash")
+    """Model names get retired (gemini-2.5-* did), so discover what this key can use and fall through the list."""
+    global LAST_MODEL
+    key = os.environ["GEMINI_API_KEY"]
+    cands = [os.environ["SCOUT_GEMINI_MODEL"]] if os.getenv("SCOUT_GEMINI_MODEL") else []
+    try:
+        cands += [m for m in _gemini_models(key) if m not in cands]
+    except (http.HttpError, RuntimeError) as e:
+        if not cands:
+            raise RuntimeError(f"could not list Gemini models for this key: {e}")
     body = {"contents": [{"parts": [{"text": prompt}]}]}
     if json_mode:
         body["generationConfig"] = {"responseMimeType": "application/json"}
-    r = http.request("POST", f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
-                     headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]}, json_body=body, ttl=MONTH, timeout=90)
-    return "".join(p.get("text", "") for p in r["candidates"][0]["content"]["parts"])
+    errors = []
+    for model in cands:
+        try:
+            r = http.request("POST", f"{GEMINI_BASE}/models/{model}:generateContent", headers={"x-goog-api-key": key},
+                             json_body=body, ttl=MONTH, timeout=90)
+            LAST_MODEL = model
+            return "".join(p.get("text", "") for p in r["candidates"][0]["content"]["parts"])
+        except (http.HttpError, RuntimeError, KeyError, IndexError) as e:
+            errors.append(f"{model}: {str(e)[:80]}")
+    raise RuntimeError("no Gemini model worked. Tried " + "; ".join(errors) if errors else "no usable Gemini model found for this key")
 
 
 def _openrouter(prompt, json_mode):

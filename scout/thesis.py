@@ -94,7 +94,7 @@ def design(industry, stage, location):
     raw = llm.complete_json(PROMPT.format(industry=industry, stage=stage, location=location))
     d = validate_design(raw)
     if d:
-        return d, llm.provider(), "ok"
+        return d, llm.provider(), f"ok, model {llm.LAST_MODEL or llm.provider()}"
     if llm.provider() is None:
         why = "no LLM key visible to this run (check the secret is named exactly GEMINI_API_KEY)"
     elif raw is None:

@@ -111,3 +111,29 @@ def test_global_location_not_in_statement():
     dsn = thesis.validate_design(thesis.fallback_design("Climatetech", "pre-seed"))
     t = thesis.build("Climatetech", "pre-seed", "global", dsn, [1, 1, 1], "fallback", "x")
     assert "in global" not in t["statement"]
+
+
+def test_gemini_candidate_ranking_prefers_newest_flash_and_skips_non_text():
+    from scout import llm
+    names = ["gemini-2.5-flash", "gemini-3.8-flash", "gemini-3.8-flash-tts", "gemini-3.1-flash-lite",
+             "gemini-3-flash-preview", "gemini-3.1-flash-image", "gemini-3.8-pro", "gemma-4-31b-it", "text-embedding-004"]
+    c = llm.gemini_candidates(names)
+    assert c[0] == "gemini-3.8-flash"
+    assert all(not any(x in n for x in ("tts", "image", "gemma", "embed", "pro")) for n in c)
+    assert c.index("gemini-3.1-flash-lite") > c.index("gemini-3-flash-preview") or c.index("gemini-3.1-flash-lite") < len(c)
+
+
+def test_gemini_falls_through_retired_models(monkeypatch):
+    from scout import http, llm
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    monkeypatch.delenv("SCOUT_GEMINI_MODEL", raising=False)
+
+    def fake(method, url, **kw):
+        if url.endswith("/models"):
+            return {"models": [{"name": "models/gemini-2.5-flash", "supportedGenerationMethods": ["generateContent"]},
+                               {"name": "models/gemini-3.8-flash", "supportedGenerationMethods": ["generateContent"]}]}
+        if "gemini-3.8-flash" in url:
+            return {"candidates": [{"content": {"parts": [{"text": "{\"ok\": 1}"}]}}]}
+        raise http.HttpError(404, url)
+    monkeypatch.setattr(http, "request", fake)
+    assert llm._gemini("hi", True) == '{"ok": 1}' and llm.LAST_MODEL == "gemini-3.8-flash"
