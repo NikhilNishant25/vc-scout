@@ -1,0 +1,24 @@
+name: weekly-scout
+on:
+  schedule: [{cron: "0 3 * * 1"}]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt
+      - run: python -m scout run --top 15 --memos 5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - run: |
+          git config user.name "scout-bot"
+          git config user.email "scout-bot@users.noreply.github.com"
+          git add memos
+          git diff --staged --quiet || git commit -m "scout: weekly digest"
+          git push
