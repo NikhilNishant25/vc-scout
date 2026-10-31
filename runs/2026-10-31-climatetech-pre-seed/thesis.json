@@ -10,10 +10,12 @@
     "country": "GLOBAL",
     "query": "global"
   },
-  "statement": "Pre-Seed Climatetech startups in global showing a technical moat, design partners or pilots, found through indirect signals before wide press coverage.",
+  "statement": "Pre-Seed Climatetech startups showing a technical moat, design partners or pilots, found through indirect signals before wide press coverage.",
   "keywords": {
     "core": [
       "climatetech",
+      "climate tech",
+      "climate",
       "open source",
       "benchmark",
       "patent",
@@ -33,7 +35,9 @@
     ]
   },
   "search_terms": [
-    "climatetech"
+    "climatetech",
+    "climate tech",
+    "climate"
   ],
   "must_have": [
     "a technical moat",
@@ -47,6 +51,7 @@
     "stealth": 0.208
   },
   "design_provider": "fallback",
+  "llm_status": "LLM call failed: HTTP 404 for https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
   "qa": [
     {
       "question": "What kind of edge should an early Climatetech company have?",

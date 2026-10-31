@@ -1,119 +1,43 @@
 [
   {
-    "id": "dbcddd5720",
-    "name": "startup-finder",
-    "domains": [
-      "onrender.com"
-    ],
-    "signals": [
-      {
-        "source": "github",
-        "kind": "repo",
-        "name": "SakshiGaikwad05/startup-finder",
-        "url": "https://github.com/SakshiGaikwad05/startup-finder",
-        "domain": "onrender.com",
-        "ts": "2026-10-05T06:43:51Z",
-        "data": {
-          "full_name": "SakshiGaikwad05/startup-finder",
-          "stars": 24,
-          "forks": 7,
-          "description": "Find startups hiring for your skills. Upload your resume and get Pune or remote startup jobs from YC, job boards and funding news, with the reason for every match.",
-          "language": "TypeScript",
-          "matched": "climatetech"
-        }
-      }
-    ],
-    "evidence": {
-      "github": {
-        "commits_30d": 44,
-        "authors_30d": 2,
-        "errors": [],
-        "last_release": null,
-        "owner_followers": 37,
-        "owner_location": "Pune, Maharashtra",
-        "owner_blog": "https://sakshii.tech/",
-        "owner_company": null,
-        "readme_len": 9919,
-        "archived": false,
-        "stars": 24,
-        "age_days": 26,
-        "repo": "SakshiGaikwad05/startup-finder",
-        "url": "https://github.com/SakshiGaikwad05/startup-finder"
-      },
-      "site": {
-        "live": true,
-        "url": "https://render.com",
-        "title": "Render | The cloud for builders",
-        "parked": false,
-        "product": true,
-        "team": true,
-        "copyright_year": null
-      },
-      "hiring": {},
-      "registry": {
-        "matched": false,
-        "manual_lookup": true
-      },
-      "ecosystem": {},
-      "links": [
-        {
-          "label": "github: SakshiGaikwad05/startup-finder",
-          "url": "https://github.com/SakshiGaikwad05/startup-finder"
-        }
-      ],
-      "families": [
-        "github"
-      ]
-    },
-    "tier": "Likely",
-    "confidence": 0.45,
-    "scores": {
-      "fit": 0.0,
-      "verification": 0.45,
-      "momentum": 0.427,
-      "stealth": 0.8
-    },
-    "rank_score": 0.3866,
-    "flags": []
-  },
-  {
-    "id": "80fc5b7d5d",
-    "name": "awesome-developer-conferences",
+    "id": "33fe2db002",
+    "name": "academic-commercialization-agent",
     "domains": [],
     "signals": [
       {
         "source": "github",
         "kind": "repo",
-        "name": "Infrasity-Labs/awesome-developer-conferences",
-        "url": "https://github.com/Infrasity-Labs/awesome-developer-conferences",
+        "name": "shuxiachai/academic-commercialization-agent",
+        "url": "https://github.com/shuxiachai/academic-commercialization-agent",
         "domain": null,
-        "ts": "2026-06-18T10:06:56Z",
+        "ts": "2026-06-25T07:43:09Z",
         "data": {
-          "full_name": "Infrasity-Labs/awesome-developer-conferences",
-          "stars": 71,
-          "forks": 9,
-          "description": "A daily updated directory of developer, DevRel, cloud native, and platform engineering conferences taking place all over the world, separated by regions. It is an open source repository covering B2B SaaS, DevOps, and API events with dates, formats, and registration links.",
+          "full_name": "shuxiachai/academic-commercialization-agent",
+          "stars": 802,
+          "forks": 97,
+          "description": "AI multi-agent tool that turns research papers into cited commercialization and tech-transfer assessments: TRL, patent landscape, market and risks. CrewAI + FastAPI, with a reproducible benchmark.",
           "language": "Python",
-          "matched": "climatetech"
+          "matched": "climate"
         }
       }
     ],
     "evidence": {
       "github": {
-        "commits_30d": 49,
-        "authors_30d": 4,
+        "commits_30d": 100,
+        "authors_30d": 2,
         "errors": [],
-        "last_release": null,
-        "owner_followers": 7,
-        "owner_location": null,
+        "last_release": "2026-10-17T07:36:40Z",
+        "owner_followers": 18,
+        "owner_location": "Sydney, Australia",
         "owner_blog": "",
         "owner_company": null,
-        "readme_len": 200000,
+        "readme_len": 20269,
+        "readme_excerpt": "# Academic Commercialization Assessment Agent\n\n**Paper in, cited commercialization triage out.** A multi-agent LLM pipeline\nturns a research paper or topic into a scorecard for technology readiness,\nmanufacturing, patents and market, with citations to registered sources and the\nrisks spelled out. Its experiments are published with their protocols, failures\nincluded.\n\n[![Tests](https://github.com/shuxiachai/academic-commercialization-agent/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/shuxiachai/academic-commercialization-agent/actions/workflows/test.yml)\n[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)\n![Python 3.11 | 3.12](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)\n\n**[\u25b6 Read a finished report \u2014 no key, no sign-up](https://academic-commercialization-agent.up.railway.app/samples)** \u00b7 [Open the application](https://academic-commercialization-agent.up.railway.app) \u00b7 [Run locally](#quick-start) \u00b7 [\u4e2d\u6587](README.zh-CN.md)\n\n![Demo: a finished CAR-T assessment opened from the history list, its scorecard, risks and opportunities with citations, the cited report, and one saved source excerpt](assets/demo.gif)\n\n*A real run from 2026-08-14 (CAR-T cell therapy for blood cancers, `deepseek-chat`), opened from a local copy in the current interface and captured 2026-10-23; no model or search request was made. It predates today's automated checks, which the panel states; it is not a current-model result.*\n\n## Try it\n\n| Way in | ",
         "archived": false,
-        "stars": 71,
-        "age_days": 135,
-        "repo": "Infrasity-Labs/awesome-developer-conferences",
-        "url": "https://github.com/Infrasity-Labs/awesome-developer-conferences"
+        "stars": 802,
+        "age_days": 128,
+        "repo": "shuxiachai/academic-commercialization-agent",
+        "url": "https://github.com/shuxiachai/academic-commercialization-agent"
       },
       "site": {
         "live": false,
@@ -127,8 +51,8 @@
       "ecosystem": {},
       "links": [
         {
-          "label": "github: Infrasity-Labs/awesome-developer-conferences",
-          "url": "https://github.com/Infrasity-Labs/awesome-developer-conferences"
+          "label": "github: shuxiachai/academic-commercialization-agent",
+          "url": "https://github.com/shuxiachai/academic-commercialization-agent"
         }
       ],
       "families": [
@@ -138,15 +62,13 @@
     "tier": "Unverified",
     "confidence": 0.15,
     "scores": {
-      "fit": 0.017,
+      "fit": 0.533,
       "verification": 0.15,
-      "momentum": 0.394,
-      "stealth": 0.735
+      "momentum": 0.6,
+      "stealth": 0.585
     },
-    "rank_score": 0.2836,
-    "flags": [
-      "negative-keyword:awesome"
-    ]
+    "rank_score": 0.4459,
+    "flags": []
   },
   {
     "id": "798b1c06c6",
@@ -202,12 +124,557 @@
     "tier": "Unverified",
     "confidence": 0.15,
     "scores": {
-      "fit": 0.0,
+      "fit": 0.533,
       "verification": 0.15,
       "momentum": 0.004,
       "stealth": 0.995
     },
-    "rank_score": 0.2516,
+    "rank_score": 0.4072,
+    "flags": []
+  },
+  {
+    "id": "bbed07d1f1",
+    "name": "BeamDisk",
+    "domains": [
+      "beamdisk.app"
+    ],
+    "signals": [
+      {
+        "source": "hn",
+        "kind": "show_hn",
+        "name": "BeamDisk",
+        "url": "https://news.ycombinator.com/item?id=50308351",
+        "domain": "beamdisk.app",
+        "ts": "2026-10-30T18:40:51Z",
+        "data": {
+          "title": "Show HN: BeamDisk \u2013 High Performance iSCSI Initiator for macOS",
+          "points": 1,
+          "comments": 0,
+          "author": "nulledy",
+          "hn_id": "50308351",
+          "matched": "climate"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {},
+      "site": {
+        "live": true,
+        "url": "https://beamdisk.app/",
+        "title": "BeamDisk: fast iSCSI for Macs with Apple Silicon, no kernel extension",
+        "parked": false,
+        "product": true,
+        "team": false,
+        "copyright_year": 2026
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "hn: BeamDisk",
+          "url": "https://news.ycombinator.com/item?id=50308351"
+        }
+      ],
+      "families": [
+        "hn"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.35,
+    "scores": {
+      "fit": 0.267,
+      "verification": 0.35,
+      "momentum": 0.001,
+      "stealth": 0.999
+    },
+    "rank_score": 0.3882,
+    "flags": []
+  },
+  {
+    "id": "97b19a7a26",
+    "name": "SeasonMap",
+    "domains": [
+      "seasonmap.app"
+    ],
+    "signals": [
+      {
+        "source": "hn",
+        "kind": "show_hn",
+        "name": "SeasonMap",
+        "url": "https://news.ycombinator.com/item?id=49728781",
+        "domain": "seasonmap.app",
+        "ts": "2026-09-16T15:43:07Z",
+        "data": {
+          "title": "Show HN: SeasonMap \u2013 when to travel where? visualized with climate data",
+          "points": 23,
+          "comments": 11,
+          "author": "alongtheflow",
+          "hn_id": "49728781",
+          "matched": "climate"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {},
+      "site": {
+        "live": true,
+        "url": "https://seasonmap.app/",
+        "title": "SeasonMap \u2014 where to travel, by the weather you actually want",
+        "parked": false,
+        "product": true,
+        "team": false,
+        "copyright_year": null
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "hn: SeasonMap",
+          "url": "https://news.ycombinator.com/item?id=49728781"
+        }
+      ],
+      "families": [
+        "hn"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.35,
+    "scores": {
+      "fit": 0.267,
+      "verification": 0.35,
+      "momentum": 0.015,
+      "stealth": 0.981
+    },
+    "rank_score": 0.3873,
+    "flags": []
+  },
+  {
+    "id": "188067336d",
+    "name": "idrive7-apps",
+    "domains": [],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "cauliflowermossgrape/idrive7-apps",
+        "url": "https://github.com/cauliflowermossgrape/idrive7-apps",
+        "domain": null,
+        "ts": "2026-10-21T11:37:46Z",
+        "data": {
+          "full_name": "cauliflowermossgrape/idrive7-apps",
+          "stars": 251,
+          "forks": 47,
+          "description": "Custom apps for the BMW MGU / iDrive 7 head unit (shift lights, virtual dyno, brake and drag timers, G-meter, fault scanner) plus an SDK kit to build and install your own.",
+          "language": "JavaScript",
+          "matched": "climate"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 100,
+        "authors_30d": 6,
+        "errors": [],
+        "last_release": null,
+        "owner_followers": 47,
+        "owner_location": null,
+        "owner_blog": "",
+        "owner_company": null,
+        "readme_len": 72632,
+        "readme_excerpt": "**English** | [\u4e2d\u6587 (Chinese translation)](README.zh-CN.md)\n\n<h1 align=\"center\">MGU Custom Apps</h1>\n\n<p align=\"center\">\n  <b>Custom apps for the BMW MGU head unit (iDrive 7), drawn by their own GPU render engine at a true 60 fps.</b><br>\n  Plus a complete kit to build your own.\n</p>\n\n<p align=\"center\">\n  <img alt=\"60 fps\" src=\"https://img.shields.io/badge/frame%20rate-60%20fps-2ea44f?style=for-the-badge\">\n  <img alt=\"OpenGL ES 2\" src=\"https://img.shields.io/badge/render-OpenGL%20ES%202-1c6dd0?style=for-the-badge\">\n  <img alt=\"GPU time\" src=\"https://img.shields.io/badge/GPU%20time-~1%20ms%20%2F%20frame-8957e5?style=for-the-badge\">\n  <img alt=\"iDrive 7\" src=\"https://img.shields.io/badge/BMW-iDrive%207%20MGU-e4002b?style=for-the-badge\">\n</p>\n\n<p align=\"center\">\n  <img src=\"docs/media/redline.gif\" alt=\"Redline: full-screen rev bar, shift lights and gear, animated at 60 fps\" width=\"100%\">\n</p>\n\nReal electric range, battery health and a charge log for plug-in hybrids, and live battery\npower, cell temperatures and climate power use. A sport cluster with\nboost, fuel pressures, ignition timing, misfires and tyre data. Shift lights and a full-screen\ntach, a virtual dyno, brake and drag timers, a G-meter, an oil warm-up guide, a fault-code\nscanner / cleaner, the car's service items, and Doom for when you're parked. They run on the car's own app platform, use the HMI's real buttons and\nsettings menus, read live vehicle data and survive reboots. Everything can be removed again\nwith one com",
+        "archived": false,
+        "stars": 251,
+        "age_days": 10,
+        "repo": "cauliflowermossgrape/idrive7-apps",
+        "url": "https://github.com/cauliflowermossgrape/idrive7-apps"
+      },
+      "site": {
+        "live": false,
+        "reason": "no domain found"
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: cauliflowermossgrape/idrive7-apps",
+          "url": "https://github.com/cauliflowermossgrape/idrive7-apps"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.15,
+    "scores": {
+      "fit": 0.267,
+      "verification": 0.15,
+      "momentum": 0.6,
+      "stealth": 0.657
+    },
+    "rank_score": 0.3832,
+    "flags": []
+  },
+  {
+    "id": "b83b2b532d",
+    "name": "datasets",
+    "domains": [
+      "toddrjones.com"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "toddrjones/datasets",
+        "url": "https://github.com/toddrjones/datasets",
+        "domain": null,
+        "ts": "2026-10-09T18:38:36Z",
+        "data": {
+          "full_name": "toddrjones/datasets",
+          "stars": 470,
+          "forks": 78,
+          "description": "A compilation of 125+ free datasets for use in social science, applied microeconomics, data visualization, etc.",
+          "language": null,
+          "matched": "climate"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 68,
+        "authors_30d": 6,
+        "errors": [],
+        "last_release": null,
+        "owner_followers": 35,
+        "owner_location": null,
+        "owner_blog": "https://www.toddrjones.com/",
+        "owner_company": null,
+        "readme_len": 37448,
+        "readme_excerpt": "# Free Datasets for Social Science Research\nThis is a compilation of free datasets that I hope can be useful to students, professors, and others for research, data visualization, etc. Most of the datasets are publicly available, but some aren't and require data agreements. If you have any additions (including new datasets or filling in details on existing entries), changes, or comments, please [contribute](https://github.com/toddrjones/datasets/blob/main/contributing.md)! Thanks for everyone who has helped!\n\n \\- [Todd Jones](https://www.toddrjones.com/)\n\n--- \n\n### Contents\n\nSkip to: [Time Use](#time-use), [Crime](#crime), [US Censuses and Economic History](#us-censuses-and-economic-history), [Household Surveys](#household-surveys), [Mobility and Migration](#mobility-and-migration), [Names](#names), [Injury and death](#injury-and-death), [Crashes and traffic](#crashes-and-traffic), [Education](#education), [Academia](#academia), [Weather](#weather), [Family](#family), [Sports](#sports), [Religion](#religion), [Government](#government), [Inflation and cost of living](#inflation-and-cost-of-living), [Working](#working), [Businesses](#businesses), [Politics and voting](#politics-and-voting), [Health, public health, and epidemiology](#health-public-health-and-epidemiology), [Demography](#demography), [Real estate](#real-estate), [Patents](#patents), [Social networks](#social-networks), [Beliefs and values](#beliefs-and-values), [Law](#law), [Environment and energy](#environment-an",
+        "archived": false,
+        "stars": 470,
+        "age_days": 21,
+        "repo": "toddrjones/datasets",
+        "url": "https://github.com/toddrjones/datasets"
+      },
+      "site": {
+        "live": true,
+        "url": "https://www.toddrjones.com/",
+        "title": "Todd Jones",
+        "parked": false,
+        "product": false,
+        "team": false,
+        "copyright_year": 2026
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: toddrjones/datasets",
+          "url": "https://github.com/toddrjones/datasets"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.15,
+    "scores": {
+      "fit": 0.267,
+      "verification": 0.15,
+      "momentum": 0.6,
+      "stealth": 0.618
+    },
+    "rank_score": 0.3751,
+    "flags": [
+      "domain-from-owner-blog"
+    ]
+  },
+  {
+    "id": "4385302c3a",
+    "name": "neonplan3d",
+    "domains": [],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "Mastershort/neonplan3d",
+        "url": "https://github.com/Mastershort/neonplan3d",
+        "domain": null,
+        "ts": "2026-09-27T21:31:26Z",
+        "data": {
+          "full_name": "Mastershort/neonplan3d",
+          "stars": 966,
+          "forks": 101,
+          "description": "3D floor plan for Home Assistant: draw your home in the built-in editor (rooms, walls, doors, windows, furniture, roof) and see and control lights, covers, windows, climate, media, sensors and cameras live in a neon 3D view \u2013 as a sidebar panel and dashboard card.",
+          "language": "TypeScript",
+          "matched": "climate"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 100,
+        "authors_30d": 1,
+        "errors": [],
+        "last_release": "2026-10-31T05:36:16Z",
+        "owner_followers": 36,
+        "owner_location": null,
+        "owner_blog": "",
+        "owner_company": null,
+        "readme_len": 17790,
+        "readme_excerpt": "# NeonPlan 3D\n\n[![Spenden mit PayPal](https://img.shields.io/badge/PayPal-Spenden-00457C?logo=paypal&logoColor=white)](https://www.paypal.com/donate/?hosted_button_id=Z3G2VWKSK5VJL)\n\n**by Mastershort** \u2013 draw your home right inside Home Assistant and live in it as a neon 3D house: lights glow in their colours, blinds and curtains move, doors and windows open, cameras watch, the TV shows what is playing, energy flows through the walls \u2013 and you can simply **talk to it**. No external tools, no cloud, made for wall tablets \u2013 old Fire tablets included.\n\n\u25b6\ufe0f **[Try the online demo](https://neonplan3d.mastershort.de/)** \u2013 in your browser, with invented demo data: turn the house, switch lights, open the editor. Nothing to install.\n\n[![Open your Home Assistant instance and open the NeonPlan 3D repository inside HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Mastershort&repository=neonplan3d&category=integration)\n\n[![NeonPlan 3D: the whole house in neon \u2013 solar roof with live energy cards, lit rooms on two floors, garden and drive](https://raw.githubusercontent.com/Mastershort/neonplan3d/main/docs/images/hero-house.jpg)](https://neonplan3d.mastershort.de/)\n\n[![NeonPlan 3D: the house turns with its solar roof and energy cards, voice control opens the living room, the doorbell rings and the live director looks through the front door camera, then back to the whole house](https://raw.githubusercontent.com/Master",
+        "archived": false,
+        "stars": 966,
+        "age_days": 33,
+        "repo": "Mastershort/neonplan3d",
+        "url": "https://github.com/Mastershort/neonplan3d"
+      },
+      "site": {
+        "live": false,
+        "reason": "no domain found"
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: Mastershort/neonplan3d",
+          "url": "https://github.com/Mastershort/neonplan3d"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.15,
+    "scores": {
+      "fit": 0.267,
+      "verification": 0.15,
+      "momentum": 0.6,
+      "stealth": 0.574
+    },
+    "rank_score": 0.366,
+    "flags": []
+  },
+  {
+    "id": "696fcffa95",
+    "name": "E-Paper-Climate-Logger",
+    "domains": [],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "Michael-Manning/E-Paper-Climate-Logger",
+        "url": "https://github.com/Michael-Manning/E-Paper-Climate-Logger",
+        "domain": null,
+        "ts": "2026-05-31T15:48:00Z",
+        "data": {
+          "full_name": "Michael-Manning/E-Paper-Climate-Logger",
+          "stars": 457,
+          "forks": 14,
+          "description": null,
+          "language": "C++",
+          "matched": "climate"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 0,
+        "authors_30d": 0,
+        "errors": [],
+        "last_release": null,
+        "owner_followers": 49,
+        "owner_location": "Edmonton Alberta",
+        "owner_blog": "https://github.com/Michael-Manning",
+        "owner_company": null,
+        "readme_len": 7729,
+        "readme_excerpt": "# Weathergotchi - an E-Paper Climate Logger\n\n## About\n\nThis project is an open-source, battery-powered temperature and humidity data logger with an always-on e-paper display. It records ambient conditions over time, stores readings in non-volatile memory, and displays current data along with a history graph. The device is designed for low power consumption, over 2 weeks of operation on a small Li\u2011Po battery.\n\nKey features:\n\n- ESP32-S3 with deep sleep & RTC timer to wake up\n- Temperature and humidity sensor with external EEPROM for logging\n- Accurate battery monitoring and charging management\n- Power button controller to turn on/off\n- 1.54\u2011inch e\u2011paper display\n- Custom PCB & 3D\u2011printed case\n- Over 2 weeks of battery life on a single charge\n\nThe entire project is open source, including hardware schematics, PCB layout, firmware, and enclosure CAD files. A detailed build video is available on YouTube: [E-Paper Climate Logger](https://www.youtube.com/watch?v=I44iGj7gLGA).\n\n![photo-device-on](img/photo-device-on.jpg \"\")\n![photo-enclosure](img/photo-enclosure.jpg \"\")\n![photo-pcb](img/photo-pcb.jpg \"\")\n\n### Youtube video\n\n[![E-Paper Climate Logger](https://img.youtube.com/vi/I44iGj7gLGA/maxresdefault.jpg)](https://youtu.be/I44iGj7gLGA)\n\n## Repository Structure\n\n```\nE-Paper-Climate-Logger/\n\u251c\u2500\u2500 CAD/                 # 3D case design (OpenSCAD source and STL exports)\n\u251c\u2500\u2500 PCB/                 # KiCad hardware design, schematics, datasheets, references\n\u251c\u2500\u2500 firmware/            # PlatformIO",
+        "archived": false,
+        "stars": 457,
+        "age_days": 152,
+        "repo": "Michael-Manning/E-Paper-Climate-Logger",
+        "url": "https://github.com/Michael-Manning/E-Paper-Climate-Logger"
+      },
+      "site": {
+        "live": false,
+        "reason": "no domain found"
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: Michael-Manning/E-Paper-Climate-Logger",
+          "url": "https://github.com/Michael-Manning/E-Paper-Climate-Logger"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.0,
+    "scores": {
+      "fit": 0.533,
+      "verification": 0.0,
+      "momentum": 0.25,
+      "stealth": 0.62
+    },
+    "rank_score": 0.3366,
+    "flags": []
+  },
+  {
+    "id": "bf0b4a1312",
+    "name": "WebGCM",
+    "domains": [
+      "echorelay.net"
+    ],
+    "signals": [
+      {
+        "source": "hn",
+        "kind": "show_hn",
+        "name": "WebGCM",
+        "url": "https://news.ycombinator.com/item?id=49793545",
+        "domain": "echorelay.net",
+        "ts": "2026-09-21T21:15:04Z",
+        "data": {
+          "title": "Show HN: WebGCM \u2013 a global climate model running in the browser on WebGPU",
+          "points": 6,
+          "comments": 0,
+          "author": "jlhawn",
+          "hn_id": "49793545",
+          "matched": "climate tech"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {},
+      "site": {
+        "live": false,
+        "reason": "GET http://echorelay.net failed: HTTPConnectionPool(host='echorelay.net', port=80): Max retries exceeded with url: / (Ca"
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "hn: WebGCM",
+          "url": "https://news.ycombinator.com/item?id=49793545"
+        }
+      ],
+      "families": [
+        "hn"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.15,
+    "scores": {
+      "fit": 0.267,
+      "verification": 0.15,
+      "momentum": 0.004,
+      "stealth": 0.995
+    },
+    "rank_score": 0.3296,
+    "flags": []
+  },
+  {
+    "id": "2fd6422c7b",
+    "name": "LHTB",
+    "domains": [],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "zli12321/LHTB",
+        "url": "https://github.com/zli12321/LHTB",
+        "domain": null,
+        "ts": "2026-07-07T23:16:23Z",
+        "data": {
+          "full_name": "zli12321/LHTB",
+          "stars": 569,
+          "forks": 34,
+          "description": "Long Horizon Terminal Benchmark with Dense Reward Grading",
+          "language": "Python",
+          "matched": "climate"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 15,
+        "authors_30d": 1,
+        "errors": [],
+        "last_release": null,
+        "owner_followers": 43,
+        "owner_location": null,
+        "owner_blog": "https://zli12321.github.io",
+        "owner_company": "University of Maryland",
+        "readme_len": 30047,
+        "readme_excerpt": "# Long-Horizon Terminal-Bench (LHTB)\n\nEnglish | [\u7b80\u4f53\u4e2d\u6587](README.zh-CN.md)\n\n```\n _     _   _ _____ ____\n| |   | | | |_   _| __ )\n| |   | |_| | | | |  _ \\\n| |___|  _  | | | | |_) |\n|_____|_| |_| |_| |____/\n  Long-Horizon Terminal-Bench\n```\n\n[![Blog](https://img.shields.io/badge/Blog-105864?style=for-the-badge)](https://zli12321.github.io/LHTB/)\n[![Terminal Data Website](https://img.shields.io/badge/%F0%9F%A4%97%20Terminal%20Data-Website-ff9d00?style=for-the-badge)](https://huggingface.co/spaces/IntelligenceLab/Terminal-Data-Website)\n[![arXiv](https://img.shields.io/badge/arXiv-2607.08964-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.08964)\n[![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-ffd21e?style=for-the-badge)](https://huggingface.co/datasets/IntelligenceLab/Long-Horizon-Terminal-Bench)\n[![Harbor Hub](https://img.shields.io/badge/Harbor%20Hub-Dataset-0a7ea4?style=for-the-badge)](https://hub.harborframework.com/datasets/silrlab/long-horizon-terminal-bench-2.0)\n[![Leaderboard](https://img.shields.io/badge/Leaderboard-0a7ea4?style=for-the-badge)](https://zli12321.github.io/LHTB/leaderboard.html)\n[![Citation](https://img.shields.io/badge/Citation-BibTeX-6f42c1?style=for-the-badge)](#citing-lhtb)\n\n**Long-Horizon Terminal-Bench** is a benchmark for measuring how well LLM agents sustain useful work in a containerized terminal over **hundreds of steps**. **LHTB 2.0** has **77 tasks**: the 46 original tas",
+        "archived": false,
+        "stars": 569,
+        "age_days": 115,
+        "repo": "zli12321/LHTB",
+        "url": "https://github.com/zli12321/LHTB"
+      },
+      "site": {
+        "live": false,
+        "reason": "no domain found"
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: zli12321/LHTB",
+          "url": "https://github.com/zli12321/LHTB"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.15,
+    "scores": {
+      "fit": 0.267,
+      "verification": 0.15,
+      "momentum": 0.381,
+      "stealth": 0.606
+    },
+    "rank_score": 0.3271,
     "flags": []
   }
 ]
