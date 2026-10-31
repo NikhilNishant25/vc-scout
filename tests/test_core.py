@@ -137,3 +137,9 @@ def test_gemini_falls_through_retired_models(monkeypatch):
         raise http.HttpError(404, url)
     monkeypatch.setattr(http, "request", fake)
     assert llm._gemini("hi", True) == '{"ok": 1}' and llm.LAST_MODEL == "gemini-3.8-flash"
+
+
+def test_http_error_carries_provider_message():
+    from scout import http
+    e = http.HttpError(429, "https://x", "quota exceeded for this model")
+    assert e.code == 429 and "quota exceeded" in str(e)

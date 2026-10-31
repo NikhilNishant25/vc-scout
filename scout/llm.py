@@ -22,6 +22,7 @@ GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta"
 _SKIP = ("tts", "image", "live", "audio", "transcribe", "omni", "embed", "lyria", "veo", "imagen", "robotics",
          "computer-use", "deep-research", "gemma", "aqa", "learnlm", "vision")
 LAST_MODEL = None
+_BAD = set()
 
 
 def _version(name):
@@ -33,7 +34,7 @@ def _version(name):
 def gemini_candidates(names):
     """Rank usable text models: newest generation first, full Flash before Flash-Lite, stable before preview."""
     ok = [n for n in names if n.startswith("gemini-") and "flash" in n and not any(x in n for x in _SKIP)]
-    return sorted(ok, key=lambda n: (-_version(n), "lite" in n, "preview" in n, n))[:4]
+    return sorted(ok, key=lambda n: (-_version(n), "lite" in n, "preview" in n, n))[:8]
 
 
 def _gemini_models(key):
@@ -58,14 +59,20 @@ def _gemini(prompt, json_mode):
         body["generationConfig"] = {"responseMimeType": "application/json"}
     errors = []
     for model in cands:
+        if model in _BAD:
+            continue
         try:
             r = http.request("POST", f"{GEMINI_BASE}/models/{model}:generateContent", headers={"x-goog-api-key": key},
-                             json_body=body, ttl=MONTH, timeout=90)
+                             json_body=body, ttl=MONTH, timeout=90, retries=1)
             LAST_MODEL = model
             return "".join(p.get("text", "") for p in r["candidates"][0]["content"]["parts"])
-        except (http.HttpError, RuntimeError, KeyError, IndexError) as e:
-            errors.append(f"{model}: {str(e)[:80]}")
-    raise RuntimeError("no Gemini model worked. Tried " + "; ".join(errors) if errors else "no usable Gemini model found for this key")
+        except http.HttpError as e:
+            _BAD.add(model)
+            errors.append(f"{model}: HTTP {e.code} {e.body[:140]}")
+        except (RuntimeError, KeyError, IndexError) as e:
+            _BAD.add(model)
+            errors.append(f"{model}: {str(e)[:140]}")
+    raise RuntimeError(("no Gemini model worked. " + " | ".join(errors)) if errors else "no usable Gemini model found for this key")
 
 
 def _openrouter(prompt, json_mode):
@@ -120,6 +127,33 @@ def complete_json(prompt):
             LAST_ERROR = "model replied but not with valid JSON"
         return out
     except Exception as e:  # network/quota/bad key: caller falls back
-        LAST_ERROR = str(e)[:200]
+        LAST_ERROR = str(e)[:700]
         print(f"[warn] LLM call failed: {e}")
         return None
+
+
+def check():
+    """Diagnostics for `python -m scout llm-check`. Never prints keys."""
+    lines = [f"provider: {provider()}"]
+    if provider() != "gemini":
+        return lines + ["(only the Gemini check is implemented; set GEMINI_API_KEY)"]
+    key = os.environ["GEMINI_API_KEY"]
+    try:
+        r = http.request("GET", f"{GEMINI_BASE}/models", params={"pageSize": 200}, headers={"x-goog-api-key": key}, ttl=0)
+        names = [m["name"].removeprefix("models/") for m in r.get("models", []) if "generateContent" in m.get("supportedGenerationMethods", [])]
+        lines.append(f"models visible to this key supporting generateContent: {len(names)}")
+        lines.append("all: " + ", ".join(sorted(names)))
+    except http.HttpError as e:
+        return lines + [f"ListModels failed: HTTP {e.code} {e.body}"]
+    except RuntimeError as e:
+        return lines + [f"ListModels failed: {e}"]
+    for m in gemini_candidates(names):
+        try:
+            out = http.request("POST", f"{GEMINI_BASE}/models/{m}:generateContent", headers={"x-goog-api-key": key},
+                               json_body={"contents": [{"parts": [{"text": "Reply with the single word OK"}]}]}, ttl=0, retries=0, timeout=60)
+            lines.append(f"{m}: WORKS -> {out['candidates'][0]['content']['parts'][0].get('text', '')[:30]!r}")
+        except http.HttpError as e:
+            lines.append(f"{m}: HTTP {e.code} {e.body[:200]}")
+        except Exception as e:
+            lines.append(f"{m}: {str(e)[:200]}")
+    return lines

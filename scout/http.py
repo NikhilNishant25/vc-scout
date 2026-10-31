@@ -9,9 +9,17 @@ _conn = None
 
 
 class HttpError(RuntimeError):
-    def __init__(self, code, url):
-        super().__init__(f"HTTP {code} for {url}")
-        self.code = code
+    def __init__(self, code, url, body=""):
+        super().__init__(f"HTTP {code} for {url}" + (f": {body}" if body else ""))
+        self.code, self.body = code, body
+
+
+def _err_body(r):
+    try:
+        j = r.json()
+        return str((j.get("error") or {}).get("message") or j)[:300]
+    except Exception:
+        return r.text[:200]
 
 
 def _db():
@@ -31,7 +39,7 @@ def request(method, url, *, params=None, headers=None, json_body=None, auth=None
         if row and time.time() - row[1] < ttl:
             return json.loads(row[0])
     h = {"User-Agent": UA, **(headers or {})}
-    last = "unknown"
+    last, last_resp = "unknown", None
     for i in range(retries + 1):
         try:
             r = requests.request(method, url, params=params, headers=h, json=json_body,
@@ -41,19 +49,22 @@ def request(method, url, *, params=None, headers=None, json_body=None, auth=None
             time.sleep(1 + i)
             continue
         if r.status_code in (429, 500, 502, 503, 504):
-            last = f"HTTP {r.status_code}"
-            time.sleep(2 * (i + 1))
+            last, last_resp = f"HTTP {r.status_code}", (r.status_code, _err_body(r))
+            if i < retries:
+                time.sleep(2 * (i + 1))
             continue
         if text:
             val = {"status": r.status_code, "url": r.url, "text": r.text[:200000]}
         else:
             if r.status_code >= 400:
-                raise HttpError(r.status_code, url)
+                raise HttpError(r.status_code, url, _err_body(r))
             val = r.json()
         if ttl and (text or r.status_code < 400):
             _db().execute("insert or replace into kv values (?,?,?)", (key, json.dumps(val), time.time()))
             _db().commit()
         return val
+    if last_resp:
+        raise HttpError(last_resp[0], url, last_resp[1])
     raise RuntimeError(f"{method} {url} failed: {last}")
 
 

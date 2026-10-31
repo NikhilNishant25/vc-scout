@@ -19,6 +19,10 @@ jobs:
         with: {python-version: "3.12"}
       - run: pip install -r requirements.txt
       - run: python -m scout refresh-known || echo "known-company refresh failed (non-fatal)"
+      - name: LLM diagnostics (written to runs/llm-check.txt)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: mkdir -p runs && python -m scout llm-check > runs/llm-check.txt 2>&1 || true
       - name: Run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

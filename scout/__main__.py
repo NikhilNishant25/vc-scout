@@ -34,6 +34,11 @@ def cmd_rerun_all(a):
         pipeline.run(t, out, a.top, a.memos, a.verify_top)
 
 
+def cmd_llm_check(a):
+    from . import llm
+    print("\n".join(llm.check()))
+
+
 def main():
     p = argparse.ArgumentParser(prog="scout")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -52,6 +57,7 @@ def main():
     g = sub.add_parser("go"); common(g); g.set_defaults(fn=cmd_go)
     r = sub.add_parser("run"); r.add_argument("--thesis", required=True); common(r, spec=False); r.set_defaults(fn=cmd_run)
     ra = sub.add_parser("rerun-all"); common(ra, spec=False); ra.set_defaults(fn=cmd_rerun_all)
+    lc = sub.add_parser("llm-check"); lc.set_defaults(fn=cmd_llm_check)
     k = sub.add_parser("refresh-known"); k.set_defaults(fn=lambda a: print(f"known domains: {known.refresh()}"))
     a = p.parse_args()
     a.fn(a)
