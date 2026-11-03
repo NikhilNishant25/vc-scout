@@ -43,10 +43,24 @@ def run():
         return f"HTTP {r['status']}; paths mentioning 'dependent': {paths[:12]}"
     L.append(_try("ecosyste.ms openapi spec", eco_spec))
 
+    def eco_detail():
+        import yaml
+        spec = yaml.safe_load(http.request("GET", "https://packages.ecosyste.ms/docs/api/v1/openapi.yaml", text=True, ttl=0, retries=0)["text"])
+        out = []
+        for path in ("/registries/{registryName}/packages", "/registries/{registryName}/packages/{packageName}/dependent_packages"):
+            op = ((spec.get("paths") or {}).get(path) or {}).get("get") or {}
+            params = [(x.get("name") or x.get("$ref", "?")) for x in op.get("parameters", []) if isinstance(x, dict)]
+            sch = (((op.get("responses") or {}).get("200") or {}).get("content") or {}).get("application/json", {}).get("schema", {})
+            out.append(f"{path}\n    params={params}\n    200 schema={str(sch)[:160]}")
+        props = (((spec.get("components") or {}).get("schemas") or {}).get("Package") or {}).get("properties", {})
+        out.append("Package schema fields: " + ", ".join(list(props)[:45]))
+        return "\n  " + "\n  ".join(out)
+    L.append(_try("ecosyste.ms spec detail", eco_detail))
+
     def eco_dep():
-        r = http.request("GET", "https://packages.ecosyste.ms/api/v1/registries/npmjs.org/packages/react/dependent_packages", params={"per_page": 2}, ttl=0, retries=0)
-        return f"WORKS; type={type(r).__name__}; first item keys={sorted(r[0].keys())[:10] if isinstance(r, list) and r else r}"
-    L.append(_try("ecosyste.ms dependent_packages (guess)", eco_dep))
+        r = http.request("GET", "https://packages.ecosyste.ms/api/v1/registries/pypi.org/packages/instructor/dependent_packages", params={"per_page": 2}, ttl=0, retries=0, timeout=90)
+        return f"WORKS; type={type(r).__name__}; n={len(r) if isinstance(r, list) else '?'}; first item keys={sorted(r[0].keys())[:25] if isinstance(r, list) and r else r}"
+    L.append(_try("ecosyste.ms dependent_packages (pypi instructor)", eco_dep))
 
     def repos_eco():
         r = http.request("GET", "https://repos.ecosyste.ms/api/v1/hosts/GitHub/repositories/facebook%2Freact", ttl=0, retries=0)
@@ -68,7 +82,7 @@ def run():
                 res.append(f"{s}=ERR {str(e)[:40]}")
         L.append(f"job board {name}: " + ", ".join(res))
 
-    L.append(_try("yc directory mirror", lambda: (lambda d: f"{len(d)} companies; first keys={sorted(d[0].keys())[:10]}")(http.request("GET", "https://yc-oss.github.io/api/companies/all.json", ttl=0, retries=0, timeout=60))))
+    L.append(_try("yc directory mirror", lambda: (lambda d: f"{len(d)} companies; has website field={'website' in d[0]}; sample={str(d[0].get('website'))[:40]}")(http.request("GET", "https://yc-oss.github.io/api/companies/all.json", ttl=0, retries=0, timeout=60))))
 
     if os.getenv("PRODUCTHUNT_TOKEN"):
         def ph():
