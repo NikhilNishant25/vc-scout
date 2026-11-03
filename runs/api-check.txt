@@ -2,15 +2,23 @@ github rate limit: core 4880/5000, search 30/30
 hn algolia: 3 hits
 ecosyste.ms package (react): WORKS; keys present=repository_url,dependent_repos_count,dependent_packages_count,downloads,funding_links | missing=
 ecosyste.ms openapi spec: HTTP 200; paths mentioning 'dependent': ['/registries/{registryName}/packages/{packageName}/dependent_package_kinds', '/registries/{registryName}/packages/{packageName}/dependent_packages']
-ecosyste.ms dependent_packages (guess): ERROR GET https://packages.ecosyste.ms/api/v1/registries/npmjs.org/packages/react/dependent_packages failed: HTTPSConnectionPool(host='packages.ecosyste.ms', port=443): Read timed out. (read timeout=20)
+ecosyste.ms spec detail: 
+  /registries/{registryName}/packages
+    params=['registryName', 'page', 'per_page', 'created_after', 'updated_after', 'created_before', 'updated_before', 'critical', 'sort', 'order']
+    200 schema={}
+  /registries/{registryName}/packages/{packageName}/dependent_packages
+    params=['registryName', 'packageName', 'page', 'per_page', 'created_after', 'updated_after', 'sort', 'order', 'latest', 'kind']
+    200 schema={}
+  Package schema fields: id, name, ecosystem, description, homepage, licenses, normalized_licenses, repository_url, keywords_array, namespace, versions_count, first_release_published_at, latest_release_published_at, latest_release_number, latest_published_release_number, last_synced_at, created_at, updated_at, registry_url, documentation_url, install_command, metadata, repo_metadata, repo_metadata_updated_at, dependent_packages_count, downloads, downloads_period, dependent_repos_count, rankings, purl, advisories, versions_url, latest_version_url, version_numbers_url, dependent_packages_url, related_packages_url, codemeta_url, docker_usage_url, docker_dependents_count, docker_downloads_count, usage_url, dependent_repositories_url, status, funding_links, maintainers
+ecosyste.ms dependent_packages (pypi instructor): WORKS; type=list; n=2; first item keys=['advisories', 'codemeta_url', 'created_at', 'critical', 'dependent_packages_count', 'dependent_packages_url', 'dependent_repos_count', 'dependent_repositories_url', 'description', 'docker_dependents_count', 'docker_downloads_count', 'docker_usage_url', 'documentation_url', 'downloads', 'downloads_period', 'ecosystem', 'first_release_published_at', 'funding_links', 'homepage', 'id', 'install_command', 'issue_metadata', 'keywords_array', 'last_synced_at', 'latest_published_release_number']
 repos.ecosyste.ms repo (facebook/react): HTTP 404 {"error":"Repository not found"}
-job board greenhouse: stripe=744, airbnb=212, figma=145
+job board greenhouse: stripe=745, airbnb=212, figma=145
 job board lever: palantir=304, spotify=86, netflix=HTTP 404
-job board ashby: openai=807, ramp=168, notion=146
-yc directory mirror: 6362 companies; first keys=['all_locations', 'api', 'app_answers', 'app_video_public', 'batch', 'demo_day_video_public', 'former_names', 'id', 'industries', 'industry']
+job board ashby: openai=808, ramp=168, notion=146
+yc directory mirror: 6362 companies; has website field=True; sample=https://circuithub.com
 product hunt: WORKS; node keys=['createdAt', 'name', 'tagline', 'url', 'votesCount', 'website']; website sample=https://www.producthunt.com/r/Z4CS3GP3KI46YZ?utm_campaign=pr
 companies house: skipped (no COMPANIES_HOUSE_KEY)
-sec edgar: skipped (no SEC_USER_AGENT secret)
+sec edgar full-text: WORKS; 47 hits; source keys=['adsh', 'biz_locations', 'biz_states', 'ciks', 'display_names', 'file_date', 'file_description', 'file_num']
 hugging face api: HTTP 200; 2 models
 wayback cdx: rows=3
 gh archive file: HTTP 200 (first bytes only)
