@@ -1,0 +1,41 @@
+{
+  "thesis_id": "2026-11-03-ai-agent-infrastructure-pre-seed",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "signals": 216,
+      "maturity": "tested"
+    },
+    "hn": {
+      "status": "ok",
+      "signals": 367,
+      "maturity": "experimental"
+    },
+    "producthunt": {
+      "status": "ok",
+      "signals": 1,
+      "maturity": "experimental"
+    },
+    "companies_house": {
+      "status": "skipped",
+      "reason": "only for UK"
+    }
+  },
+  "signals": 584,
+  "companies": 565,
+  "verified_attempted": 40,
+  "filtered_out": 1,
+  "llm_status": "ok, model gemini-3.8-flash",
+  "review_queue": [
+    {
+      "a": "awesome-agents",
+      "b": "awesome-agent",
+      "ratio": 0.96
+    }
+  ],
+  "tiers": {
+    "Verified-operating": 0,
+    "Likely": 2,
+    "Unverified": 38
+  }
+}

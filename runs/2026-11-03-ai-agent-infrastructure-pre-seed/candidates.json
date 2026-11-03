@@ -1,0 +1,1203 @@
+[
+  {
+    "id": "53de6c19ae",
+    "name": "Hard Stop",
+    "domains": [
+      "arxiv.org"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "Xiangyue-Zhang/auto-deep-researcher-24x7",
+        "url": "https://github.com/Xiangyue-Zhang/auto-deep-researcher-24x7",
+        "domain": "arxiv.org",
+        "ts": "2026-04-08T04:48:26Z",
+        "data": {
+          "full_name": "Xiangyue-Zhang/auto-deep-researcher-24x7",
+          "stars": 1140,
+          "forks": 95,
+          "description": "\ud83d\udd25 An autonomous AI agent that runs your deep learning experiments 24/7 while you sleep. Zero-cost monitoring, Leader-Worker architecture, constant-size memory.",
+          "language": "Python",
+          "matched": "tool use"
+        }
+      },
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "DA2I2-SLM/Time-series-memory",
+        "url": "https://github.com/DA2I2-SLM/Time-series-memory",
+        "domain": "arxiv.org",
+        "ts": "2026-08-16T02:10:41Z",
+        "data": {
+          "full_name": "DA2I2-SLM/Time-series-memory",
+          "stars": 5,
+          "forks": 0,
+          "description": "Curated paper collection on memory in deep time-series models \u2014 companion to our survey.",
+          "language": null,
+          "matched": "agent state management"
+        }
+      },
+      {
+        "source": "hn",
+        "kind": "show_hn",
+        "name": "Hard Stop",
+        "url": "https://news.ycombinator.com/item?id=49844056",
+        "domain": "arxiv.org",
+        "ts": "2026-09-25T13:01:56Z",
+        "data": {
+          "title": "Show HN: Hard Stop: Kernel-level preemption for autonomous AI agents",
+          "points": 2,
+          "comments": 0,
+          "author": "joseluispino",
+          "hn_id": "49844056",
+          "matched": "autonomous agent"
+        }
+      },
+      {
+        "source": "hn",
+        "kind": "show_hn",
+        "name": "I built a tool showing how AI providers (should) throttle their models",
+        "url": "https://news.ycombinator.com/item?id=49448480",
+        "domain": "arxiv.org",
+        "ts": "2026-08-26T13:08:39Z",
+        "data": {
+          "title": "Show HN: I built a tool showing how AI providers (should) throttle their models",
+          "points": 3,
+          "comments": 0,
+          "author": "eliotho",
+          "hn_id": "49448480",
+          "matched": "agentic workflow"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 0,
+        "authors_30d": 0,
+        "errors": [],
+        "last_release": null,
+        "owner_followers": 101,
+        "owner_location": null,
+        "owner_blog": "www.xiangyuezhang.com",
+        "owner_company": null,
+        "readme_len": 43137,
+        "readme_excerpt": "<p align=\"center\">\n  <img src=\"assets/banner.png\" alt=\"Deep Researcher Agent\" width=\"700\"/>\n</p>\n\n<h1 align=\"center\">Deep Researcher Agent</h1>\n<h3 align=\"center\">24/7 Autonomous Deep Learning Experiment Agent</h3>\n\n<p align=\"center\">\n  <strong>An AI agent that autonomously runs your deep learning experiments 24/7 while you sleep.</strong>\n</p>\n\n<p align=\"center\">\n  <a href=\"README.md\">English</a> |\n  <a href=\"docs/README_CN.md\">\u4e2d\u6587</a> |\n  <a href=\"docs/README_JP.md\">\u65e5\u672c\u8a9e</a> |\n  <a href=\"docs/README_KR.md\">\ud55c\uad6d\uc5b4</a>\n</p>\n\n<p align=\"center\">\n  <a href=\"#quickstart\"><img src=\"https://img.shields.io/badge/-Quick_Start-blue?style=for-the-badge\" alt=\"Quick Start\"/></a>\n  <a href=\"docs/architecture.md\"><img src=\"https://img.shields.io/badge/-Architecture-orange?style=for-the-badge\" alt=\"Architecture\"/></a>\n</p>\n\n<p align=\"center\">\n  <img src=\"https://img.shields.io/badge/python-3.10+-blue.svg\" alt=\"Python\"/>\n  <img src=\"https://img.shields.io/badge/Claude_Code-compatible-blueviolet.svg\" alt=\"Claude Code\"/>\n  <img src=\"https://img.shields.io/badge/Codex_CLI-compatible-green.svg\" alt=\"Codex CLI\"/>\n  <img src=\"https://img.shields.io/badge/license-Apache_2.0-green.svg\" alt=\"License\"/>\n  <a href=\"https://github.com/Xiangyue-Zhang/auto-deep-researcher-24x7/stargazers\"><img src=\"https://img.shields.io/github/stars/Xiangyue-Zhang/auto-deep-researcher-24x7?color=yellow&logo=github&label=Stars\" alt=\"Stars\"/></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://arxiv.org/abs/2604.05854\"><img src=\"ht",
+        "archived": false,
+        "stars": 1140,
+        "age_days": 209,
+        "repo": "Xiangyue-Zhang/auto-deep-researcher-24x7",
+        "url": "https://github.com/Xiangyue-Zhang/auto-deep-researcher-24x7"
+      },
+      "site": {
+        "live": true,
+        "url": "https://arxiv.org/",
+        "title": "arXiv.org e-Print archive",
+        "parked": false,
+        "product": true,
+        "team": true,
+        "copyright_year": null
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: Xiangyue-Zhang/auto-deep-researcher-24x7",
+          "url": "https://github.com/Xiangyue-Zhang/auto-deep-researcher-24x7"
+        },
+        {
+          "label": "github: DA2I2-SLM/Time-series-memory",
+          "url": "https://github.com/DA2I2-SLM/Time-series-memory"
+        },
+        {
+          "label": "hn: Hard Stop",
+          "url": "https://news.ycombinator.com/item?id=49844056"
+        },
+        {
+          "label": "hn: I built a tool showing how AI providers (should) throttle their models",
+          "url": "https://news.ycombinator.com/item?id=49448480"
+        }
+      ],
+      "families": [
+        "github",
+        "hn"
+      ]
+    },
+    "tier": "Likely",
+    "confidence": 0.5,
+    "scores": {
+      "fit": 0.51,
+      "verification": 0.5,
+      "momentum": 0.502,
+      "stealth": 0.561
+    },
+    "rank_score": 0.5067,
+    "flags": []
+  },
+  {
+    "id": "774cd382ad",
+    "name": "awesome-agent-cortex",
+    "domains": [
+      "nyk.dev"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "0xNyk/awesome-agent-cortex",
+        "url": "https://github.com/0xNyk/awesome-agent-cortex",
+        "domain": "nyk.dev",
+        "ts": "2026-03-07T19:16:47Z",
+        "data": {
+          "full_name": "0xNyk/awesome-agent-cortex",
+          "stars": 231,
+          "forks": 117,
+          "description": "Curated map of AI agent frameworks, protocols, runtimes, skills, memory, identity, security, evaluation, and commerce.",
+          "language": "JavaScript",
+          "matched": "agent orchestration framework"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 0,
+        "authors_30d": 0,
+        "errors": [],
+        "last_release": null,
+        "owner_followers": 616,
+        "owner_location": null,
+        "owner_blog": "https://nyk.dev",
+        "owner_company": "@builderz-labs",
+        "readme_len": 51641,
+        "readme_excerpt": "# Awesome Agent Cortex [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)\n\n<p align=\"center\">\n  <img src=\"public/readme/agent-cortex-hero.jpeg\" alt=\"Awesome Agent Cortex maps the sovereign agent stack\" width=\"960\">\n</p>\n\n<p align=\"center\">\n  <strong>A curated map of the tools, memory systems, identity rails, and operational patterns behind capable AI agents.</strong>\n</p>\n\n<p align=\"center\">\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-CC0-FF6A2A.svg\" alt=\"CC0 license\"></a>\n  <a href=\"https://github.com/0xNyk/awesome-agent-cortex/actions/workflows/docs-health.yml\"><img src=\"https://github.com/0xNyk/awesome-agent-cortex/actions/workflows/docs-health.yml/badge.svg\" alt=\"Documentation health\"></a>\n  <a href=\"https://github.com/0xNyk/awesome-agent-cortex\"><img src=\"https://img.shields.io/github/stars/0xNyk/awesome-agent-cortex\" alt=\"GitHub stars\"></a>\n</p>\n\n---\n\nAwesome Agent Cortex connects the layers that ordinary framework lists leave apart: agent runtimes, coding tools, MCP, evaluation, memory, knowledge graphs, on-chain identity, payments, security, and observability. Use it to find one component or to understand how the pieces fit into a complete agent system.\n\n![Navigate the directory through build, operate, remember, and own](public/readme/find-your-layer.jpeg)\n\nChoose a route from the contents below:\n\n- **Build:** frameworks, coding agents, MCP, skills, and prompt systems.\n- **Operate:** runtimes, harnessing, evaluation, security, and ob",
+        "archived": false,
+        "stars": 231,
+        "age_days": 241,
+        "repo": "0xNyk/awesome-agent-cortex",
+        "url": "https://github.com/0xNyk/awesome-agent-cortex"
+      },
+      "site": {
+        "live": true,
+        "url": "https://www.nyk.dev/",
+        "title": "Reliability Audit for production coding agents \u00b7 nyk",
+        "parked": false,
+        "product": true,
+        "team": true,
+        "copyright_year": 2026
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: 0xNyk/awesome-agent-cortex",
+          "url": "https://github.com/0xNyk/awesome-agent-cortex"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Likely",
+    "confidence": 0.45,
+    "scores": {
+      "fit": 0.58,
+      "verification": 0.45,
+      "momentum": 0.08,
+      "stealth": 0.662
+    },
+    "rank_score": 0.4193,
+    "flags": []
+  },
+  {
+    "id": "45113d5354",
+    "name": "odek",
+    "domains": [
+      "21no.de"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "BackendStack21/odek",
+        "url": "https://github.com/BackendStack21/odek",
+        "domain": "21no.de",
+        "ts": "2026-05-17T15:22:46Z",
+        "data": {
+          "full_name": "BackendStack21/odek",
+          "stars": 10,
+          "forks": 0,
+          "description": "Minimal Go autonomous agent runtime \u2014 One binary. One loop. Zero frameworks. ReAct (Reasoning + Acting + Verify)",
+          "language": "Go",
+          "matched": "autonomous agent runtime"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 40,
+        "authors_30d": 2,
+        "errors": [],
+        "last_release": "2026-10-30T11:22:47Z",
+        "owner_followers": 34,
+        "owner_location": "Germany",
+        "owner_blog": "https://21no.de",
+        "owner_company": null,
+        "readme_len": 18864,
+        "readme_excerpt": "# odek\n\n**Minimal Go autonomous agent runtime \u2014 tiny dep tree, small static binary, instant startup.**\n\nOne binary. One loop. Zero frameworks. ReAct (Reasoning + Acting) \u2014 think, therefore act.\n\n```bash\n# One-line install (macOS/Linux, checksum-verified prebuilt binary):\ncurl -fsSL https://odek.21no.de/install.sh | sh\n\n# Or install from a v2 release tag (requires Go \u2265 1.25.13 \u2014 see GETTING_STARTED.md).\n# Do not use @latest: Go ignores v2 tags on this module path and would\n# install an older v1 release.\ngo install github.com/BackendStack21/odek/cmd/odek@v2.11.2\n\n# Use (provider env key \u2014 DEEPSEEK_API_KEY for the default provider)\nexport DEEPSEEK_API_KEY=sk-...\nodek run \"How many lines in go.mod?\"\n# \u2192 3 lines\n```\n\n**Build requirements:** Go **1.25.13 or newer**. The `go` directive in `go.mod` pins this floor because earlier 1.25.x toolchains ship reachable standard-library CVEs; CI additionally runs `govulncheck` on every push/PR so new advisories fail the build.\n\n**New here?** The step-by-step install guide \u2014 including the GLM 5.3 Flash (z.ai) setup and the optional bodek TUI \u2014 lives in [GETTING_STARTED.md](GETTING_STARTED.md).\n\n---\n\n## Why odek\n\nodek is not a framework. It's a **runtime** \u2014 the smallest possible surface area between an LLM and your tools.\n\n| | odek | Python agents (LangChain, CrewAI, etc.) |\n|---|---|---|\n| Dependencies | **6.** 3\u00d7 21no.de, 3\u00d7 golang.org/x | 200+ packages |\n| Binary size | ~15 MB static | 50-200 MB with venv |\n| Startup | **Instant** | 2-10s ",
+        "archived": false,
+        "stars": 10,
+        "age_days": 170,
+        "repo": "BackendStack21/odek",
+        "url": "https://github.com/BackendStack21/odek"
+      },
+      "site": {
+        "live": true,
+        "url": "https://21no.de/",
+        "title": "21no.de \u00e2\u0080\u0094 AI &amp; Systems Research Lab",
+        "parked": false,
+        "product": true,
+        "team": false,
+        "copyright_year": 2026
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: BackendStack21/odek",
+          "url": "https://github.com/BackendStack21/odek"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.35,
+    "scores": {
+      "fit": 0.89,
+      "verification": 0.35,
+      "momentum": 0.355,
+      "stealth": 0.851
+    },
+    "rank_score": 0.6092,
+    "flags": []
+  },
+  {
+    "id": "9b8cfe06ce",
+    "name": "mate",
+    "domains": [
+      "antonijevic.rs"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "antiv/mate",
+        "url": "https://github.com/antiv/mate",
+        "domain": "antonijevic.rs",
+        "ts": "2026-02-27T21:02:40Z",
+        "data": {
+          "full_name": "antiv/mate",
+          "stars": 95,
+          "forks": 22,
+          "description": "Production-ready multi-agent orchestration engine built on Google ADK. Database-driven agent config, 50+ LLM providers, MCP protocol, persistent memory, web dashboard, RBAC.",
+          "language": "Python",
+          "matched": "multi-agent orchestration engine"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 100,
+        "authors_30d": 12,
+        "errors": [],
+        "last_release": "2026-10-31T09:18:55Z",
+        "owner_followers": 5,
+        "owner_location": null,
+        "owner_blog": "",
+        "owner_company": null,
+        "readme_len": 26590,
+        "readme_excerpt": "<div align=\"center\">\n\n# MATE \u2014 The Command Center for AI Agents\n\n**Change the prompt, the model or who may use an agent from a dashboard \u2014 no code change, no redeploy.**<br>\nSelf-hosted, on Google ADK or LangGraph, with any of 50+ LLM providers.\n\n[![Release](https://img.shields.io/github/v/release/antiv/mate)](https://github.com/antiv/mate/releases)\n[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)\n[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)\n[![Google ADK](https://img.shields.io/badge/Google-ADK-orange.svg)](https://github.com/google/adk-python)\n[![LangGraph](https://img.shields.io/badge/LangGraph-supported-1C3C3C.svg)](https://github.com/langchain-ai/langgraph)\n[![LiteLLM](https://img.shields.io/badge/LiteLLM-50%2B%20providers-purple.svg)](https://github.com/BerriAI/litellm)\n[![MCP](https://img.shields.io/badge/MCP-compatible-brightgreen.svg)](https://modelcontextprotocol.io/)\n[![MCP Badge](https://lobehub.com/badge/mcp/antiv-mate)](https://lobehub.com/mcp/antiv-mate)\n\n[**Live demo**](#try-it-without-installing-anything) \u00b7 [**Quick Start**](#quick-start) \u00b7 [**Docs**](docs/README.md) \u00b7 [**Changelog**](CHANGELOG.md)\n\n![The MATE Visual Builder: an agent hierarchy with its tools, edited on a canvas](documents/images/visual_builder.png)\n\n</div>\n\n**Run it in one command:**\n\n```bash\ndocker run -d -p 8000:8000 -e AUTH_PASSWORD=change-me -e GOOGLE_API_KEY=your-key ghcr.io/antiv/m",
+        "archived": false,
+        "stars": 95,
+        "age_days": 248,
+        "repo": "antiv/mate",
+        "url": "https://github.com/antiv/mate"
+      },
+      "site": {
+        "live": true,
+        "url": "https://antonijevic.rs/",
+        "title": "Ant BioCode \u00e2\u0080\u0094 Softverska re\u00c5\u00a1enja i AI konsalting",
+        "parked": false,
+        "product": false,
+        "team": false,
+        "copyright_year": 2026
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: antiv/mate",
+          "url": "https://github.com/antiv/mate"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.15,
+    "scores": {
+      "fit": 0.86,
+      "verification": 0.15,
+      "momentum": 0.382,
+      "stealth": 0.717
+    },
+    "rank_score": 0.5462,
+    "flags": []
+  },
+  {
+    "id": "e996678b07",
+    "name": "agent-infrastructure-landscape",
+    "domains": [],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "MrPeppersDev/agent-infrastructure-landscape",
+        "url": "https://github.com/MrPeppersDev/agent-infrastructure-landscape",
+        "domain": null,
+        "ts": "2026-05-06T06:32:13Z",
+        "data": {
+          "full_name": "MrPeppersDev/agent-infrastructure-landscape",
+          "stars": 7,
+          "forks": 0,
+          "description": "AI agent memory & infrastructure landscape \u2014 comparative catalog of 912 systems \u00d7 68 columns covering memory layers, agent frameworks, runtimes, vector stores, knowledge graphs, MCP servers, benchmarks. Searchable with typed edges, lineages, citations.",
+          "language": "HTML",
+          "matched": "agent memory infrastructure"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 100,
+        "authors_30d": 3,
+        "errors": [],
+        "last_release": "2026-05-19T19:44:04Z",
+        "owner_followers": 0,
+        "owner_location": "Spawn Beach",
+        "owner_blog": "",
+        "owner_company": null,
+        "readme_len": 11612,
+        "readme_excerpt": "# AI Agent Infrastructure Landscape\n\n**An analysis tool for the AI agent stack. Work out what's best for the agent or multi-agent system you're building, with a citation behind every claim.**\n\n- **Build a stack:** describe the product; get one cited pick per layer (framework, model, gateway, memory, vector/graph store, tools and auth, sandbox, guardrails, observability), the runners-up and why not, integrations, risk, OWASP coverage, cost and a `stack.yml`.\n- **Choose one layer:** memory, framework or data store.\n- **Check a stack you run:** archived, acquired or stale dependencies, with replacements that fit the rest of your stack.\n\nUnderneath is an open, comparative catalog of **1,000 systems** across the agent stack. Every cell links to the source it came from and carries a verifiability tier. Bots keep it fresh, and anyone can submit a missing system.\n\n**[Build a stack \u2192](https://mrpeppersdev.github.io/agent-infrastructure-landscape/build)** \u00b7 [Check your stack](https://mrpeppersdev.github.io/agent-infrastructure-landscape/check) \u00b7 [Choose a component](https://mrpeppersdev.github.io/agent-infrastructure-landscape/choose) \u00b7 [Browse the catalog](https://mrpeppersdev.github.io/agent-infrastructure-landscape/) \u00b7 [Findings](https://mrpeppersdev.github.io/agent-infrastructure-landscape/findings) \u00b7 [Submit a system](https://mrpeppersdev.github.io/agent-infrastructure-landscape/submit) \u00b7 [Raw data (CC-BY-4.0)](./data/landscape.json)\n\n## Five catalogs in one dataset\n\nThe catalog i",
+        "archived": false,
+        "stars": 7,
+        "age_days": 181,
+        "repo": "MrPeppersDev/agent-infrastructure-landscape",
+        "url": "https://github.com/MrPeppersDev/agent-infrastructure-landscape"
+      },
+      "site": {
+        "live": false,
+        "reason": "no domain found"
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: MrPeppersDev/agent-infrastructure-landscape",
+          "url": "https://github.com/MrPeppersDev/agent-infrastructure-landscape"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.15,
+    "scores": {
+      "fit": 0.83,
+      "verification": 0.15,
+      "momentum": 0.353,
+      "stealth": 0.871
+    },
+    "rank_score": 0.531,
+    "flags": []
+  },
+  {
+    "id": "db0ff174da",
+    "name": "spawnfile",
+    "domains": [
+      "spawnfile.com"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "noopolis/spawnfile",
+        "url": "https://github.com/noopolis/spawnfile",
+        "domain": "spawnfile.com",
+        "ts": "2026-03-22T00:22:13Z",
+        "data": {
+          "full_name": "noopolis/spawnfile",
+          "stars": 9,
+          "forks": 1,
+          "description": "A spec and compiler for autonomous agent runtimes and agentic organizations. Write your agent once, compile for any runtime",
+          "language": "TypeScript",
+          "matched": "autonomous agent runtime"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 100,
+        "authors_30d": 1,
+        "errors": [],
+        "last_release": "2026-11-03T01:25:11Z",
+        "owner_followers": 1,
+        "owner_location": "Argentina",
+        "owner_blog": "https://noopolis.ai",
+        "owner_company": null,
+        "readme_len": 6107,
+        "readme_excerpt": "# Spawnfile\n\n> Write your agent team once. Compile it for different runtimes.\n\n<p align=\"center\">\n  <a href=\"https://www.npmjs.com/package/spawnfile\"><img src=\"https://img.shields.io/npm/v/spawnfile?style=flat-square&color=d4604a&label=npm\" alt=\"npm\"></a>\n  <a href=\"https://www.npmjs.com/package/spawnfile\"><img src=\"https://img.shields.io/npm/dm/spawnfile?style=flat-square&color=d4604a\" alt=\"downloads\"></a>\n  <a href=\"#try-it\"><img src=\"https://img.shields.io/node/v/spawnfile?style=flat-square&color=d4604a\" alt=\"node\"></a>\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/npm/l/spawnfile?style=flat-square&color=d4604a\" alt=\"MIT\"></a>\n  <a href=\"https://spawnfile.com\"><img src=\"https://img.shields.io/website?url=https%3A%2F%2Fspawnfile.com&style=flat-square&label=spawnfile.com&color=d4604a\" alt=\"website\"></a>\n</p>\n\n<p align=\"center\">\n  <img src=\"website/public/new-claw-images.png\" alt=\"Spawnfile compiles one agent source into multiple runtimes\" width=\"420\" />\n</p>\n\nDescribe your agents, give them identities and tools, and keep the whole team in one source project. Spawnfile compiles that project into the configuration and workspaces their runtimes need, then builds and deploys it with Docker.\n\n```text\nSpawnfile + workspace \u2500\u2192 compile \u2500\u2192 runtime files\n```\n\n## Try it\n\nStart with one agent. Requires **Node.js 22.19+**; compilation needs no Docker or model credentials.\n\n```bash\nnpm install -g spawnfile\nspawnfile init my-agent\ncd my-agent\nspawnfile validate\nspawnfile compile\n```",
+        "archived": false,
+        "stars": 9,
+        "age_days": 226,
+        "repo": "noopolis/spawnfile",
+        "url": "https://github.com/noopolis/spawnfile"
+      },
+      "site": {
+        "live": true,
+        "url": "https://spawnfile.com/",
+        "title": "AI Agent Configuration &amp; Runtime Compiler | Spawnfile",
+        "parked": false,
+        "product": true,
+        "team": false,
+        "copyright_year": null
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: noopolis/spawnfile",
+          "url": "https://github.com/noopolis/spawnfile"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.35,
+    "scores": {
+      "fit": 0.64,
+      "verification": 0.35,
+      "momentum": 0.353,
+      "stealth": 0.857
+    },
+    "rank_score": 0.4979,
+    "flags": []
+  },
+  {
+    "id": "23d0455e5d",
+    "name": "singular-lite",
+    "domains": [
+      "xiper.ai"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "xiperinc/singular-lite",
+        "url": "https://github.com/xiperinc/singular-lite",
+        "domain": null,
+        "ts": "2026-06-10T18:42:16Z",
+        "data": {
+          "full_name": "xiperinc/singular-lite",
+          "stars": 40,
+          "forks": 1,
+          "description": "Autonomous multi-agent orchestration engine for software repos \u2014 L0/L1/L2 agents, leases, gates, audits, git-worktree isolation. Detached dispatch by default. GPL-3.0.",
+          "language": "Shell",
+          "matched": "multi-agent orchestration engine"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 1,
+        "authors_30d": 1,
+        "errors": [],
+        "last_release": null,
+        "owner_followers": 3,
+        "owner_location": "Switzerland",
+        "owner_blog": "https://www.xiper.ai",
+        "owner_company": null,
+        "readme_len": 75225,
+        "readme_excerpt": "https://github.com/user-attachments/assets/826bf112-645b-4293-8b63-cf1c8ad6038b\n\n# singular\n\n**Autonomous multi-agent orchestration for software repos. One engine, many consumers.**\n\nsingular is a bash + Python orchestration engine that drives autonomous AI coding agents\nin parallel against a repository. It implements a three-tier scheduling model\n(L0 scheduler \u2192 L1 drivers \u2192 L2 worker agents) with durable leases, state packets,\ngate/audit pipelines, and git-worktree isolation. The engine is installed once per machine\nand pinned per consumer repo \u2014 improvements propagate by bumping a version pin, not by\nre-copying scripts.\n\n## How it works\n\n### Scheduling tiers\n\n| Tier | Role |\n| --- | --- |\n| **L0 origin** | Bash control loop (`autonomate.sh` / `reconcile.sh`), not a model agent. Imports packets, recovers leases, integrates completed work, schedules planning and dispatch, and writes snapshots. |\n| **L1 drivers** | Bash orchestration: `l1-plan-node.sh` invokes a model planner for a DAG node and stages its proposals; `l1-drive.sh` drives one task through worker, gate, audit and bounded recovery. L1 is not itself a persistent model agent. |\n| **L2 workers** | Execute a single task in an isolated git worktree on a per-task branch. Produce a state packet (owned files, changes, evidence). An auditor reviews the packet; the decider routes the outcome. |\n\n### Reconcile cycle\n\nEach `singular reconcile --actuate` runs:\n\n1. **Import** \u2014 validate and import completed state packets from ",
+        "archived": false,
+        "stars": 40,
+        "age_days": 146,
+        "repo": "xiperinc/singular-lite",
+        "url": "https://github.com/xiperinc/singular-lite"
+      },
+      "site": {
+        "live": true,
+        "url": "https://www.xiper.ai/",
+        "title": "Xiper: Deliver FPGA faster",
+        "parked": false,
+        "product": true,
+        "team": false,
+        "copyright_year": null
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: xiperinc/singular-lite",
+          "url": "https://github.com/xiperinc/singular-lite"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.35,
+    "scores": {
+      "fit": 0.83,
+      "verification": 0.35,
+      "momentum": 0.032,
+      "stealth": 0.77
+    },
+    "rank_score": 0.4959,
+    "flags": [
+      "domain-from-owner-blog"
+    ]
+  },
+  {
+    "id": "e85dfe0287",
+    "name": "Distributed, deterministically secure agentic swarm runtime. Enclawed",
+    "domains": [
+      "zenodo.org"
+    ],
+    "signals": [
+      {
+        "source": "hn",
+        "kind": "show_hn",
+        "name": "Distributed, deterministically secure agentic swarm runtime. Enclawed",
+        "url": "https://news.ycombinator.com/item?id=50215552",
+        "domain": "zenodo.org",
+        "ts": "2026-10-23T21:23:33Z",
+        "data": {
+          "title": "Show HN: Distributed, deterministically secure agentic swarm runtime. Enclawed",
+          "points": 1,
+          "comments": 0,
+          "author": "enclawed",
+          "hn_id": "50215552",
+          "matched": "secure agent"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {},
+      "site": {
+        "live": true,
+        "url": "https://zenodo.org/",
+        "title": "Zenodo",
+        "parked": false,
+        "product": true,
+        "team": false,
+        "copyright_year": null
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "hn: Distributed, deterministically secure agentic swarm runtime. Enclawed",
+          "url": "https://news.ycombinator.com/item?id=50215552"
+        }
+      ],
+      "families": [
+        "hn"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.35,
+    "scores": {
+      "fit": 0.8,
+      "verification": 0.35,
+      "momentum": 0.001,
+      "stealth": 0.999
+    },
+    "rank_score": 0.4831,
+    "flags": []
+  },
+  {
+    "id": "53be593ba7",
+    "name": "Collaborative-Ai-Agent-Orchestration",
+    "domains": [],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "Manirider/Collaborative-Ai-Agent-Orchestration",
+        "url": "https://github.com/Manirider/Collaborative-Ai-Agent-Orchestration",
+        "domain": null,
+        "ts": "2026-10-16T08:32:55Z",
+        "data": {
+          "full_name": "Manirider/Collaborative-Ai-Agent-Orchestration",
+          "stars": 4,
+          "forks": 0,
+          "description": "Production minded asynchronous multi-agent orchestration framework using LangGraph, FastAPI, Celery, Redis, PostgreSQL, and Docker.",
+          "language": "Python",
+          "matched": "multi-agent orchestration engine"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 2,
+        "authors_30d": 1,
+        "errors": [],
+        "last_release": null,
+        "owner_followers": 14,
+        "owner_location": null,
+        "owner_blog": " https://portfolio-web-rho-nine.vercel.app/",
+        "owner_company": null,
+        "readme_len": 17332,
+        "readme_excerpt": "# Collaborative AI Agent Orchestration Framework\n\n<p align=\"center\">\n  <img src=\"https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.14-3776AB?style=for-the-badge&logo=python&logoColor=white\" alt=\"Python Version\" />\n  <img src=\"https://img.shields.io/badge/LangGraph-v0.2+-FF6F00?style=for-the-badge&logo=langchain&logoColor=white\" alt=\"LangGraph\" />\n  <img src=\"https://img.shields.io/badge/FastAPI-0.104+-009688?style=for-the-badge&logo=fastapi&logoColor=white\" alt=\"FastAPI\" />\n  <img src=\"https://img.shields.io/badge/Celery-5.3+-37814A?style=for-the-badge&logo=celery&logoColor=white\" alt=\"Celery\" />\n  <img src=\"https://img.shields.io/badge/PostgreSQL-16+-4169E1?style=for-the-badge&logo=postgresql&logoColor=white\" alt=\"PostgreSQL\" />\n  <img src=\"https://img.shields.io/badge/Redis-7+-DC382D?style=for-the-badge&logo=redis&logoColor=white\" alt=\"Redis\" />\n  <img src=\"https://img.shields.io/badge/Tests-36%20Passed-2EA44F?style=for-the-badge&logo=pytest&logoColor=white\" alt=\"Test Status\" />\n</p>\n\nAn enterprise-grade, stateful multi-agent orchestration engine built with **LangGraph**, **FastAPI**, **Celery**, **PostgreSQL**, **Redis**, and **WebSockets**.\n\nThis system coordinates specialized autonomous agents through end-to-end research, draft synthesis, and human-in-the-loop validation pipelines. It features durable PostgreSQL checkpointing, atomic row-level concurrency protection, zero-data-loss audit telemetry, and instant initial-state WebSocket streaming.\n\n## Table of",
+        "archived": false,
+        "stars": 4,
+        "age_days": 18,
+        "repo": "Manirider/Collaborative-Ai-Agent-Orchestration",
+        "url": "https://github.com/Manirider/Collaborative-Ai-Agent-Orchestration"
+      },
+      "site": {
+        "live": false,
+        "reason": "no domain found"
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: Manirider/Collaborative-Ai-Agent-Orchestration",
+          "url": "https://github.com/Manirider/Collaborative-Ai-Agent-Orchestration"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.15,
+    "scores": {
+      "fit": 0.83,
+      "verification": 0.15,
+      "momentum": 0.036,
+      "stealth": 0.9
+    },
+    "rank_score": 0.45,
+    "flags": []
+  },
+  {
+    "id": "f00ff88bc7",
+    "name": "Nerya",
+    "domains": [],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "NeryaAI/Nerya",
+        "url": "https://github.com/NeryaAI/Nerya",
+        "domain": null,
+        "ts": "2026-05-01T06:55:47Z",
+        "data": {
+          "full_name": "NeryaAI/Nerya",
+          "stars": 14,
+          "forks": 5,
+          "description": "Skill-first, trading-native, self-evolving autonomous agent runtime for AgentNetwork workflows.",
+          "language": "Python",
+          "matched": "autonomous agent runtime"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 47,
+        "authors_30d": 1,
+        "errors": [],
+        "last_release": "2026-09-27T15:33:32Z",
+        "owner_followers": 0,
+        "owner_location": null,
+        "owner_blog": "",
+        "owner_company": null,
+        "readme_len": 10236,
+        "readme_excerpt": "<div align=\"center\">\n\n<img src=\"branding/logo.png\" alt=\"Nerya\" width=\"88\" />\n\n# Nerya\n\n### One idea. A team to build it.\n\nYour local Agent strategy workspace \u2014 research, build, backtest and review in one conversation.\n\n**1.0.0 Beta** \u00b7 `1.0.0-beta.1`\n\n[English](README.md) \u00b7 [\u7b80\u4f53\u4e2d\u6587](README.zh-CN.md)\n\n[Website](https://neryaai.github.io/) \u00b7 [Documentation](https://neryaai.github.io/docs.html) \u00b7 [Desktop downloads](https://github.com/NeryaAI/Nerya/releases) \u00b7 [Build status](https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml)\n\n[![Desktop CI](https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml/badge.svg)](https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml)\n[![Version](https://img.shields.io/badge/version-1.0.0--beta.1-7961e8)](VERSION)\n[![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue)](LICENSE)\n\n</div>\n\nDescribe your trading idea and its constraints. Nerya brings researchers, strategy authors and reviewers into the same workspace. Follow the tools as they run, inspect the evidence, open the strategy and backtest details, and decide what happens next.\n\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"branding/screenshots/1.0.0-beta/strategy-en-dark.gif\" />\n  <img src=\"branding/screenshots/1.0.0-beta/strategy-en-light.gif\" alt=\"Nerya strategy conversation and workflow, English\" width=\"100%\" />\n</picture>\n\n*Recorded from the website's isolated product tour. It uses example data, not a live account or veri",
+        "archived": false,
+        "stars": 14,
+        "age_days": 186,
+        "repo": "NeryaAI/Nerya",
+        "url": "https://github.com/NeryaAI/Nerya"
+      },
+      "site": {
+        "live": false,
+        "reason": "no domain found"
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: NeryaAI/Nerya",
+          "url": "https://github.com/NeryaAI/Nerya"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.15,
+    "scores": {
+      "fit": 0.64,
+      "verification": 0.15,
+      "momentum": 0.356,
+      "stealth": 0.832
+    },
+    "rank_score": 0.446,
+    "flags": []
+  },
+  {
+    "id": "8d474bf324",
+    "name": "duoduo",
+    "domains": [
+      "openduo.ai"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "openduo/duoduo",
+        "url": "https://github.com/openduo/duoduo",
+        "domain": "openduo.ai",
+        "ts": "2026-03-05T03:55:34Z",
+        "data": {
+          "full_name": "openduo/duoduo",
+          "stars": 10,
+          "forks": 4,
+          "description": "duoduo \u2014 autonomous agent runtime",
+          "language": "HTML",
+          "matched": "autonomous agent runtime"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 26,
+        "authors_30d": 1,
+        "errors": [],
+        "last_release": "2026-10-30T03:11:31Z",
+        "owner_followers": 11,
+        "owner_location": null,
+        "owner_blog": "https://openduo.ai",
+        "owner_company": null,
+        "readme_len": 13564,
+        "readme_excerpt": "# duoduo\n\n**A model call ends. The work shouldn't.**\n\n[![npm](https://img.shields.io/npm/v/@openduo/duoduo)](https://www.npmjs.com/package/@openduo/duoduo)\n\nDuoDuo is a long-lived local runtime for Claude, Codex, Grok, and Pi. Conversations, jobs, outputs, and prompts live in files on your machine. Foreground sessions handle live work; a scheduled subconscious distills experience into an intuition layer that every new session starts with, kept in Git so every change to what DuoDuo has learned has a diff and a revert.\n\nDuoDuo is not another harness. Claude, Codex, Grok, and Pi are the harnesses, and they keep improving; DuoDuo is the environment that gives them durable state, time, channels, and a Git-tracked history. Talk to it from any channel you plug in: a chat app, a room, a button in your pocket, or another assistant that becomes DuoDuo through Tether.\n\nSite and documentation: [openduo.ai](https://openduo.ai).\n\n## Why Not Open Source?\n\nFirst: we are called **open**duo and we don't publish source either. Respect to OpenAI.\n\nThe real reason: **this codebase is not written for humans to read.**\n\nduoduo is an agent that codes itself. The published npm packages contain minified JavaScript. An agent can read, understand, and modify minified code just fine \u2014 it doesn't need pretty source with comments and indentation. Minification here isn't obfuscation; it's compression. Saves bandwidth. Keeps the context window lean.\n\nHumans don't need to read the source. Humans need to **vib",
+        "archived": false,
+        "stars": 10,
+        "age_days": 243,
+        "repo": "openduo/duoduo",
+        "url": "https://github.com/openduo/duoduo"
+      },
+      "site": {
+        "live": true,
+        "url": "https://openduo.ai/",
+        "title": "DuoDuo: The AI Agent That Keeps Working for You | OpenDuo",
+        "parked": false,
+        "product": false,
+        "team": false,
+        "copyright_year": null
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: openduo/duoduo",
+          "url": "https://github.com/openduo/duoduo"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.15,
+    "scores": {
+      "fit": 0.67,
+      "verification": 0.15,
+      "momentum": 0.231,
+      "stealth": 0.851
+    },
+    "rank_score": 0.4276,
+    "flags": []
+  },
+  {
+    "id": "19432ca4d6",
+    "name": "netops-ai-agent",
+    "domains": [],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "mahfuz-raihan/netops-ai-agent",
+        "url": "https://github.com/mahfuz-raihan/netops-ai-agent",
+        "domain": null,
+        "ts": "2026-04-10T20:35:46Z",
+        "data": {
+          "full_name": "mahfuz-raihan/netops-ai-agent",
+          "stars": 2,
+          "forks": 0,
+          "description": "An autonomous, AI-driven Security Operations Center (SOC). Uses FastAPI, PyTorch, local LLMs (Ollama), and the OpenClaw agent framework to detect anomalies and autonomously deploy firewall defenses via a Human-in-the-Loop dashboard.",
+          "language": "Python",
+          "matched": "secure agent sandbox"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 0,
+        "authors_30d": 0,
+        "errors": [],
+        "last_release": null,
+        "owner_followers": 19,
+        "owner_location": "Bangladesh",
+        "owner_blog": "https://mahfuz-raihan.netlify.app/",
+        "owner_company": "Brain Station 23",
+        "readme_len": 11525,
+        "readme_excerpt": "# Morpheus: Autonomous Security Operations Center\n## Dashboard Preview\n\n![Morpheus Dashboard](assets/dashboard.png)\n\n> A containerized, AI-driven SOC platform that autonomously monitors network traffic, detects anomalies with deep learning, and executes closed-loop firewall defenses through an agentic reasoning pipeline with full Human-in-the-Loop (HITL) oversight.\n\n---\n\n## Table of Contents\n\n- [Project Description](#project-description)\n- [Key Features](#key-features)\n- [System Design Pattern](#system-design-pattern)\n- [Tech Stack](#tech-stack)\n- [How to Run Locally](#how-to-run-locally)\n- [Testing](#testing)\n\n---\n\n## Project Description\n\n**Morpheus** is a production-grade, containerized Continuous Threat Exposure Management (CTEM) platform. It autonomously ingests network log streams, classifies threats using a zero-shot deep learning model, synthesizes contextual forensic intelligence via LLM, and enforces live firewall defenses through a secure, sandboxed Agent Gateway.\n\nThe system is built around a **dual-path mitigation model**: threats can be automatically neutralized when Autonomous Shielding thresholds are breached, or queued for manual approval by a security engineer through the SOC Dashboard or Discord ChatOps channel.\n\nEvery stage of the pipeline is protected by a multi-layer guardrail system that enforces prompt injection protection, PII scrubbing, IP validation, command injection sanitization, and action rate-limiting.\n\n---\n\n## Key Features\n\n| Feature           ",
+        "archived": false,
+        "stars": 2,
+        "age_days": 207,
+        "repo": "mahfuz-raihan/netops-ai-agent",
+        "url": "https://github.com/mahfuz-raihan/netops-ai-agent"
+      },
+      "site": {
+        "live": false,
+        "reason": "no domain found"
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: mahfuz-raihan/netops-ai-agent",
+          "url": "https://github.com/mahfuz-raihan/netops-ai-agent"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.0,
+    "scores": {
+      "fit": 0.86,
+      "verification": 0.0,
+      "momentum": 0.001,
+      "stealth": 0.932
+    },
+    "rank_score": 0.4166,
+    "flags": []
+  },
+  {
+    "id": "b6ad699473",
+    "name": "Skillscript",
+    "domains": [],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "sshwarts/skillscript",
+        "url": "https://github.com/sshwarts/skillscript",
+        "domain": null,
+        "ts": "2026-05-20T17:23:27Z",
+        "data": {
+          "full_name": "sshwarts/skillscript",
+          "stars": 75,
+          "forks": 4,
+          "description": "Skillscript \u2014 a small declarative language for authoring agent workflows. Runtime, compiler, and CLI.",
+          "language": "TypeScript",
+          "matched": "agentic workflow runtime"
+        }
+      },
+      {
+        "source": "hn",
+        "kind": "show_hn",
+        "name": "Skillscript",
+        "url": "https://news.ycombinator.com/item?id=48881112",
+        "domain": null,
+        "ts": "2026-07-12T13:34:00Z",
+        "data": {
+          "title": "Show HN: Skillscript \u2013 A declarative, sandboxed language for tool orchestration",
+          "points": 18,
+          "comments": 32,
+          "author": "sshwarts",
+          "hn_id": "48881112",
+          "matched": "agent orchestration",
+          "github_repo": "sshwarts/skillscript"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 1,
+        "authors_30d": 1,
+        "errors": [],
+        "last_release": "2026-10-12T18:19:16Z",
+        "owner_followers": 8,
+        "owner_location": null,
+        "owner_blog": "",
+        "owner_company": null,
+        "readme_len": 8068,
+        "readme_excerpt": "<p align=\"center\">\n  <img src=\"assets/skillscript_logo.png\" alt=\"Skillscript\" width=\"400\">\n</p>\n\n<p align=\"center\">\n<em>Safe, reusable automation authored by agents.</em>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://skillscript.ai\">skillscript.ai</a>&nbsp; \u2022 &nbsp;\n  <a href=\"https://docs.skillscript.ai/docs\">docs</a>&nbsp;\n  </p>\n\n\n[![npm version](https://img.shields.io/npm/v/skillscript-runtime.svg)](https://www.npmjs.com/package/skillscript-runtime)\n[![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)\n[![status](https://img.shields.io/badge/status-pre--1.0-orange)](#status)\n\n> **TL;DR** \u2014 `npm install -g skillscript-runtime && skillfile init && skillfile dashboard`. See [Quickstart](#quickstart).\n\n### What is Skillscript?\n\nSkillscript came from asking: what would a Makefile look like if it built skills instead of binaries? The answer is a constrained language, inspired by Make, and a runtime that turns an agent's reasoning into persistent, inspectable automation. The agent writes the skill, you approve what it can do, and it runs the same way every time.\n\nIt is built for teams that want agents to create and run recurring workflows without giving them unrestricted shell access, arbitrary package installation, or direct control of production credentials.\n\nAn agent writes a skill. A human reviews and approves it. The runtime executes it through configured connectors, allowlists, and security policies.\n\n```bash\nnpm install -g skillscript-runtime\nskillfile init\ns",
+        "archived": false,
+        "stars": 75,
+        "age_days": 167,
+        "repo": "sshwarts/skillscript",
+        "url": "https://github.com/sshwarts/skillscript"
+      },
+      "site": {
+        "live": false,
+        "reason": "no domain found"
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: sshwarts/skillscript",
+          "url": "https://github.com/sshwarts/skillscript"
+        },
+        {
+          "label": "hn: Skillscript",
+          "url": "https://news.ycombinator.com/item?id=48881112"
+        }
+      ],
+      "families": [
+        "github",
+        "hn"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.2,
+    "scores": {
+      "fit": 0.72,
+      "verification": 0.2,
+      "momentum": 0.058,
+      "stealth": 0.716
+    },
+    "rank_score": 0.413,
+    "flags": []
+  },
+  {
+    "id": "12038ec7a2",
+    "name": "Agent Memory Leaderboard",
+    "domains": [
+      "agentmemoryleaderboard.ai"
+    ],
+    "signals": [
+      {
+        "source": "hn",
+        "kind": "show_hn",
+        "name": "Agent Memory Leaderboard",
+        "url": "https://news.ycombinator.com/item?id=49281370",
+        "domain": "agentmemoryleaderboard.ai",
+        "ts": "2026-08-13T03:09:45Z",
+        "data": {
+          "title": "Show HN: Agent Memory Leaderboard \u2013 first public results for AI memory systems",
+          "points": 3,
+          "comments": 1,
+          "author": "IreneAI",
+          "hn_id": "49281370",
+          "matched": "agent memory"
+        }
+      },
+      {
+        "source": "hn",
+        "kind": "show_hn",
+        "name": "An open Add/Search evaluation framework for agent memory",
+        "url": "https://news.ycombinator.com/item?id=49749689",
+        "domain": "agentmemoryleaderboard.ai",
+        "ts": "2026-09-18T02:52:01Z",
+        "data": {
+          "title": "Show HN: An open Add/Search evaluation framework for agent memory",
+          "points": 2,
+          "comments": 0,
+          "author": "IreneAI",
+          "hn_id": "49749689",
+          "matched": "agent memory"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {},
+      "site": {
+        "live": true,
+        "url": "https://agentmemoryleaderboard.ai/",
+        "title": "Agent Memory Leaderboard | Textual, Coding &amp; Multimodal Memory",
+        "parked": false,
+        "product": false,
+        "team": false,
+        "copyright_year": null
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "hn: Agent Memory Leaderboard",
+          "url": "https://news.ycombinator.com/item?id=49281370"
+        },
+        {
+          "label": "hn: An open Add/Search evaluation framework for agent memory",
+          "url": "https://news.ycombinator.com/item?id=49749689"
+        }
+      ],
+      "families": [
+        "hn"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.15,
+    "scores": {
+      "fit": 0.75,
+      "verification": 0.15,
+      "momentum": 0.002,
+      "stealth": 0.998
+    },
+    "rank_score": 0.4093,
+    "flags": []
+  },
+  {
+    "id": "e61b318eff",
+    "name": "agent-knowledge-system",
+    "domains": [],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "xiandaiweijifen/agent-knowledge-system",
+        "url": "https://github.com/xiandaiweijifen/agent-knowledge-system",
+        "domain": null,
+        "ts": "2026-03-13T13:57:33Z",
+        "data": {
+          "full_name": "xiandaiweijifen/agent-knowledge-system",
+          "stars": 2,
+          "forks": 0,
+          "description": "A stateful agent workflow runtime for engineering scenarios, supporting local orchestration, persistent execution state, structured recovery, and LLM-powered task execution via Gemini/OpenAI APIs.",
+          "language": "Python",
+          "matched": "agentic workflow runtime"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 0,
+        "authors_30d": 0,
+        "errors": [],
+        "last_release": null,
+        "owner_followers": 0,
+        "owner_location": "Champaign",
+        "owner_blog": "",
+        "owner_company": "University of Illinois - Urbana-Champaign",
+        "readme_len": 9888,
+        "readme_excerpt": "# Agent Knowledge System\n\nA local-first agent runtime for engineering and operations scenarios \u2014 document-backed knowledge retrieval, LLM-routed tool execution, multi-step workflow orchestration, and persisted run recovery.\n\n---\n\n## Quick Start\n\n**Prerequisites:** Docker Desktop running, Python venv ready, Node installed.\n\n```powershell\n# 1. Start infrastructure\ndocker compose up -d\ndocker compose ps   # wait until aks_qdrant / aks_postgres / aks_redis are healthy\n\n# 2. Backend (new terminal)\ncd backend\n.\\.venv\\Scripts\\activate\n$env:PYTHONPATH = '.'\npython -m uvicorn app.main:app --host 127.0.0.1 --port 8000\n\n# 3. Frontend (new terminal)\ncd frontend\nnpm run dev\n```\n\n| Service | URL |\n|---------|-----|\n| Backend API | `http://127.0.0.1:8000` |\n| OpenAPI docs | `http://127.0.0.1:8000/docs` |\n| Frontend console | `http://127.0.0.1:5173` |\n\n**Healthy startup signs** (backend logs):\n```\nLangGraph checkpoint tables ready\nPostgres checkpointer ready (sync fallback)\nRedis client ready\nApplication startup complete.\n```\n\n### First-time setup\n\n```powershell\ncd backend\npython -m venv .venv\n.\\.venv\\Scripts\\activate\npip install -r requirements.txt\n\ncd ../frontend\nnpm install\n```\n\n### Minimal mode (no Docker)\n\nLeave `DATABASE_URL` and `REDIS_URL` empty in `.env`. The backend still works for query, retrieval, and frontend flows \u2014 checkpoint persistence and Redis are disabled.\n\n---\n\n## What This Is\n\nAn **Agentic Platform** built on LangGraph. The infrastructure is production-quality; the tool",
+        "archived": false,
+        "stars": 2,
+        "age_days": 235,
+        "repo": "xiandaiweijifen/agent-knowledge-system",
+        "url": "https://github.com/xiandaiweijifen/agent-knowledge-system"
+      },
+      "site": {
+        "live": false,
+        "reason": "no domain found"
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: xiandaiweijifen/agent-knowledge-system",
+          "url": "https://github.com/xiandaiweijifen/agent-knowledge-system"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.0,
+    "scores": {
+      "fit": 0.83,
+      "verification": 0.0,
+      "momentum": 0.001,
+      "stealth": 0.932
+    },
+    "rank_score": 0.4033,
+    "flags": []
+  }
+]

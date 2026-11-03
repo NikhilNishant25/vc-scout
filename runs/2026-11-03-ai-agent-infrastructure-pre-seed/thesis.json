@@ -1,0 +1,104 @@
+{
+  "id": "2026-11-03-ai-agent-infrastructure-pre-seed",
+  "created": "2026-11-03",
+  "inputs": {
+    "industry": "AI agent infrastructure",
+    "stage": "pre-seed",
+    "location": "global"
+  },
+  "geo": {
+    "country": "GLOBAL",
+    "query": "global"
+  },
+  "statement": "Pre-Seed AI agent infrastructure startups showing sandbox, github, deterministic, found through indirect signals before wide press coverage.",
+  "keywords": {
+    "core": [
+      "agent orchestration framework",
+      "autonomous agent runtime",
+      "multi-agent orchestration engine",
+      "agent memory infrastructure",
+      "agentic workflow runtime",
+      "secure agent sandbox",
+      "tool use execution environment",
+      "agent state management",
+      "agent evaluation platform",
+      "agent communication protocol",
+      "microvm agent sandbox",
+      "remote code execution environment",
+      "headless browser infrastructure",
+      "ephemeral sandbox runtime",
+      "open source agent framework",
+      "github stars",
+      "developer sdk",
+      "apache-2.0 runtime",
+      "deterministic workflow engine",
+      "reliable tool use framework",
+      "typed function execution",
+      "idempotent agent execution"
+    ],
+    "adjacent": [
+      "llm observability",
+      "code interpreter api",
+      "function calling gateway",
+      "vector retrieval engine",
+      "context window management",
+      "llm guardrails framework",
+      "synthetic data for agents"
+    ],
+    "negative": [
+      "tutorial",
+      "course",
+      "bootcamp",
+      "udemy",
+      "syllabus",
+      "how to build an agent",
+      "homework",
+      "curated list"
+    ]
+  },
+  "search_terms": [
+    "agent orchestration framework",
+    "autonomous agent runtime",
+    "multi-agent orchestration engine",
+    "agent memory infrastructure",
+    "agentic workflow runtime",
+    "secure agent sandbox",
+    "tool use execution environment",
+    "agent state management"
+  ],
+  "must_have": [
+    "sandbox",
+    "github",
+    "deterministic"
+  ],
+  "anti_signals": [
+    "prompt template directory",
+    "no-code builder",
+    "schedule enterprise demo",
+    "closed beta waitlist only",
+    "roleplay agent",
+    "autonomous virtual companion"
+  ],
+  "weights": {
+    "fit": 0.444,
+    "verification": 0.259,
+    "momentum": 0.259,
+    "stealth": 0.037
+  },
+  "design_provider": "gemini",
+  "llm_status": "ok, model gemini-3.8-flash",
+  "qa": [
+    {
+      "question": "Which technical layer of the agent infrastructure stack is the primary focus?",
+      "answer": "Execution Environment & Sandboxing (code execution, browser compute, isolation)"
+    },
+    {
+      "question": "What distribution and go-to-market model is preferred for pre-seed sourcing?",
+      "answer": "Open Source / Developer Adoption First"
+    },
+    {
+      "question": "What operational paradigm should the agent runtime optimize for?",
+      "answer": "Deterministic Tool Calling & Production Automation (APIs, structured outputs)"
+    }
+  ]
+}
