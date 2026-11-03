@@ -15,20 +15,7 @@ def _blob(c):
     return " ".join(parts + [site.get("title", ""), site.get("text", "")[:3000], c.evidence.get("github", {}).get("readme_excerpt", "")]).lower()
 
 
-STOP = {"and", "or", "the", "for", "with", "next", "gen", "based", "using", "new"}
-
-
-def phrase_score(phrase, blob):
-    """1.0 exact phrase; 0.6 all significant words present; 0.3 all but one (needs >=3 words); else 0."""
-    if re.search(rf"\b{re.escape(phrase)}", blob):
-        return 1.0
-    words = [w for w in re.findall(r"[a-z0-9]+", phrase) if w not in STOP and len(w) > 2]
-    if len(words) < 2:
-        return 0.0
-    hit = sum(re.search(rf"\b{re.escape(w)}", blob) is not None for w in words)
-    if hit == len(words):
-        return 0.6
-    return 0.3 if len(words) >= 3 and hit == len(words) - 1 else 0.0
+from .terms import phrase_score  # noqa: E402
 
 
 def fit(c, thesis):

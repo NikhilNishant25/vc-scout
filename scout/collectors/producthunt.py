@@ -3,6 +3,7 @@ import datetime as dt, os
 from .. import http
 from ..models import RawSignal
 from ..resolve import reg_domain
+from ..terms import phrase_score
 
 QUERY = """query($cursor:String,$after:DateTime){posts(first:50,order:NEWEST,postedAfter:$after,after:$cursor){
 pageInfo{endCursor hasNextPage} edges{node{name tagline description website url votesCount createdAt}}}}"""
@@ -13,7 +14,7 @@ def collect(thesis):
     after = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=days)).strftime("%Y-%m-%dT%H:%M:%SZ")
     kws = thesis["keywords"]["core"] + thesis["keywords"]["adjacent"]
     out, cursor = [], None
-    for _ in range(8):
+    for _ in range(20):  # 20 pages x 50 newest posts
         r = http.request("POST", "https://api.producthunt.com/v2/api/graphql",
                          headers={"Authorization": f"Bearer {os.environ['PRODUCTHUNT_TOKEN']}"},
                          json_body={"query": QUERY, "variables": {"cursor": cursor, "after": after}}, ttl=6 * 3600)
@@ -21,7 +22,7 @@ def collect(thesis):
         for e in posts["edges"]:
             n = e["node"]
             blob = f"{n['name']} {n.get('tagline') or ''} {n.get('description') or ''}".lower()
-            hit = [k for k in kws if k in blob]
+            hit = [k for k in kws if phrase_score(k, blob) >= 0.6]
             if not hit:
                 continue
             landing = http.final_url(n["website"]) if n.get("website") else None
