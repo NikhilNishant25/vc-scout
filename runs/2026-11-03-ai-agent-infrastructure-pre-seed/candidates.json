@@ -1,267 +1,62 @@
 [
   {
-    "id": "53de6c19ae",
-    "name": "Hard Stop",
+    "id": "3e7a19ab73",
+    "name": "agentic-ai-apis",
     "domains": [
-      "arxiv.org"
+      "viralwavestudio.com"
     ],
     "signals": [
       {
         "source": "github",
         "kind": "repo",
-        "name": "Xiangyue-Zhang/auto-deep-researcher-24x7",
-        "url": "https://github.com/Xiangyue-Zhang/auto-deep-researcher-24x7",
-        "domain": "arxiv.org",
-        "ts": "2026-04-08T04:48:26Z",
+        "name": "cporter202/agentic-ai-apis",
+        "url": "https://github.com/cporter202/agentic-ai-apis",
+        "domain": null,
+        "ts": "2026-04-06T18:55:04Z",
         "data": {
-          "full_name": "Xiangyue-Zhang/auto-deep-researcher-24x7",
-          "stars": 1140,
-          "forks": 95,
-          "description": "\ud83d\udd25 An autonomous AI agent that runs your deep learning experiments 24/7 while you sleep. Zero-cost monitoring, Leader-Worker architecture, constant-size memory.",
-          "language": "Python",
-          "matched": "tool use"
-        }
-      },
-      {
-        "source": "github",
-        "kind": "repo",
-        "name": "DA2I2-SLM/Time-series-memory",
-        "url": "https://github.com/DA2I2-SLM/Time-series-memory",
-        "domain": "arxiv.org",
-        "ts": "2026-08-16T02:10:41Z",
-        "data": {
-          "full_name": "DA2I2-SLM/Time-series-memory",
-          "stars": 5,
-          "forks": 0,
-          "description": "Curated paper collection on memory in deep time-series models \u2014 companion to our survey.",
-          "language": null,
-          "matched": "agent state management"
-        }
-      },
-      {
-        "source": "hn",
-        "kind": "show_hn",
-        "name": "Hard Stop",
-        "url": "https://news.ycombinator.com/item?id=49844056",
-        "domain": "arxiv.org",
-        "ts": "2026-09-25T13:01:56Z",
-        "data": {
-          "title": "Show HN: Hard Stop: Kernel-level preemption for autonomous AI agents",
-          "points": 2,
-          "comments": 0,
-          "author": "joseluispino",
-          "hn_id": "49844056",
-          "matched": "autonomous agent"
-        }
-      },
-      {
-        "source": "hn",
-        "kind": "show_hn",
-        "name": "I built a tool showing how AI providers (should) throttle their models",
-        "url": "https://news.ycombinator.com/item?id=49448480",
-        "domain": "arxiv.org",
-        "ts": "2026-08-26T13:08:39Z",
-        "data": {
-          "title": "Show HN: I built a tool showing how AI providers (should) throttle their models",
-          "points": 3,
-          "comments": 0,
-          "author": "eliotho",
-          "hn_id": "49448480",
-          "matched": "agentic workflow"
-        }
-      }
-    ],
-    "evidence": {
-      "github": {
-        "commits_30d": 0,
-        "authors_30d": 0,
-        "errors": [],
-        "last_release": null,
-        "owner_followers": 101,
-        "owner_location": null,
-        "owner_blog": "www.xiangyuezhang.com",
-        "owner_company": null,
-        "readme_len": 43137,
-        "readme_excerpt": "<p align=\"center\">\n  <img src=\"assets/banner.png\" alt=\"Deep Researcher Agent\" width=\"700\"/>\n</p>\n\n<h1 align=\"center\">Deep Researcher Agent</h1>\n<h3 align=\"center\">24/7 Autonomous Deep Learning Experiment Agent</h3>\n\n<p align=\"center\">\n  <strong>An AI agent that autonomously runs your deep learning experiments 24/7 while you sleep.</strong>\n</p>\n\n<p align=\"center\">\n  <a href=\"README.md\">English</a> |\n  <a href=\"docs/README_CN.md\">\u4e2d\u6587</a> |\n  <a href=\"docs/README_JP.md\">\u65e5\u672c\u8a9e</a> |\n  <a href=\"docs/README_KR.md\">\ud55c\uad6d\uc5b4</a>\n</p>\n\n<p align=\"center\">\n  <a href=\"#quickstart\"><img src=\"https://img.shields.io/badge/-Quick_Start-blue?style=for-the-badge\" alt=\"Quick Start\"/></a>\n  <a href=\"docs/architecture.md\"><img src=\"https://img.shields.io/badge/-Architecture-orange?style=for-the-badge\" alt=\"Architecture\"/></a>\n</p>\n\n<p align=\"center\">\n  <img src=\"https://img.shields.io/badge/python-3.10+-blue.svg\" alt=\"Python\"/>\n  <img src=\"https://img.shields.io/badge/Claude_Code-compatible-blueviolet.svg\" alt=\"Claude Code\"/>\n  <img src=\"https://img.shields.io/badge/Codex_CLI-compatible-green.svg\" alt=\"Codex CLI\"/>\n  <img src=\"https://img.shields.io/badge/license-Apache_2.0-green.svg\" alt=\"License\"/>\n  <a href=\"https://github.com/Xiangyue-Zhang/auto-deep-researcher-24x7/stargazers\"><img src=\"https://img.shields.io/github/stars/Xiangyue-Zhang/auto-deep-researcher-24x7?color=yellow&logo=github&label=Stars\" alt=\"Stars\"/></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://arxiv.org/abs/2604.05854\"><img src=\"ht",
-        "archived": false,
-        "stars": 1140,
-        "age_days": 209,
-        "repo": "Xiangyue-Zhang/auto-deep-researcher-24x7",
-        "url": "https://github.com/Xiangyue-Zhang/auto-deep-researcher-24x7"
-      },
-      "site": {
-        "live": true,
-        "url": "https://arxiv.org/",
-        "title": "arXiv.org e-Print archive",
-        "parked": false,
-        "product": true,
-        "team": true,
-        "copyright_year": null
-      },
-      "hiring": {},
-      "registry": {
-        "matched": false,
-        "manual_lookup": true
-      },
-      "ecosystem": {},
-      "links": [
-        {
-          "label": "github: Xiangyue-Zhang/auto-deep-researcher-24x7",
-          "url": "https://github.com/Xiangyue-Zhang/auto-deep-researcher-24x7"
-        },
-        {
-          "label": "github: DA2I2-SLM/Time-series-memory",
-          "url": "https://github.com/DA2I2-SLM/Time-series-memory"
-        },
-        {
-          "label": "hn: Hard Stop",
-          "url": "https://news.ycombinator.com/item?id=49844056"
-        },
-        {
-          "label": "hn: I built a tool showing how AI providers (should) throttle their models",
-          "url": "https://news.ycombinator.com/item?id=49448480"
-        }
-      ],
-      "families": [
-        "github",
-        "hn"
-      ]
-    },
-    "tier": "Likely",
-    "confidence": 0.5,
-    "scores": {
-      "fit": 0.51,
-      "verification": 0.5,
-      "momentum": 0.502,
-      "stealth": 0.561
-    },
-    "rank_score": 0.5067,
-    "flags": []
-  },
-  {
-    "id": "774cd382ad",
-    "name": "awesome-agent-cortex",
-    "domains": [
-      "nyk.dev"
-    ],
-    "signals": [
-      {
-        "source": "github",
-        "kind": "repo",
-        "name": "0xNyk/awesome-agent-cortex",
-        "url": "https://github.com/0xNyk/awesome-agent-cortex",
-        "domain": "nyk.dev",
-        "ts": "2026-03-07T19:16:47Z",
-        "data": {
-          "full_name": "0xNyk/awesome-agent-cortex",
-          "stars": 231,
-          "forks": 117,
-          "description": "Curated map of AI agent frameworks, protocols, runtimes, skills, memory, identity, security, evaluation, and commerce.",
+          "full_name": "cporter202/agentic-ai-apis",
+          "stars": 768,
+          "forks": 202,
+          "description": "The ultimate collection of APIs for building autonomous AI agents \u2014 2,036 production-ready APIs across Agents, AI Models, and MCP Servers. Stop wasting weeks building infrastructure. Plug these in and ship your agent today.",
           "language": "JavaScript",
-          "matched": "agent orchestration framework"
+          "matched": "agentic workflow engine"
         }
       }
     ],
     "evidence": {
       "github": {
-        "commits_30d": 0,
-        "authors_30d": 0,
-        "errors": [],
-        "last_release": null,
-        "owner_followers": 616,
-        "owner_location": null,
-        "owner_blog": "https://nyk.dev",
-        "owner_company": "@builderz-labs",
-        "readme_len": 51641,
-        "readme_excerpt": "# Awesome Agent Cortex [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)\n\n<p align=\"center\">\n  <img src=\"public/readme/agent-cortex-hero.jpeg\" alt=\"Awesome Agent Cortex maps the sovereign agent stack\" width=\"960\">\n</p>\n\n<p align=\"center\">\n  <strong>A curated map of the tools, memory systems, identity rails, and operational patterns behind capable AI agents.</strong>\n</p>\n\n<p align=\"center\">\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-CC0-FF6A2A.svg\" alt=\"CC0 license\"></a>\n  <a href=\"https://github.com/0xNyk/awesome-agent-cortex/actions/workflows/docs-health.yml\"><img src=\"https://github.com/0xNyk/awesome-agent-cortex/actions/workflows/docs-health.yml/badge.svg\" alt=\"Documentation health\"></a>\n  <a href=\"https://github.com/0xNyk/awesome-agent-cortex\"><img src=\"https://img.shields.io/github/stars/0xNyk/awesome-agent-cortex\" alt=\"GitHub stars\"></a>\n</p>\n\n---\n\nAwesome Agent Cortex connects the layers that ordinary framework lists leave apart: agent runtimes, coding tools, MCP, evaluation, memory, knowledge graphs, on-chain identity, payments, security, and observability. Use it to find one component or to understand how the pieces fit into a complete agent system.\n\n![Navigate the directory through build, operate, remember, and own](public/readme/find-your-layer.jpeg)\n\nChoose a route from the contents below:\n\n- **Build:** frameworks, coding agents, MCP, skills, and prompt systems.\n- **Operate:** runtimes, harnessing, evaluation, security, and ob",
-        "archived": false,
-        "stars": 231,
-        "age_days": 241,
-        "repo": "0xNyk/awesome-agent-cortex",
-        "url": "https://github.com/0xNyk/awesome-agent-cortex"
-      },
-      "site": {
-        "live": true,
-        "url": "https://www.nyk.dev/",
-        "title": "Reliability Audit for production coding agents \u00b7 nyk",
-        "parked": false,
-        "product": true,
-        "team": true,
-        "copyright_year": 2026
-      },
-      "hiring": {},
-      "registry": {
-        "matched": false,
-        "manual_lookup": true
-      },
-      "ecosystem": {},
-      "links": [
-        {
-          "label": "github: 0xNyk/awesome-agent-cortex",
-          "url": "https://github.com/0xNyk/awesome-agent-cortex"
-        }
-      ],
-      "families": [
-        "github"
-      ]
-    },
-    "tier": "Likely",
-    "confidence": 0.45,
-    "scores": {
-      "fit": 0.58,
-      "verification": 0.45,
-      "momentum": 0.08,
-      "stealth": 0.662
-    },
-    "rank_score": 0.4193,
-    "flags": []
-  },
-  {
-    "id": "45113d5354",
-    "name": "odek",
-    "domains": [
-      "21no.de"
-    ],
-    "signals": [
-      {
-        "source": "github",
-        "kind": "repo",
-        "name": "BackendStack21/odek",
-        "url": "https://github.com/BackendStack21/odek",
-        "domain": "21no.de",
-        "ts": "2026-05-17T15:22:46Z",
-        "data": {
-          "full_name": "BackendStack21/odek",
-          "stars": 10,
-          "forks": 0,
-          "description": "Minimal Go autonomous agent runtime \u2014 One binary. One loop. Zero frameworks. ReAct (Reasoning + Acting + Verify)",
-          "language": "Go",
-          "matched": "autonomous agent runtime"
-        }
-      }
-    ],
-    "evidence": {
-      "github": {
-        "commits_30d": 40,
+        "commits_30d": 38,
         "authors_30d": 2,
         "errors": [],
-        "last_release": "2026-10-30T11:22:47Z",
-        "owner_followers": 34,
-        "owner_location": "Germany",
-        "owner_blog": "https://21no.de",
-        "owner_company": null,
-        "readme_len": 18864,
-        "readme_excerpt": "# odek\n\n**Minimal Go autonomous agent runtime \u2014 tiny dep tree, small static binary, instant startup.**\n\nOne binary. One loop. Zero frameworks. ReAct (Reasoning + Acting) \u2014 think, therefore act.\n\n```bash\n# One-line install (macOS/Linux, checksum-verified prebuilt binary):\ncurl -fsSL https://odek.21no.de/install.sh | sh\n\n# Or install from a v2 release tag (requires Go \u2265 1.25.13 \u2014 see GETTING_STARTED.md).\n# Do not use @latest: Go ignores v2 tags on this module path and would\n# install an older v1 release.\ngo install github.com/BackendStack21/odek/cmd/odek@v2.11.2\n\n# Use (provider env key \u2014 DEEPSEEK_API_KEY for the default provider)\nexport DEEPSEEK_API_KEY=sk-...\nodek run \"How many lines in go.mod?\"\n# \u2192 3 lines\n```\n\n**Build requirements:** Go **1.25.13 or newer**. The `go` directive in `go.mod` pins this floor because earlier 1.25.x toolchains ship reachable standard-library CVEs; CI additionally runs `govulncheck` on every push/PR so new advisories fail the build.\n\n**New here?** The step-by-step install guide \u2014 including the GLM 5.3 Flash (z.ai) setup and the optional bodek TUI \u2014 lives in [GETTING_STARTED.md](GETTING_STARTED.md).\n\n---\n\n## Why odek\n\nodek is not a framework. It's a **runtime** \u2014 the smallest possible surface area between an LLM and your tools.\n\n| | odek | Python agents (LangChain, CrewAI, etc.) |\n|---|---|---|\n| Dependencies | **6.** 3\u00d7 21no.de, 3\u00d7 golang.org/x | 200+ packages |\n| Binary size | ~15 MB static | 50-200 MB with venv |\n| Startup | **Instant** | 2-10s ",
+        "last_release": null,
+        "owner_followers": 1605,
+        "owner_location": "Erie",
+        "owner_blog": "https://viralwavestudio.com",
+        "owner_company": "viralwavestudio",
+        "readme_len": 5980,
+        "readme_excerpt": "<div align=\"center\">\n\n<img src=\"./assets/readme-hero-v2.svg\" alt=\"agentic-ai-apis hero banner\" width=\"100%\" />\n\n<br />\n<br />\n\n[![GitHub stars](https://img.shields.io/github/stars/cporter202/agentic-ai-apis?style=for-the-badge)](https://github.com/cporter202/agentic-ai-apis/stargazers)\n[![GitHub forks](https://img.shields.io/github/forks/cporter202/agentic-ai-apis?style=for-the-badge)](https://github.com/cporter202/agentic-ai-apis/network/members)\n[![Last commit](https://img.shields.io/github/last-commit/cporter202/agentic-ai-apis?style=for-the-badge)](https://github.com/cporter202/agentic-ai-apis/commits/main)\n[![Repo size](https://img.shields.io/github/repo-size/cporter202/agentic-ai-apis?style=for-the-badge)](https://github.com/cporter202/agentic-ai-apis)\n\n<p>\n  <a href=\"#at-a-glance\"><strong>At A Glance</strong></a>\n  |\n  <a href=\"#start-here\"><strong>Start Here</strong></a>\n  |\n  <a href=\"#explore-the-stack\"><strong>Explore The Stack</strong></a>\n  |\n  <a href=\"#why-this-repo-wins\"><strong>Why This Repo Wins</strong></a>\n  |\n  <a href=\"#star-history\"><strong>Star History</strong></a>\n</p>\n\n</div>\n\n## At A Glance\n\n> The ultimate collection of APIs for building autonomous AI agents - **2,380 production-ready APIs** across **Agents**, **AI Models**, and **MCP Servers**.\n\nThis repository is designed to feel like a launchpad, not a junk drawer. It is tightly scoped around the API layers that matter most when you are building autonomous systems, copilots, tool-using assistants, and MCP-native workflows.\n\n| Metric | Count |\n|--------|-------|\n| Total APIs | 2,380 |\n| Categories | 3 |\n| Last Updated | 2026-11-03 |\n| Focus | Agentic AI infrastructure |\n\n<table>\n  <tr>\n    <td width=\"33%\" valign=\"top\">\n      <h3>Agents</h3>\n      <p><strong>655 APIs</strong></p>\n      <p>Execution layers, orchestration, autonomous task handling, and agent-style workflows.</p>\n      <p><a href=\"./agents-apis/\"><strong>Open Agents Directory</strong></a></p>\n    </td>\n    <td width=\"33%\" valign=\"top\">\n      <h3>AI Models</h3>\n      <p><strong>1,340 APIs</strong></p>\n      <p>Generation, reasoning, extraction, transformation, and model-powered product building blocks.</p>\n      <p><a href=\"./ai-models-apis/\"><strong>Open AI Models Directory</strong></a></p>\n    </td>\n    <td width=\"33%\" valign=\"top\">\n      <h3>MCP Servers</h3>\n      <p><strong>385 APIs</strong></p>\n      <p>Model Context Protocol integrations that connect assistants to real tools, systems, and data.</p>\n      <p><a href=\"./mcp-servers-apis/\"><strong>Open MCP Servers Directory</strong></a></p>\n    </td>\n  </tr>\n</table>\n\n## Start Here\n\n1. Pick the layer you need first: `Agents`, `AI Models`, or `MCP Servers`.\n2. Open that category README and scan the API names and descriptions.\n3. Click through to the provider page for implementation details, pricing, and docs.\n4. Build your shortlist fast instead of wasting hours digging through irrelevant categories.\n\n## Explore The Stack\n\n<details open>\n<summary><strong>Agents</strong></summary>\n\nBest for builders who need APIs that feel closer to execution and autonomy:\n\n- agent workflows\n- orchestration layers\n- autonomous task completion\n- assistant behavior and action loops\n\n[Browse Agents APIs](./agents-apis/)\n\n</details>\n\n<details>\n<summary><strong>AI Models</strong></summary>\n\nBest for builders who need intelligence and generation as a reusable service layer:\n\n- reasoning and inference\n- summarization and extraction\n- content generation\n- analysis and transformation\n\n[Browse AI Models APIs](./ai-models-apis/)\n\n</details>\n\n<details>\n<summary><strong>MCP Servers</strong></summary>\n\nBest for builders who want agents to use tools through structured interfaces:\n\n- MCP-native tool integrations\n- external system connectivity\n- docs, search, analytics, scheduling, and developer workflows\n- assistants that need real-world actions\n\n[Browse MCP Servers APIs](./mcp-servers-apis/)\n\n</details>\n\n## Built For\n\n<table>\n  <tr>\n    <td width=\"25%\" align=\"center\"",
+        "readme_links": [
+          "https://img.shields.io/github/stars/cporter202/agentic-ai-apis?style=for-the-badge",
+          "https://github.com/cporter202/agentic-ai-apis/stargazers",
+          "https://img.shields.io/github/forks/cporter202/agentic-ai-apis?style=for-the-badge",
+          "https://github.com/cporter202/agentic-ai-apis/network/members",
+          "https://img.shields.io/github/last-commit/cporter202/agentic-ai-apis?style=for-the-badge",
+          "https://github.com/cporter202/agentic-ai-apis/commits/main",
+          "https://img.shields.io/github/repo-size/cporter202/agentic-ai-apis?style=for-the-badge",
+          "https://github.com/cporter202/agentic-ai-apis",
+          "https://api.star-history.com/svg?repos=cporter202/agentic-ai-apis&type=Date",
+          "https://www.star-history.com/#cporter202/agentic-ai-apis&Date"
+        ],
         "archived": false,
-        "stars": 10,
-        "age_days": 170,
-        "repo": "BackendStack21/odek",
-        "url": "https://github.com/BackendStack21/odek"
+        "stars": 768,
+        "age_days": 211,
+        "repo": "cporter202/agentic-ai-apis",
+        "url": "https://github.com/cporter202/agentic-ai-apis"
       },
       "site": {
         "live": true,
-        "url": "https://21no.de/",
-        "title": "21no.de \u00e2\u0080\u0094 AI &amp; Systems Research Lab",
+        "url": "https://viralwavestudio.com/",
+        "title": "Your AI Marketing Employee | ViralWave Studio",
         "parked": false,
         "product": true,
         "team": false,
@@ -272,11 +67,22 @@
         "matched": false,
         "manual_lookup": true
       },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [
+          "pricing"
+        ],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
       "ecosystem": {},
       "links": [
         {
-          "label": "github: BackendStack21/odek",
-          "url": "https://github.com/BackendStack21/odek"
+          "label": "github: cporter202/agentic-ai-apis",
+          "url": "https://github.com/cporter202/agentic-ai-apis"
         }
       ],
       "families": [
@@ -284,62 +90,198 @@
       ]
     },
     "tier": "Unverified",
-    "confidence": 0.35,
+    "confidence": 0.3,
     "scores": {
-      "fit": 0.89,
-      "verification": 0.35,
-      "momentum": 0.355,
-      "stealth": 0.851
+      "fit": 0.83,
+      "verification": 0.3,
+      "momentum": 0.583,
+      "stealth": 0.588
     },
-    "rank_score": 0.6092,
-    "flags": []
+    "rank_score": 0.5796,
+    "flags": [
+      "domain-from-owner-blog"
+    ]
   },
   {
-    "id": "9b8cfe06ce",
-    "name": "mate",
+    "id": "50f79868d6",
+    "name": "hive",
     "domains": [
-      "antonijevic.rs"
+      "hivecli.sh"
     ],
     "signals": [
       {
         "source": "github",
         "kind": "repo",
-        "name": "antiv/mate",
-        "url": "https://github.com/antiv/mate",
-        "domain": "antonijevic.rs",
-        "ts": "2026-02-27T21:02:40Z",
+        "name": "ivankuznetsov/hive",
+        "url": "https://github.com/ivankuznetsov/hive",
+        "domain": null,
+        "ts": "2026-04-25T11:22:04Z",
         "data": {
-          "full_name": "antiv/mate",
-          "stars": 95,
-          "forks": 22,
-          "description": "Production-ready multi-agent orchestration engine built on Google ADK. Database-driven agent config, 50+ LLM providers, MCP protocol, persistent memory, web dashboard, RBAC.",
-          "language": "Python",
-          "matched": "multi-agent orchestration engine"
+          "full_name": "ivankuznetsov/hive",
+          "stars": 33,
+          "forks": 0,
+          "description": "An open-source agent workflow engine & meta-harness: orchestrates Claude, Codex, and Pi to run multi-step work as a folder-as-agent pipeline. Its flagship coding workflow turns a rough idea into a merge-ready PR; ships content too, and runs the workflows you author.",
+          "language": "Ruby",
+          "matched": "agentic workflow engine"
         }
       }
     ],
     "evidence": {
       "github": {
-        "commits_30d": 100,
-        "authors_30d": 12,
+        "commits_30d": 36,
+        "authors_30d": 2,
         "errors": [],
-        "last_release": "2026-10-31T09:18:55Z",
-        "owner_followers": 5,
-        "owner_location": null,
-        "owner_blog": "",
-        "owner_company": null,
-        "readme_len": 26590,
-        "readme_excerpt": "<div align=\"center\">\n\n# MATE \u2014 The Command Center for AI Agents\n\n**Change the prompt, the model or who may use an agent from a dashboard \u2014 no code change, no redeploy.**<br>\nSelf-hosted, on Google ADK or LangGraph, with any of 50+ LLM providers.\n\n[![Release](https://img.shields.io/github/v/release/antiv/mate)](https://github.com/antiv/mate/releases)\n[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)\n[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)\n[![Google ADK](https://img.shields.io/badge/Google-ADK-orange.svg)](https://github.com/google/adk-python)\n[![LangGraph](https://img.shields.io/badge/LangGraph-supported-1C3C3C.svg)](https://github.com/langchain-ai/langgraph)\n[![LiteLLM](https://img.shields.io/badge/LiteLLM-50%2B%20providers-purple.svg)](https://github.com/BerriAI/litellm)\n[![MCP](https://img.shields.io/badge/MCP-compatible-brightgreen.svg)](https://modelcontextprotocol.io/)\n[![MCP Badge](https://lobehub.com/badge/mcp/antiv-mate)](https://lobehub.com/mcp/antiv-mate)\n\n[**Live demo**](#try-it-without-installing-anything) \u00b7 [**Quick Start**](#quick-start) \u00b7 [**Docs**](docs/README.md) \u00b7 [**Changelog**](CHANGELOG.md)\n\n![The MATE Visual Builder: an agent hierarchy with its tools, edited on a canvas](documents/images/visual_builder.png)\n\n</div>\n\n**Run it in one command:**\n\n```bash\ndocker run -d -p 8000:8000 -e AUTH_PASSWORD=change-me -e GOOGLE_API_KEY=your-key ghcr.io/antiv/m",
+        "last_release": "2026-10-27T18:56:21Z",
+        "owner_followers": 17,
+        "owner_location": "London, UK",
+        "owner_blog": "http://ikuznetsov.com",
+        "owner_company": "ikuznetsov.com",
+        "readme_len": 33052,
+        "readme_excerpt": "<p align=\"center\">\n  <img src=\"docs/assets/logo.svg\" alt=\"Hive\" width=\"96\" height=\"96\">\n</p>\n\n# Hive\n\n**Website &amp; docs: [hivecli.sh](https://hivecli.sh)** \u2014 quickstart, concepts, the full command reference, and an [`llms.txt`](https://hivecli.sh/llms.txt) for agents.\n\nCommunity: [join the Hive Discord](https://discord.gg/Qg5E7rMt) for questions,\nfeedback, and release discussions.\n\nHive is a durable, local-first workflow engine for AI agents. It orchestrates Claude, Codex, Grok, Pi, and opt-in OpenCode to run multi-step work as a *folder-as-agent pipeline*. Its flagship **`coding`** workflow turns a rough software idea into a merge-ready pull request: you sketch an idea in a few sentences, open the `hive tui` dashboard or native local web UI, and watch the work move forward \u2014 brainstorm pins down what you actually want, plan fixes the approach, execute writes the code, review hardens it, and finalize ships the PR. You can step in at any stage with a normal editor \u2014 every artefact is a markdown file in a stage folder, inspectable and editable by you or by another agent. Software delivery is the flagship proof, not the product boundary: Hive also ships `content` and `bench` workflows, installs reviewed Honeycombs, and runs the ones you author yourself for writing, research, triage, audits, and operations (see [Custom Workflows](#custom-workflows)).\n\nThe mental model is folders. Every task is a directory; the folder's location is the task state. Moving a task from `2-brainstorm/` to `3-plan/` is the approval gesture, and every stage writes a durable artefact the next stage can trust. That practice \u2014 making each step's output strong enough for the next one to run autonomously \u2014 is called *compound engineering*. It's how Hive carries work from rough idea to merged PR while letting humans drop in on their own terms instead of a chat thread's.\n\nThe `coding` workflow runs nine stages, each a folder:\n\n```text\n1-inbox  ->  2-brainstorm  ->  3-plan  ->  4-execute  ->  5-open-pr  ->  6-review  ->  7-artifacts  ->  8-finalize  ->  9-done\ncapture       refine           design      build          draft PR       harden        collect        publish         archive\n```\n\nRead the model in depth in [docs/concepts.md](docs/concepts.md) \u2014 folder-as-agent, the marker protocol that lets stages negotiate handoff, the nine stages in detail, and the trade-offs that come with making everything a file.\n\n## Demo\n\nA sub-two-minute reel of the whole loop \u2014 install, `hive init`, capture an idea in the TUI, answer brainstorm questions in vim, and archive the finished task once Hive has shipped it:\n\n![Hive demo](docs/assets/hive-demo.webp)\n\nFull-quality MP4 (~4&nbsp;MB): [docs/assets/hive-demo.mp4](docs/assets/hive-demo.mp4).\n\nThe result Hive built in that reel lives at [ivankuznetsov/shipped](https://github.com/ivankuznetsov/shipped) \u2014 a real public repo seeded with a one-sentence idea (\"a Telegram bot that sends a daily digest of what was shipped\"), driven through brainstorm \u2192 plan \u2192 execute \u2192 multi-agent review \u2192 finalize, and landed as [PR #1](https://github.com/ivankuznetsov/shipped/pull/1).\n\n> [!IMPORTANT]\n> **Hive is a token-heavy workflow.** You can customize it, but by default it runs a lot of subagents and several different coding agents, and it burns through a LOT of tokens. I strongly recommend a **Claude Max** subscription plus **ChatGPT Pro** for Codex to run it properly \u2014 the best results come from the top-tier subscriptions. If you're really tight on budget, you might try the **Pi** agent with the latest **Kimi** model for some parts of the workflow, though the Pi integration is not yet properly tested or performance-evaluated.\n\n## Install\n\nHive ships as a rubygem (`hive-cli`) plus a managed Hive web bundle attached to each GitHub Release. A cosign-signed checksum manifest authenticates both artifacts before installation or extraction. Each native channel installs the same gem; the normal `hive setup` then installs Hive-owned dependencies, t",
+        "readme_links": [
+          "https://hivecli.sh",
+          "https://hivecli.sh/llms.txt",
+          "https://discord.gg/Qg5E7rMt",
+          "https://github.com/ivankuznetsov/shipped",
+          "https://github.com/ivankuznetsov/shipped/pull/1",
+          "https://github.com/ivankuznetsov/homebrew-hive",
+          "https://raw.githubusercontent.com/ivankuznetsov/hive/v0.8.0/install.sh",
+          "https://aur.archlinux.org/packages/hive-bin",
+          "https://github.com/ivankuznetsov/hive",
+          "http://127.0.0.1:4567`;"
+        ],
         "archived": false,
-        "stars": 95,
-        "age_days": 248,
-        "repo": "antiv/mate",
-        "url": "https://github.com/antiv/mate"
+        "stars": 33,
+        "age_days": 192,
+        "repo": "ivankuznetsov/hive",
+        "url": "https://github.com/ivankuznetsov/hive"
       },
       "site": {
         "live": true,
-        "url": "https://antonijevic.rs/",
-        "title": "Ant BioCode \u00e2\u0080\u0094 Softverska re\u00c5\u00a1enja i AI konsalting",
+        "url": "https://hivecli.sh/",
+        "title": "Hive \u00e2\u0080\u0094 turn a rough idea into a merge-ready PR | Hive",
+        "parked": false,
+        "product": false,
+        "team": false,
+        "copyright_year": null
+      },
+      "hiring": {
+        "count": 9,
+        "board": "greenhouse",
+        "slug": "hive",
+        "url": "https://boards-api.greenhouse.io/v1/boards/hive/jobs"
+      },
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: ivankuznetsov/hive",
+          "url": "https://github.com/ivankuznetsov/hive"
+        },
+        {
+          "label": "jobs (greenhouse)",
+          "url": "https://boards-api.greenhouse.io/v1/boards/hive/jobs"
+        }
+      ],
+      "families": [
+        "careers",
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.31,
+    "scores": {
+      "fit": 0.8,
+      "verification": 0.31,
+      "momentum": 0.529,
+      "stealth": 0.781
+    },
+    "rank_score": 0.5638,
+    "flags": [
+      "domain-from-readme"
+    ]
+  },
+  {
+    "id": "d31682e4c9",
+    "name": "mateclaw",
+    "domains": [
+      "mate.vip"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "mateaix/mateclaw",
+        "url": "https://github.com/mateaix/mateclaw",
+        "domain": "mate.vip",
+        "ts": "2026-04-04T10:53:35Z",
+        "data": {
+          "full_name": "mateaix/mateclaw",
+          "stars": 1177,
+          "forks": 356,
+          "description": "\ud83e\udd16 MateClaw \u2014 Your second brain with Multi-Agent Orchestration, MCP Protocol, Skills & Memory, Dream, and Multi-Channel Support. Built on Spring AI Alibaba.",
+          "language": "Java",
+          "matched": "multi-agent orchestration"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 42,
+        "authors_30d": 5,
+        "errors": [],
+        "last_release": "2026-10-27T08:45:09Z",
+        "owner_followers": 118,
+        "owner_location": null,
+        "owner_blog": "",
+        "owner_company": null,
+        "readme_len": 32251,
+        "readme_excerpt": "<div align=\"center\">\n\n> **3.0.0 stable release \u00b7 2026-10-26**. Java 21 / Spring Boot 4.1.1 / Spring AI 2.0.1 / AgentScope 2.0.4. AgentScope drives execution loops; MateClaw retains tool approvals, permissions, Goals, SSE and persistence. See Releases for stable builds.\n> [3.0.0 architecture changelog](CHANGELOG.md)\n> Includes all changes since 2.3.0: structured decisions, member file isolation, DSH SDK upgrades, voice preview and structured MCP presentation.\n\n\n<p align=\"center\">\n  <img src=\"mateclaw-ui/public/logo/mateclaw_logo_s.png\" alt=\"MateClaw Logo\" width=\"120\">\n</p>\n\n# MateClaw\n\n<p align=\"center\"><b>Your second brain</b></p>\n\n<p align=\"center\"><sub><b>Pluggable Agent Runtime \u00b7 Native + DSH \u00b7 Spring Boot inside</b></sub></p>\n\n[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-black.svg?logo=github)](https://github.com/mateaix/mateclaw)\n[![Documentation](https://img.shields.io/badge/Docs-Website-green.svg?logo=readthedocs&label=Docs)](https://claw.mate.vip/docs)\n[![Live Demo](https://img.shields.io/badge/Demo-Online-orange.svg?logo=vercel&label=Demo)](https://claw-demo.mate.vip)\n[![Website](https://img.shields.io/badge/Website-claw.mate.vip-blue.svg?logo=googlechrome&label=Site)](https://claw.mate.vip)\n[![Java Version](https://img.shields.io/badge/Java-21+-blue.svg?logo=openjdk&label=Java)](https://adoptium.net/)\n[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.1.1-brightgreen.svg?logo=springboot)](https://spring.io/projects/spring-boot)\n[![Vue](https://img.shields.io/badge/Vue-3-4FC08D.svg?logo=vuedotjs)](https://vuejs.org/)\n[![Last Commit](https://img.shields.io/github/last-commit/mateaix/mateclaw)](https://github.com/mateaix/mateclaw)\n[![License](https://img.shields.io/badge/license-Apache--2.0-red.svg?logo=opensourceinitiative&label=License)](LICENSE)\n\n[[Website](https://claw.mate.vip)] [[Live Demo](https://claw-demo.mate.vip)] [[Documentation](https://claw.mate.vip/docs)] [[\u4e2d\u6587](README_zh.md)]\n\n</div>\n\n<p align=\"center\">\n  <img src=\"assets/images/preview.png\" alt=\"MateClaw Preview\" width=\"800\">\n</p>\n\n---\n\n> **3.0.0 \u2014 Governed execution, recoverable long tasks and team delivery.** Java 21, Spring Boot 4, Spring AI 2 and AgentScope 2 power the native runtime. Consistent context budgets, final-answer checks and team synthesis strengthen delivery while preserving approvals and workspace boundaries. [Release and upgrade notes](https://claw.mate.vip/docs/en/releases/3.0.0). Release date: **2026-10-26**.\n\n---\n\n> **Other personal AI agents are built for one person. MateClaw is the one your IT department can actually sign off on.**\n>\n> Multi-user workspaces. Approval-gated sensitive actions. Full audit trail. Spring Boot Actuator health monitoring. Per-channel error isolation so one chat platform's outage doesn't take down the rest. One JAR in your environment; you control persisted data, and task content is sent only to model, channel, or tool services you explicitly configure.\n>\n> **And underneath, a real Agent Runtime.** An employee is no longer welded to one reasoning loop. Choose the native AgentScope runtime for ReAct, Plan-and-Execute, Goals, and Team Runs, or run DeepSeek Harness as a managed external loop over SDK JSON-RPC. Both paths converge on the same conversations, workspace boundaries, Tool Guard, event projection, and lifecycle controls.\n\nMost AI tools die when their vendor has a bad day. Most forget you the moment the tab closes. Most give you a chatbox and call it a product.\n\n**MateClaw is the whole widget.** One deployment. Reasoning, knowledge, memory, tools, channels \u2014 built together, not bolted on. And when your primary model is unavailable, the next healthy provider retries the current request.\n\n---\n\n## What changes in 3.0.0\n\n3.0.0 includes the unpublished 2.4.0 development cycle. Release date: **2026-10-26**. Download published packages from Releases.\n\n- **Native execution:** AgentScope Java **2.0.4** runs ReAct and the tool loop within each Plan-Execute step. MateClaw retains plan sche",
+        "readme_links": [
+          "https://img.shields.io/badge/GitHub-Repo-black.svg?logo=github",
+          "https://github.com/mateaix/mateclaw",
+          "https://img.shields.io/badge/Docs-Website-green.svg?logo=readthedocs&label=Docs",
+          "https://claw.mate.vip/docs",
+          "https://img.shields.io/badge/Demo-Online-orange.svg?logo=vercel&label=Demo",
+          "https://claw-demo.mate.vip",
+          "https://img.shields.io/badge/Website-claw.mate.vip-blue.svg?logo=googlechrome&label=Site",
+          "https://claw.mate.vip",
+          "https://img.shields.io/badge/Java-21+-blue.svg?logo=openjdk&label=Java",
+          "https://adoptium.net/",
+          "https://img.shields.io/badge/Spring%20Boot-4.1.1-brightgreen.svg?logo=springboot",
+          "https://spring.io/projects/spring-boot",
+          "https://img.shields.io/badge/Vue-3-4FC08D.svg?logo=vuedotjs",
+          "https://vuejs.org/",
+          "https://img.shields.io/github/last-commit/mateaix/mateclaw",
+          "https://github.com/mateaix/mateclaw",
+          "https://img.shields.io/badge/license-Apache--2.0-red.svg?logo=opensourceinitiative&label=License",
+          "https://claw.mate.vip",
+          "https://claw-demo.mate.vip",
+          "https://claw.mate.vip/docs",
+          "https://claw.mate.vip/docs/en/releases/3.0.0"
+        ],
+        "archived": false,
+        "stars": 1177,
+        "age_days": 213,
+        "repo": "mateaix/mateclaw",
+        "url": "https://github.com/mateaix/mateclaw"
+      },
+      "site": {
+        "live": true,
+        "url": "https://mate.vip/",
+        "title": "mate.vip \u00e2\u0080\u0094 Microservices \u00c2\u00b7 Cloud Native \u00c2\u00b7 AI",
         "parked": false,
         "product": false,
         "team": false,
@@ -350,11 +292,20 @@
         "matched": false,
         "manual_lookup": true
       },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
       "ecosystem": {},
       "links": [
         {
-          "label": "github: antiv/mate",
-          "url": "https://github.com/antiv/mate"
+          "label": "github: mateaix/mateclaw",
+          "url": "https://github.com/mateaix/mateclaw"
         }
       ],
       "families": [
@@ -362,85 +313,14 @@
       ]
     },
     "tier": "Unverified",
-    "confidence": 0.15,
+    "confidence": 0.12,
     "scores": {
       "fit": 0.86,
-      "verification": 0.15,
-      "momentum": 0.382,
-      "stealth": 0.717
+      "verification": 0.12,
+      "momentum": 0.6,
+      "stealth": 0.561
     },
-    "rank_score": 0.5462,
-    "flags": []
-  },
-  {
-    "id": "e996678b07",
-    "name": "agent-infrastructure-landscape",
-    "domains": [],
-    "signals": [
-      {
-        "source": "github",
-        "kind": "repo",
-        "name": "MrPeppersDev/agent-infrastructure-landscape",
-        "url": "https://github.com/MrPeppersDev/agent-infrastructure-landscape",
-        "domain": null,
-        "ts": "2026-05-06T06:32:13Z",
-        "data": {
-          "full_name": "MrPeppersDev/agent-infrastructure-landscape",
-          "stars": 7,
-          "forks": 0,
-          "description": "AI agent memory & infrastructure landscape \u2014 comparative catalog of 912 systems \u00d7 68 columns covering memory layers, agent frameworks, runtimes, vector stores, knowledge graphs, MCP servers, benchmarks. Searchable with typed edges, lineages, citations.",
-          "language": "HTML",
-          "matched": "agent memory infrastructure"
-        }
-      }
-    ],
-    "evidence": {
-      "github": {
-        "commits_30d": 100,
-        "authors_30d": 3,
-        "errors": [],
-        "last_release": "2026-05-19T19:44:04Z",
-        "owner_followers": 0,
-        "owner_location": "Spawn Beach",
-        "owner_blog": "",
-        "owner_company": null,
-        "readme_len": 11612,
-        "readme_excerpt": "# AI Agent Infrastructure Landscape\n\n**An analysis tool for the AI agent stack. Work out what's best for the agent or multi-agent system you're building, with a citation behind every claim.**\n\n- **Build a stack:** describe the product; get one cited pick per layer (framework, model, gateway, memory, vector/graph store, tools and auth, sandbox, guardrails, observability), the runners-up and why not, integrations, risk, OWASP coverage, cost and a `stack.yml`.\n- **Choose one layer:** memory, framework or data store.\n- **Check a stack you run:** archived, acquired or stale dependencies, with replacements that fit the rest of your stack.\n\nUnderneath is an open, comparative catalog of **1,000 systems** across the agent stack. Every cell links to the source it came from and carries a verifiability tier. Bots keep it fresh, and anyone can submit a missing system.\n\n**[Build a stack \u2192](https://mrpeppersdev.github.io/agent-infrastructure-landscape/build)** \u00b7 [Check your stack](https://mrpeppersdev.github.io/agent-infrastructure-landscape/check) \u00b7 [Choose a component](https://mrpeppersdev.github.io/agent-infrastructure-landscape/choose) \u00b7 [Browse the catalog](https://mrpeppersdev.github.io/agent-infrastructure-landscape/) \u00b7 [Findings](https://mrpeppersdev.github.io/agent-infrastructure-landscape/findings) \u00b7 [Submit a system](https://mrpeppersdev.github.io/agent-infrastructure-landscape/submit) \u00b7 [Raw data (CC-BY-4.0)](./data/landscape.json)\n\n## Five catalogs in one dataset\n\nThe catalog i",
-        "archived": false,
-        "stars": 7,
-        "age_days": 181,
-        "repo": "MrPeppersDev/agent-infrastructure-landscape",
-        "url": "https://github.com/MrPeppersDev/agent-infrastructure-landscape"
-      },
-      "site": {
-        "live": false,
-        "reason": "no domain found"
-      },
-      "hiring": {},
-      "registry": {
-        "matched": false,
-        "manual_lookup": true
-      },
-      "ecosystem": {},
-      "links": [
-        {
-          "label": "github: MrPeppersDev/agent-infrastructure-landscape",
-          "url": "https://github.com/MrPeppersDev/agent-infrastructure-landscape"
-        }
-      ],
-      "families": [
-        "github"
-      ]
-    },
-    "tier": "Unverified",
-    "confidence": 0.15,
-    "scores": {
-      "fit": 0.83,
-      "verification": 0.15,
-      "momentum": 0.353,
-      "stealth": 0.871
-    },
-    "rank_score": 0.531,
+    "rank_score": 0.5343,
     "flags": []
   },
   {
@@ -478,7 +358,27 @@
         "owner_blog": "https://noopolis.ai",
         "owner_company": null,
         "readme_len": 6107,
-        "readme_excerpt": "# Spawnfile\n\n> Write your agent team once. Compile it for different runtimes.\n\n<p align=\"center\">\n  <a href=\"https://www.npmjs.com/package/spawnfile\"><img src=\"https://img.shields.io/npm/v/spawnfile?style=flat-square&color=d4604a&label=npm\" alt=\"npm\"></a>\n  <a href=\"https://www.npmjs.com/package/spawnfile\"><img src=\"https://img.shields.io/npm/dm/spawnfile?style=flat-square&color=d4604a\" alt=\"downloads\"></a>\n  <a href=\"#try-it\"><img src=\"https://img.shields.io/node/v/spawnfile?style=flat-square&color=d4604a\" alt=\"node\"></a>\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/npm/l/spawnfile?style=flat-square&color=d4604a\" alt=\"MIT\"></a>\n  <a href=\"https://spawnfile.com\"><img src=\"https://img.shields.io/website?url=https%3A%2F%2Fspawnfile.com&style=flat-square&label=spawnfile.com&color=d4604a\" alt=\"website\"></a>\n</p>\n\n<p align=\"center\">\n  <img src=\"website/public/new-claw-images.png\" alt=\"Spawnfile compiles one agent source into multiple runtimes\" width=\"420\" />\n</p>\n\nDescribe your agents, give them identities and tools, and keep the whole team in one source project. Spawnfile compiles that project into the configuration and workspaces their runtimes need, then builds and deploys it with Docker.\n\n```text\nSpawnfile + workspace \u2500\u2192 compile \u2500\u2192 runtime files\n```\n\n## Try it\n\nStart with one agent. Requires **Node.js 22.19+**; compilation needs no Docker or model credentials.\n\n```bash\nnpm install -g spawnfile\nspawnfile init my-agent\ncd my-agent\nspawnfile validate\nspawnfile compile\n```",
+        "readme_excerpt": "# Spawnfile\n\n> Write your agent team once. Compile it for different runtimes.\n\n<p align=\"center\">\n  <a href=\"https://www.npmjs.com/package/spawnfile\"><img src=\"https://img.shields.io/npm/v/spawnfile?style=flat-square&color=d4604a&label=npm\" alt=\"npm\"></a>\n  <a href=\"https://www.npmjs.com/package/spawnfile\"><img src=\"https://img.shields.io/npm/dm/spawnfile?style=flat-square&color=d4604a\" alt=\"downloads\"></a>\n  <a href=\"#try-it\"><img src=\"https://img.shields.io/node/v/spawnfile?style=flat-square&color=d4604a\" alt=\"node\"></a>\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/npm/l/spawnfile?style=flat-square&color=d4604a\" alt=\"MIT\"></a>\n  <a href=\"https://spawnfile.com\"><img src=\"https://img.shields.io/website?url=https%3A%2F%2Fspawnfile.com&style=flat-square&label=spawnfile.com&color=d4604a\" alt=\"website\"></a>\n</p>\n\n<p align=\"center\">\n  <img src=\"website/public/new-claw-images.png\" alt=\"Spawnfile compiles one agent source into multiple runtimes\" width=\"420\" />\n</p>\n\nDescribe your agents, give them identities and tools, and keep the whole team in one source project. Spawnfile compiles that project into the configuration and workspaces their runtimes need, then builds and deploys it with Docker.\n\n```text\nSpawnfile + workspace \u2500\u2192 compile \u2500\u2192 runtime files\n```\n\n## Try it\n\nStart with one agent. Requires **Node.js 22.19+**; compilation needs no Docker or model credentials.\n\n```bash\nnpm install -g spawnfile\nspawnfile init my-agent\ncd my-agent\nspawnfile validate\nspawnfile compile\n```\n\n`init` creates an OpenClaw project with `IDENTITY.md`, `SOUL.md`, and `AGENTS.md`. `compile` writes runtime configuration, the generated workspace, and container files into `.spawn/`. Read `spawnfile-report.json` there to see how your source was compiled. **The agent is configured, but has not started.**\n\nEdit the Markdown files to define who the agent is and what it should do, then compile again. Keep the source in Git; `.spawn/` is generated and ignored.\n\n## From one agent to a team\n\nA team has its own `Spawnfile`, which references the member agent projects. Create its directory with `spawnfile init my-team --team`. Once you have two projects with distinct agent names under `my-team/agents/`, put their references in `my-team/Spawnfile`:\n\n```yaml\nspawnfile_version: \"0.1\"\nkind: team\nname: research-team\nmode: swarm\nmembers:\n  - id: researcher\n    ref: ./agents/researcher\n  - id: writer\n    ref: ./agents/writer\n```\n\nEach member has its own Spawnfile, identity, and runtime. Teams can share instructions and resources, contain nested teams, and declare [Moltnet](https://moltnet.dev) rooms. The [team guide](https://spawnfile.com/guides/teams/) covers the full setup; [examples](examples/) show complete projects.\n\n## What travels with your team\n\n- **Agents:** Identity documents, instructions, skills, workspace resources, and each agent\u2019s wake schedule.\n- **Tools and models:** MCP connections, model selection, and declared secret requirements.\n- **Team structure:** Members, nested teams, and shared resources.\n- **Communication:** Declared [Moltnet](https://moltnet.dev) networks and rooms for agents to exchange messages across runtimes.\n- **Deployment:** Runtime configuration, container files, and a capability report built from the same source.\n\nA team declaration alone does not create a conversation or a useful division of work. Give the agents a task, configure their communication, and choose how they wake. Start with the [team guide](https://spawnfile.com/guides/teams/) and [example projects](examples/).\n\n## Run and share it\n\nOnce the prompts and configuration are ready:\n\n1. **Provide credentials.** Import an existing subscription login or configure provider credentials with [auth profiles](https://spawnfile.com/guides/docker/). Keep secret values out of Git.\n2. **Build and start.** With Docker available, `spawnfile up . --detach --auth-profile <profile>` compiles, builds, and starts the project. A Docker context can target another machine.\n3. **Check the deplo",
+        "readme_links": [
+          "https://www.npmjs.com/package/spawnfile",
+          "https://img.shields.io/npm/v/spawnfile?style=flat-square&color=d4604a&label=npm",
+          "https://www.npmjs.com/package/spawnfile",
+          "https://img.shields.io/npm/dm/spawnfile?style=flat-square&color=d4604a",
+          "https://img.shields.io/node/v/spawnfile?style=flat-square&color=d4604a",
+          "https://img.shields.io/npm/l/spawnfile?style=flat-square&color=d4604a",
+          "https://spawnfile.com",
+          "https://img.shields.io/website?url=https%3A%2F%2Fspawnfile.com&style=flat-square&label=spawnfile.com&color=d4604a",
+          "https://moltnet.dev",
+          "https://spawnfile.com/guides/teams/",
+          "https://moltnet.dev",
+          "https://spawnfile.com/guides/teams/",
+          "https://spawnfile.com/guides/docker/",
+          "https://github.com/noopolis",
+          "https://moltnet.dev",
+          "https://github.com/noopolis/daimon-harness",
+          "https://simfile.org",
+          "https://spawnfile.com"
+        ],
         "archived": false,
         "stars": 9,
         "age_days": 226,
@@ -499,6 +399,15 @@
         "matched": false,
         "manual_lookup": true
       },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
       "ecosystem": {},
       "links": [
         {
@@ -511,62 +420,191 @@
       ]
     },
     "tier": "Unverified",
-    "confidence": 0.35,
+    "confidence": 0.3,
     "scores": {
-      "fit": 0.64,
-      "verification": 0.35,
+      "fit": 0.83,
+      "verification": 0.3,
       "momentum": 0.353,
       "stealth": 0.857
     },
-    "rank_score": 0.4979,
+    "rank_score": 0.527,
     "flags": []
   },
   {
-    "id": "23d0455e5d",
-    "name": "singular-lite",
+    "id": "3ad5a24f1d",
+    "name": "hermes-memory-suite",
     "domains": [
-      "xiper.ai"
+      "nousresearch.com"
     ],
     "signals": [
       {
         "source": "github",
         "kind": "repo",
-        "name": "xiperinc/singular-lite",
-        "url": "https://github.com/xiperinc/singular-lite",
-        "domain": null,
-        "ts": "2026-06-10T18:42:16Z",
+        "name": "Marchy02/hermes-memory-suite",
+        "url": "https://github.com/Marchy02/hermes-memory-suite",
+        "domain": "nousresearch.com",
+        "ts": "2026-05-26T17:32:28Z",
         "data": {
-          "full_name": "xiperinc/singular-lite",
-          "stars": 40,
-          "forks": 1,
-          "description": "Autonomous multi-agent orchestration engine for software repos \u2014 L0/L1/L2 agents, leases, gates, audits, git-worktree isolation. Detached dispatch by default. GPL-3.0.",
-          "language": "Shell",
-          "matched": "multi-agent orchestration engine"
+          "full_name": "Marchy02/hermes-memory-suite",
+          "stars": 1,
+          "forks": 0,
+          "description": "Optional skills for Hermes Agent \u2014 memory discipline, audit, and self-improvement loop. Decision trees, source-based docs, and tools for rigorous LLM memory management.",
+          "language": null,
+          "matched": "llm memory management"
         }
       }
     ],
     "evidence": {
       "github": {
-        "commits_30d": 1,
-        "authors_30d": 1,
+        "commits_30d": 0,
+        "authors_30d": 0,
         "errors": [],
         "last_release": null,
-        "owner_followers": 3,
-        "owner_location": "Switzerland",
-        "owner_blog": "https://www.xiper.ai",
+        "owner_followers": 2,
+        "owner_location": null,
+        "owner_blog": "",
         "owner_company": null,
-        "readme_len": 75225,
-        "readme_excerpt": "https://github.com/user-attachments/assets/826bf112-645b-4293-8b63-cf1c8ad6038b\n\n# singular\n\n**Autonomous multi-agent orchestration for software repos. One engine, many consumers.**\n\nsingular is a bash + Python orchestration engine that drives autonomous AI coding agents\nin parallel against a repository. It implements a three-tier scheduling model\n(L0 scheduler \u2192 L1 drivers \u2192 L2 worker agents) with durable leases, state packets,\ngate/audit pipelines, and git-worktree isolation. The engine is installed once per machine\nand pinned per consumer repo \u2014 improvements propagate by bumping a version pin, not by\nre-copying scripts.\n\n## How it works\n\n### Scheduling tiers\n\n| Tier | Role |\n| --- | --- |\n| **L0 origin** | Bash control loop (`autonomate.sh` / `reconcile.sh`), not a model agent. Imports packets, recovers leases, integrates completed work, schedules planning and dispatch, and writes snapshots. |\n| **L1 drivers** | Bash orchestration: `l1-plan-node.sh` invokes a model planner for a DAG node and stages its proposals; `l1-drive.sh` drives one task through worker, gate, audit and bounded recovery. L1 is not itself a persistent model agent. |\n| **L2 workers** | Execute a single task in an isolated git worktree on a per-task branch. Produce a state packet (owned files, changes, evidence). An auditor reviews the packet; the decider routes the outcome. |\n\n### Reconcile cycle\n\nEach `singular reconcile --actuate` runs:\n\n1. **Import** \u2014 validate and import completed state packets from ",
+        "readme_len": 4626,
+        "readme_excerpt": "# Hermes Memory Suite\n\nA collection of **optional skills** for [Hermes Agent](https://hermes-agent.nousresearch.com) that enforce rigorous memory discipline, periodic audit, and self-improvement loop understanding.\n\n## Why this exists\n\nHermes Agent has a powerful but nuanced memory system \u2014 `memory`, `fact_store` (holographic), `skill_manage`, and session logs each serve different purposes with different lifetimes, visibility rules, and trade-offs. Without strict routing, it's easy to:\n\n- Bloat `MEMORY.md` with technical project details that belong in `fact_store`\n- Store debugging output or task progress that pollutes the system prompt every turn\n- Hit the ~2.2K char limit on `MEMORY.md` without progressive warnings\n- Lose critical insight during context compression (the holographic plugin doesn't implement `on_pre_compress`)\n- Have the background self-improvement loop make writes it can't verify (fork has no shell access)\n\nThese skills encode hard-won lessons from real use \u2014 backed by source code analysis of Hermes Agent internals (`memory_tool.py`, `memory_manager.py`, `background_review.py`, `context_compressor.py`, `conversation_loop.py`, holographic plugin).\n\n## Skills included\n\n### `memory-discipline` (critical)\n\nA decision tree and absolute rules for where to save what. Every time you're about to call `memory`, `fact_store`, or `skill_manage`, run this checklist:\n\n```\nServe every turn, auto-injected?\n\u251c\u2500\u2500 YES \u2192 Stable user preference? \u2192 MEMORY (target='memory'|'user')\n\u251c\u2500\u2500 NO  \u2192 Project/technical detail? \u2192 FACT_STORE\n\u251c\u2500\u2500 NO  \u2192 Procedure with 3+ steps?  \u2192 SKILL\n\u2514\u2500\u2500 NO  \u2192 Temporary/task progress?  \u2192 Don't save (use session_search)\n```\n\nDocuments the **frozen snapshot bug** (mid-session writes update the file but the system prompt stays frozen until restart), the **background fork blind spot** (self-improvement loop can write but can't verify), and the **holographic `on_pre_compress` gap**.\n\n### `memory-audit` (high)\n\nPeriodic audit procedure that checks:\n\n- Memory saturation (yellow >80%, red >95% of char limits)\n- Stale facts in `fact_store` (trust < 0.4)\n- Semantic duplicates in memory (same concept, different wording)\n- Cross-sync issues (same fact in both memory and fact_store)\n\nRunnable on demand or triggered automatically when memory is near capacity.\n\n### `self-improvement-loop` (medium)\n\nDeep documentation of how the background review system actually works \u2014 based on the real source code:\n\n- **Trigger timing:** Memory nudge pre-turn (every 10 turns), skill nudge post-turn (every 10 tool iters)\n- **Counter resets:** Calling `memory()` or `skill_manage()` resets the respective counters\n- **Fork architecture:** Background review spawns a child `AIAgent` with strict tool whitelist (only `memory` + `skill_manage`), auto-deny on shell commands, `max_iterations=16`\n- **3 known pitfalls:** nudge timing blindness, no rate-limit on review writes, holographic missing `on_pre_compress`\n- **Gateway cold-start workaround:** Hydrates counters from `conversation_history` so nudges work after gateway eviction\n\n## Installation\n\nEach skill is a standard Hermes Agent optional skill. Copy the skill directory to your Hermes skills path:\n\n```bash\n# Copy individual skills\ncp -r optional-skills/memory-discipline ~/.hermes/skills/\ncp -r optional-skills/memory-audit ~/.hermes/skills/\ncp -r optional-skills/self-improvement-loop ~/.hermes/skills/\n```\n\nOr symlink to keep them in sync:\n\n```bash\nln -s $(pwd)/optional-skills/memory-discipline ~/.hermes/skills/\nln -s $(pwd)/optional-skills/memory-audit ~/.hermes/skills/\nln -s $(pwd)/optional-skills/self-improvement-loop ~/.hermes/skills/\n```\n\nOnce loaded, the skills are available via `skill_view(name)` and follow their `trigger` conditions automatically.\n\n## File structure\n\n```\nhermes-memory-suite/\n\u251c\u2500\u2500 README.md\n\u251c\u2500\u2500 LICENSE                     (MIT)\n\u251c\u2500\u2500 optional-skills/\n\u2502   \u251c\u2500\u2500 memory-discipline/\n\u2502   \u2502   \u251c\u2500\u2500 SKILL.md            (decision tree + absolute rules)\n\u2502   \u2502   \u2514\u2500\u2500 references/\n\u2502   \u2502       \u2514\u2500",
+        "readme_links": [
+          "https://hermes-agent.nousresearch.com"
+        ],
         "archived": false,
-        "stars": 40,
-        "age_days": 146,
-        "repo": "xiperinc/singular-lite",
-        "url": "https://github.com/xiperinc/singular-lite"
+        "stars": 1,
+        "age_days": 161,
+        "repo": "Marchy02/hermes-memory-suite",
+        "url": "https://github.com/Marchy02/hermes-memory-suite"
       },
       "site": {
         "live": true,
-        "url": "https://www.xiper.ai/",
-        "title": "Xiper: Deliver FPGA faster",
+        "url": "https://nousresearch.com/",
+        "title": "Nous Research",
+        "parked": false,
+        "product": false,
+        "team": false,
+        "copyright_year": null
+      },
+      "hiring": {
+        "count": 15,
+        "board": "ashby",
+        "slug": "nousresearch",
+        "url": "https://api.ashbyhq.com/posting-api/job-board/nousresearch"
+      },
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "signals": {
+        "accelerator": [],
+        "funding": [
+          "backed by"
+        ],
+        "hiring_text": false,
+        "commercial": [],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": true
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: Marchy02/hermes-memory-suite",
+          "url": "https://github.com/Marchy02/hermes-memory-suite"
+        },
+        {
+          "label": "jobs (ashby)",
+          "url": "https://api.ashbyhq.com/posting-api/job-board/nousresearch"
+        }
+      ],
+      "families": [
+        "careers",
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.41,
+    "scores": {
+      "fit": 0.79,
+      "verification": 0.41,
+      "momentum": 0.201,
+      "stealth": 0.957
+    },
+    "rank_score": 0.5117,
+    "flags": []
+  },
+  {
+    "id": "b6772b9443",
+    "name": "Pane",
+    "domains": [
+      "runpane.com"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "greenfield-inc/Pane",
+        "url": "https://github.com/greenfield-inc/Pane",
+        "domain": "runpane.com",
+        "ts": "2026-02-27T01:34:13Z",
+        "data": {
+          "full_name": "greenfield-inc/Pane",
+          "stars": 600,
+          "forks": 234,
+          "description": "Terminal-first, open-source AI agent manager for any CLI agent (agent agnostic), any OS (mac, windows, linux). The Open-Source Agentic Development Environment for running multiple coding agents in parallel. Run locally or self-host Remote Pane to manage agents from desktop or phone. Simplify multi-agent orchestration with the runpane CLI.",
+          "language": "TypeScript",
+          "matched": "multi-agent orchestration"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 100,
+        "authors_30d": 2,
+        "errors": [],
+        "last_release": "2026-10-31T06:07:38Z",
+        "owner_followers": 8,
+        "owner_location": "United States of America",
+        "owner_blog": "https://greenfield.to",
+        "owner_company": null,
+        "readme_len": 37232,
+        "readme_excerpt": "<p align=\"center\">\n  <img src=\"frontend/src/assets/pane-logo.png\" alt=\"Pane\" width=\"120\" height=\"120\">\n</p>\n\n<p align=\"center\">\n  <strong>Run any coding agent, on any OS, from desktop <a href=\"#remote-pane\">or phone</a>.</strong><br>\n  <em>just terminals. no abstractions.</em>\n</p>\n\n<div align=\"center\">\n\n<a href=\"https://runpane.com\" title=\"Click on this image to see more themes and demo\">\n  <img src=\"assets/readme-remote-pane.png\" alt=\"Pane desktop app and Remote Pane mobile browser app\" title=\"Pane desktop app and Remote Pane mobile browser app\" width=\"100%\">\n</a>\n\nAppearance follows your OS \u2014 see [Appearance](docs/APPEARANCE.md).\n\n[![AGPL-3.0 License](https://img.shields.io/badge/License-AGPL--3.0-555555.svg?labelColor=333333&color=666666)](./LICENSE)\n[![Downloads](https://img.shields.io/endpoint?url=https://runpane.com/api/badge/downloads&labelColor=333333&color=666666)](https://github.com/greenfield-inc/Pane/releases)\n[![GitHub](https://img.shields.io/badge/GitHub-source-555555?labelColor=333333&color=666666&logo=github&logoColor=white)](https://github.com/greenfield-inc/Pane)\n[![Latest Release](https://img.shields.io/badge/Release-latest-555555?labelColor=333333&color=666666)](https://github.com/greenfield-inc/Pane/releases/latest)\n[![Changelog](https://img.shields.io/badge/Changelog-runpane.com-555555?labelColor=333333&color=666666)](https://runpane.com/changelog)\n[![Active Users](https://img.shields.io/endpoint?url=https://runpane.com/api/badge/installs&labelColor=333333)](https://runpane.com)\n[![Discord](https://img.shields.io/badge/Discord-join-%235462eb?labelColor=%235462eb&logo=discord&logoColor=%23f5f5f5)](https://discord.gg/BdMyubeAZn)\n\n<br />\n\n**Made possible by our amazing contributors**\n\n<a href=\"https://github.com/greenfield-inc/Pane/graphs/contributors\">\n  <img src=\"https://contrib.rocks/image?repo=greenfield-inc/Pane\" alt=\"Pane contributors\">\n</a>\n\n<sub><a href=\"./CONTRIBUTING.md\">Join them</a> and help make Pane better.</sub>\n\n<br />\n<br />\n\n**Quick install (recommended)**\n\n<sub>Mac / Linux</sub><br />\n<pre><code>curl -fsSL https://runpane.com/install.sh | sh</code></pre>\n\n<sub>Windows (PowerShell)</sub><br />\n<pre><code>irm https://runpane.com/install.ps1 | iex</code></pre>\n\n<sub><em>Bypasses the macOS Gatekeeper / Windows SmartScreen prompts on direct downloads.</em></sub>\n\n<br />\n<br />\n\n<sub>or download the installer directly</sub><br />\n<br />\n\n<a href=\"https://runpane.com/api/download?platform=mac&source=readme\">\n  <img src=\"https://img.shields.io/badge/Download_for_macOS-000?style=for-the-badge&logo=apple&logoColor=white\" height=\"40\" alt=\"Download for macOS\">\n</a>\n<a href=\"https://runpane.com/api/download?platform=windows&source=readme\">\n  <img src=\"https://img.shields.io/badge/Download_for_Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white\" height=\"40\" alt=\"Download for Windows\">\n</a>\n<a href=\"https://runpane.com/api/download?platform=linux&source=readme\">\n  <img src=\"https://img.shields.io/badge/Download_for_Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black\" height=\"40\" alt=\"Download for Linux\">\n</a>\n\n<br />\n<br />\n\n<details>\n<summary><sub>Other install methods: npx, pnpm, and pipx</sub></summary>\n<br />\n\n<pre><code># Guided setup via npm\nnpx --yes runpane@latest\n\n# pnpm one-shot\npnpm dlx runpane@latest\n\n# Python tools one-shot\npipx run runpane\n\n# Persistent npm install\nnpm i -g runpane\nrunpane setup</code></pre>\n\n</details>\n\n<br />\n<br />\n\n[Installation](#installation) \u00b7 [What Flying Feels Like](#what-flying-feels-like) \u00b7 [Remote Pane](#remote-pane) \u00b7 [Workspaces](#pane-workspaces) \u00b7 [Handoff](#hand-off-a-task) \u00b7 [Pane Chat](#pane-chat) \u00b7 [Agent-Operable CLI](#agent-operable-cli) \u00b7 [Keyboard Shortcuts](#keyboard-shortcuts) \u00b7 [Building from Source](#building-from-source)\n\n</div>\n\nNot an IDE. Not a terminal emulator. **Vim for agent management.**\n\nPane manages AI coding agents without replacing them. If it runs in a terminal, it runs in Pane \u2014 instantly, with zero integration",
+        "readme_links": [
+          "https://runpane.com",
+          "https://img.shields.io/badge/License-AGPL--3.0-555555.svg?labelColor=333333&color=666666",
+          "https://img.shields.io/endpoint?url=https://runpane.com/api/badge/downloads&labelColor=333333&color=666666",
+          "https://github.com/greenfield-inc/Pane/releases",
+          "https://img.shields.io/badge/GitHub-source-555555?labelColor=333333&color=666666&logo=github&logoColor=white",
+          "https://github.com/greenfield-inc/Pane",
+          "https://img.shields.io/badge/Release-latest-555555?labelColor=333333&color=666666",
+          "https://github.com/greenfield-inc/Pane/releases/latest",
+          "https://img.shields.io/badge/Changelog-runpane.com-555555?labelColor=333333&color=666666",
+          "https://runpane.com/changelog",
+          "https://img.shields.io/endpoint?url=https://runpane.com/api/badge/installs&labelColor=333333",
+          "https://runpane.com",
+          "https://img.shields.io/badge/Discord-join-%235462eb?labelColor=%235462eb&logo=discord&logoColor=%23f5f5f5",
+          "https://discord.gg/BdMyubeAZn",
+          "https://github.com/greenfield-inc/Pane/graphs/contributors",
+          "https://contrib.rocks/image?repo=greenfield-inc/Pane",
+          "https://runpane.com/install.sh",
+          "https://runpane.com/install.ps1",
+          "https://runpane.com/api/download?platform=mac&source=readme",
+          "https://img.shields.io/badge/Download_for_macOS-000?style=for-the-badge&logo=apple&logoColor=white",
+          "https://runpane.com/api/download?platform=windows&source=readme",
+          "https://img.shields.io/badge/Download_for_Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white",
+          "https://runpane.com/api/download?platform=linux&source=readme",
+          "https://img.shields.io/badge/Download_for_Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black",
+          "https://runpane.com/app/"
+        ],
+        "archived": false,
+        "stars": 600,
+        "age_days": 249,
+        "repo": "greenfield-inc/Pane",
+        "url": "https://github.com/greenfield-inc/Pane"
+      },
+      "site": {
+        "live": true,
+        "url": "https://runpane.com/",
+        "title": "RunPane by Dcouple | Open-Source Agent Manager",
         "parked": false,
         "product": true,
         "team": false,
@@ -577,11 +615,24 @@
         "matched": false,
         "manual_lookup": true
       },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [
+          "pricing"
+        ],
+        "legal_entity_text": false,
+        "customers": [
+          "used by"
+        ],
+        "backed": false
+      },
       "ecosystem": {},
       "links": [
         {
-          "label": "github: xiperinc/singular-lite",
-          "url": "https://github.com/xiperinc/singular-lite"
+          "label": "github: greenfield-inc/Pane",
+          "url": "https://github.com/greenfield-inc/Pane"
         }
       ],
       "families": [
@@ -589,150 +640,124 @@
       ]
     },
     "tier": "Unverified",
-    "confidence": 0.35,
+    "confidence": 0.37,
     "scores": {
-      "fit": 0.83,
-      "verification": 0.35,
-      "momentum": 0.032,
-      "stealth": 0.77
+      "fit": 0.58,
+      "verification": 0.37,
+      "momentum": 0.551,
+      "stealth": 0.603
     },
-    "rank_score": 0.4959,
+    "rank_score": 0.5031,
+    "flags": []
+  },
+  {
+    "id": "31ec7ec8d3",
+    "name": "dvergr",
+    "domains": [
+      "replikativ.org"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "replikativ/dvergr",
+        "url": "https://github.com/replikativ/dvergr",
+        "domain": null,
+        "ts": "2026-05-02T01:22:37Z",
+        "data": {
+          "full_name": "replikativ/dvergr",
+          "stars": 39,
+          "forks": 3,
+          "description": "FRP-based LLM agent framework with git-like memory model.",
+          "language": "Clojure",
+          "matched": "llm agent framework"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 100,
+        "authors_30d": 1,
+        "errors": [],
+        "last_release": "2026-11-02T19:18:59Z",
+        "owner_followers": 75,
+        "owner_location": "Canada",
+        "owner_blog": "https://replikativ.org",
+        "owner_company": null,
+        "readme_len": 17036,
+        "readme_excerpt": "# \u2692\ufe0f dvergr\n\n[![Clojars Project](https://img.shields.io/clojars/v/org.replikativ/dvergr.svg)](https://clojars.org/org.replikativ/dvergr)\n[![CircleCI](https://circleci.com/gh/replikativ/dvergr.svg?style=shield)](https://circleci.com/gh/replikativ/dvergr)\n[![Slack](https://img.shields.io/badge/slack-join_chat-brightgreen.svg)](https://clojurians.slack.com/archives/C09622F337D)\n[![Docs](https://img.shields.io/badge/docs-clay_notebooks-blue.svg)](https://replikativ.github.io/dvergr/)\n\n**An FRP programming model for agents, in a discourse framework.** Agents are\nreactive processes in continuous-time rooms; humans, LLMs, and scripts are\nparticipants in the same shape, composing through tagged messages on a small\npub/sub kernel.\n\nYou **program agents** and **compose them into multi-agent workflows**. And because\nagents run in the same live medium they're built from, an agent **can** even begin to\ncompose workflows itself, in a forked world you review \u2014 *early and exploratory, not\nthe default mode*.\n\nBuilt on [Spindel](https://github.com/replikativ/spindel) (functional\nreactive runtime), [Datahike](https://github.com/replikativ/datahike)\n(immutable Datalog), and\n[Yggdrasil](https://github.com/replikativ/yggdrasil)\n(copy-on-write branching across git + database).\n\n## What it gives you\n\n**A programming model for multi-agent systems:**\n\n- \ud83d\udcac **Discourse rooms** \u2014 humans + LLM agents exchange messages as equal participants\n- \ud83c\udff7\ufe0f **Tagged routing** \u2014 agents escalate `:escalation/budget`, policy-bots\n  subscribe by capability tag; neither hardcodes the other\n- \ud83c\udf3f **Substrate forks** \u2014 a \"what would the coder write?\" probe runs on a\n  branched Geschichte workspace + datahike, then settles through one affine world handle\n- \ud83e\udde9 **Compositional kernel** \u2014 five primitives (tagged message, capability sub,\n  dynamic subscribe, fork-room, GenerationHandle) cover the whole programming surface\n\n**\u2026and a batteries-included substrate to run agents on:**\n\n- \ud83e\uddea **`clojure_eval` \u2014 a safe code sandbox** \u2014 the agent's main programming surface:\n  Clojure eval in an isolated **SCI** context wired to the dvergr world (rooms,\n  knowledge, intake), with new dependencies loaded through a human-approval gate\n- \ud83d\udce6 **A real workspace it owns** \u2014 each room clones the\n  [dvergr-sandbox](https://github.com/replikativ/dvergr-sandbox) stdlib into its own\n  git repo; the agent `require`s, edits, and `git commit`s its own code there, and the\n  workspace forks/merges with the room\n- \ud83d\udee0\ufe0f **A curated toolset around it** \u2014 structured read/write/edit, structural\n  Clojure edit, a test runner, and a **jailed `muschel` shell** (parsed +\n  filesystem-sandboxed, not raw `bash -c`)\n- \ud83d\udce1 **~25 intake sources** \u2014 read-only data feeds (Hacker News, Reddit, RSS,\n  web / YouTube / tweet fetch, mail, SEC-EDGAR, GitHub, \u2026) ship as **editable source in\n  the workspace** \u2014 the agent reads, copies, and extends them \u2014 pulling into a Datahike\n  knowledge graph\n- \ud83d\udd10 **Boundary credential handling** \u2014 intakes that need an API key get a *placeholder*\n  in the sandbox; the gated HTTP egress swaps in the real key only at the bound domain\n  and scrubs it from the response, so **the agent uses keys it never sees** ([design](doc/effects.md#secrets-at-the-boundary))\n- \ud83d\udd0c **Multiple LLM providers** \u2014 Anthropic API/Claude Code, a native Codex\n  subscription transport, OpenAI API, Fireworks, or any OpenAI-compatible\n  endpoint \u2014 swappable per agent\n- \ud83e\ude99 **Budgets & accounting** \u2014 every turn is metered in microdollars against a\n  per-agent budget; an agent hits a checkpoint and can escalate `:directive/raise-budget`\n  for more, with all spend recorded in a ledger \u2014 so cost stays bounded\n- \ud83e\udde0 **Context management** \u2014 long runs auto-prune tool outputs and summarize older\n  turns as the model's window fills, so an agent holds a long conversation without\n  overflowing context\n- \ud83d\udcbe **Persistent + multi-frontend** \u2014 rooms, history, and knowledge persist in\n  Datahike; drive the same daemon from the TUI, the web dashboard, Tele",
+        "readme_links": [
+          "https://img.shields.io/clojars/v/org.replikativ/dvergr.svg",
+          "https://clojars.org/org.replikativ/dvergr",
+          "https://circleci.com/gh/replikativ/dvergr.svg?style=shield",
+          "https://circleci.com/gh/replikativ/dvergr",
+          "https://img.shields.io/badge/slack-join_chat-brightgreen.svg",
+          "https://clojurians.slack.com/archives/C09622F337D",
+          "https://img.shields.io/badge/docs-clay_notebooks-blue.svg",
+          "https://replikativ.github.io/dvergr/",
+          "https://github.com/replikativ/spindel",
+          "https://github.com/replikativ/datahike",
+          "https://github.com/replikativ/yggdrasil",
+          "https://github.com/replikativ/dvergr-sandbox",
+          "https://github.com/replikativ/dvergr.git",
+          "https://api.openai.com/v1",
+          "https://api.fireworks.ai/inference/v1",
+          "https://github.com/replikativ/dvergr/releases/latest",
+          "https://clojure.org/guides/install_clojure",
+          "https://babashka.org"
+        ],
+        "archived": false,
+        "stars": 39,
+        "age_days": 185,
+        "repo": "replikativ/dvergr",
+        "url": "https://github.com/replikativ/dvergr"
+      },
+      "site": {
+        "live": true,
+        "url": "https://replikativ.org/",
+        "title": "Replikativ",
+        "parked": false,
+        "product": false,
+        "team": false,
+        "copyright_year": null
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: replikativ/dvergr",
+          "url": "https://github.com/replikativ/dvergr"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.12,
+    "scores": {
+      "fit": 0.92,
+      "verification": 0.12,
+      "momentum": 0.368,
+      "stealth": 0.771
+    },
+    "rank_score": 0.5013,
     "flags": [
       "domain-from-owner-blog"
     ]
-  },
-  {
-    "id": "e85dfe0287",
-    "name": "Distributed, deterministically secure agentic swarm runtime. Enclawed",
-    "domains": [
-      "zenodo.org"
-    ],
-    "signals": [
-      {
-        "source": "hn",
-        "kind": "show_hn",
-        "name": "Distributed, deterministically secure agentic swarm runtime. Enclawed",
-        "url": "https://news.ycombinator.com/item?id=50215552",
-        "domain": "zenodo.org",
-        "ts": "2026-10-23T21:23:33Z",
-        "data": {
-          "title": "Show HN: Distributed, deterministically secure agentic swarm runtime. Enclawed",
-          "points": 1,
-          "comments": 0,
-          "author": "enclawed",
-          "hn_id": "50215552",
-          "matched": "secure agent"
-        }
-      }
-    ],
-    "evidence": {
-      "github": {},
-      "site": {
-        "live": true,
-        "url": "https://zenodo.org/",
-        "title": "Zenodo",
-        "parked": false,
-        "product": true,
-        "team": false,
-        "copyright_year": null
-      },
-      "hiring": {},
-      "registry": {
-        "matched": false,
-        "manual_lookup": true
-      },
-      "ecosystem": {},
-      "links": [
-        {
-          "label": "hn: Distributed, deterministically secure agentic swarm runtime. Enclawed",
-          "url": "https://news.ycombinator.com/item?id=50215552"
-        }
-      ],
-      "families": [
-        "hn"
-      ]
-    },
-    "tier": "Unverified",
-    "confidence": 0.35,
-    "scores": {
-      "fit": 0.8,
-      "verification": 0.35,
-      "momentum": 0.001,
-      "stealth": 0.999
-    },
-    "rank_score": 0.4831,
-    "flags": []
-  },
-  {
-    "id": "53be593ba7",
-    "name": "Collaborative-Ai-Agent-Orchestration",
-    "domains": [],
-    "signals": [
-      {
-        "source": "github",
-        "kind": "repo",
-        "name": "Manirider/Collaborative-Ai-Agent-Orchestration",
-        "url": "https://github.com/Manirider/Collaborative-Ai-Agent-Orchestration",
-        "domain": null,
-        "ts": "2026-10-16T08:32:55Z",
-        "data": {
-          "full_name": "Manirider/Collaborative-Ai-Agent-Orchestration",
-          "stars": 4,
-          "forks": 0,
-          "description": "Production minded asynchronous multi-agent orchestration framework using LangGraph, FastAPI, Celery, Redis, PostgreSQL, and Docker.",
-          "language": "Python",
-          "matched": "multi-agent orchestration engine"
-        }
-      }
-    ],
-    "evidence": {
-      "github": {
-        "commits_30d": 2,
-        "authors_30d": 1,
-        "errors": [],
-        "last_release": null,
-        "owner_followers": 14,
-        "owner_location": null,
-        "owner_blog": " https://portfolio-web-rho-nine.vercel.app/",
-        "owner_company": null,
-        "readme_len": 17332,
-        "readme_excerpt": "# Collaborative AI Agent Orchestration Framework\n\n<p align=\"center\">\n  <img src=\"https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.14-3776AB?style=for-the-badge&logo=python&logoColor=white\" alt=\"Python Version\" />\n  <img src=\"https://img.shields.io/badge/LangGraph-v0.2+-FF6F00?style=for-the-badge&logo=langchain&logoColor=white\" alt=\"LangGraph\" />\n  <img src=\"https://img.shields.io/badge/FastAPI-0.104+-009688?style=for-the-badge&logo=fastapi&logoColor=white\" alt=\"FastAPI\" />\n  <img src=\"https://img.shields.io/badge/Celery-5.3+-37814A?style=for-the-badge&logo=celery&logoColor=white\" alt=\"Celery\" />\n  <img src=\"https://img.shields.io/badge/PostgreSQL-16+-4169E1?style=for-the-badge&logo=postgresql&logoColor=white\" alt=\"PostgreSQL\" />\n  <img src=\"https://img.shields.io/badge/Redis-7+-DC382D?style=for-the-badge&logo=redis&logoColor=white\" alt=\"Redis\" />\n  <img src=\"https://img.shields.io/badge/Tests-36%20Passed-2EA44F?style=for-the-badge&logo=pytest&logoColor=white\" alt=\"Test Status\" />\n</p>\n\nAn enterprise-grade, stateful multi-agent orchestration engine built with **LangGraph**, **FastAPI**, **Celery**, **PostgreSQL**, **Redis**, and **WebSockets**.\n\nThis system coordinates specialized autonomous agents through end-to-end research, draft synthesis, and human-in-the-loop validation pipelines. It features durable PostgreSQL checkpointing, atomic row-level concurrency protection, zero-data-loss audit telemetry, and instant initial-state WebSocket streaming.\n\n## Table of",
-        "archived": false,
-        "stars": 4,
-        "age_days": 18,
-        "repo": "Manirider/Collaborative-Ai-Agent-Orchestration",
-        "url": "https://github.com/Manirider/Collaborative-Ai-Agent-Orchestration"
-      },
-      "site": {
-        "live": false,
-        "reason": "no domain found"
-      },
-      "hiring": {},
-      "registry": {
-        "matched": false,
-        "manual_lookup": true
-      },
-      "ecosystem": {},
-      "links": [
-        {
-          "label": "github: Manirider/Collaborative-Ai-Agent-Orchestration",
-          "url": "https://github.com/Manirider/Collaborative-Ai-Agent-Orchestration"
-        }
-      ],
-      "families": [
-        "github"
-      ]
-    },
-    "tier": "Unverified",
-    "confidence": 0.15,
-    "scores": {
-      "fit": 0.83,
-      "verification": 0.15,
-      "momentum": 0.036,
-      "stealth": 0.9
-    },
-    "rank_score": 0.45,
-    "flags": []
   },
   {
     "id": "f00ff88bc7",
@@ -767,7 +792,19 @@
         "owner_blog": "",
         "owner_company": null,
         "readme_len": 10236,
-        "readme_excerpt": "<div align=\"center\">\n\n<img src=\"branding/logo.png\" alt=\"Nerya\" width=\"88\" />\n\n# Nerya\n\n### One idea. A team to build it.\n\nYour local Agent strategy workspace \u2014 research, build, backtest and review in one conversation.\n\n**1.0.0 Beta** \u00b7 `1.0.0-beta.1`\n\n[English](README.md) \u00b7 [\u7b80\u4f53\u4e2d\u6587](README.zh-CN.md)\n\n[Website](https://neryaai.github.io/) \u00b7 [Documentation](https://neryaai.github.io/docs.html) \u00b7 [Desktop downloads](https://github.com/NeryaAI/Nerya/releases) \u00b7 [Build status](https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml)\n\n[![Desktop CI](https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml/badge.svg)](https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml)\n[![Version](https://img.shields.io/badge/version-1.0.0--beta.1-7961e8)](VERSION)\n[![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue)](LICENSE)\n\n</div>\n\nDescribe your trading idea and its constraints. Nerya brings researchers, strategy authors and reviewers into the same workspace. Follow the tools as they run, inspect the evidence, open the strategy and backtest details, and decide what happens next.\n\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"branding/screenshots/1.0.0-beta/strategy-en-dark.gif\" />\n  <img src=\"branding/screenshots/1.0.0-beta/strategy-en-light.gif\" alt=\"Nerya strategy conversation and workflow, English\" width=\"100%\" />\n</picture>\n\n*Recorded from the website's isolated product tour. It uses example data, not a live account or veri",
+        "readme_excerpt": "<div align=\"center\">\n\n<img src=\"branding/logo.png\" alt=\"Nerya\" width=\"88\" />\n\n# Nerya\n\n### One idea. A team to build it.\n\nYour local Agent strategy workspace \u2014 research, build, backtest and review in one conversation.\n\n**1.0.0 Beta** \u00b7 `1.0.0-beta.1`\n\n[English](README.md) \u00b7 [\u7b80\u4f53\u4e2d\u6587](README.zh-CN.md)\n\n[Website](https://neryaai.github.io/) \u00b7 [Documentation](https://neryaai.github.io/docs.html) \u00b7 [Desktop downloads](https://github.com/NeryaAI/Nerya/releases) \u00b7 [Build status](https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml)\n\n[![Desktop CI](https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml/badge.svg)](https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml)\n[![Version](https://img.shields.io/badge/version-1.0.0--beta.1-7961e8)](VERSION)\n[![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue)](LICENSE)\n\n</div>\n\nDescribe your trading idea and its constraints. Nerya brings researchers, strategy authors and reviewers into the same workspace. Follow the tools as they run, inspect the evidence, open the strategy and backtest details, and decide what happens next.\n\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"branding/screenshots/1.0.0-beta/strategy-en-dark.gif\" />\n  <img src=\"branding/screenshots/1.0.0-beta/strategy-en-light.gif\" alt=\"Nerya strategy conversation and workflow, English\" width=\"100%\" />\n</picture>\n\n*Recorded from the website's isolated product tour. It uses example data, not a live account or verified investment performance. [Recording provenance](branding/screenshots/1.0.0-beta/README.md).*\n\n## From idea to a traceable workflow\n\n**Build a strategy.** Describe the market, entry and exit logic, time horizon and constraints. Agents prepare the strategy package and validate it. Script strategies, script-driven Agent strategies and event-driven Agent strategies share the workspace, with readable workflow nodes, parameters and run history.\n\n**Research as a team.** Delegate market data, news and technical research to specialized Agents. A reviewer can challenge assumptions while the lead combines the evidence. Open source material and research reports without losing the conversation.\n\n**Inspect more than a text reply.** Strategy cards, backtest curves, market charts and research reports are part of the conversation. Open their details in workspace tabs. Backtest views include available candle history, entry/exit markers, protection levels, trades and execution evidence; missing data remains visible rather than being presented as a complete result.\n\n**Review and iterate.** Inspect a particular run and its logs before changing a strategy. Optional review schedules produce evidence-linked recommendations and candidate changes. Review and trading authorization are distinct from editing ordinary Skill or Agent resources: those resources can be edited and saved directly.\n\n**Keep the workspace local.** Strategies, cached market history, reports and configuration live in your workspace. Credentials are stored encrypted in the local Vault and referenced by identifier. Configured model providers, market services and external tools still receive the requests needed to perform your tasks; local storage does not make those services offline.\n\n## What is in 1.0.0 Beta?\n\n| Area | In the workspace |\n| --- | --- |\n| Agent conversation | Streaming replies, available thinking output, tool execution, progress, follow-up messages and recoverable errors |\n| Strategies | Script and Agent execution, timer/event workflow nodes, strategy editing, import/export and run details |\n| Backtesting | Reusable local historical data, preflight checks, coverage information, per-market charts and trade records |\n| Research | Market cards, technical charts, evidence-linked reports and multi-Agent research |\n| Skills & Agents | `SKILL.md` playbooks, lazy-loaded references, reusable scripts and direct resource editing |\n| Integrations | Configurable model providers, exchange/wallet connections,",
+        "readme_links": [
+          "https://neryaai.github.io/",
+          "https://neryaai.github.io/docs.html",
+          "https://github.com/NeryaAI/Nerya/releases",
+          "https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml",
+          "https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml/badge.svg",
+          "https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml",
+          "https://img.shields.io/badge/version-1.0.0--beta.1-7961e8",
+          "https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue",
+          "https://github.com/NeryaAI/Nerya/releases",
+          "https://github.com/NeryaAI/Nerya.git"
+        ],
         "archived": false,
         "stars": 14,
         "age_days": 186,
@@ -783,6 +820,15 @@
         "matched": false,
         "manual_lookup": true
       },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
       "ecosystem": {},
       "links": [
         {
@@ -795,14 +841,210 @@
       ]
     },
     "tier": "Unverified",
-    "confidence": 0.15,
+    "confidence": 0.12,
     "scores": {
-      "fit": 0.64,
-      "verification": 0.15,
+      "fit": 0.8,
+      "verification": 0.12,
       "momentum": 0.356,
       "stealth": 0.832
     },
-    "rank_score": 0.446,
+    "rank_score": 0.4561,
+    "flags": []
+  },
+  {
+    "id": "4d4d398625",
+    "name": "cognithor",
+    "domains": [
+      "cognithor.ai"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "Alex8791-cyber/cognithor",
+        "url": "https://github.com/Alex8791-cyber/cognithor",
+        "domain": "cognithor.ai",
+        "ts": "2026-02-25T01:24:40Z",
+        "data": {
+          "full_name": "Alex8791-cyber/cognithor",
+          "stars": 157,
+          "forks": 27,
+          "description": "Cognithor \u00b7 Agent OS: Local-first autonomous agent operating system. 19 LLM providers, 18 channels, 145 MCP tools, 6-tier memory, Agent Packs marketplace, zero telemetry. Python 3.12+, Apache 2.0.",
+          "language": "Python",
+          "matched": "agent-to-agent protocol"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 0,
+        "authors_30d": 0,
+        "errors": [],
+        "last_release": "2026-05-06T19:29:49Z",
+        "owner_followers": 6,
+        "owner_location": null,
+        "owner_blog": "",
+        "owner_company": null,
+        "readme_len": 115000,
+        "readme_excerpt": "<p align=\"center\">\n  <h1 align=\"center\">Cognithor &middot; Agent OS</h1>\n  <p align=\"center\">\n    <strong>A local-first, autonomous agent operating system for AI experimentation and personal automation.</strong>\n  </p>\n  <p align=\"center\">\n    <em>Cognition + Thor \u2014 Intelligence with Power</em>\n  </p>\n  <p align=\"center\">\n    <a href=\"https://cognithor.ai\"><strong>cognithor.ai</strong></a> &middot;\n    <a href=\"https://cognithor.ai/packs\">Agent Packs</a> &middot;\n    <a href=\"https://cognithor.ai/docs\">Docs</a> &middot;\n    <a href=\"https://cognithor.ai/blog\">Blog</a>\n  </p>\n  <p align=\"center\">\n    <a href=\"#llm-providers\">19 LLM Providers</a> &middot; <a href=\"#channels\">17 Channels</a> &middot; <a href=\"#6-tier-cognitive-memory\">6-Tier Memory</a> &middot; <a href=\"#4-channel-hybrid-search\">4-Channel Search</a> &middot; <a href=\"#knowledge-vault\">Knowledge Vault</a> &middot; <a \n    href=\"#security\">Security</a> &middot; <a href=\"LICENSE\">Apache 2.0</a>\n  </p>\n  <p align=\"center\">\n    <a href=\"https://github.com/Alex8791-cyber/cognithor/stargazers\"><img src=\"https://img.shields.io/github/stars/Alex8791-cyber/cognithor?style=flat-square&color=yellow\" alt=\"GitHub Stars\"></a>\n    <img src=\"https://img.shields.io/badge/status-Beta%20%2F%20Experimental-orange?style=flat-square\" alt=\"Status: Beta\">\n    <a href=\"#quick-start\"><img src=\"https://img.shields.io/badge/python-%3E%3D3.12-blue?style=flat-square\" alt=\"Python\"></a>\n    <a href=\"https://github.com/Alex8791-cyber/cognithor/actions/workflows/ci.yml\"><img src=\"https://github.com/Alex8791-cyber/cognithor/actions/workflows/ci.yml/badge.svg\" alt=\"CI\"></a>\n    <a href=\"https://pypi.org/project/cognithor/\"><img src=\"https://img.shields.io/pypi/v/cognithor.svg?style=flat-square\" alt=\"PyPI\"></a>\n    <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-Apache%202.0-blue?style=flat-square\" alt=\"License\"></a>\n    <a href=\"https://github.com/Alex8791-cyber/cognithor/releases\"><img src=\"https://img.shields.io/github/v/release/Alex8791-cyber/cognithor?style=flat-square&color=blue\" alt=\"Release\"></a>\n  </p>\n</p>\n\n> **Pre-v1.0 Beta** \u2014 Cognithor is under active development. APIs may change between releases. Not recommended for production customer-facing deployments. Bug reports and feedback welcome via [Issues](../../issues).\n>\n> While the test suite is extensive (17,000+ test functions, 89% coverage gate), the project has not been battle-tested in production environments. Expect rough edges, breaking changes between versions, and some German-language strings in system prompts and error messages. See [Status & Maturity](#status--maturity) for details. For non-technical users, wait until version 1.0.0 for stable long-term support.\n\n  [![clawdboard](https://clawdboard.ai/api/badge/Alex8791-cyber)](https://clawdboard.ai/user/Alex8791-cyber)\n\n<p align=\"center\">\n  <a href=\"https://clawdboard.ai/recap/6fd37b26-7e41-4b0f-958a-3f2580427ccf\"><strong>Weekly Recap: Rank #1 | $1,644 spent vibe-engineering</strong></a>\n</p>\n\n> **Vibe-Engineered, not vibe-coded.** Cognithor is not a weekend hack held together by AI-generated spaghetti. Every module follows a deliberate architecture (PGE-Trinity, 6-phase gateway init, 3-layer security, TRUST-1..10 operational-trust stack), backed by 17,000+ test functions, structured plans, spec compliance reviews, and code quality gates. The AI writes the code \u2014 but a human engineers the system. There's a difference.\n\n---\n\n## Why Cognithor?\n\nMost AI assistants send your data to the cloud. Cognithor runs entirely on your machine \u2014 with Ollama or LM Studio, no API keys required. Cloud providers are optional, not mandatory.\n\nIt replaces a patchwork of tools with one integrated system: 17 channels, 141 MCP tools across 30 modules, 6-tier memory with 4-channel hybrid search, knowledge vault, voice, browser automation, Computer Use, cross-platform social listening, signed audit receipts (TRUST-1..10), resumable batch workflows (CRWE), TUF-Light-signed pack registry, ",
+        "readme_links": [
+          "https://cognithor.ai",
+          "https://cognithor.ai/packs",
+          "https://cognithor.ai/docs",
+          "https://cognithor.ai/blog",
+          "https://github.com/Alex8791-cyber/cognithor/stargazers",
+          "https://img.shields.io/github/stars/Alex8791-cyber/cognithor?style=flat-square&color=yellow",
+          "https://img.shields.io/badge/status-Beta%20%2F%20Experimental-orange?style=flat-square",
+          "https://img.shields.io/badge/python-%3E%3D3.12-blue?style=flat-square",
+          "https://github.com/Alex8791-cyber/cognithor/actions/workflows/ci.yml",
+          "https://github.com/Alex8791-cyber/cognithor/actions/workflows/ci.yml/badge.svg",
+          "https://pypi.org/project/cognithor/",
+          "https://img.shields.io/pypi/v/cognithor.svg?style=flat-square",
+          "https://img.shields.io/badge/license-Apache%202.0-blue?style=flat-square",
+          "https://github.com/Alex8791-cyber/cognithor/releases",
+          "https://img.shields.io/github/v/release/Alex8791-cyber/cognithor?style=flat-square&color=blue",
+          "https://clawdboard.ai/api/badge/Alex8791-cyber",
+          "https://clawdboard.ai/user/Alex8791-cyber",
+          "https://clawdboard.ai/recap/6fd37b26-7e41-4b0f-958a-3f2580427ccf"
+        ],
+        "archived": false,
+        "stars": 157,
+        "age_days": 251,
+        "repo": "Alex8791-cyber/cognithor",
+        "url": "https://github.com/Alex8791-cyber/cognithor"
+      },
+      "site": {
+        "live": true,
+        "url": "https://cognithor.ai/",
+        "title": "Cognithor \u00b7 Local-first Agent OS",
+        "parked": false,
+        "product": true,
+        "team": true,
+        "copyright_year": null
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "signals": {
+        "accelerator": [],
+        "funding": [
+          "backed by"
+        ],
+        "hiring_text": false,
+        "commercial": [
+          "waitlist"
+        ],
+        "legal_entity_text": false,
+        "customers": [
+          "case studies",
+          "case study"
+        ],
+        "backed": true
+      },
+      "ecosystem": {
+        "registry": "pypi.org",
+        "package": "cognithor",
+        "dependent_repos": 0,
+        "dependent_packages": 0,
+        "downloads": 38,
+        "funding_links": [
+          "https://github.com/sponsors/Alex8791-cyber"
+        ]
+      },
+      "links": [
+        {
+          "label": "github: Alex8791-cyber/cognithor",
+          "url": "https://github.com/Alex8791-cyber/cognithor"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.43,
+    "scores": {
+      "fit": 0.73,
+      "verification": 0.43,
+      "momentum": 0.052,
+      "stealth": 0.686
+    },
+    "rank_score": 0.4476,
+    "flags": []
+  },
+  {
+    "id": "522f71594d",
+    "name": "Openheim",
+    "domains": [
+      "openheim.io"
+    ],
+    "signals": [
+      {
+        "source": "hn",
+        "kind": "show_hn",
+        "name": "Openheim",
+        "url": "https://news.ycombinator.com/item?id=49522064",
+        "domain": "openheim.io",
+        "ts": "2026-09-01T13:54:03Z",
+        "data": {
+          "title": "Show HN: Openheim \u2013 a multi-provider LLM agent runtime, written in Rust",
+          "points": 3,
+          "comments": 0,
+          "author": "themartto",
+          "hn_id": "49522064",
+          "matched": "llm agent"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {},
+      "site": {
+        "live": true,
+        "url": "https://openheim.io/",
+        "title": "openheim \u00e2\u0080\u0094 LLM agent built to run anywhere",
+        "parked": false,
+        "product": true,
+        "team": false,
+        "copyright_year": 2026
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [
+          "enterprise"
+        ],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "hn: Openheim",
+          "url": "https://news.ycombinator.com/item?id=49522064"
+        }
+      ],
+      "families": [
+        "hn"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.3,
+    "scores": {
+      "fit": 0.83,
+      "verification": 0.3,
+      "momentum": 0.002,
+      "stealth": 0.998
+    },
+    "rank_score": 0.438,
     "flags": []
   },
   {
@@ -840,7 +1082,22 @@
         "owner_blog": "https://openduo.ai",
         "owner_company": null,
         "readme_len": 13564,
-        "readme_excerpt": "# duoduo\n\n**A model call ends. The work shouldn't.**\n\n[![npm](https://img.shields.io/npm/v/@openduo/duoduo)](https://www.npmjs.com/package/@openduo/duoduo)\n\nDuoDuo is a long-lived local runtime for Claude, Codex, Grok, and Pi. Conversations, jobs, outputs, and prompts live in files on your machine. Foreground sessions handle live work; a scheduled subconscious distills experience into an intuition layer that every new session starts with, kept in Git so every change to what DuoDuo has learned has a diff and a revert.\n\nDuoDuo is not another harness. Claude, Codex, Grok, and Pi are the harnesses, and they keep improving; DuoDuo is the environment that gives them durable state, time, channels, and a Git-tracked history. Talk to it from any channel you plug in: a chat app, a room, a button in your pocket, or another assistant that becomes DuoDuo through Tether.\n\nSite and documentation: [openduo.ai](https://openduo.ai).\n\n## Why Not Open Source?\n\nFirst: we are called **open**duo and we don't publish source either. Respect to OpenAI.\n\nThe real reason: **this codebase is not written for humans to read.**\n\nduoduo is an agent that codes itself. The published npm packages contain minified JavaScript. An agent can read, understand, and modify minified code just fine \u2014 it doesn't need pretty source with comments and indentation. Minification here isn't obfuscation; it's compression. Saves bandwidth. Keeps the context window lean.\n\nHumans don't need to read the source. Humans need to **vib",
+        "readme_excerpt": "# duoduo\n\n**A model call ends. The work shouldn't.**\n\n[![npm](https://img.shields.io/npm/v/@openduo/duoduo)](https://www.npmjs.com/package/@openduo/duoduo)\n\nDuoDuo is a long-lived local runtime for Claude, Codex, Grok, and Pi. Conversations, jobs, outputs, and prompts live in files on your machine. Foreground sessions handle live work; a scheduled subconscious distills experience into an intuition layer that every new session starts with, kept in Git so every change to what DuoDuo has learned has a diff and a revert.\n\nDuoDuo is not another harness. Claude, Codex, Grok, and Pi are the harnesses, and they keep improving; DuoDuo is the environment that gives them durable state, time, channels, and a Git-tracked history. Talk to it from any channel you plug in: a chat app, a room, a button in your pocket, or another assistant that becomes DuoDuo through Tether.\n\nSite and documentation: [openduo.ai](https://openduo.ai).\n\n## Why Not Open Source?\n\nFirst: we are called **open**duo and we don't publish source either. Respect to OpenAI.\n\nThe real reason: **this codebase is not written for humans to read.**\n\nduoduo is an agent that codes itself. The published npm packages contain minified JavaScript. An agent can read, understand, and modify minified code just fine \u2014 it doesn't need pretty source with comments and indentation. Minification here isn't obfuscation; it's compression. Saves bandwidth. Keeps the context window lean.\n\nHumans don't need to read the source. Humans need to **vibe with the agent** \u2014 describe what you want, let it figure out the implementation. That's the whole point.\n\n> Human? Read this README, then run it and talk to it.\n> Agent? The minified bundle is your source. See [Issues](#issues--feedback).\n\n### What you may do with it\n\nSource-available, and open to your agents. The bundle is licensed to you and to the agents you run: read it, de-minify it, debug it, patch it, train on it, and share your patches. The one thing you may not do is offer it, or something built from it, as a competing product or service. Two years after each release, that version becomes Apache-2.0. The terms are in [LICENSE](LICENSE); the summary an agent can act on is [LICENSE.agents.yaml](LICENSE.agents.yaml).\n\n## Core Innovations\n\n### 1. Filesystem-First, Event-Sourced Runtime\n\nAll state \u2014 conversations, outputs, jobs, memory \u2014 lives in durable files. Nothing critical is held in process memory. The canonical event log (WAL) is written before any action executes. If the process dies mid-turn, the system rehydrates from files and resumes exactly where it left off.\n\nThis is not a backup strategy. The filesystem is the database. The event log is the source of truth. The process is stateless by default.\n\n### 2. WAL-Before-Execute at the Gateway Boundary\n\nEvery inbound message follows a strict contract: write a canonical event to the append-only log _first_, then enqueue the session, then execute. Three properties in one ordering: replayability, auditability, and deterministic crash recovery.\n\n### 3. One External Identity, Many Internal Sessions\n\nExternally, duoduo presents one coherent agent identity. Internally, it orchestrates multiple concurrent session actors \u2014 one per conversation channel, plus background job sessions and subconscious partitions \u2014 each with explicit lifecycle and concurrency control enforced by lease locks.\n\n### 4. Dual-Loop Cognition: Cortex + Subconscious\n\n**Foreground (Cortex)** responds to live channel messages. Sessions persist across restarts and resume conversation history exactly.\n\n**Background (Subconscious)** runs on a cadence regardless of foreground activity. It consolidates memory, reflects on past sessions, and maintains a broadcast board of curated knowledge automatically loaded into every future session's context \u2014 even when no one is chatting.\n\n### 5. Self-Programming Cognitive Topology\n\nSubconscious behavior is defined by filesystem files \u2014 each partition has its own prompt, schedule, and cooldown. Partiti",
+        "readme_links": [
+          "https://img.shields.io/npm/v/@openduo/duoduo",
+          "https://www.npmjs.com/package/@openduo/duoduo",
+          "https://openduo.ai",
+          "http://localhost:20233/dashboard`",
+          "https://open.feishu.cn/page/openclaw?form=multiAgent",
+          "https://www.npmjs.com/package/@openduo/channel-feishu",
+          "https://www.npmjs.com/package/@openduo/channel-ambient",
+          "https://github.com/openduo/ambient",
+          "https://www.npmjs.com/package/@openduo/channel-tether",
+          "https://github.com/openduo/tether",
+          "https://skills.sh/",
+          "https://github.com/openduo/duoduo",
+          "https://github.com/openduo/duoduo"
+        ],
         "archived": false,
         "stars": 10,
         "age_days": 243,
@@ -861,6 +1118,15 @@
         "matched": false,
         "manual_lookup": true
       },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
       "ecosystem": {},
       "links": [
         {
@@ -873,35 +1139,37 @@
       ]
     },
     "tier": "Unverified",
-    "confidence": 0.15,
+    "confidence": 0.12,
     "scores": {
-      "fit": 0.67,
-      "verification": 0.15,
+      "fit": 0.83,
+      "verification": 0.12,
       "momentum": 0.231,
       "stealth": 0.851
     },
-    "rank_score": 0.4276,
+    "rank_score": 0.4343,
     "flags": []
   },
   {
-    "id": "19432ca4d6",
-    "name": "netops-ai-agent",
-    "domains": [],
+    "id": "5ca7e0811b",
+    "name": "claude-code-prompts",
+    "domains": [
+      "repowise.dev"
+    ],
     "signals": [
       {
         "source": "github",
         "kind": "repo",
-        "name": "mahfuz-raihan/netops-ai-agent",
-        "url": "https://github.com/mahfuz-raihan/netops-ai-agent",
+        "name": "repowise-dev/claude-code-prompts",
+        "url": "https://github.com/repowise-dev/claude-code-prompts",
         "domain": null,
-        "ts": "2026-04-10T20:35:46Z",
+        "ts": "2026-04-01T06:59:09Z",
         "data": {
-          "full_name": "mahfuz-raihan/netops-ai-agent",
-          "stars": 2,
-          "forks": 0,
-          "description": "An autonomous, AI-driven Security Operations Center (SOC). Uses FastAPI, PyTorch, local LLMs (Ollama), and the OpenClaw agent framework to detect anomalies and autonomously deploy firewall defenses via a Human-in-the-Loop dashboard.",
-          "language": "Python",
-          "matched": "secure agent sandbox"
+          "full_name": "repowise-dev/claude-code-prompts",
+          "stars": 1220,
+          "forks": 397,
+          "description": "Independently authored prompt templates for AI coding agents \u2014 system prompts, tool prompts, agent delegation, memory management, and multi-agent coordination. Informed by studying Claude Code.",
+          "language": null,
+          "matched": "multi-agent orchestration"
         }
       }
     ],
@@ -911,32 +1179,61 @@
         "authors_30d": 0,
         "errors": [],
         "last_release": null,
-        "owner_followers": 19,
-        "owner_location": "Bangladesh",
-        "owner_blog": "https://mahfuz-raihan.netlify.app/",
-        "owner_company": "Brain Station 23",
-        "readme_len": 11525,
-        "readme_excerpt": "# Morpheus: Autonomous Security Operations Center\n## Dashboard Preview\n\n![Morpheus Dashboard](assets/dashboard.png)\n\n> A containerized, AI-driven SOC platform that autonomously monitors network traffic, detects anomalies with deep learning, and executes closed-loop firewall defenses through an agentic reasoning pipeline with full Human-in-the-Loop (HITL) oversight.\n\n---\n\n## Table of Contents\n\n- [Project Description](#project-description)\n- [Key Features](#key-features)\n- [System Design Pattern](#system-design-pattern)\n- [Tech Stack](#tech-stack)\n- [How to Run Locally](#how-to-run-locally)\n- [Testing](#testing)\n\n---\n\n## Project Description\n\n**Morpheus** is a production-grade, containerized Continuous Threat Exposure Management (CTEM) platform. It autonomously ingests network log streams, classifies threats using a zero-shot deep learning model, synthesizes contextual forensic intelligence via LLM, and enforces live firewall defenses through a secure, sandboxed Agent Gateway.\n\nThe system is built around a **dual-path mitigation model**: threats can be automatically neutralized when Autonomous Shielding thresholds are breached, or queued for manual approval by a security engineer through the SOC Dashboard or Discord ChatOps channel.\n\nEvery stage of the pipeline is protected by a multi-layer guardrail system that enforces prompt injection protection, PII scrubbing, IP validation, command injection sanitization, and action rate-limiting.\n\n---\n\n## Key Features\n\n| Feature           ",
+        "owner_followers": 148,
+        "owner_location": "India",
+        "owner_blog": "https://repowise.dev",
+        "owner_company": null,
+        "readme_len": 11390,
+        "readme_excerpt": "# Claude Code Prompts \u2014 Independently Authored Prompt Collection\n\n Independently written prompt templates for building AI coding agents, inspired by patterns observed in Claude Code codebase. System prompts, tool prompts, agent prompts, memory management, and multi-agent coordination.\n\n## Check out [RepoWise](https://github.com/repowise-dev/repowise)\n\n<p align=\"center\">\n  <a href=\"https://github.com/repowise-dev/repowise\">\n    <img src=\"./assets/repowise-logo.png\" alt=\"RepoWise\" width=\"140\" />\n  </a>\n</p>\n\n**Prompts tell your agent how to behave. [RepoWise](https://github.com/repowise-dev/repowise) tells it what the codebase actually does.**\n\nOpen-source codebase intelligence engine. Auto-generated architecture wikis, dependency graphs, ownership maps, dead code detection, and 9 MCP tools your AI editor can query in real time.\n\n**[GitHub](https://github.com/repowise-dev/repowise)** &nbsp; | &nbsp; [repowise.dev](https://repowise.dev)\n\nScroll down for Claude Code's prompt patterns. \ud83d\udc47\n\n---\n\n<!-- GitHub repo description: Independently authored prompt templates for AI coding agents \u2014 system prompts, tool prompts, agent delegation, memory management, and multi-agent coordination. Informed by observing how Claude Code works in practice. -->\n\n<!-- Suggested GitHub topics: claude-code, claude-code-prompts, claude-prompts, system-prompt, claude-code-system-prompt, prompt-engineering, anthropic-claude, ai-coding-agent, claude-agent, llm-prompts, ai-prompts, cursor-skills, multi-agent, coding-assistant, ai-tools, prompt-templates -->\n\n## Claude Code System Prompts\n\nWe studied how Claude Code behaves in practice -- how it structures safety rules, routes tools, delegates to subagents, manages memory -- and wrote our own prompt collection from scratch implementing the same patterns.\n\n**Every prompt in this repo is independently authored.** We observed what patterns make a coding agent reliable and wrote our own versions. From the team behind [RepoWise](https://github.com/repowise-dev/repowise).\n\nNot affiliated with Anthropic. See [DISCLAIMER.md](./DISCLAIMER.md).\n\n> **Note**\n> \u2b50 Star this repository to if you find the collection useful.\n\n## What's Inside\n\n| Category | Files | What You Get |\n|----------|-------|--------------|\n| [System prompt](#claude-code-system-prompt-1) | 1 | Agent identity, safety rules, code style, tool routing, output format |\n| [Tool prompts](#claude-code-tool-prompts) | 11 | Shell, file read/edit/write, grep, glob, web search/fetch, agent launcher, ask user, plan mode |\n| [Agent prompts](#claude-code-agent-prompts) | 5 | General purpose, code explorer, solution architect, verification specialist, documentation guide |\n| [Memory prompts](#claude-code-memory-prompts) | 4 | Conversation summarization, session notes, memory extraction, memory consolidation |\n| [Coordinator prompt](#multi-agent-coordinator) | 1 | Multi-worker orchestration with synthesis, delegation, and verification workflow |\n| [Utility prompts](#claude-code-utility-prompts) | 4 | Session titles, tool summaries, away recaps, next-action suggestions |\n| [Pattern analyses](#prompt-engineering-patterns) | 9 | Commentary on each pattern with reusable templates |\n| [Cursor skills](#cursor-skills) | 3 | Drop-in skills for coding standards, verification, and prompt design |\n\n## Quick Start\n\n1. Browse the [pattern files](#prompt-engineering-patterns) to understand how production coding agents structure their prompts.\n2. Copy any [complete prompt](#claude-code-system-prompt-1) into your own agent configuration.\n3. Replace `{{PLACEHOLDER}}` values with your stack, tool names, and risk policy.\n4. For Cursor IDE users, drop `skills/` into `~/.cursor/skills-cursor/` for instant integration.\n5. Add codebase context with [RepoWise](https://github.com/repowise-dev/repowise) so your agent actually understands the project it's working in.\n\n## Prompt Engineering Patterns\n\nPatterns observed in how Claude Code structures its prompts \u2014 with analysis and independently writte",
+        "readme_links": [
+          "https://github.com/repowise-dev/repowise",
+          "https://github.com/repowise-dev/repowise",
+          "https://github.com/repowise-dev/repowise",
+          "https://github.com/repowise-dev/repowise",
+          "https://repowise.dev",
+          "https://github.com/repowise-dev/repowise",
+          "https://github.com/repowise-dev/repowise"
+        ],
         "archived": false,
-        "stars": 2,
-        "age_days": 207,
-        "repo": "mahfuz-raihan/netops-ai-agent",
-        "url": "https://github.com/mahfuz-raihan/netops-ai-agent"
+        "stars": 1220,
+        "age_days": 216,
+        "repo": "repowise-dev/claude-code-prompts",
+        "url": "https://github.com/repowise-dev/claude-code-prompts"
       },
       "site": {
-        "live": false,
-        "reason": "no domain found"
+        "live": true,
+        "url": "https://repowise.dev/",
+        "title": "Repowise: your codebase, understood by agents and teams",
+        "parked": false,
+        "product": true,
+        "team": false,
+        "copyright_year": 2026
       },
       "hiring": {},
       "registry": {
         "matched": false,
         "manual_lookup": true
       },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [
+          "enterprise",
+          "book a demo",
+          "pricing"
+        ],
+        "legal_entity_text": false,
+        "customers": [
+          "used by"
+        ],
+        "backed": false
+      },
       "ecosystem": {},
       "links": [
         {
-          "label": "github: mahfuz-raihan/netops-ai-agent",
-          "url": "https://github.com/mahfuz-raihan/netops-ai-agent"
+          "label": "github: repowise-dev/claude-code-prompts",
+          "url": "https://github.com/repowise-dev/claude-code-prompts"
         }
       ],
       "families": [
@@ -944,174 +1241,159 @@
       ]
     },
     "tier": "Unverified",
-    "confidence": 0.0,
+    "confidence": 0.37,
     "scores": {
-      "fit": 0.86,
-      "verification": 0.0,
-      "momentum": 0.001,
-      "stealth": 0.932
+      "fit": 0.61,
+      "verification": 0.37,
+      "momentum": 0.25,
+      "stealth": 0.559
     },
-    "rank_score": 0.4166,
-    "flags": []
+    "rank_score": 0.4323,
+    "flags": [
+      "domain-from-readme"
+    ]
   },
   {
-    "id": "b6ad699473",
-    "name": "Skillscript",
-    "domains": [],
+    "id": "45113d5354",
+    "name": "odek",
+    "domains": [
+      "21no.de"
+    ],
     "signals": [
       {
         "source": "github",
         "kind": "repo",
-        "name": "sshwarts/skillscript",
-        "url": "https://github.com/sshwarts/skillscript",
-        "domain": null,
-        "ts": "2026-05-20T17:23:27Z",
+        "name": "BackendStack21/odek",
+        "url": "https://github.com/BackendStack21/odek",
+        "domain": "21no.de",
+        "ts": "2026-05-17T15:22:46Z",
         "data": {
-          "full_name": "sshwarts/skillscript",
-          "stars": 75,
-          "forks": 4,
-          "description": "Skillscript \u2014 a small declarative language for authoring agent workflows. Runtime, compiler, and CLI.",
-          "language": "TypeScript",
-          "matched": "agentic workflow runtime"
-        }
-      },
-      {
-        "source": "hn",
-        "kind": "show_hn",
-        "name": "Skillscript",
-        "url": "https://news.ycombinator.com/item?id=48881112",
-        "domain": null,
-        "ts": "2026-07-12T13:34:00Z",
-        "data": {
-          "title": "Show HN: Skillscript \u2013 A declarative, sandboxed language for tool orchestration",
-          "points": 18,
-          "comments": 32,
-          "author": "sshwarts",
-          "hn_id": "48881112",
-          "matched": "agent orchestration",
-          "github_repo": "sshwarts/skillscript"
+          "full_name": "BackendStack21/odek",
+          "stars": 10,
+          "forks": 0,
+          "description": "Minimal Go autonomous agent runtime \u2014 One binary. One loop. Zero frameworks. ReAct (Reasoning + Acting + Verify)",
+          "language": "Go",
+          "matched": "autonomous agent runtime"
         }
       }
     ],
     "evidence": {
       "github": {
-        "commits_30d": 1,
-        "authors_30d": 1,
+        "commits_30d": 40,
+        "authors_30d": 2,
         "errors": [],
-        "last_release": "2026-10-12T18:19:16Z",
-        "owner_followers": 8,
-        "owner_location": null,
-        "owner_blog": "",
+        "last_release": "2026-10-30T11:22:47Z",
+        "owner_followers": 34,
+        "owner_location": "Germany",
+        "owner_blog": "https://21no.de",
         "owner_company": null,
-        "readme_len": 8068,
-        "readme_excerpt": "<p align=\"center\">\n  <img src=\"assets/skillscript_logo.png\" alt=\"Skillscript\" width=\"400\">\n</p>\n\n<p align=\"center\">\n<em>Safe, reusable automation authored by agents.</em>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://skillscript.ai\">skillscript.ai</a>&nbsp; \u2022 &nbsp;\n  <a href=\"https://docs.skillscript.ai/docs\">docs</a>&nbsp;\n  </p>\n\n\n[![npm version](https://img.shields.io/npm/v/skillscript-runtime.svg)](https://www.npmjs.com/package/skillscript-runtime)\n[![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)\n[![status](https://img.shields.io/badge/status-pre--1.0-orange)](#status)\n\n> **TL;DR** \u2014 `npm install -g skillscript-runtime && skillfile init && skillfile dashboard`. See [Quickstart](#quickstart).\n\n### What is Skillscript?\n\nSkillscript came from asking: what would a Makefile look like if it built skills instead of binaries? The answer is a constrained language, inspired by Make, and a runtime that turns an agent's reasoning into persistent, inspectable automation. The agent writes the skill, you approve what it can do, and it runs the same way every time.\n\nIt is built for teams that want agents to create and run recurring workflows without giving them unrestricted shell access, arbitrary package installation, or direct control of production credentials.\n\nAn agent writes a skill. A human reviews and approves it. The runtime executes it through configured connectors, allowlists, and security policies.\n\n```bash\nnpm install -g skillscript-runtime\nskillfile init\ns",
+        "readme_len": 18864,
+        "readme_excerpt": "# odek\n\n**Minimal Go autonomous agent runtime \u2014 tiny dep tree, small static binary, instant startup.**\n\nOne binary. One loop. Zero frameworks. ReAct (Reasoning + Acting) \u2014 think, therefore act.\n\n```bash\n# One-line install (macOS/Linux, checksum-verified prebuilt binary):\ncurl -fsSL https://odek.21no.de/install.sh | sh\n\n# Or install from a v2 release tag (requires Go \u2265 1.25.13 \u2014 see GETTING_STARTED.md).\n# Do not use @latest: Go ignores v2 tags on this module path and would\n# install an older v1 release.\ngo install github.com/BackendStack21/odek/cmd/odek@v2.11.2\n\n# Use (provider env key \u2014 DEEPSEEK_API_KEY for the default provider)\nexport DEEPSEEK_API_KEY=sk-...\nodek run \"How many lines in go.mod?\"\n# \u2192 3 lines\n```\n\n**Build requirements:** Go **1.25.13 or newer**. The `go` directive in `go.mod` pins this floor because earlier 1.25.x toolchains ship reachable standard-library CVEs; CI additionally runs `govulncheck` on every push/PR so new advisories fail the build.\n\n**New here?** The step-by-step install guide \u2014 including the GLM 5.3 Flash (z.ai) setup and the optional bodek TUI \u2014 lives in [GETTING_STARTED.md](GETTING_STARTED.md).\n\n---\n\n## Why odek\n\nodek is not a framework. It's a **runtime** \u2014 the smallest possible surface area between an LLM and your tools.\n\n| | odek | Python agents (LangChain, CrewAI, etc.) |\n|---|---|---|\n| Dependencies | **6.** 3\u00d7 21no.de, 3\u00d7 golang.org/x | 200+ packages |\n| Binary size | ~15 MB static | 50-200 MB with venv |\n| Startup | **Instant** | 2-10s (Python imports) |\n| Sandbox | **Default-on** Docker sandbox (`--no-sandbox` to opt out) | Requires manual Docker setup |\n| Tool interface | One interface, one method | Class hierarchies + decorators |\n\n---\n\n## Strategic Features\n\n### \ud83d\udd12 Sandboxed Execution\nEvery session can run in an isolated Docker container: no network, no host mounts beyond the working directory, zero capabilities, destroyed on exit. Sandboxing is **on by default** for `odek run`, `odek repl`, and `odek serve`; opt out with `--no-sandbox` / `ODEK_NO_SANDBOX=1` (unsandboxed runs warn loudly, and `ODEK_REQUIRE_SANDBOX=1` makes them fatal). `--ctx` files are auto-injected into the container at `/workspace/`. Full security model in [docs/SANDBOXING.md](docs/SANDBOXING.md).\n\n### \ud83d\udee1\ufe0f Prompt-Injection-Aware\nExternal content the agent ingests (`browser`, `read_file`, `shell`, `search_files`, `transcribe`, `vision`, `web_search`, `session_search`, MCP tools) is wrapped in per-call nonce'd `<untrusted_content>` boundaries so the model can distinguish data from instructions. Redirect hops are re-classified (`browser`/`http_request`), MCP tool descriptions are scanned for injection at registration, and the MCP error channel is wrapped too. The danger classifier parses shell syntax (quoting, substitutions, brace and `$IFS` tricks, wrappers, loops and conditionals, here-documents) and judges every command a line would run; it fails closed on what it cannot parse, and uploads, secret reads, and unread scripts get their own prompts. Approval prompts show the command with control and bidi characters escaped. Approvers engage friction mode after 3 same-class approvals in 60 s. Memory episodes from tainted sessions are stored but never auto-replayed. Imported and project skills track provenance \u2014 untrusted ones stay excluded from trigger matching until explicit `odek skill promote --force`. `odek audit <session-id>` surfaces every ingest + per-turn divergence heuristic. Full threat model in [docs/SECURITY.md](docs/SECURITY.md).\n\n### \ud83e\udde9 Sub-Agent Delegation\nParallel OS-process sub-agents via `delegate_tasks`. True isolation \u2014 each sub-agent is a fresh `odek subagent` process with its own config, tools, and termination timeout. Up to 8 concurrent workers. Operator-defined **capability profiles** (top-level `profiles` config) override a sub-agent's permissions by name and fail closed on unknown names \u2014 a curated starter set of 21 task profiles ships in [`profiles.template.json`](profiles.template.json). See [d",
+        "readme_links": [
+          "https://odek.21no.de/install.sh",
+          "https://github.com/BackendStack21/go-llm-sdk"
+        ],
         "archived": false,
-        "stars": 75,
-        "age_days": 167,
-        "repo": "sshwarts/skillscript",
-        "url": "https://github.com/sshwarts/skillscript"
+        "stars": 10,
+        "age_days": 170,
+        "repo": "BackendStack21/odek",
+        "url": "https://github.com/BackendStack21/odek"
       },
       "site": {
-        "live": false,
-        "reason": "no domain found"
+        "live": true,
+        "url": "https://21no.de/",
+        "title": "21no.de \u00e2\u0080\u0094 AI &amp; Systems Research Lab",
+        "parked": false,
+        "product": true,
+        "team": false,
+        "copyright_year": 2026
       },
       "hiring": {},
       "registry": {
         "matched": false,
         "manual_lookup": true
       },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [
+          "enterprise"
+        ],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
       "ecosystem": {},
       "links": [
         {
-          "label": "github: sshwarts/skillscript",
-          "url": "https://github.com/sshwarts/skillscript"
-        },
-        {
-          "label": "hn: Skillscript",
-          "url": "https://news.ycombinator.com/item?id=48881112"
+          "label": "github: BackendStack21/odek",
+          "url": "https://github.com/BackendStack21/odek"
         }
       ],
       "families": [
-        "github",
-        "hn"
+        "github"
       ]
     },
     "tier": "Unverified",
-    "confidence": 0.2,
+    "confidence": 0.3,
     "scores": {
-      "fit": 0.72,
-      "verification": 0.2,
-      "momentum": 0.058,
-      "stealth": 0.716
+      "fit": 0.42,
+      "verification": 0.3,
+      "momentum": 0.355,
+      "stealth": 0.851
     },
-    "rank_score": 0.413,
+    "rank_score": 0.3769,
     "flags": []
   },
   {
-    "id": "12038ec7a2",
-    "name": "Agent Memory Leaderboard",
-    "domains": [
-      "agentmemoryleaderboard.ai"
-    ],
+    "id": "d958dd37e0",
+    "name": "Maki, an open-source multi-agent LLM framework (local or hosted)",
+    "domains": [],
     "signals": [
       {
         "source": "hn",
         "kind": "show_hn",
-        "name": "Agent Memory Leaderboard",
-        "url": "https://news.ycombinator.com/item?id=49281370",
-        "domain": "agentmemoryleaderboard.ai",
-        "ts": "2026-08-13T03:09:45Z",
+        "name": "Maki, an open-source multi-agent LLM framework (local or hosted)",
+        "url": "https://news.ycombinator.com/item?id=49785562",
+        "domain": null,
+        "ts": "2026-09-21T10:52:31Z",
         "data": {
-          "title": "Show HN: Agent Memory Leaderboard \u2013 first public results for AI memory systems",
-          "points": 3,
-          "comments": 1,
-          "author": "IreneAI",
-          "hn_id": "49281370",
-          "matched": "agent memory"
-        }
-      },
-      {
-        "source": "hn",
-        "kind": "show_hn",
-        "name": "An open Add/Search evaluation framework for agent memory",
-        "url": "https://news.ycombinator.com/item?id=49749689",
-        "domain": "agentmemoryleaderboard.ai",
-        "ts": "2026-09-18T02:52:01Z",
-        "data": {
-          "title": "Show HN: An open Add/Search evaluation framework for agent memory",
+          "title": "Show HN: Maki, an open-source multi-agent LLM framework (local or hosted)",
           "points": 2,
-          "comments": 0,
-          "author": "IreneAI",
-          "hn_id": "49749689",
-          "matched": "agent memory"
+          "comments": 2,
+          "author": "bowlofdata",
+          "hn_id": "49785562",
+          "matched": "llm agent framework",
+          "github_repo": "BowlOfData/maki"
         }
       }
     ],
     "evidence": {
       "github": {},
       "site": {
-        "live": true,
-        "url": "https://agentmemoryleaderboard.ai/",
-        "title": "Agent Memory Leaderboard | Textual, Coding &amp; Multimodal Memory",
-        "parked": false,
-        "product": false,
-        "team": false,
-        "copyright_year": null
+        "live": false,
+        "reason": "no domain found"
       },
       "hiring": {},
       "registry": {
         "matched": false,
         "manual_lookup": true
       },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
       "ecosystem": {},
       "links": [
         {
-          "label": "hn: Agent Memory Leaderboard",
-          "url": "https://news.ycombinator.com/item?id=49281370"
-        },
-        {
-          "label": "hn: An open Add/Search evaluation framework for agent memory",
-          "url": "https://news.ycombinator.com/item?id=49749689"
+          "label": "hn: Maki, an open-source multi-agent LLM framework (local or hosted)",
+          "url": "https://news.ycombinator.com/item?id=49785562"
         }
       ],
       "families": [
@@ -1119,56 +1401,41 @@
       ]
     },
     "tier": "Unverified",
-    "confidence": 0.15,
+    "confidence": 0.12,
     "scores": {
-      "fit": 0.75,
-      "verification": 0.15,
-      "momentum": 0.002,
+      "fit": 0.8,
+      "verification": 0.12,
+      "momentum": 0.001,
       "stealth": 0.998
     },
-    "rank_score": 0.4093,
+    "rank_score": 0.3668,
     "flags": []
   },
   {
-    "id": "e61b318eff",
-    "name": "agent-knowledge-system",
+    "id": "8cf0bda257",
+    "name": "Guilds",
     "domains": [],
     "signals": [
       {
-        "source": "github",
-        "kind": "repo",
-        "name": "xiandaiweijifen/agent-knowledge-system",
-        "url": "https://github.com/xiandaiweijifen/agent-knowledge-system",
+        "source": "hn",
+        "kind": "show_hn",
+        "name": "Guilds",
+        "url": "https://news.ycombinator.com/item?id=50043499",
         "domain": null,
-        "ts": "2026-03-13T13:57:33Z",
+        "ts": "2026-10-11T14:11:07Z",
         "data": {
-          "full_name": "xiandaiweijifen/agent-knowledge-system",
-          "stars": 2,
-          "forks": 0,
-          "description": "A stateful agent workflow runtime for engineering scenarios, supporting local orchestration, persistent execution state, structured recovery, and LLM-powered task execution via Gemini/OpenAI APIs.",
-          "language": "Python",
-          "matched": "agentic workflow runtime"
+          "title": "Show HN: Guilds \u2013 Open-source inspectable multi-agents collaboration framework",
+          "points": 2,
+          "comments": 0,
+          "author": "0mbre",
+          "hn_id": "50043499",
+          "matched": "agent framework",
+          "github_repo": "CigaleAI/guilds"
         }
       }
     ],
     "evidence": {
-      "github": {
-        "commits_30d": 0,
-        "authors_30d": 0,
-        "errors": [],
-        "last_release": null,
-        "owner_followers": 0,
-        "owner_location": "Champaign",
-        "owner_blog": "",
-        "owner_company": "University of Illinois - Urbana-Champaign",
-        "readme_len": 9888,
-        "readme_excerpt": "# Agent Knowledge System\n\nA local-first agent runtime for engineering and operations scenarios \u2014 document-backed knowledge retrieval, LLM-routed tool execution, multi-step workflow orchestration, and persisted run recovery.\n\n---\n\n## Quick Start\n\n**Prerequisites:** Docker Desktop running, Python venv ready, Node installed.\n\n```powershell\n# 1. Start infrastructure\ndocker compose up -d\ndocker compose ps   # wait until aks_qdrant / aks_postgres / aks_redis are healthy\n\n# 2. Backend (new terminal)\ncd backend\n.\\.venv\\Scripts\\activate\n$env:PYTHONPATH = '.'\npython -m uvicorn app.main:app --host 127.0.0.1 --port 8000\n\n# 3. Frontend (new terminal)\ncd frontend\nnpm run dev\n```\n\n| Service | URL |\n|---------|-----|\n| Backend API | `http://127.0.0.1:8000` |\n| OpenAPI docs | `http://127.0.0.1:8000/docs` |\n| Frontend console | `http://127.0.0.1:5173` |\n\n**Healthy startup signs** (backend logs):\n```\nLangGraph checkpoint tables ready\nPostgres checkpointer ready (sync fallback)\nRedis client ready\nApplication startup complete.\n```\n\n### First-time setup\n\n```powershell\ncd backend\npython -m venv .venv\n.\\.venv\\Scripts\\activate\npip install -r requirements.txt\n\ncd ../frontend\nnpm install\n```\n\n### Minimal mode (no Docker)\n\nLeave `DATABASE_URL` and `REDIS_URL` empty in `.env`. The backend still works for query, retrieval, and frontend flows \u2014 checkpoint persistence and Redis are disabled.\n\n---\n\n## What This Is\n\nAn **Agentic Platform** built on LangGraph. The infrastructure is production-quality; the tool",
-        "archived": false,
-        "stars": 2,
-        "age_days": 235,
-        "repo": "xiandaiweijifen/agent-knowledge-system",
-        "url": "https://github.com/xiandaiweijifen/agent-knowledge-system"
-      },
+      "github": {},
       "site": {
         "live": false,
         "reason": "no domain found"
@@ -1178,26 +1445,35 @@
         "matched": false,
         "manual_lookup": true
       },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
       "ecosystem": {},
       "links": [
         {
-          "label": "github: xiandaiweijifen/agent-knowledge-system",
-          "url": "https://github.com/xiandaiweijifen/agent-knowledge-system"
+          "label": "hn: Guilds",
+          "url": "https://news.ycombinator.com/item?id=50043499"
         }
       ],
       "families": [
-        "github"
+        "hn"
       ]
     },
     "tier": "Unverified",
-    "confidence": 0.0,
+    "confidence": 0.12,
     "scores": {
-      "fit": 0.83,
-      "verification": 0.0,
+      "fit": 0.8,
+      "verification": 0.12,
       "momentum": 0.001,
-      "stealth": 0.932
+      "stealth": 0.998
     },
-    "rank_score": 0.4033,
+    "rank_score": 0.3668,
     "flags": []
   }
 ]

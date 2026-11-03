@@ -10,95 +10,98 @@
     "country": "GLOBAL",
     "query": "global"
   },
-  "statement": "Pre-Seed AI agent infrastructure startups showing sandbox, github, deterministic, found through indirect signals before wide press coverage.",
+  "statement": "Pre-Seed AI agent infrastructure startups with emphasis on orchestration, SDK, production, found through indirect signals before wide press coverage.",
   "keywords": {
     "core": [
-      "agent orchestration framework",
+      "llm agent framework",
+      "multi-agent orchestration",
+      "agentic workflow engine",
       "autonomous agent runtime",
-      "multi-agent orchestration engine",
-      "agent memory infrastructure",
-      "agentic workflow runtime",
-      "secure agent sandbox",
-      "tool use execution environment",
-      "agent state management",
-      "agent evaluation platform",
-      "agent communication protocol",
-      "microvm agent sandbox",
-      "remote code execution environment",
-      "headless browser infrastructure",
-      "ephemeral sandbox runtime",
-      "open source agent framework",
-      "github stars",
-      "developer sdk",
-      "apache-2.0 runtime",
-      "deterministic workflow engine",
-      "reliable tool use framework",
-      "typed function execution",
-      "idempotent agent execution"
+      "tool use execution layer",
+      "llm memory management",
+      "deterministic agent evaluation",
+      "agent-to-agent protocol",
+      "autonomous api integration",
+      "stateful agent infrastructure",
+      "multi-agent protocol",
+      "agent-to-agent communication",
+      "open-source agent framework",
+      "local sdk",
+      "developer tools",
+      "design partner",
+      "production workload"
     ],
     "adjacent": [
+      "vector database",
+      "prompt engineering tool",
       "llm observability",
-      "code interpreter api",
-      "function calling gateway",
-      "vector retrieval engine",
-      "context window management",
-      "llm guardrails framework",
-      "synthetic data for agents"
+      "rag pipeline",
+      "fine-tuning infrastructure",
+      "synthetic data generation",
+      "api gateway for llms"
     ],
     "negative": [
       "tutorial",
-      "course",
       "bootcamp",
-      "udemy",
-      "syllabus",
-      "how to build an agent",
+      "agency",
+      "consulting",
+      "course",
+      "wrapper",
+      "blog",
+      "newsletter",
+      "awesome",
+      "template",
+      "boilerplate",
       "homework",
+      "portfolio",
+      "demo app",
+      "landscape",
+      "leaderboard",
+      "cheatsheet",
       "curated list"
     ]
   },
   "search_terms": [
-    "agent orchestration framework",
+    "llm agent framework",
+    "multi-agent orchestration",
+    "agentic workflow engine",
     "autonomous agent runtime",
-    "multi-agent orchestration engine",
-    "agent memory infrastructure",
-    "agentic workflow runtime",
-    "secure agent sandbox",
-    "tool use execution environment",
-    "agent state management"
+    "tool use execution layer",
+    "llm memory management",
+    "deterministic agent evaluation",
+    "agent-to-agent protocol"
   ],
   "must_have": [
-    "sandbox",
-    "github",
-    "deterministic"
+    "orchestration",
+    "SDK",
+    "production"
   ],
   "anti_signals": [
-    "prompt template directory",
-    "no-code builder",
-    "schedule enterprise demo",
-    "closed beta waitlist only",
-    "roleplay agent",
-    "autonomous virtual companion"
+    "single-prompt wrapper",
+    "proprietary black-box",
+    "waitlist only",
+    "ideation phase"
   ],
   "weights": {
-    "fit": 0.444,
-    "verification": 0.259,
-    "momentum": 0.259,
-    "stealth": 0.037
+    "fit": 0.367,
+    "verification": 0.333,
+    "momentum": 0.267,
+    "stealth": 0.033
   },
   "design_provider": "gemini",
-  "llm_status": "ok, model gemini-3.8-flash",
+  "llm_status": "ok, model gemini-3.5-flash-lite",
   "qa": [
     {
-      "question": "Which technical layer of the agent infrastructure stack is the primary focus?",
-      "answer": "Execution Environment & Sandboxing (code execution, browser compute, isolation)"
+      "question": "What is the primary architectural focus of your agent infrastructure product?",
+      "answer": "Multi-agent orchestration and communication protocols"
     },
     {
-      "question": "What distribution and go-to-market model is preferred for pre-seed sourcing?",
-      "answer": "Open Source / Developer Adoption First"
+      "question": "How do developers interact with and deploy your infrastructure?",
+      "answer": "Open-source developer-first runtime and local SDKs"
     },
     {
-      "question": "What operational paradigm should the agent runtime optimize for?",
-      "answer": "Deterministic Tool Calling & Production Automation (APIs, structured outputs)"
+      "question": "What is your current validation and go-to-market motion at pre-seed?",
+      "answer": "Early design partners stress-testing production agent workflows"
     }
   ]
 }

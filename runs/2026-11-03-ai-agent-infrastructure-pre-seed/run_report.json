@@ -3,17 +3,17 @@
   "sources": {
     "github": {
       "status": "ok",
-      "signals": 216,
+      "signals": 204,
       "maturity": "tested"
     },
     "hn": {
       "status": "ok",
-      "signals": 367,
+      "signals": 384,
       "maturity": "experimental"
     },
     "producthunt": {
       "status": "ok",
-      "signals": 1,
+      "signals": 9,
       "maturity": "experimental"
     },
     "companies_house": {
@@ -21,21 +21,21 @@
       "reason": "only for UK"
     }
   },
-  "signals": 584,
-  "companies": 565,
+  "signals": 597,
+  "companies": 579,
   "verified_attempted": 40,
-  "filtered_out": 1,
-  "llm_status": "ok, model gemini-3.8-flash",
+  "filtered_out": 3,
+  "llm_status": "ok, model gemini-3.5-flash-lite",
   "review_queue": [
     {
-      "a": "awesome-agents",
-      "b": "awesome-agent",
-      "ratio": 0.96
+      "a": "Needle2",
+      "b": "Needle",
+      "ratio": 0.92
     }
   ],
   "tiers": {
     "Verified-operating": 0,
-    "Likely": 2,
-    "Unverified": 38
+    "Likely": 0,
+    "Unverified": 40
   }
 }
