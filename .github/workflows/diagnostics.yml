@@ -1,0 +1,30 @@
+name: diagnostics
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  diagnostics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt
+      - name: Probe every integration
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PRODUCTHUNT_TOKEN: ${{ secrets.PRODUCTHUNT_TOKEN }}
+          COMPANIES_HOUSE_KEY: ${{ secrets.COMPANIES_HOUSE_KEY }}
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: |
+          mkdir -p runs
+          python -m scout api-check > runs/api-check.txt 2>&1 || true
+          python -m scout llm-check > runs/llm-check.txt 2>&1 || true
+      - run: |
+          git config user.name "scout-bot"
+          git config user.email "scout-bot@users.noreply.github.com"
+          git add runs
+          git diff --staged --quiet || git commit -m "diagnostics: $(date -u +%F)"
+          git push

@@ -39,6 +39,11 @@ def cmd_llm_check(a):
     print("\n".join(llm.check()))
 
 
+def cmd_api_check(a):
+    from . import apicheck
+    print("\n".join(apicheck.run()))
+
+
 def main():
     p = argparse.ArgumentParser(prog="scout")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -57,6 +62,7 @@ def main():
     g = sub.add_parser("go"); common(g); g.set_defaults(fn=cmd_go)
     r = sub.add_parser("run"); r.add_argument("--thesis", required=True); common(r, spec=False); r.set_defaults(fn=cmd_run)
     ra = sub.add_parser("rerun-all"); common(ra, spec=False); ra.set_defaults(fn=cmd_rerun_all)
+    ac = sub.add_parser("api-check"); ac.set_defaults(fn=cmd_api_check)
     lc = sub.add_parser("llm-check"); lc.set_defaults(fn=cmd_llm_check)
     k = sub.add_parser("refresh-known"); k.set_defaults(fn=lambda a: print(f"known domains: {known.refresh()}"))
     a = p.parse_args()

@@ -2,6 +2,7 @@
 from __future__ import annotations
 import datetime as dt, os, re
 from . import github_signals, http
+from .company_signals import company_signals
 from .resolve import norm_name, reg_domain
 
 PARKED = ["domain is for sale", "buy this domain", "this domain may be for sale", "domain for sale", "parked free"]
@@ -132,16 +133,18 @@ def anti_flags(c, ev, thesis):
 
 
 def assess(f):
-    """Pure tier logic. f: live, parked, product, team, recent, hiring, registry, families (int), flags (list)."""
-    conf = (0.20 * f["product"] + 0.10 * f["team"] + 0.20 * f["hiring"] + 0.25 * f["registry"] + 0.15 * f["recent"]
-            + 0.10 * min(1.0, max(0, f["families"] - 1) / 2))
+    """Pure tier logic. Required: live, parked, product, team, recent, hiring, registry, families, flags.
+    Optional company signals: backed, legal_text, customers (claims on the company's own pages)."""
+    backed, legal, cust = f.get("backed", False), f.get("legal_text", False), f.get("customers", False)
+    conf = (0.18 * f["product"] + 0.08 * f["team"] + 0.15 * f["hiring"] + 0.22 * f["registry"] + 0.12 * f["recent"]
+            + 0.08 * min(1.0, max(0, f["families"] - 1) / 2) + 0.10 * backed + 0.07 * (legal or cust))
     conf = round(conf, 3)
     if f["flags"] or not f["live"] or f["parked"]:
         return "Unverified", conf
     entity = f["registry"] or (f["hiring"] and f["team"] and f["families"] >= 2)
     if entity and f["product"] and f["recent"] and f["families"] >= 2:
         return "Verified-operating", conf
-    if f["product"] and (f["team"] or f["hiring"]) and f["recent"]:
+    if f["product"] and (f["team"] or f["hiring"] or backed) and f["recent"]:
         return "Likely", conf
     return "Unverified", conf
 
@@ -164,6 +167,8 @@ def verify(c, thesis):
     ev["site"] = check_site(dom) if dom else {"live": False, "reason": "no domain found"}
     ev["hiring"] = check_hiring(dom, c.name) if dom else {}
     ev["registry"] = check_registry(c, country)
+    ev["signals"] = company_signals(ev["site"].get("text", "") + " " + ev["github"].get("readme_excerpt", ""))
+    hiring_any = bool(ev["hiring"]) or ev["signals"]["hiring_text"]
     ev["ecosystem"] = check_ecosystem(c)
     now = dt.datetime.now(dt.timezone.utc)
 
@@ -189,8 +194,9 @@ def verify(c, thesis):
             flags.append("site-name-mismatch")
     tier, conf = assess({"live": ev["site"].get("live", False), "parked": ev["site"].get("parked", False),
                          "product": ev["site"].get("product", False), "team": ev["site"].get("team", False),
-                         "recent": recent, "hiring": bool(ev["hiring"]), "registry": bool(ev["registry"].get("matched")),
-                         "families": len(families), "flags": flags})
+                         "recent": recent, "hiring": hiring_any, "registry": bool(ev["registry"].get("matched")),
+                         "families": len(families), "flags": flags, "backed": ev["signals"]["backed"],
+                         "legal_text": ev["signals"]["legal_entity_text"], "customers": bool(ev["signals"]["customers"])})
     links = [{"label": f"{s.source}: {s.name}", "url": s.url} for s in c.signals]
     if ev["hiring"]:
         links.append({"label": f"jobs ({ev['hiring']['board']})", "url": ev["hiring"]["url"]})

@@ -181,3 +181,17 @@ def test_domain_from_readme_is_precision_first():
     links = ["https://img.shields.io/badge/x", "https://github.com/a/b", "https://spawnfile.com/docs", "https://other.io"]
     assert verify.domain_from_readme(links, "spawnfile", "someone") == "spawnfile.com"
     assert verify.domain_from_readme(["https://unrelated.com"], "spawnfile", "someone") is None
+
+
+def test_company_signals_detects_claims():
+    from scout.company_signals import company_signals
+    s = company_signals("We are backed by Y Combinator (YC W25). Book a demo. We're hiring! © 2026 Acme Labs. Trusted by 40 teams.")
+    assert s["backed"] and s["hiring_text"] and s["legal_entity_text"] and s["customers"] and s["commercial"]
+    assert not company_signals("my weekend hobby project, MIT licence")["backed"]
+
+
+def test_backed_claim_opens_likely_but_not_verified():
+    base = _f(team=False, hiring=False, registry=False, families=1)
+    assert verify.assess(base)[0] == "Unverified"
+    assert verify.assess({**base, "backed": True})[0] == "Likely"
+    assert verify.assess({**base, "backed": True, "families": 3})[0] != "Verified-operating"  # claims alone are never proof

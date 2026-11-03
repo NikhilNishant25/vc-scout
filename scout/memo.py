@@ -24,7 +24,7 @@ def facts(c):
                                              "info": {k: v for k, v in s.data.items() if k != "repo"}} for s in c.signals],
             "site": {k: site.get(k) for k in ("title", "product", "team", "copyright_year")},
             "site_excerpt": site.get("text", "")[:1500],
-            "hiring": ev.get("hiring"), "registry": ev.get("registry"), "ecosystem": ev.get("ecosystem"),
+            "company_signals_claimed_on_own_pages": ev.get("signals"), "hiring": ev.get("hiring"), "registry": ev.get("registry"), "ecosystem": ev.get("ecosystem"),
             "github": {k: v for k, v in ev.get("github", {}).items() if k not in ("owner_blog",)},
             "links": ev.get("links", [])}
 

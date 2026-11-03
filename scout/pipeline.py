@@ -18,6 +18,11 @@ def _summary(c):
         bits.append(f"hiring {ev['hiring']['count']} ({ev['hiring']['board']})")
     if ev.get("registry", {}).get("matched"):
         bits.append(f"registry: {ev['registry']['type']}")
+    sg = ev.get("signals", {})
+    if sg.get("accelerator") or sg.get("funding"):
+        bits.append("claims: " + ", ".join((sg.get("accelerator") or []) + (sg.get("funding") or []))[:60])
+    if sg.get("customers"):
+        bits.append("customers/partners mentioned")
     g = ev.get("github", {})
     if g:
         bits.append("github data unavailable" if g.get("commits_30d") is None else f"commits30d {g['commits_30d']}")
