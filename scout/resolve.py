@@ -13,6 +13,11 @@ BLOCK = {"github.com", "gitlab.com", "twitter.com", "x.com", "producthunt.com", 
          "azurewebsites.net", "cloudfront.net", "amazonaws.com", "appspot.com", "ngrok.io", "ngrok-free.app",
          "trycloudflare.com", "workers.dev", "deno.dev", "surge.sh", "gitbook.io", "bubbleapps.io", "framer.website",
          "framer.app", "lovable.app", "bolt.host", "base44.app", "hf.space", "gradio.live", "supabase.co",
+         "arxiv.org", "zenodo.org", "doi.org", "osf.io", "researchgate.net", "ssrn.com", "openreview.net", "semanticscholar.org",
+         "biorxiv.org", "medrxiv.org", "wikipedia.org", "kaggle.com", "colab.research.google.com", "docs.google.com",
+         "drive.google.com", "notion.so", "figma.com", "loom.com", "youtu.be", "bit.ly", "t.co", "linktr.ee", "discord.com",
+         "slack.com", "huggingface.co", "dev.to", "hashnode.dev", "wordpress.com", "blogspot.com", "mastodon.social",
+         "bsky.app", "ko-fi.com", "buymeacoffee.com", "patreon.com", "gumroad.com",
          "google.com", "t.me", "discord.gg", "facebook.com", "instagram.com", "reddit.com", "pypi.org", "npmjs.com"}
 MULTI = {"co.uk", "org.uk", "ac.uk", "co.in", "org.in", "com.au", "co.nz", "com.br", "co.jp", "com.sg"}
 LEGAL = re.compile(r"\b(inc|ltd|limited|llc|llp|pvt|private|plc|corp|corporation|gmbh|co)\b")

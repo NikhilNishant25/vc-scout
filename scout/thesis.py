@@ -5,7 +5,8 @@ from . import geo, llm
 
 STAGES = ["idea", "pre-seed", "seed", "series-a"]
 BASE_WEIGHTS = {"fit": 0.35, "verification": 0.30, "momentum": 0.20, "stealth": 0.15}
-DEFAULT_NEG = ["tutorial", "course", "awesome", "template", "boilerplate", "homework", "portfolio", "demo app"]
+DEFAULT_NEG = ["tutorial", "course", "awesome", "template", "boilerplate", "homework", "portfolio", "demo app",
+               "landscape", "leaderboard", "cheatsheet", "curated list"]
 
 PROMPT = """You design a sourcing thesis for an early-stage investor.
 Industry: {industry}
@@ -70,8 +71,7 @@ def validate_design(d):
     clean_kw = {k: _dedupe(kw.get(k, []) if isinstance(kw.get(k, []), list) else [])[:14] for k in ("core", "adjacent", "negative")}
     if not clean_kw["core"]:
         return None
-    if not clean_kw["negative"]:
-        clean_kw["negative"] = DEFAULT_NEG
+    clean_kw["negative"] = _dedupe(clean_kw["negative"] + DEFAULT_NEG)
     questions = []
     for q in (d.get("questions") or [])[:3]:
         opts = []
@@ -139,7 +139,7 @@ def build(industry, stage, location, dsn, answers, provider, llm_status=""):
     w = {k: round(v / total, 3) for k, v in w.items()}
     g = geo.resolve(location)
     where = f" in {location}" if location and g["country"] != "GLOBAL" and location.lower() != "global" else ""
-    stmt = (f"{stage.title()} {industry} startups{where} showing {', '.join(must) or 'verifiable early traction'}, "
+    stmt = (f"{stage.title()} {industry} startups{where} with emphasis on {', '.join(must) or 'verifiable early traction'}, "
             f"found through indirect signals before wide press coverage.")
     return {"id": f"{dt.date.today()}-{re.sub(r'[^a-z0-9]+', '-', industry.lower()).strip('-')}-{stage}",
             "created": dt.date.today().isoformat(), "inputs": {"industry": industry, "stage": stage, "location": location},

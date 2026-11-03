@@ -78,6 +78,17 @@ def check_registry(c, country):
     return {"matched": False, "manual_lookup": True}
 
 
+def domain_from_readme(links, name, owner):
+    """Precision-first: accept a README link only if its domain label echoes the project or owner name."""
+    tokens = {norm_name(name), norm_name(owner)} - {""}
+    for u in links or []:
+        d = reg_domain(u)
+        label = norm_name(d.split(".")[0]) if d else ""
+        if label and any(len(t) >= 4 and (t in label or (len(label) >= 4 and label in t)) for t in tokens):
+            return d
+    return None
+
+
 def check_github(c):
     gs = [s for s in c.signals if s.source == "github" and s.data.get("repo")]
     if not gs:
@@ -139,10 +150,16 @@ def verify(c, thesis):
     country = thesis["geo"]["country"]
     ev = {"github": check_github(c)}
     if not c.domains:
-        d = reg_domain(ev["github"].get("owner_blog"))
+        gs = [s for s in c.signals if s.source == "github" and s.data.get("full_name")]
+        d = domain_from_readme(ev["github"].get("readme_links"), c.name, gs[0].data["full_name"].split("/")[0]) if gs else None
         if d:
             c.domains.append(d)
-            c.flags.append("domain-from-owner-blog")
+            c.flags.append("domain-from-readme")
+        else:
+            d = reg_domain(ev["github"].get("owner_blog"))
+            if d:
+                c.domains.append(d)
+                c.flags.append("domain-from-owner-blog")
     dom = c.domains[0] if c.domains else None
     ev["site"] = check_site(dom) if dom else {"live": False, "reason": "no domain found"}
     ev["hiring"] = check_hiring(dom, c.name) if dom else {}

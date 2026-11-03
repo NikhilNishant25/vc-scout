@@ -157,3 +157,27 @@ def test_phrase_score_rewards_partial_matches_but_not_noise():
     assert phrase_score("direct air capture sorbent", "benq screenbar halo esphome") == 0.0
     assert phrase_score("biochar", "biochar production tracking") == 1.0
     assert phrase_score("green hydrogen electrolyzer", "green hydrogen plant simulator") == 0.3
+
+
+def test_research_and_link_hosts_are_blocked():
+    for u in ("https://arxiv.org/abs/2501.1", "https://zenodo.org/record/1", "https://bit.ly/x", "https://docs.google.com/d/1"):
+        assert resolve.reg_domain(u) is None
+
+
+def test_two_repos_sharing_a_paper_link_do_not_merge():
+    sigs = [_s("github", "a/one", resolve.reg_domain("https://arxiv.org/abs/1"), full_name="a/one"),
+            _s("github", "b/two", resolve.reg_domain("https://arxiv.org/abs/2"), full_name="b/two")]
+    companies, _ = resolve.resolve(sigs)
+    assert len(companies) == 2
+
+
+def test_default_negatives_always_present():
+    d = thesis.validate_design({"keywords": {"core": ["x y"], "adjacent": [], "negative": ["foo"]},
+                                "questions": [{"text": "q", "options": [{"label": "a", "adds_keywords": ["k"]}, {"label": "b", "adds_keywords": ["j"]}]}]})
+    assert {"foo", "awesome", "landscape", "leaderboard"} <= set(d["keywords"]["negative"])
+
+
+def test_domain_from_readme_is_precision_first():
+    links = ["https://img.shields.io/badge/x", "https://github.com/a/b", "https://spawnfile.com/docs", "https://other.io"]
+    assert verify.domain_from_readme(links, "spawnfile", "someone") == "spawnfile.com"
+    assert verify.domain_from_readme(["https://unrelated.com"], "spawnfile", "someone") is None

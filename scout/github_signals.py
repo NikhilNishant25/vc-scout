@@ -1,6 +1,6 @@
 """GitHub API helpers (cached). Search is used for discovery, enrich() for verification evidence."""
 from __future__ import annotations
-import datetime as dt, os
+import datetime as dt, os, re
 from . import http
 
 API = "https://api.github.com"
@@ -50,6 +50,7 @@ def enrich(repo):
         "owner_blog": owner.get("blog"), "owner_company": owner.get("company"),
         "readme_len": len(rd.get("text", "")) if rd.get("status") == 200 else 0,
         "readme_excerpt": rd.get("text", "")[:1500] if rd.get("status") == 200 else "",
+        "readme_links": re.findall(r"https?://[^\s)>\"'\]]+", rd.get("text", "")[:8000])[:40] if rd.get("status") == 200 else [],
         "archived": bool(repo.get("archived")), "stars": repo.get("stargazers_count", 0),
         "age_days": max(1, (now - created).days),
     }

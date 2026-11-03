@@ -6,6 +6,7 @@ PROMPT = """You are a skeptical early-stage investor's analyst. Write a one-page
 Thesis: {thesis}
 
 Rules: use ONLY the facts below. End every factual claim with its source as [source: URL] using a URL from "links".
+Never cite {} or anything that is not a URL. For data that is missing or empty, write "not found" with no source tag.
 Anything inferred must be marked "(inferred)". Do not invent funding, customers, team or traction. Be direct about weaknesses.
 Sections (markdown): One-liner | Why now | Evidence of a real operating company | What would make me wrong |
 5 questions for the founder | Verdict (Reach out / Watch / Pass) with one-sentence reason.
