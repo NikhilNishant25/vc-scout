@@ -7,46 +7,41 @@
 ## Sources
 | Source | Status | Detail |
 |---|---|---|
-| github | ok | 205 |
-| hn | ok | 359 |
-| producthunt | ok | 3 |
+| github | ok | 204 |
+| hn | ok | 394 |
+| producthunt | ok | 19 |
 | companies_house | skipped | only for UK |
 | ecosystems | ok | 0 |
 
-Companies found: 553. Verified-attempted: 40. Tiers: {'Verified-operating': 0, 'Likely': 3, 'Unverified': 37}
+Companies found: 602. Verified-attempted: 40. Tiers: {'Verified-operating': 0, 'Likely': 1, 'Unverified': 39}
 
 ## Ranked (tier first, then score)
 | # | Company | Tier | Score | Conf | Domain | Evidence | Flags |
 |---|---|---|---|---|---|---|---|
-| 1 | Traccia | Likely | 0.6851 | 0.47 | traccia.ai | site live; product page; claims: backed by; customers/partners mentioned |  |
-| 2 | .github-private | Likely | 0.5999 | 0.37 | combsmith.com | site live; product page; customers/partners mentioned; commits30d 100 | domain-from-owner-blog |
-| 3 | agentland | Likely | 0.4907 | 0.37 | agentland.in | site live; product page; customers/partners mentioned; commits30d 0 | domain-from-readme |
-| 4 | duoduo | Unverified | 0.6443 | 0.3 | openduo.ai | site live; commits30d 26 |  |
-| 5 | agentskit | Unverified | 0.6211 | 0.3 | agentskit.io | site live; product page; commits30d 34 |  |
-| 6 | orbt | Unverified | 0.6174 | 0.3 | orbt.sh | site live; product page; commits30d 32 | domain-from-readme |
-| 7 | gitlord | Unverified | 0.5996 | 0.12 |  | site: no domain found; commits30d 0 |  |
-| 8 | agent-observability-platform | Unverified | 0.5933 | 0.12 |  | site: no domain found; commits30d 0 |  |
-| 9 | weaver-memory | Unverified | 0.5886 | 0.0 |  | site: no domain found; commits30d 0 |  |
-| 10 | spawnfile | Unverified | 0.5868 | 0.3 | spawnfile.com | site live; product page; commits30d 100 |  |
-| 11 | odek | Unverified | 0.5854 | 0.3 | 21no.de | site live; product page; commits30d 40 |  |
-| 12 | SenWeaverCoding | Unverified | 0.5794 | 0.12 | senweaver.com | site: HTTP 404; commits30d 0 | domain-from-owner-blog |
-| 13 | Atlas-AI-Platform | Unverified | 0.5793 | 0.12 |  | site: no domain found; commits30d 0 |  |
-| 14 | Agent-Observability-Platform-SDK | Unverified | 0.577 | 0.0 |  | site: no domain found; commits30d 0 |  |
-| 15 | MiMo-CodeHarness | Unverified | 0.5712 | 0.12 |  | site: no domain found; commits30d 14 |  |
+| 1 | hive | Likely | 0.6445 | 0.49 | hivecli.sh | site live; hiring 9 (greenhouse); commits30d 39 | domain-from-readme |
+| 2 | ANOLISA | Unverified | 0.5981 | 0.3 | agentic-os.sh | site live; product page; commits30d 100 |  |
+| 3 | Pane | Unverified | 0.5749 | 0.3 | runpane.com | site live; product page; commits30d 100 |  |
+| 4 | agentskit | Unverified | 0.5293 | 0.3 | agentskit.io | site live; product page; commits30d 34 |  |
+| 5 | mateclaw | Unverified | 0.5255 | 0.12 | mate.vip | site live; commits30d 42 |  |
+| 6 | spawnfile | Unverified | 0.5245 | 0.3 | spawnfile.com | site live; product page; commits30d 100 |  |
+| 7 | duoduo | Unverified | 0.5146 | 0.3 | openduo.ai | site live; commits30d 26 |  |
+| 8 | NeMo-Relay | Unverified | 0.5058 | 0.3 | nvidia.com | site live; product page; commits30d 100 |  |
+| 9 | OpenAPPA | Unverified | 0.4853 | 0.3 | openappa.com | site live; product page |  |
+| 10 | odek | Unverified | 0.4491 | 0.3 | 21no.de | site live; product page; commits30d 40 |  |
+| 11 | launch-control | Unverified | 0.4388 | 0.12 |  | site: no domain found; commits30d 28 |  |
+| 12 | Nerya | Unverified | 0.4151 | 0.12 |  | site: no domain found; commits30d 47 |  |
+| 13 | agenttrace | Unverified | 0.3967 | 0.12 |  | site: no domain found; commits30d 2 |  |
+| 14 | zeroclaw | Unverified | 0.3889 | 0.12 |  | site: no domain found; commits30d 0 |  |
+| 15 | Traccia | Unverified | 0.3863 | 0.3 | traccia.ai | site live; product page |  |
 
 ## Filtered out (checked, rejected)
 | Company | Why |
 |---|---|
-| awesome-agent-cortex | negative-keyword:awesome |
-| oteru | site-name-mismatch |
-| awesome-ai-agents | negative-keyword:awesome |
-| geode | negative-keyword:portfolio |
+| awesome-graph-engineering | negative-keyword:awesome |
+| memographix | negative-keyword:portfolio, site-name-mismatch |
+| Agent_Memory_Techniques | site-name-mismatch |
 
 Registry for GLOBAL: no free API. Check legal entities manually: https://opencorporates.com/
 
 ## Possible duplicates (not merged)
-- awesome-agents ~ awesome-ai-agents (0.93)
-- awesome-agents ~ awesome-ai-agents (0.93)
-- Zengram ~ engram (0.92)
-- ai-agent-observability-platform ~ agent-observability-platform (0.96)
-- I built a RAG and knowledge graph agent that runs locally ~ I built a powerful RAG and knowledge graph agent that runs locally (0.92)
+- agent-me ~ agent-mem (0.93)

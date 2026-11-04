@@ -1,387 +1,189 @@
 [
   {
-    "id": "9448b38e51",
-    "name": "Traccia",
+    "id": "50f79868d6",
+    "name": "hive",
     "domains": [
-      "traccia.ai"
+      "hivecli.sh"
     ],
     "signals": [
       {
-        "source": "hn",
-        "kind": "show_hn",
-        "name": "Traccia",
-        "url": "https://news.ycombinator.com/item?id=49391995",
-        "domain": "traccia.ai",
-        "ts": "2026-08-21T18:20:16Z",
+        "source": "github",
+        "kind": "repo",
+        "name": "ivankuznetsov/hive",
+        "url": "https://github.com/ivankuznetsov/hive",
+        "domain": null,
+        "ts": "2026-04-25T11:22:04Z",
         "data": {
-          "title": "Show HN: Traccia - Observability, Runtime Control & Audit for agents",
-          "points": 4,
-          "comments": 0,
-          "author": "vijaypoudel",
-          "hn_id": "49391995",
-          "matched": "autonomous agent runtime"
+          "full_name": "ivankuznetsov/hive",
+          "stars": 33,
+          "forks": 0,
+          "description": "An open-source agent workflow engine & meta-harness: orchestrates Claude, Codex, and Pi to run multi-step work as a folder-as-agent pipeline. Its flagship coding workflow turns a rough idea into a merge-ready PR; ships content too, and runs the workflows you author.",
+          "language": "Ruby",
+          "matched": "agentic workflow engine"
         }
       }
     ],
     "evidence": {
-      "github": {},
+      "github": {
+        "commits_30d": 39,
+        "authors_30d": 2,
+        "errors": [],
+        "last_release": "2026-10-27T18:56:21Z",
+        "owner_followers": 17,
+        "owner_location": "London, UK",
+        "owner_blog": "http://ikuznetsov.com",
+        "owner_company": "ikuznetsov.com",
+        "readme_len": 33052,
+        "readme_excerpt": "<p align=\"center\">\n  <img src=\"docs/assets/logo.svg\" alt=\"Hive\" width=\"96\" height=\"96\">\n</p>\n\n# Hive\n\n**Website &amp; docs: [hivecli.sh](https://hivecli.sh)** \u2014 quickstart, concepts, the full command reference, and an [`llms.txt`](https://hivecli.sh/llms.txt) for agents.\n\nCommunity: [join the Hive Discord](https://discord.gg/Qg5E7rMt) for questions,\nfeedback, and release discussions.\n\nHive is a durable, local-first workflow engine for AI agents. It orchestrates Claude, Codex, Grok, Pi, and opt-in OpenCode to run multi-step work as a *folder-as-agent pipeline*. Its flagship **`coding`** workflow turns a rough software idea into a merge-ready pull request: you sketch an idea in a few sentences, open the `hive tui` dashboard or native local web UI, and watch the work move forward \u2014 brainstorm pins down what you actually want, plan fixes the approach, execute writes the code, review hardens it, and finalize ships the PR. You can step in at any stage with a normal editor \u2014 every artefact is a markdown file in a stage folder, inspectable and editable by you or by another agent. Software delivery is the flagship proof, not the product boundary: Hive also ships `content` and `bench` workflows, installs reviewed Honeycombs, and runs the ones you author yourself for writing, research, triage, audits, and operations (see [Custom Workflows](#custom-workflows)).\n\nThe mental model is folders. Every task is a directory; the folder's location is the task state. Moving a task from `2-brainstorm/` to `3-plan/` is the approval gesture, and every stage writes a durable artefact the next stage can trust. That practice \u2014 making each step's output strong enough for the next one to run autonomously \u2014 is called *compound engineering*. It's how Hive carries work from rough idea to merged PR while letting humans drop in on their own terms instead of a chat thread's.\n\nThe `coding` workflow runs nine stages, each a folder:\n\n```text\n1-inbox  ->  2-brainstorm  ->  3-plan  ->  4-execute  ->  5-open-pr  ->  6-review  ->  7-artifacts  ->  8-finalize  ->  9-done\ncapture       refine           design      build          draft PR       harden        collect        publish         archive\n```\n\nRead the model in depth in [docs/concepts.md](docs/concepts.md) \u2014 folder-as-agent, the marker protocol that lets stages negotiate handoff, the nine stages in detail, and the trade-offs that come with making everything a file.\n\n## Demo\n\nA sub-two-minute reel of the whole loop \u2014 install, `hive init`, capture an idea in the TUI, answer brainstorm questions in vim, and archive the finished task once Hive has shipped it:\n\n![Hive demo](docs/assets/hive-demo.webp)\n\nFull-quality MP4 (~4&nbsp;MB): [docs/assets/hive-demo.mp4](docs/assets/hive-demo.mp4).\n\nThe result Hive built in that reel lives at [ivankuznetsov/shipped](https://github.com/ivankuznetsov/shipped) \u2014 a real public repo seeded with a one-sentence idea (\"a Telegram bot that sends a daily digest of what was shipped\"), driven through brainstorm \u2192 plan \u2192 execute \u2192 multi-agent review \u2192 finalize, and landed as [PR #1](https://github.com/ivankuznetsov/shipped/pull/1).\n\n> [!IMPORTANT]\n> **Hive is a token-heavy workflow.** You can customize it, but by default it runs a lot of subagents and several different coding agents, and it burns through a LOT of tokens. I strongly recommend a **Claude Max** subscription plus **ChatGPT Pro** for Codex to run it properly \u2014 the best results come from the top-tier subscriptions. If you're really tight on budget, you might try the **Pi** agent with the latest **Kimi** model for some parts of the workflow, though the Pi integration is not yet properly tested or performance-evaluated.\n\n## Install\n\nHive ships as a rubygem (`hive-cli`) plus a managed Hive web bundle attached to each GitHub Release. A cosign-signed checksum manifest authenticates both artifacts before installation or extraction. Each native channel installs the same gem; the normal `hive setup` then installs Hive-owned dependencies, t",
+        "readme_links": [
+          "https://hivecli.sh",
+          "https://hivecli.sh/llms.txt",
+          "https://discord.gg/Qg5E7rMt",
+          "https://github.com/ivankuznetsov/shipped",
+          "https://github.com/ivankuznetsov/shipped/pull/1",
+          "https://github.com/ivankuznetsov/homebrew-hive",
+          "https://raw.githubusercontent.com/ivankuznetsov/hive/v0.8.0/install.sh",
+          "https://aur.archlinux.org/packages/hive-bin",
+          "https://github.com/ivankuznetsov/hive",
+          "http://127.0.0.1:4567`;"
+        ],
+        "pushed_days_ago": 0,
+        "archived": false,
+        "stars": 33,
+        "age_days": 192,
+        "repo": "ivankuznetsov/hive",
+        "url": "https://github.com/ivankuznetsov/hive"
+      },
       "site": {
         "live": true,
-        "url": "https://traccia.ai/",
-        "title": "AI Agent Control Plane: Observability &amp; Governance | Traccia",
+        "url": "https://hivecli.sh/",
+        "title": "Hive \u00e2\u0080\u0094 turn a rough idea into a merge-ready PR | Hive",
         "parked": false,
-        "product": true,
+        "product": false,
         "dev_product": true,
         "team": false,
-        "copyright_year": 2026
+        "copyright_year": null
       },
-      "hiring": {},
+      "hiring": {
+        "count": 9,
+        "board": "greenhouse",
+        "slug": "hive",
+        "url": "https://boards-api.greenhouse.io/v1/boards/hive/jobs"
+      },
       "registry": {
         "matched": false,
         "manual_lookup": true
       },
       "signals": {
         "accelerator": [],
-        "funding": [
-          "backed by"
-        ],
+        "funding": [],
         "hiring_text": false,
-        "commercial": [
-          "pricing",
-          "enterprise"
-        ],
+        "commercial": [],
         "legal_entity_text": false,
-        "customers": [
-          "used by"
-        ],
-        "backed": true
+        "customers": [],
+        "backed": false
       },
       "ecosystem": {},
       "links": [
         {
-          "label": "hn: Traccia",
-          "url": "https://news.ycombinator.com/item?id=49391995"
+          "label": "github: ivankuznetsov/hive",
+          "url": "https://github.com/ivankuznetsov/hive"
+        },
+        {
+          "label": "jobs (greenhouse)",
+          "url": "https://boards-api.greenhouse.io/v1/boards/hive/jobs"
         }
       ],
       "families": [
-        "hn"
+        "careers",
+        "github"
       ]
     },
     "tier": "Likely",
-    "confidence": 0.47,
+    "confidence": 0.49,
     "scores": {
       "fit": 0.8,
-      "verification": 0.47,
-      "momentum": 0.003,
-      "stealth": 0.997
+      "verification": 0.49,
+      "momentum": 0.556,
+      "stealth": 0.781
     },
-    "rank_score": 0.6851,
-    "flags": []
+    "rank_score": 0.6445,
+    "flags": [
+      "domain-from-readme"
+    ]
   },
   {
-    "id": "5fc5e10e94",
-    "name": ".github-private",
+    "id": "4fa8916139",
+    "name": "ANOLISA",
     "domains": [
-      "combsmith.com"
+      "agentic-os.sh"
     ],
     "signals": [
       {
         "source": "github",
         "kind": "repo",
-        "name": "combsmith/.github-private",
-        "url": "https://github.com/combsmith/.github-private",
-        "domain": null,
-        "ts": "2026-04-08T16:45:04Z",
+        "name": "agentic-os-org/ANOLISA",
+        "url": "https://github.com/agentic-os-org/ANOLISA",
+        "domain": "agentic-os.sh",
+        "ts": "2026-03-30T06:33:06Z",
         "data": {
-          "full_name": "combsmith/.github-private",
-          "stars": 5,
-          "forks": 1,
-          "description": "Org-wide custom agents, skills, and agentic workflow infrastructure",
-          "language": "Shell",
-          "matched": "agentic workflow infrastructure"
+          "full_name": "agentic-os-org/ANOLISA",
+          "stars": 658,
+          "forks": 184,
+          "description": "ANOLISA (Agentic Nexus Operating Layer & Interface System Architecture) | Agentic OS with runtime, security, observability, and Tokenless response compression for lower token usage and cost.",
+          "language": "Rust",
+          "matched": "agent sandbox"
         }
       }
     ],
     "evidence": {
       "github": {
         "commits_30d": 100,
-        "authors_30d": 2,
+        "authors_30d": 23,
         "errors": [],
-        "last_release": null,
-        "owner_followers": 5,
-        "owner_location": null,
-        "owner_blog": "https://combsmith.com",
+        "last_release": "2026-11-03T04:02:10Z",
+        "owner_followers": 9,
+        "owner_location": "China",
+        "owner_blog": "https://agentic-os.sh/",
         "owner_company": null,
-        "readme_len": 12147,
-        "readme_excerpt": "# .github-private\n\n[![Contributing](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/combsmith/.github/blob/main/CONTRIBUTING.md)\n\nOrg-wide Copilot custom agents, automated workflows, prompts, scripts, and frameworks for `combsmith`.\n\n## What This Repo Does\n\nThis is the [`.github-private` convention](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/create-custom-agents) repo for the combsmith org.\nAgent profiles in `/agents/` are available org-wide \u2014 invocable from GitHub.com, VS Code, JetBrains, and Copilot CLI.\n\nIt also contains automated workflows (GitHub Actions agents running on events and schedules),\nprompts, scripts, and the scheduled reporting dashboards that run across the org.\n\nIt also contains the scheduled PR review automation (workflows + scripts + prompts) that runs hourly across the org.\n\n## Structure\n\n```\nagents/                   # Copilot custom agent profiles (org-wide)\n  agentic-workflows.md    # Agentic workflow orchestration\n  compliance-auditor.md   # Org standards compliance checking\n  feature-ideator.md      # Feature idea generation\n  pr-reviewer.md          # Multi-tier cascading PR review\nprompts/                  # Prompt libraries used by workflows\nscripts/                  # Shell orchestration for GitHub Actions\nframeworks/               # Installed agentic frameworks (git subtree)\n  bmad-bgreat-suite/      # bmad-bgreat-suite @ ae8914e84b87: SRE, DevOps, and Security agents\n  bmad-method/            # BMAD-METHOD v6.8.0: multi-agent development lifecycle\n  bmad-test-architecture/ # bmad-method-test-architecture-enterprise v1.19.0\n.github/workflows/        # Scheduled automation (PR review, health checks)\n```\n\n## @-Mention Agents\n\n| Agent | Purpose | Invoke with |\n|-------|---------|-------------|\n| [`agentic-workflows`](agents/agentic-workflows.md) | Agentic workflow orchestration | `@agentic-workflows` in any org repo |\n| [`compliance-auditor`](agents/compliance-auditor.md) | Audit repo against org standards | `@compliance-auditor` in any org repo |\n| [`feature-ideator`](agents/feature-ideator.md) | Generate and prioritize feature ideas | `@feature-ideator` in any org repo |\n| [`pr-reviewer`](agents/pr-reviewer.md) | Cascading PR review (triage \u2192 deep \u2192 security audit) with cross-engine adversarial review (see also [`pr-review-trigger.yml`](.github/workflows/pr-review-trigger.yml) for scheduled automation) | `@pr-reviewer` in any org PR |\n\n## Automated Workflows\n\nAutonomous agents that run as GitHub Actions, triggered by events or schedules across the org.\n\n| Workflow | Purpose |\n|----------|---------|\n| [`ci-failure-analyst-reusable.yml`](.github/workflows/ci-failure-analyst-reusable.yml) | CI failure analyst \u2014 diagnoses failed CI/Lint/Test runs and comments root-cause analysis |\n| [`feature-ideation.yml`](.github/workflows/feature-ideation.yml) | Feature research & ideation agent (BMAD Analyst) \u2014 turns sources into scoped feature ideas |\n| [`idea-triage.yml`](.github/workflows/idea-triage.yml) | Idea triage agent \u2014 scores queued ideas and promotes them into the backlog |\n| [`decision-brief.yml`](.github/workflows/decision-brief.yml) | Decision-brief agent (BMAD Analyst) \u2014 drafts the go/no-go brief for a ripe idea as a PR in the target repo |\n| [`initiative-driver.yml`](.github/workflows/initiative-driver.yml) | Initiative driver \u2014 auto-releases an epic's ready sub-issues to Dev-Lead |\n| [`initiative-planner.yml`](.github/workflows/initiative-planner.yml) | Initiative planner (BMAD Scrum Master) \u2014 breaks an approved initiative into an epic + sub-issues |\n| [`issue-triage-runner.yml`](.github/workflows/issue-triage-runner.yml) | Issue triage agent \u2014 labels and routes newly opened issues |\n| [`pr-review-trigger.yml`](.github/workflows/pr-review-trigger.yml) | PR review agent \u2014 cascading triage \u2192 deep \u2192 security review on open PRs across the org; auto-approves LOW/MEDIUM risk PRs with passing CI, escalates",
+        "readme_len": 20001,
+        "readme_excerpt": "<div align=\"center\">\n\n<picture>\n  <source\n    media=\"(prefers-color-scheme: dark)\"\n    srcset=\"docs/images/brand/anolisa-lockup-dark.svg\"\n  >\n  <source\n    media=\"(prefers-color-scheme: light)\"\n    srcset=\"docs/images/brand/anolisa-lockup-light.svg\"\n  >\n  <img\n    src=\"docs/images/brand/anolisa-lockup-light.svg\"\n    alt=\"ANOLISA\"\n    width=\"320\"\n  >\n</picture>\n\n<sub>**A**gentic **N**exus **O**perating **L**ayer & **I**nterface **S**ystem **A**rchitecture</sub>\n\n**A system software stack for AI Agents.**\n\n[\u4e2d\u6587\u7248](README_zh.md) \u00b7 [Website](https://agentic-os.sh/) \u00b7\n[Get Started](#get-started) \u00b7 [User Guide](https://agentic-os.sh/docs/user-guide/) \u00b7\n[Contribute](CONTRIBUTING.md)\n\n[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)\n[![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS-lightgrey.svg)](https://agentic-os.sh/docs/user-guide/getting-started/installation/)\n[![AARM Aligned](https://img.shields.io/badge/AARM-Aligned-blue.svg)](https://aarm.dev/builders/agentseccore-anolisa)\n[![OWASP Agentic Top 10: 7 Full, 3 Partial](https://img.shields.io/badge/OWASP_Agentic_Top_10-7_Full,_3_Partial-blue)](docs/user-guide/en/agent-sec-core/owasp-agentic-top10.md)\n\n</div>\n\n**ANOLISA is a multi-component system software stack for AI Agent workloads.**\nBuilt on existing operating system kernels and infrastructure, it provides\ncontext management, Skills delivery, workspace recovery, security, and\nobservability for Agent applications, frameworks and platforms.\n**Users** can carry out tasks in a native terminal that preserves a familiar\nShell experience, and enable system-level optimizations for their Agents'\nruntime environments. **Developers** can extend the stack through\n[AW's open architecture](https://agentic-os.sh/docs/developer-guide/aw/providers/)\nby integrating their own system software optimized for Agent workloads into ANOLISA.\n\n> **ANOLISA vs. Agentic OS:** Agentic OS describes a class of operating systems\n> designed for AI Agent workloads. Our community takes a neutral and open\n> approach to exploring this direction; ANOLISA is the core system software\n> stack in the Agentic OS architecture we design.\n\n<a id=\"get-started\"></a>\n\n## 1. Get started\n\nANOLISA offers three ways to get started: use a **preinstalled image** to\nexperience the full capabilities of an Agentic OS; install the system software\nstack on an existing OS to **extend it into an Agentic OS**; or connect an\nexisting Agent application, framework, or harness to\n**enable configurable system-level optimizations**.\n\n<a id=\"preinstalled-images-and-agentic-computers\"></a>\n\n### 1.1 Start from an image\n\nIn a ready-to-use preinstalled system environment, you can use familiar Shell\nworkflows in cosh and call system tools and Skills through natural language.\nAfter installing and configuring the relevant components, you can also use\nAgent Semantic Layer capabilities such as context compression, workspace\nsnapshots and recovery, security, and observability. Container base images\nprovide a starting point for building your own Agent runtime environment.\n\nThe [Images and cloud services](docs/user-guide/en/getting-started/images.md)\ncatalog lists available images, their preinstalled software, download or pull\naddresses, and cloud service entry points. Vendors and community contributors\ncan add image or cloud service entries and usage instructions to the catalog.\n\n<a id=\"integrate-anolisa-into-an-agent-platform-image\"></a>\n\nDevelopers of Agent platforms and Agent runtime infrastructure can preinstall\nANOLISA packages in Agent, sandbox, or business images. See the\n[base image catalog](docs/user-guide/en/getting-started/images.md#container-base-images)\nand [package installation guide](https://agentic-os.sh/docs/user-guide/getting-started/installation/).\n\n<a id=\"convert-an-existing-os-into-an-agentic-os\"></a>\n\n### 1.2 Convert an existing OS into an Agentic OS\n\nIf you already run a supported Linux system, you can install ANOLISA's system\nsoftware ",
         "readme_links": [
-          "https://img.shields.io/badge/contributions-welcome-brightgreen.svg",
-          "https://github.com/combsmith/.github/blob/main/CONTRIBUTING.md",
-          "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/create-custom-agents",
-          "https://github.com/combsmith/.github/blob/main/.github/workflows/compliance-audit-and-improvement.yml",
-          "https://github.com/combsmith/.github/blob/main/.github/workflows/daily-org-status.yml",
-          "https://github.com/combsmith/.github/blob/main/.github/workflows/org-scorecard.yml",
-          "https://github.com/combsmith/.github/blob/main/.github/workflows/standards-deploy.yml",
-          "https://github.com/combsmith/.github/blob/main/standards/advanced-security.md",
-          "https://github.com/combsmith/.github/blob/main/standards/agent-rate-limits.md",
-          "https://github.com/combsmith/.github/blob/main/standards/agen"
+          "https://agentic-os.sh/",
+          "https://agentic-os.sh/docs/user-guide/",
+          "https://img.shields.io/badge/License-Apache_2.0-blue.svg",
+          "https://img.shields.io/badge/Platform-Linux%20%7C%20macOS-lightgrey.svg",
+          "https://agentic-os.sh/docs/user-guide/getting-started/installation/",
+          "https://img.shields.io/badge/AARM-Aligned-blue.svg",
+          "https://aarm.dev/builders/agentseccore-anolisa",
+          "https://img.shields.io/badge/OWASP_Agentic_Top_10-7_Full,_3_Partial-blue",
+          "https://agentic-os.sh/docs/developer-guide/aw/providers/",
+          "https://agentic-os.sh/docs/user-guide/getting-started/installation/",
+          "https://agentic-os.sh/docs/user-guide/getting-started/installation/",
+          "https://agentic-os.sh/docs/user-guide/cosh-ng/",
+          "https://agentic-os.sh/docs/user-guide/getting-started/installation/",
+          "https://github.com/user-attachments/assets/ed6952c6-19da-44c7-ae35-85d753bdccf9",
+          "https://agentic-os.sh/docs/user-guide/agentsight/",
+          "https://github.com/user-attachments/assets/b372ae72-44fa-492f-9feb-e6cd137b631a",
+          "https://agentic-os.sh/docs/user-guide/tokenless/measuring-savings/",
+          "https://github.co"
         ],
         "pushed_days_ago": 0,
         "archived": false,
-        "stars": 5,
-        "age_days": 209,
-        "repo": "combsmith/.github-private",
-        "url": "https://github.com/combsmith/.github-private"
+        "stars": 658,
+        "age_days": 219,
+        "repo": "agentic-os-org/ANOLISA",
+        "url": "https://github.com/agentic-os-org/ANOLISA"
       },
       "site": {
         "live": true,
-        "url": "https://combsmith.com/",
-        "title": "Comb Smith \u2014 a workshop for small, sharp tools",
+        "url": "https://agentic-os.sh/",
+        "title": "System Software Stack for AI Agents. | ANOLISA",
         "parked": false,
         "product": true,
-        "dev_product": false,
-        "team": false,
-        "copyright_year": null
-      },
-      "hiring": {},
-      "registry": {
-        "matched": false,
-        "manual_lookup": true
-      },
-      "signals": {
-        "accelerator": [],
-        "funding": [],
-        "hiring_text": false,
-        "commercial": [
-          "enterprise",
-          "pricing"
-        ],
-        "legal_entity_text": false,
-        "customers": [
-          "used by"
-        ],
-        "backed": false
-      },
-      "ecosystem": {},
-      "links": [
-        {
-          "label": "github: combsmith/.github-private",
-          "url": "https://github.com/combsmith/.github-private"
-        }
-      ],
-      "families": [
-        "github"
-      ]
-    },
-    "tier": "Likely",
-    "confidence": 0.37,
-    "scores": {
-      "fit": 0.61,
-      "verification": 0.37,
-      "momentum": 0.352,
-      "stealth": 0.889
-    },
-    "rank_score": 0.5999,
-    "flags": [
-      "domain-from-owner-blog"
-    ]
-  },
-  {
-    "id": "6ec65b26a8",
-    "name": "agentland",
-    "domains": [
-      "agentland.in"
-    ],
-    "signals": [
-      {
-        "source": "github",
-        "kind": "repo",
-        "name": "jaiswal-naman/agentland",
-        "url": "https://github.com/jaiswal-naman/agentland",
-        "domain": null,
-        "ts": "2026-03-05T19:20:16Z",
-        "data": {
-          "full_name": "jaiswal-naman/agentland",
-          "stars": 51,
-          "forks": 0,
-          "description": "AI Agent Observability Platform",
-          "language": "Rust",
-          "matched": "agent observability platform"
-        }
-      }
-    ],
-    "evidence": {
-      "github": {
-        "commits_30d": 0,
-        "authors_30d": 0,
-        "errors": [],
-        "last_release": null,
-        "owner_followers": 25,
-        "owner_location": null,
-        "owner_blog": "",
-        "owner_company": null,
-        "readme_len": 25432,
-        "readme_excerpt": "<p align=\"center\">\n  <img src=\"https://img.shields.io/badge/Agentland-AI%20Agent%20Governance-8B5CF6?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0tMiAxNWwtNS01IDEuNDEtMS40MUwxMCAxNC4xN2w3LjU5LTcuNTlMMTkgOGwtOSA5eiIvPjwvc3ZnPg==&logoColor=white\" alt=\"Agentland\" />\n</p>\n\n<h1 align=\"center\">\ud83d\udee1\ufe0f Agentland</h1>\n\n<p align=\"center\">\n  <b>Open-Source AI Agent Observability, Governance & Compliance Platform</b>\n</p>\n\n<p align=\"center\">\n  <i>Know what your AI agents are doing \u2014 before your auditor asks.</i>\n</p>\n\n<br/>\n\n<p align=\"center\">\n  <b>\u2b50\ufe0f If you find Agentland useful, <a href=\"https://github.com/jaiswal-naman/agentland\">please consider giving us a star!</a> It helps the open-source project grow. \u2b50\ufe0f</b>\n</p>\n\n<p align=\"center\">\n  Built with \u2764\ufe0f by <a href=\"https://github.com/jaiswal-naman\"><b>Naman</b></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://agentland.in\"><img src=\"https://img.shields.io/badge/Website-agentland.in-8B5CF6?style=flat-square&logo=globe&logoColor=white\" alt=\"Website\" /></a>\n  <a href=\"https://x.com/agentlandai\"><img src=\"https://img.shields.io/badge/X%20(Twitter)-black?style=flat-square&logo=x&logoColor=white\" alt=\"X (Twitter)\" /></a>\n  <a href=\"http://linkedin.com/company/agentland\"><img src=\"https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white\" alt=\"LinkedIn\" /></a>\n  <a href=\"https://discord.gg/kYa8SqQd\"><img src=\"https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white\" alt=\"Discord\" /></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"#-quick-start\"><img src=\"https://img.shields.io/badge/Setup-2%20Minutes-00C853?style=flat-square\" alt=\"Setup Time\" /></a>\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-Apache%202.0-blue?style=flat-square\" alt=\"License\" /></a>\n  <a href=\"https://www.rust-lang.org\"><img src=\"https://img.shields.io/badge/Rust-1.75+-DEA584?style=flat-square&logo=rust&logoColor=white\" alt=\"Rust\" /></a>\n  <a href=\"https://react.dev\"><img src=\"https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black\" alt=\"React\" /></a>\n  <a href=\"https://www.timescale.com\"><img src=\"https://img.shields.io/badge/TimescaleDB-PG16-FDB515?style=flat-square&logo=postgresql&logoColor=white\" alt=\"TimescaleDB\" /></a>\n  <a href=\"https://github.com/jaiswal-naman/agentland/actions/workflows/ci.yml\"><img src=\"https://github.com/jaiswal-naman/agentland/actions/workflows/ci.yml/badge.svg\" alt=\"CI\" /></a>\n  <a href=\"https://ghcr.io/jaiswal-naman/agentland\"><img src=\"https://img.shields.io/badge/Docker-ghcr.io-2496ED?style=flat-square&logo=docker&logoColor=white\" alt=\"Docker\" /></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"#-quick-start\"><b>Getting Started</b></a> \u00b7\n  <a href=\"https://github.com/jaiswal-naman/agentland/issues\"><b>Issues</b></a> \u00b7\n  <a href=\"#-agentland-platform-enterprise\"><b>Enterprise</b></a>\n</p>\n\n<br/>\n\n<p align=\"center\">\n  <img src=\"imgonline-com-ua-GIF-animation-2aVXJx6VtOK.gif\" alt=\"Agentland Dashboard Demo\" width=\"800\" />\n</p>\n\n---\n\n## \ud83c\udfaf What is Agentland?\n\nAgentland is a **transparent reverse proxy** that sits between your AI agents and their APIs (OpenAI, Anthropic, etc.). It captures every request and response \u2014 **without touching your agent code**.\n\n**One env var. Zero code changes. Full visibility.**\n\n```bash\nexport OPENAI_BASE_URL=http://localhost:4000/proxy/openai/v1\n# That's it. Your agents keep working exactly as before.\n```\n\nNow every AI call is automatically **logged**, **costed**, **scanned for PII**, and **attributed** to the agent that made it.\n\n```text\n  \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510       \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510       \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n  \u2502                 \u2502       \u2502   \ud83d\udee1\ufe0f Agentland  \u2502       \u2502                   \u2502\n  \u2502   Your Agents   \u2502 \u2500\u2500\u2500\u2500\u25ba \u2502     (:4000)        \u2502 \u2500\u2500\u2500\u2500\u25ba \u2502  OpenAI / Claude  ",
-        "readme_links": [
-          "https://img.shields.io/badge/Agentland-AI%20Agent%20Governance-8B5CF6?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0tMiAxNWwtNS01IDEuNDEtMS40MUwxMCAxNC4xN2w3LjU5LTcuNTlMMTkgOGwtOSA5eiIvPjwvc3ZnPg==&logoColor=white",
-          "https://github.com/jaiswal-naman/agentland",
-          "https://github.com/jaiswal-naman",
-          "https://agentland.in",
-          "https://img.shields.io/badge/Website-agentland.in-8B5CF6?style=flat-square&logo=globe&logoColor=white",
-          "https://x.com/agentlandai",
-          "https://img.shields.io/badge/X%20(Twitter",
-          "http://linkedin.com/company/agentland",
-          "https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white",
-          "https://discord.gg/kYa8SqQd",
-          "https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white",
-          "https://img.shields.io/badge/Setup-2%20Minutes-00C853?style=flat-square",
-          "https://img.shields.io/badge/License-Apache%202.0-blue?style=flat-square",
-          "https://www.rust-lang.org",
-          "https://img.shields.io/badge/Rust-1.75+-DEA584?style=flat-square&logo=rust&logoColor=white",
-          "https://react.dev",
-          "https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black",
-          "https://www.timescale.com",
-          "https://img.shields.io/badge/TimescaleDB-PG16-FDB515?style=flat-square&logo=postgresql&logoColor=white",
-          "https://github.com/jaiswal-naman/agentland/actions/workflows/ci.yml",
-          "https://github.com/jaiswal-naman/agentland/actions/workflows/ci.yml/badge.svg",
-          "https://ghcr.io/jaiswal-naman/agentland",
-          "https://img.shields.io/badge/Docker-ghcr.io-2496ED?style=flat-square&logo=docker&logoColor=white",
-          "https://github.com/jaiswal-naman/agentland/issues",
-          "http://localhost:4000/proxy/openai/v1",
-          "https://docker.com",
-          "https://raw.githubusercontent.com/jaiswal-naman/agentland/main/install.sh",
-          "https://raw.githubusercontent.com/jaiswal-naman/agentland/main/install.ps1",
-          "https://github.com/jaiswal-naman/agentland.git",
-          "https://github.com/jaiswal-naman/agentland.git"
-        ],
-        "pushed_days_ago": 211,
-        "archived": false,
-        "stars": 51,
-        "age_days": 243,
-        "repo": "jaiswal-naman/agentland",
-        "url": "https://github.com/jaiswal-naman/agentland"
-      },
-      "site": {
-        "live": true,
-        "url": "https://www.agentland.in/",
-        "title": "Agentland \u00b7 find every manual task in your sales stack and run it with AI",
-        "parked": false,
-        "product": true,
-        "dev_product": false,
-        "team": false,
-        "copyright_year": 2026
-      },
-      "hiring": {},
-      "registry": {
-        "matched": false,
-        "manual_lookup": true
-      },
-      "signals": {
-        "accelerator": [],
-        "funding": [],
-        "hiring_text": false,
-        "commercial": [
-          "waitlist",
-          "early access",
-          "pricing"
-        ],
-        "legal_entity_text": false,
-        "customers": [
-          "design partners"
-        ],
-        "backed": false
-      },
-      "ecosystem": {},
-      "links": [
-        {
-          "label": "github: jaiswal-naman/agentland",
-          "url": "https://github.com/jaiswal-naman/agentland"
-        }
-      ],
-      "families": [
-        "github"
-      ]
-    },
-    "tier": "Likely",
-    "confidence": 0.37,
-    "scores": {
-      "fit": 0.52,
-      "verification": 0.37,
-      "momentum": 0.017,
-      "stealth": 0.755
-    },
-    "rank_score": 0.4907,
-    "flags": [
-      "domain-from-readme"
-    ]
-  },
-  {
-    "id": "8d474bf324",
-    "name": "duoduo",
-    "domains": [
-      "openduo.ai"
-    ],
-    "signals": [
-      {
-        "source": "github",
-        "kind": "repo",
-        "name": "openduo/duoduo",
-        "url": "https://github.com/openduo/duoduo",
-        "domain": "openduo.ai",
-        "ts": "2026-03-05T03:55:34Z",
-        "data": {
-          "full_name": "openduo/duoduo",
-          "stars": 10,
-          "forks": 4,
-          "description": "duoduo \u2014 autonomous agent runtime",
-          "language": "HTML",
-          "matched": "autonomous agent runtime"
-        }
-      }
-    ],
-    "evidence": {
-      "github": {
-        "commits_30d": 26,
-        "authors_30d": 1,
-        "errors": [],
-        "last_release": "2026-10-30T03:11:31Z",
-        "owner_followers": 11,
-        "owner_location": null,
-        "owner_blog": "https://openduo.ai",
-        "owner_company": null,
-        "readme_len": 13564,
-        "readme_excerpt": "# duoduo\n\n**A model call ends. The work shouldn't.**\n\n[![npm](https://img.shields.io/npm/v/@openduo/duoduo)](https://www.npmjs.com/package/@openduo/duoduo)\n\nDuoDuo is a long-lived local runtime for Claude, Codex, Grok, and Pi. Conversations, jobs, outputs, and prompts live in files on your machine. Foreground sessions handle live work; a scheduled subconscious distills experience into an intuition layer that every new session starts with, kept in Git so every change to what DuoDuo has learned has a diff and a revert.\n\nDuoDuo is not another harness. Claude, Codex, Grok, and Pi are the harnesses, and they keep improving; DuoDuo is the environment that gives them durable state, time, channels, and a Git-tracked history. Talk to it from any channel you plug in: a chat app, a room, a button in your pocket, or another assistant that becomes DuoDuo through Tether.\n\nSite and documentation: [openduo.ai](https://openduo.ai).\n\n## Why Not Open Source?\n\nFirst: we are called **open**duo and we don't publish source either. Respect to OpenAI.\n\nThe real reason: **this codebase is not written for humans to read.**\n\nduoduo is an agent that codes itself. The published npm packages contain minified JavaScript. An agent can read, understand, and modify minified code just fine \u2014 it doesn't need pretty source with comments and indentation. Minification here isn't obfuscation; it's compression. Saves bandwidth. Keeps the context window lean.\n\nHumans don't need to read the source. Humans need to **vibe with the agent** \u2014 describe what you want, let it figure out the implementation. That's the whole point.\n\n> Human? Read this README, then run it and talk to it.\n> Agent? The minified bundle is your source. See [Issues](#issues--feedback).\n\n### What you may do with it\n\nSource-available, and open to your agents. The bundle is licensed to you and to the agents you run: read it, de-minify it, debug it, patch it, train on it, and share your patches. The one thing you may not do is offer it, or something built from it, as a competing product or service. Two years after each release, that version becomes Apache-2.0. The terms are in [LICENSE](LICENSE); the summary an agent can act on is [LICENSE.agents.yaml](LICENSE.agents.yaml).\n\n## Core Innovations\n\n### 1. Filesystem-First, Event-Sourced Runtime\n\nAll state \u2014 conversations, outputs, jobs, memory \u2014 lives in durable files. Nothing critical is held in process memory. The canonical event log (WAL) is written before any action executes. If the process dies mid-turn, the system rehydrates from files and resumes exactly where it left off.\n\nThis is not a backup strategy. The filesystem is the database. The event log is the source of truth. The process is stateless by default.\n\n### 2. WAL-Before-Execute at the Gateway Boundary\n\nEvery inbound message follows a strict contract: write a canonical event to the append-only log _first_, then enqueue the session, then execute. Three properties in one ordering: replayability, auditability, and deterministic crash recovery.\n\n### 3. One External Identity, Many Internal Sessions\n\nExternally, duoduo presents one coherent agent identity. Internally, it orchestrates multiple concurrent session actors \u2014 one per conversation channel, plus background job sessions and subconscious partitions \u2014 each with explicit lifecycle and concurrency control enforced by lease locks.\n\n### 4. Dual-Loop Cognition: Cortex + Subconscious\n\n**Foreground (Cortex)** responds to live channel messages. Sessions persist across restarts and resume conversation history exactly.\n\n**Background (Subconscious)** runs on a cadence regardless of foreground activity. It consolidates memory, reflects on past sessions, and maintains a broadcast board of curated knowledge automatically loaded into every future session's context \u2014 even when no one is chatting.\n\n### 5. Self-Programming Cognitive Topology\n\nSubconscious behavior is defined by filesystem files \u2014 each partition has its own prompt, schedule, and cooldown. Partiti",
-        "readme_links": [
-          "https://img.shields.io/npm/v/@openduo/duoduo",
-          "https://www.npmjs.com/package/@openduo/duoduo",
-          "https://openduo.ai",
-          "http://localhost:20233/dashboard`",
-          "https://open.feishu.cn/page/openclaw?form=multiAgent",
-          "https://www.npmjs.com/package/@openduo/channel-feishu",
-          "https://www.npmjs.com/package/@openduo/channel-ambient",
-          "https://github.com/openduo/ambient",
-          "https://www.npmjs.com/package/@openduo/channel-tether",
-          "https://github.com/openduo/tether",
-          "https://skills.sh/",
-          "https://github.com/openduo/duoduo",
-          "https://github.com/openduo/duoduo"
-        ],
-        "pushed_days_ago": 5,
-        "archived": false,
-        "stars": 10,
-        "age_days": 244,
-        "repo": "openduo/duoduo",
-        "url": "https://github.com/openduo/duoduo"
-      },
-      "site": {
-        "live": true,
-        "url": "https://openduo.ai/",
-        "title": "DuoDuo: The AI Agent That Keeps Working for You | OpenDuo",
-        "parked": false,
-        "product": false,
         "dev_product": true,
         "team": false,
-        "copyright_year": null
+        "copyright_year": 2026
       },
       "hiring": {},
       "registry": {
@@ -400,8 +202,8 @@
       "ecosystem": {},
       "links": [
         {
-          "label": "github: openduo/duoduo",
-          "url": "https://github.com/openduo/duoduo"
+          "label": "github: agentic-os-org/ANOLISA",
+          "url": "https://github.com/agentic-os-org/ANOLISA"
         }
       ],
       "families": [
@@ -413,10 +215,128 @@
     "scores": {
       "fit": 0.83,
       "verification": 0.3,
-      "momentum": 0.231,
-      "stealth": 0.851
+      "momentum": 0.6,
+      "stealth": 0.597
     },
-    "rank_score": 0.6443,
+    "rank_score": 0.5981,
+    "flags": []
+  },
+  {
+    "id": "b6772b9443",
+    "name": "Pane",
+    "domains": [
+      "runpane.com"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "greenfield-inc/Pane",
+        "url": "https://github.com/greenfield-inc/Pane",
+        "domain": "runpane.com",
+        "ts": "2026-02-27T01:34:13Z",
+        "data": {
+          "full_name": "greenfield-inc/Pane",
+          "stars": 600,
+          "forks": 235,
+          "description": "Terminal-first, open-source AI agent manager for any CLI agent (agent agnostic), any OS (mac, windows, linux). The Open-Source Agentic Development Environment for running multiple coding agents in parallel. Run locally or self-host Remote Pane to manage agents from desktop or phone. Simplify multi-agent orchestration with the runpane CLI.",
+          "language": "TypeScript",
+          "matched": "multi-agent orchestration"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 100,
+        "authors_30d": 1,
+        "errors": [],
+        "last_release": "2026-11-04T00:26:39Z",
+        "owner_followers": 8,
+        "owner_location": "United States of America",
+        "owner_blog": "https://greenfield.to",
+        "owner_company": null,
+        "readme_len": 37232,
+        "readme_excerpt": "<p align=\"center\">\n  <img src=\"frontend/src/assets/pane-logo.png\" alt=\"Pane\" width=\"120\" height=\"120\">\n</p>\n\n<p align=\"center\">\n  <strong>Run any coding agent, on any OS, from desktop <a href=\"#remote-pane\">or phone</a>.</strong><br>\n  <em>just terminals. no abstractions.</em>\n</p>\n\n<div align=\"center\">\n\n<a href=\"https://runpane.com\" title=\"Click on this image to see more themes and demo\">\n  <img src=\"assets/readme-remote-pane.png\" alt=\"Pane desktop app and Remote Pane mobile browser app\" title=\"Pane desktop app and Remote Pane mobile browser app\" width=\"100%\">\n</a>\n\nAppearance follows your OS \u2014 see [Appearance](docs/APPEARANCE.md).\n\n[![AGPL-3.0 License](https://img.shields.io/badge/License-AGPL--3.0-555555.svg?labelColor=333333&color=666666)](./LICENSE)\n[![Downloads](https://img.shields.io/endpoint?url=https://runpane.com/api/badge/downloads&labelColor=333333&color=666666)](https://github.com/greenfield-inc/Pane/releases)\n[![GitHub](https://img.shields.io/badge/GitHub-source-555555?labelColor=333333&color=666666&logo=github&logoColor=white)](https://github.com/greenfield-inc/Pane)\n[![Latest Release](https://img.shields.io/badge/Release-latest-555555?labelColor=333333&color=666666)](https://github.com/greenfield-inc/Pane/releases/latest)\n[![Changelog](https://img.shields.io/badge/Changelog-runpane.com-555555?labelColor=333333&color=666666)](https://runpane.com/changelog)\n[![Active Users](https://img.shields.io/endpoint?url=https://runpane.com/api/badge/installs&labelColor=333333)](https://runpane.com)\n[![Discord](https://img.shields.io/badge/Discord-join-%235462eb?labelColor=%235462eb&logo=discord&logoColor=%23f5f5f5)](https://discord.gg/BdMyubeAZn)\n\n<br />\n\n**Made possible by our amazing contributors**\n\n<a href=\"https://github.com/greenfield-inc/Pane/graphs/contributors\">\n  <img src=\"https://contrib.rocks/image?repo=greenfield-inc/Pane\" alt=\"Pane contributors\">\n</a>\n\n<sub><a href=\"./CONTRIBUTING.md\">Join them</a> and help make Pane better.</sub>\n\n<br />\n<br />\n\n**Quick install (recommended)**\n\n<sub>Mac / Linux</sub><br />\n<pre><code>curl -fsSL https://runpane.com/install.sh | sh</code></pre>\n\n<sub>Windows (PowerShell)</sub><br />\n<pre><code>irm https://runpane.com/install.ps1 | iex</code></pre>\n\n<sub><em>Bypasses the macOS Gatekeeper / Windows SmartScreen prompts on direct downloads.</em></sub>\n\n<br />\n<br />\n\n<sub>or download the installer directly</sub><br />\n<br />\n\n<a href=\"https://runpane.com/api/download?platform=mac&source=readme\">\n  <img src=\"https://img.shields.io/badge/Download_for_macOS-000?style=for-the-badge&logo=apple&logoColor=white\" height=\"40\" alt=\"Download for macOS\">\n</a>\n<a href=\"https://runpane.com/api/download?platform=windows&source=readme\">\n  <img src=\"https://img.shields.io/badge/Download_for_Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white\" height=\"40\" alt=\"Download for Windows\">\n</a>\n<a href=\"https://runpane.com/api/download?platform=linux&source=readme\">\n  <img src=\"https://img.shields.io/badge/Download_for_Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black\" height=\"40\" alt=\"Download for Linux\">\n</a>\n\n<br />\n<br />\n\n<details>\n<summary><sub>Other install methods: npx, pnpm, and pipx</sub></summary>\n<br />\n\n<pre><code># Guided setup via npm\nnpx --yes runpane@latest\n\n# pnpm one-shot\npnpm dlx runpane@latest\n\n# Python tools one-shot\npipx run runpane\n\n# Persistent npm install\nnpm i -g runpane\nrunpane setup</code></pre>\n\n</details>\n\n<br />\n<br />\n\n[Installation](#installation) \u00b7 [What Flying Feels Like](#what-flying-feels-like) \u00b7 [Remote Pane](#remote-pane) \u00b7 [Workspaces](#pane-workspaces) \u00b7 [Handoff](#hand-off-a-task) \u00b7 [Pane Chat](#pane-chat) \u00b7 [Agent-Operable CLI](#agent-operable-cli) \u00b7 [Keyboard Shortcuts](#keyboard-shortcuts) \u00b7 [Building from Source](#building-from-source)\n\n</div>\n\nNot an IDE. Not a terminal emulator. **Vim for agent management.**\n\nPane manages AI coding agents without replacing them. If it runs in a terminal, it runs in Pane \u2014 instantly, with zero integration",
+        "readme_links": [
+          "https://runpane.com",
+          "https://img.shields.io/badge/License-AGPL--3.0-555555.svg?labelColor=333333&color=666666",
+          "https://img.shields.io/endpoint?url=https://runpane.com/api/badge/downloads&labelColor=333333&color=666666",
+          "https://github.com/greenfield-inc/Pane/releases",
+          "https://img.shields.io/badge/GitHub-source-555555?labelColor=333333&color=666666&logo=github&logoColor=white",
+          "https://github.com/greenfield-inc/Pane",
+          "https://img.shields.io/badge/Release-latest-555555?labelColor=333333&color=666666",
+          "https://github.com/greenfield-inc/Pane/releases/latest",
+          "https://img.shields.io/badge/Changelog-runpane.com-555555?labelColor=333333&color=666666",
+          "https://runpane.com/changelog",
+          "https://img.shields.io/endpoint?url=https://runpane.com/api/badge/installs&labelColor=333333",
+          "https://runpane.com",
+          "https://img.shields.io/badge/Discord-join-%235462eb?labelColor=%235462eb&logo=discord&logoColor=%23f5f5f5",
+          "https://discord.gg/BdMyubeAZn",
+          "https://github.com/greenfield-inc/Pane/graphs/contributors",
+          "https://contrib.rocks/image?repo=greenfield-inc/Pane",
+          "https://runpane.com/install.sh",
+          "https://runpane.com/install.ps1",
+          "https://runpane.com/api/download?platform=mac&source=readme",
+          "https://img.shields.io/badge/Download_for_macOS-000?style=for-the-badge&logo=apple&logoColor=white",
+          "https://runpane.com/api/download?platform=windows&source=readme",
+          "https://img.shields.io/badge/Download_for_Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white",
+          "https://runpane.com/api/download?platform=linux&source=readme",
+          "https://img.shields.io/badge/Download_for_Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black",
+          "https://runpane.com/app/"
+        ],
+        "pushed_days_ago": 0,
+        "archived": false,
+        "stars": 600,
+        "age_days": 250,
+        "repo": "greenfield-inc/Pane",
+        "url": "https://github.com/greenfield-inc/Pane"
+      },
+      "site": {
+        "live": true,
+        "url": "https://runpane.com/",
+        "title": "RunPane by Dcouple | Open-Source Agent Manager",
+        "parked": false,
+        "product": true,
+        "dev_product": true,
+        "team": false,
+        "copyright_year": null
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [
+          "pricing"
+        ],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: greenfield-inc/Pane",
+          "url": "https://github.com/greenfield-inc/Pane"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.3,
+    "scores": {
+      "fit": 0.8,
+      "verification": 0.3,
+      "momentum": 0.55,
+      "stealth": 0.603
+    },
+    "rank_score": 0.5749,
     "flags": []
   },
   {
@@ -534,66 +454,81 @@
       "momentum": 0.312,
       "stealth": 0.773
     },
-    "rank_score": 0.6211,
+    "rank_score": 0.5293,
     "flags": []
   },
   {
-    "id": "55e265701c",
-    "name": "orbt",
+    "id": "d31682e4c9",
+    "name": "mateclaw",
     "domains": [
-      "orbt.sh"
+      "mate.vip"
     ],
     "signals": [
       {
         "source": "github",
         "kind": "repo",
-        "name": "linuszz/orbt",
-        "url": "https://github.com/linuszz/orbt",
-        "domain": null,
-        "ts": "2026-07-02T01:29:59Z",
+        "name": "mateaix/mateclaw",
+        "url": "https://github.com/mateaix/mateclaw",
+        "domain": "mate.vip",
+        "ts": "2026-04-04T10:53:35Z",
         "data": {
-          "full_name": "linuszz/orbt",
-          "stars": 48,
-          "forks": 0,
-          "description": "Orbit is a next-generation terminal workspace that unifies human command-line interaction with AI agent execution environments.",
-          "language": "Rust",
-          "matched": "agent execution environment"
+          "full_name": "mateaix/mateclaw",
+          "stars": 1178,
+          "forks": 356,
+          "description": "\ud83e\udd16 MateClaw \u2014 Your second brain with Multi-Agent Orchestration, MCP Protocol, Skills & Memory, Dream, and Multi-Channel Support. Built on Spring AI Alibaba.",
+          "language": "Java",
+          "matched": "multi-agent orchestration"
         }
       }
     ],
     "evidence": {
       "github": {
-        "commits_30d": 32,
-        "authors_30d": 2,
+        "commits_30d": 42,
+        "authors_30d": 5,
         "errors": [],
-        "last_release": "2026-10-07T10:00:12Z",
-        "owner_followers": 3,
+        "last_release": "2026-10-27T08:45:09Z",
+        "owner_followers": 118,
         "owner_location": null,
         "owner_blog": "",
         "owner_company": null,
-        "readme_len": 13833,
-        "readme_excerpt": "# Orbit\n\n**A terminal workspace for local and remote machines, with built-in AI agent monitoring.**\n\nOrbit (`orbt`) is a terminal multiplexer \u2014 like tmux \u2014 that also watches the AI coding agents running inside your sessions, lets you respond to them without leaving the terminal, and connects to remote machines over SSH with a single command. It adapts its layout automatically when the terminal is too narrow for a full desktop UI.\n\n---\n\n## Install\n\n### One-liner (Linux / macOS)\n\n```sh\ncurl -fsSL https://github.com/linuszz/orbt/releases/latest/download/install.sh | sh\n```\n\n### Homebrew (macOS / Linux)\n\n```sh\nbrew install linuszz/orbt/orbt\n```\n\n### apt (Debian / Ubuntu)\n\n```sh\ncurl -fsSL https://apt.orbt.sh/orbt.gpg.pub \\\n  | sudo gpg --dearmor -o /usr/share/keyrings/orbt.gpg\necho \"deb [arch=amd64 signed-by=/usr/share/keyrings/orbt.gpg] https://apt.orbt.sh stable main\" \\\n  | sudo tee /etc/apt/sources.list.d/orbt.list\nsudo apt update && sudo apt install orbt\n```\n\n### AUR (Arch Linux)\n\n```sh\nyay -S orbt-bin     # prebuilt binary \u2014 fast\nyay -S orbt         # build from source\n```\n\n### Scoop (Windows)\n\n```powershell\nscoop bucket add orbt https://github.com/linuszz/scoop-orbt\nscoop install orbt\n```\n\n### winget (Windows)\n\n```powershell\nwinget install Linus.Orbt\n```\n\n### Nix\n\n```sh\n# Run without installing\nnix run github:linuszz/orbt\n\n# Add to profile\nnix profile install github:linuszz/orbt\n```\n\n### cargo\n\n```sh\ncargo install orbt\n```\n\n### Manual download\n\nPrebuilt binaries for every platform are attached to each [GitHub Release](https://github.com/linuszz/orbt/releases/latest):\n\n| Platform | File |\n|---|---|\n| Linux x86\\_64 | `orbt-linux-x86_64.tar.gz` |\n| macOS Apple Silicon | `orbt-macos-aarch64.tar.gz` |\n| macOS Intel | `orbt-macos-x86_64.tar.gz` |\n| Windows x86\\_64 | `orbt-windows-x86_64.zip` |\n\nSHA-256 sidecar files (`.sha256`) are included for each archive.\n\n---\n\n## Quick start\n\n```sh\norbt           # start (auto-starts the background daemon on first run)\norbt daemon    # run the daemon in the foreground (for servers / init systems)\n```\n\nOrbit is client-server: `orbt` spawns a background daemon (`orbt daemon`) the first time it runs. The daemon keeps all sessions alive \u2014 close the client window without losing anything.\n\n```sh\norbt kill      # stop the daemon and wipe its saved session\norbt --fresh   # start with a clean session, ignoring any saved state\n```\n\n---\n\n## Remote connection\n\nConnect Orbit's TUI directly to an `orbtd` daemon running on another machine:\n\n```sh\norbt --remote user@host\norbt --remote user@host:2222     # custom port\n```\n\nOrbit opens a native SSH connection (reads your `~/.ssh/id_*` keys and `SSH_AUTH_SOCK`), forwards the remote Unix socket through the tunnel, and attaches as if the daemon were local. The remote daemon must be running (`orbt daemon` or a service unit).\n\n---\n\n## Layouts\n\nOrbit ships two pane-arrangement strategies, switchable at runtime from **Settings \u2192 Layout** (`Ctrl+B ,`).\n\n### Scrollable Strip (default)\n\nPanes live in a horizontal band of columns that scrolls left and right \u2014 the same model as [niri](https://github.com/YaLTeR/niri). Each column can hold a single pane or a vertical stack of panes. The active column is always fully visible; the rest peek in from the sides.\n\n```\n \u25c2  \u256d\u2500 1/3 \u00b7 editor \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\u256d\u2500 2/3 \u00b7 server \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e  \u25b8\n    \u2502 fn main() {                     \u2502\u2502 [2026-10-07 09:00] GET /api/data \u2502\n    \u2502   println!(\"hello\");            \u2502\u2502 200 OK  12ms                     \u2502\n    \u2502 }                               \u2502\u2502                                  \u2502\n    \u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n    \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u25c6\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501  \u25a6   +\n```\n\n**Navigating the strip**\n\n| Action | How |\n|---|---|\n| Focus next / previous pane | `\u2190` / `\u2192` in command palette, or click the **\u25c0 \u25b6** nav arrows |\n| Scroll viewport without moving focus | Click the **\u25c2 \u25b8** edge tabs on the frame border |\n| Jump viewport to any positio",
+        "readme_len": 32251,
+        "readme_excerpt": "<div align=\"center\">\n\n> **3.0.0 stable release \u00b7 2026-10-26**. Java 21 / Spring Boot 4.1.1 / Spring AI 2.0.1 / AgentScope 2.0.4. AgentScope drives execution loops; MateClaw retains tool approvals, permissions, Goals, SSE and persistence. See Releases for stable builds.\n> [3.0.0 architecture changelog](CHANGELOG.md)\n> Includes all changes since 2.3.0: structured decisions, member file isolation, DSH SDK upgrades, voice preview and structured MCP presentation.\n\n\n<p align=\"center\">\n  <img src=\"mateclaw-ui/public/logo/mateclaw_logo_s.png\" alt=\"MateClaw Logo\" width=\"120\">\n</p>\n\n# MateClaw\n\n<p align=\"center\"><b>Your second brain</b></p>\n\n<p align=\"center\"><sub><b>Pluggable Agent Runtime \u00b7 Native + DSH \u00b7 Spring Boot inside</b></sub></p>\n\n[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-black.svg?logo=github)](https://github.com/mateaix/mateclaw)\n[![Documentation](https://img.shields.io/badge/Docs-Website-green.svg?logo=readthedocs&label=Docs)](https://claw.mate.vip/docs)\n[![Live Demo](https://img.shields.io/badge/Demo-Online-orange.svg?logo=vercel&label=Demo)](https://claw-demo.mate.vip)\n[![Website](https://img.shields.io/badge/Website-claw.mate.vip-blue.svg?logo=googlechrome&label=Site)](https://claw.mate.vip)\n[![Java Version](https://img.shields.io/badge/Java-21+-blue.svg?logo=openjdk&label=Java)](https://adoptium.net/)\n[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.1.1-brightgreen.svg?logo=springboot)](https://spring.io/projects/spring-boot)\n[![Vue](https://img.shields.io/badge/Vue-3-4FC08D.svg?logo=vuedotjs)](https://vuejs.org/)\n[![Last Commit](https://img.shields.io/github/last-commit/mateaix/mateclaw)](https://github.com/mateaix/mateclaw)\n[![License](https://img.shields.io/badge/license-Apache--2.0-red.svg?logo=opensourceinitiative&label=License)](LICENSE)\n\n[[Website](https://claw.mate.vip)] [[Live Demo](https://claw-demo.mate.vip)] [[Documentation](https://claw.mate.vip/docs)] [[\u4e2d\u6587](README_zh.md)]\n\n</div>\n\n<p align=\"center\">\n  <img src=\"assets/images/preview.png\" alt=\"MateClaw Preview\" width=\"800\">\n</p>\n\n---\n\n> **3.0.0 \u2014 Governed execution, recoverable long tasks and team delivery.** Java 21, Spring Boot 4, Spring AI 2 and AgentScope 2 power the native runtime. Consistent context budgets, final-answer checks and team synthesis strengthen delivery while preserving approvals and workspace boundaries. [Release and upgrade notes](https://claw.mate.vip/docs/en/releases/3.0.0). Release date: **2026-10-26**.\n\n---\n\n> **Other personal AI agents are built for one person. MateClaw is the one your IT department can actually sign off on.**\n>\n> Multi-user workspaces. Approval-gated sensitive actions. Full audit trail. Spring Boot Actuator health monitoring. Per-channel error isolation so one chat platform's outage doesn't take down the rest. One JAR in your environment; you control persisted data, and task content is sent only to model, channel, or tool services you explicitly configure.\n>\n> **And underneath, a real Agent Runtime.** An employee is no longer welded to one reasoning loop. Choose the native AgentScope runtime for ReAct, Plan-and-Execute, Goals, and Team Runs, or run DeepSeek Harness as a managed external loop over SDK JSON-RPC. Both paths converge on the same conversations, workspace boundaries, Tool Guard, event projection, and lifecycle controls.\n\nMost AI tools die when their vendor has a bad day. Most forget you the moment the tab closes. Most give you a chatbox and call it a product.\n\n**MateClaw is the whole widget.** One deployment. Reasoning, knowledge, memory, tools, channels \u2014 built together, not bolted on. And when your primary model is unavailable, the next healthy provider retries the current request.\n\n---\n\n## What changes in 3.0.0\n\n3.0.0 includes the unpublished 2.4.0 development cycle. Release date: **2026-10-26**. Download published packages from Releases.\n\n- **Native execution:** AgentScope Java **2.0.4** runs ReAct and the tool loop within each Plan-Execute step. MateClaw retains plan sche",
         "readme_links": [
-          "https://github.com/linuszz/orbt/releases/latest/download/install.sh",
-          "https://apt.orbt.sh/orbt.gpg.pub",
-          "https://apt.orbt.sh",
-          "https://github.com/linuszz/scoop-orbt",
-          "https://github.com/linuszz/orbt/releases/latest",
-          "https://github.com/YaLTeR/niri"
+          "https://img.shields.io/badge/GitHub-Repo-black.svg?logo=github",
+          "https://github.com/mateaix/mateclaw",
+          "https://img.shields.io/badge/Docs-Website-green.svg?logo=readthedocs&label=Docs",
+          "https://claw.mate.vip/docs",
+          "https://img.shields.io/badge/Demo-Online-orange.svg?logo=vercel&label=Demo",
+          "https://claw-demo.mate.vip",
+          "https://img.shields.io/badge/Website-claw.mate.vip-blue.svg?logo=googlechrome&label=Site",
+          "https://claw.mate.vip",
+          "https://img.shields.io/badge/Java-21+-blue.svg?logo=openjdk&label=Java",
+          "https://adoptium.net/",
+          "https://img.shields.io/badge/Spring%20Boot-4.1.1-brightgreen.svg?logo=springboot",
+          "https://spring.io/projects/spring-boot",
+          "https://img.shields.io/badge/Vue-3-4FC08D.svg?logo=vuedotjs",
+          "https://vuejs.org/",
+          "https://img.shields.io/github/last-commit/mateaix/mateclaw",
+          "https://github.com/mateaix/mateclaw",
+          "https://img.shields.io/badge/license-Apache--2.0-red.svg?logo=opensourceinitiative&label=License",
+          "https://claw.mate.vip",
+          "https://claw-demo.mate.vip",
+          "https://claw.mate.vip/docs",
+          "https://claw.mate.vip/docs/en/releases/3.0.0"
         ],
-        "pushed_days_ago": 15,
+        "pushed_days_ago": 0,
         "archived": false,
-        "stars": 48,
-        "age_days": 125,
-        "repo": "linuszz/orbt",
-        "url": "https://github.com/linuszz/orbt"
+        "stars": 1178,
+        "age_days": 213,
+        "repo": "mateaix/mateclaw",
+        "url": "https://github.com/mateaix/mateclaw"
       },
       "site": {
         "live": true,
-        "url": "https://orbt.sh/",
-        "title": "Orbt",
+        "url": "https://mate.vip/",
+        "title": "mate.vip \u00e2\u0080\u0094 Microservices \u00c2\u00b7 Cloud Native \u00c2\u00b7 AI",
         "parked": false,
-        "product": true,
+        "product": false,
         "dev_product": false,
         "team": false,
         "copyright_year": 2026
@@ -615,208 +550,8 @@
       "ecosystem": {},
       "links": [
         {
-          "label": "github: linuszz/orbt",
-          "url": "https://github.com/linuszz/orbt"
-        }
-      ],
-      "families": [
-        "github"
-      ]
-    },
-    "tier": "Unverified",
-    "confidence": 0.3,
-    "scores": {
-      "fit": 0.8,
-      "verification": 0.3,
-      "momentum": 0.312,
-      "stealth": 0.759
-    },
-    "rank_score": 0.6174,
-    "flags": [
-      "domain-from-readme"
-    ]
-  },
-  {
-    "id": "ffdf481c3f",
-    "name": "gitlord",
-    "domains": [],
-    "signals": [
-      {
-        "source": "github",
-        "kind": "repo",
-        "name": "yashneil75/gitlord",
-        "url": "https://github.com/yashneil75/gitlord",
-        "domain": null,
-        "ts": "2026-07-16T18:12:23Z",
-        "data": {
-          "full_name": "yashneil75/gitlord",
-          "stars": 57,
-          "forks": 9,
-          "description": "Agent orchestration framework with Git-backed storage. Every turn is a Git commit - inspectable, rewindable, forkable.",
-          "language": "Python",
-          "matched": "agent orchestration framework"
-        }
-      }
-    ],
-    "evidence": {
-      "github": {
-        "commits_30d": 0,
-        "authors_30d": 0,
-        "errors": [],
-        "last_release": "2026-07-16T18:31:47Z",
-        "owner_followers": 3,
-        "owner_location": null,
-        "owner_blog": "",
-        "owner_company": null,
-        "readme_len": 4248,
-        "readme_excerpt": "# GitLord\n\n**Git for AI Agents.**\n\nGitLord turns Git into a database for autonomous agents. Every agent action becomes a version-controlled event \u2014 inspectable, replayable, forkable.\n\n---\n\n## Why GitLord?\n\nAI agents are powerful but untrustworthy. When something goes wrong, you can't answer basic questions:\n\n- Why did the agent make that decision?\n- Which tool call caused the failure?\n- Can we reproduce the execution?\n- Can we branch from an earlier point?\n\nMost frameworks lose this information. GitLord makes execution history a first-class primitive.\n\n---\n\n## How It Works\n\nEvery turn is a Git commit on a branch under `refs/agents/`:\n\n```\nrefs/agents/my-agent\n  commit 001 \u2192 user prompt\n  commit 002 \u2192 assistant response\n  commit 003 \u2192 tool call\n  commit 004 \u2192 tool result\n  commit 005 \u2192 subagent result\n```\n\nGit's primitives become agent primitives:\n\n| Git Concept | Agent Concept |\n|-------------|---------------|\n| commits | agent events |\n| branches | agent timelines |\n| objects | durable state |\n| history | memory |\n| diffs | behavior changes |\n| refs | agent identity |\n\n---\n\n## Features\n\n### Inspect Everything\n\nSee exactly what an agent did, turn by turn. Every tool call, every decision, every failure \u2014 all version-controlled.\n\n### Rewind Failures\n\nFailed execution doesn't destroy history. Rewind to any checkpoint and try a different approach.\n\n```\nA --- B --- C --- D (failed)\n       \\\n        E --- F (new attempt)\n```\n\n### Fork Alternative Approaches\n\nExplore multiple solutions in parallel. Each branch maintains its own history.\n\n### Track Subagents\n\nSubagents run on their own branches with isolated histories. Results flow back to parents via Git trailers.\n\n### Searchable History\n\nQuery past executions by turn, agent, tokens, errors, or semantic similarity. Your agents don't just remember documents \u2014 they remember experiences.\n\n### Two-Repo Architecture\n\nClean separation between memory and workspace:\n\n- **Log repo** \u2014 turn history, tool calls, metadata (no working-tree checkout needed)\n- **Workspace repo** \u2014 actual files the agent reads/writes\n\n---\n\n## Install\n\n```bash\npip install gitlord           # core (just pydantic)\npip install gitlord[all]      # everything\npip install gitlord[mcp]      # MCP server support\npip install gitlord[litellm]  # LLM model routing\npip install gitlord[chromadb] # vector index for RAG\n```\n\n---\n\n## Quickstart\n\n```python\nfrom gitlord import Session, SessionConfig, Turn, TurnRole\n\nconfig = SessionConfig(log_repo_path=\"log\")\nsession = Session.create(\"my-agent\", config)\nsession.append_user_turn(\"Hello, what's the weather in London?\")\n\nturns = session.get_turns()\nfor t in turns:\n    print(f\"  [{t.role}] {t.content[:80]}\")\n```\n\n---\n\n## CLI\n\n```bash\ngitlord run my-session                    # run a session\ngitlord log my-session                    # view turn history\ngitlord tree my-session                   # view branch structure\ngitlord show <sha>                        # show turn JSON\ngitlord rewind my-session <sha>           # rewind to checkpoint\ngitlord diff <sha-a> <sha-b>              # diff two turns\ngitlord index                             # rebuild search index\ngitlord trim my-session [N]              # trim to N turns\n```\n\n---\n\n## Architecture\n\n| Module | What It Does |\n|--------|--------------|\n| `gitlord.git` | Git plumbing \u2014 tree/commit construction, CAS updates, orphan branches |\n| `gitlord.session` | Session lifecycle \u2014 create, resume, append turns, rewind |\n| `gitlord.subagent` | Subagent management \u2014 spawn, complete, drain, trim |\n| `gitlord.context` | Context assembly \u2014 dedup, summarization, token budget |\n| `gitlord.mcp` | MCP server lifecycle \u2014 tool discovery, crash recovery |\n| `gitlord.model` | LLM router \u2014 tool schema translation, retry/fallback |\n| `gitlord.rag` | Vector index \u2014 ChromaDB wrapper, MMR search |\n| `gitlord.index` | JSON index \u2014 rebuild from git log |\n| `gitlord.query` | In-memory query layer \u2014 filter, group, aggregate |\n| `gitlord.cli` | CLI \u2014 run, log, tree, sh",
-        "readme_links": [],
-        "pushed_days_ago": 90,
-        "archived": false,
-        "stars": 57,
-        "age_days": 110,
-        "repo": "yashneil75/gitlord",
-        "url": "https://github.com/yashneil75/gitlord"
-      },
-      "site": {
-        "live": false,
-        "reason": "no domain found"
-      },
-      "hiring": {},
-      "registry": {
-        "matched": false,
-        "manual_lookup": true
-      },
-      "signals": {
-        "accelerator": [],
-        "funding": [],
-        "hiring_text": false,
-        "commercial": [],
-        "legal_entity_text": false,
-        "customers": [],
-        "backed": false
-      },
-      "ecosystem": {
-        "registry": "pypi.org",
-        "package": "gitlord",
-        "dependent_repos": 0,
-        "dependent_packages": 0,
-        "downloads": 29,
-        "funding_links": []
-      },
-      "links": [
-        {
-          "label": "github: yashneil75/gitlord",
-          "url": "https://github.com/yashneil75/gitlord"
-        }
-      ],
-      "families": [
-        "github"
-      ]
-    },
-    "tier": "Unverified",
-    "confidence": 0.12,
-    "scores": {
-      "fit": 0.95,
-      "verification": 0.12,
-      "momentum": 0.043,
-      "stealth": 0.748
-    },
-    "rank_score": 0.5996,
-    "flags": []
-  },
-  {
-    "id": "843e8d62be",
-    "name": "agent-observability-platform",
-    "domains": [],
-    "signals": [
-      {
-        "source": "github",
-        "kind": "repo",
-        "name": "aasish3187/agent-observability-platform",
-        "url": "https://github.com/aasish3187/agent-observability-platform",
-        "domain": null,
-        "ts": "2026-07-29T17:47:45Z",
-        "data": {
-          "full_name": "aasish3187/agent-observability-platform",
-          "stars": 1,
-          "forks": 0,
-          "description": "Agent Genome is an enterprise observability platform and control plane designed to monitor, manage, and secure fleets of autonomous AI agents. It provides real-time telemetry, cost tracking, security policy enforcement, and live latency metrics across diverse LLM frameworks like LangChain, CrewAI, and AutoGen.",
-          "language": "Python",
-          "matched": "agent observability platform"
-        }
-      }
-    ],
-    "evidence": {
-      "github": {
-        "commits_30d": 0,
-        "authors_30d": 0,
-        "errors": [],
-        "last_release": null,
-        "owner_followers": 1,
-        "owner_location": null,
-        "owner_blog": "",
-        "owner_company": null,
-        "readme_len": 12817,
-        "readme_excerpt": "# Agent Genome - Enterprise AI Observability and Control Platform\n\n<p align=\"center\">\n  <a href=\"./REPORT.md\"><img src=\"https://img.shields.io/badge/Detailed_Report-Read_Now-FF6600?style=for-the-badge\" alt=\"Detailed Report\" /></a>\n  <a href=\"https://ten-teams-hide.loca.lt\"><img src=\"https://img.shields.io/badge/Live_Demo-LocalTunnel-000?style=for-the-badge&logo=vercel\" alt=\"Live Demo\" /></a>\n  <a href=\"https://github.com/aasish3187/agent-observability-platform\"><img src=\"https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge\" alt=\"Source Code\" /></a>\n</p>\n\n<p align=\"center\">\n  <img src=\"https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white\" alt=\"FastAPI\" />\n  <img src=\"https://img.shields.io/badge/React_18-61DAFB?style=flat-square&logo=react&logoColor=black\" alt=\"React\" />\n  <img src=\"https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white\" alt=\"Vite\" />\n  <img src=\"https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white\" alt=\"PostgreSQL\" />\n  <img src=\"https://img.shields.io/badge/Neo4j-4581C3?style=flat-square&logo=neo4j&logoColor=white\" alt=\"Neo4j\" />\n  <img src=\"https://img.shields.io/badge/Qdrant-FF6B6B?style=flat-square&logo=qdrant&logoColor=white\" alt=\"Qdrant\" />\n  <img src=\"https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white\" alt=\"Docker\" />\n  <img src=\"https://img.shields.io/badge/WebSocket-010101?style=flat-square&logo=socketdotio&logoColor=white\" alt=\"WebSocket\" />\n  <img src=\"https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat-square&logo=sqlalchemy&logoColor=white\" alt=\"SQLAlchemy\" />\n  <img src=\"https://img.shields.io/badge/Sentence_Transformers-FFCA28?style=flat-square&logo=huggingface&logoColor=black\" alt=\"Sentence Transformers\" />\n</p>\n\n<p align=\"center\">\n  <img src=\"https://img.shields.io/github/license/aasish3187/agent-observability-platform?style=flat-square&color=blue\" alt=\"License\" />\n  <img src=\"https://img.shields.io/github/stars/aasish3187/agent-observability-platform?style=flat-square&color=yellow\" alt=\"Stars\" />\n  <img src=\"https://img.shields.io/github/forks/aasish3187/agent-observability-platform?style=flat-square&color=green\" alt=\"Forks\" />\n  <img src=\"https://img.shields.io/github/issues/aasish3187/agent-observability-platform?style=flat-square&color=red\" alt=\"Issues\" />\n  <img src=\"https://img.shields.io/github/last-commit/aasish3187/agent-observability-platform?style=flat-square&color=purple\" alt=\"Last Commit\" />\n  <img src=\"https://img.shields.io/github/repo-size/aasish3187/agent-observability-platform?style=flat-square&color=orange\" alt=\"Repo Size\" />\n</p>\n\n---\n\n**Agent Genome** is a production-grade observability platform and control plane engineered specifically for modern organizations deploying fleets of autonomous AI agents. It provides unprecedented, real-time visibility into agent actions, security policies, and token costs across diverse LLM frameworks like LangChain, CrewAI, AutoGen, and Hugging Face.\n\n> Built by **Aasish** | Vignan University  \n> **[Live Demo](https://ten-teams-hide.loca.lt)** | **[Report Bug](https://github.com/aasish3187/agent-observability-platform/issues)** | **[Request Feature](https://github.com/aasish3187/agent-observability-platform/issues/new)**\n\n---\n\n## About Agent Genome\n\nAs enterprises transition from single LLM integrations (like basic chatbots) to complex, multi-agent workflows, traditional application monitoring tools fall short. **Agent Genome** fills this gap by acting as a **central nervous system** for your AI fleet \u2014 providing real-time telemetry, cost tracking, security policy enforcement, and live latency metrics all in one pane of glass.\n\n---\n\n## The Problem Statement\n\nWhen an AI agent is given autonomy to use tools, query databases, or call external APIs, you need to know exactly what it is doing:\n\n1. **Cost Blowouts**: A rogue agent stuck in a loop can consume thousands of d",
-        "readme_links": [
-          "https://img.shields.io/badge/Detailed_Report-Read_Now-FF6600?style=for-the-badge",
-          "https://ten-teams-hide.loca.lt",
-          "https://img.shields.io/badge/Live_Demo-LocalTunnel-000?style=for-the-badge&logo=vercel",
-          "https://github.com/aasish3187/agent-observability-platform",
-          "https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge",
-          "https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white",
-          "https://img.shields.io/badge/React_18-61DAFB?style=flat-square&logo=react&logoColor=black",
-          "https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white",
-          "https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white",
-          "https://img.shields.io/badge/Neo4j-4581C3?style=flat-square&logo=neo4j&logoColor=white",
-          "https://img.shields.io/badge/Qdrant-FF6B6B?style=flat-square&logo=qdrant&logoColor=white",
-          "https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white",
-          "https://img.shields.io/badge/WebSocket-010101?style=flat-square&logo=socketdotio&logoColor=white",
-          "https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat-square&logo=sqlalchemy&logoColor=white",
-          "https://img.shields.io/badge/Sentence_Transformers-FFCA28?style=flat-square&logo=huggingface&logoColor=black",
-          "https://img.shields.io/github/license/aasish3187/agent-observability-platform?style=flat-square&color=blue",
-          "https://img.shields.io/github/stars/aasish3187/agent-observability-platform?style=flat-square&color=yellow",
-          "https://img.shields.io/github/forks/aasish3187/agent-observability-platform?style=flat-square&color=green",
-          "https://img.shields.io/github/issues/aasish3187/agent-observability-platform?style=flat-square&color=red",
-          "https://img.shields.io/github/last-commit/aasish3187/agent-observability-platform?style=flat-square&color=purple",
-          "https://img.shields.io/github/repo-size/aasish3187/agent-observability-platform?style=flat-square&color=orange",
-          "https://ten-teams-hide.loca.lt",
-          "https://github.com/aasish3187/agent-observability-platform/issues",
-          "https://github.com/aasish3187/agent-observability-platform/issues/new"
-        ],
-        "pushed_days_ago": 88,
-        "archived": false,
-        "stars": 1,
-        "age_days": 97,
-        "repo": "aasish3187/agent-observability-platform",
-        "url": "https://github.com/aasish3187/agent-observability-platform"
-      },
-      "site": {
-        "live": false,
-        "reason": "no domain found"
-      },
-      "hiring": {},
-      "registry": {
-        "matched": false,
-        "manual_lookup": true
-      },
-      "signals": {
-        "accelerator": [],
-        "funding": [],
-        "hiring_text": false,
-        "commercial": [
-          "enterprise"
-        ],
-        "legal_entity_text": false,
-        "customers": [],
-        "backed": false
-      },
-      "ecosystem": {},
-      "links": [
-        {
-          "label": "github: aasish3187/agent-observability-platform",
-          "url": "https://github.com/aasish3187/agent-observability-platform"
+          "label": "github: mateaix/mateclaw",
+          "url": "https://github.com/mateaix/mateclaw"
         }
       ],
       "families": [
@@ -828,95 +563,10 @@
     "scores": {
       "fit": 0.8,
       "verification": 0.12,
-      "momentum": 0.001,
-      "stealth": 0.957
+      "momentum": 0.6,
+      "stealth": 0.561
     },
-    "rank_score": 0.5933,
-    "flags": []
-  },
-  {
-    "id": "4770c85146",
-    "name": "weaver-memory",
-    "domains": [],
-    "signals": [
-      {
-        "source": "github",
-        "kind": "repo",
-        "name": "Invovel/weaver-memory",
-        "url": "https://github.com/Invovel/weaver-memory",
-        "domain": null,
-        "ts": "2026-05-31T05:43:56Z",
-        "data": {
-          "full_name": "Invovel/weaver-memory",
-          "stars": 1,
-          "forks": 0,
-          "description": "Loop-aware runtime path governance for AI agents: evidence-gated experience reuse with Harness authority, rollback, and predictive option flow.",
-          "language": "Python",
-          "matched": "multi-agent memory layer"
-        }
-      }
-    ],
-    "evidence": {
-      "github": {
-        "commits_30d": 0,
-        "authors_30d": 0,
-        "errors": [],
-        "last_release": null,
-        "owner_followers": 2,
-        "owner_location": null,
-        "owner_blog": "",
-        "owner_company": null,
-        "readme_len": 52307,
-        "readme_excerpt": "# MemoryWeaver\n\n[\u4e2d\u6587\u7248 (Chinese Version)](README_ZH.md) | [GitHub](https://github.com/Invovel/weaver-memory)\n\n**Feedback-Calibrated Path Promotion Harness for Long-Lived AI Agents**\n\n**LLM proposes. Harness judges.**\n\n> **One-line summary:** MemoryWeaver is a loop-aware runtime path governance\n> layer for AI agents: it turns verified task experience into reusable,\n> evidence-gated paths that can be activated, challenged, rolled back, and\n> replaced.\n\n**Core claim:** Layer-3 path promotion turns verified experience into reusable execution paths.\n\nMemoryWeaver is not a generic RAG wrapper, answer cache, skill-document\noptimizer, or orchestration runtime. It sits above those systems and decides\nwhen a remembered route, optimized procedure, retrieval path, or tool-use loop\nis allowed to affect runtime behavior.\n\n![MemoryWeaver loop flow](docs/assets/memoryweaver-loop-flow.svg)\n\n## What It Governs\n\n| Candidate source | What it can provide | MemoryWeaver boundary |\n| --- | --- | --- |\n| RAG / GraphRAG | Evidence and relationships | Evidence only; not runtime authority |\n| SkillOpt-style skill optimization | Candidate procedures / improved skill text | Candidate only until Harness review |\n| Claude-style option flow | User-selectable action routes | Selection becomes `ActionProposal`, not memory |\n| DeepSeek-style prefix caching | Matched continuation / route hint | Hint only; misses are discarded |\n| Tool feedback | Hard evidence such as pytest, diff, tool JSON | May support promotion after gates |\n\nThe current framework can also be described as **evidence-governed, loop-aware\npath memory**. Retrieval Wear is the retrieval-loop instance: MemoryWeaver\nreuses a validated retrieval route across paraphrases, but invalidates and\nrebuilds the route when its evidence version changes.\n\nThis positioning is intentionally narrower than skill-document optimization\nsystems such as [SkillOpt](https://github.com/microsoft/SkillOpt). SkillOpt-style\nsystems can produce candidate procedures or improved skill text; MemoryWeaver\ndoes not treat those artifacts as runtime authority. A generated or optimized\nskill remains a candidate until the Harness links it to external evidence,\nchecks scope and freshness, trials it, and keeps a rollback path.\n\nThe controlled 50-family Retrieval Wear experiment distinguishes this behavior\nfrom exact answer caching and blind path reuse. Compared with repeated RAG, the\nMemoryWeaver arm reduced inspected candidates from `51,150` to `34,422`\n(`32.7%`) while keeping evidence hit rate at `1.0`. Exact answer cache and\nungoverned path reuse both reached stale reuse rate `1.0` after controlled\nevidence drift; MemoryWeaver kept stale reuse at `0.0`, invalidation success at\n`1.0`, rollback recovery at `1.0`, and passed three isolated runs. See\n[`docs/validation/retrieval-wear-e2e/README.md`](docs/validation/retrieval-wear-e2e/README.md).\n\nMemoryWeaver is an experimental runtime path-evolution harness for AI agents. It turns conversations, terminal outputs, tool results, user corrections, and task outcomes into verified experience, then promotes that experience through Layer 3 into reusable execution paths that can be trialed, stabilized, challenged, rolled back, and replaced.\n\nIn the current direction, a Layer-3 runtime path is not a prompt fragment. It has the shape:\n\n```text\ncondition -> action policy -> validation gate -> fallback -> rollback rule\n```\n\nPromotion is gated by external evidence: tool results, passing tests, explicit user corrections, expected file diffs, benchmark-score deltas, repeated sibling-task validation, counterexamples, conflicts, time decay, and rollback records. Model confidence is not promotion evidence by default.\n\nUnlike traditional RAG systems, MemoryWeaver uses **source-gated polarity** and **contradiction detection** to prevent LLM fabrications from polluting the memory store. Those governance layers are not the end goal by themselves; they exist so Layer 3 can keep selecting the latest, most suitab",
-        "readme_links": [
-          "https://github.com/Invovel/weaver-memory",
-          "https://github.com/microsoft/SkillOpt"
-        ],
-        "pushed_days_ago": 116,
-        "archived": false,
-        "stars": 1,
-        "age_days": 157,
-        "repo": "Invovel/weaver-memory",
-        "url": "https://github.com/Invovel/weaver-memory"
-      },
-      "site": {
-        "live": false,
-        "reason": "no domain found"
-      },
-      "hiring": {},
-      "registry": {
-        "matched": false,
-        "manual_lookup": true
-      },
-      "signals": {
-        "accelerator": [],
-        "funding": [],
-        "hiring_text": false,
-        "commercial": [],
-        "legal_entity_text": false,
-        "customers": [],
-        "backed": false
-      },
-      "ecosystem": {},
-      "links": [
-        {
-          "label": "github: Invovel/weaver-memory",
-          "url": "https://github.com/Invovel/weaver-memory"
-        }
-      ],
-      "families": [
-        "github"
-      ]
-    },
-    "tier": "Unverified",
-    "confidence": 0.0,
-    "scores": {
-      "fit": 0.86,
-      "verification": 0.0,
-      "momentum": 0.001,
-      "stealth": 0.957
-    },
-    "rank_score": 0.5886,
+    "rank_score": 0.5255,
     "flags": []
   },
   {
@@ -1020,12 +670,335 @@
     "tier": "Unverified",
     "confidence": 0.3,
     "scores": {
-      "fit": 0.64,
+      "fit": 0.76,
       "verification": 0.3,
       "momentum": 0.353,
       "stealth": 0.857
     },
-    "rank_score": 0.5868,
+    "rank_score": 0.5245,
+    "flags": []
+  },
+  {
+    "id": "8d474bf324",
+    "name": "duoduo",
+    "domains": [
+      "openduo.ai"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "openduo/duoduo",
+        "url": "https://github.com/openduo/duoduo",
+        "domain": "openduo.ai",
+        "ts": "2026-03-05T03:55:34Z",
+        "data": {
+          "full_name": "openduo/duoduo",
+          "stars": 10,
+          "forks": 4,
+          "description": "duoduo \u2014 autonomous agent runtime",
+          "language": "HTML",
+          "matched": "autonomous agent runtime"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 26,
+        "authors_30d": 1,
+        "errors": [],
+        "last_release": "2026-10-30T03:11:31Z",
+        "owner_followers": 11,
+        "owner_location": null,
+        "owner_blog": "https://openduo.ai",
+        "owner_company": null,
+        "readme_len": 13564,
+        "readme_excerpt": "# duoduo\n\n**A model call ends. The work shouldn't.**\n\n[![npm](https://img.shields.io/npm/v/@openduo/duoduo)](https://www.npmjs.com/package/@openduo/duoduo)\n\nDuoDuo is a long-lived local runtime for Claude, Codex, Grok, and Pi. Conversations, jobs, outputs, and prompts live in files on your machine. Foreground sessions handle live work; a scheduled subconscious distills experience into an intuition layer that every new session starts with, kept in Git so every change to what DuoDuo has learned has a diff and a revert.\n\nDuoDuo is not another harness. Claude, Codex, Grok, and Pi are the harnesses, and they keep improving; DuoDuo is the environment that gives them durable state, time, channels, and a Git-tracked history. Talk to it from any channel you plug in: a chat app, a room, a button in your pocket, or another assistant that becomes DuoDuo through Tether.\n\nSite and documentation: [openduo.ai](https://openduo.ai).\n\n## Why Not Open Source?\n\nFirst: we are called **open**duo and we don't publish source either. Respect to OpenAI.\n\nThe real reason: **this codebase is not written for humans to read.**\n\nduoduo is an agent that codes itself. The published npm packages contain minified JavaScript. An agent can read, understand, and modify minified code just fine \u2014 it doesn't need pretty source with comments and indentation. Minification here isn't obfuscation; it's compression. Saves bandwidth. Keeps the context window lean.\n\nHumans don't need to read the source. Humans need to **vibe with the agent** \u2014 describe what you want, let it figure out the implementation. That's the whole point.\n\n> Human? Read this README, then run it and talk to it.\n> Agent? The minified bundle is your source. See [Issues](#issues--feedback).\n\n### What you may do with it\n\nSource-available, and open to your agents. The bundle is licensed to you and to the agents you run: read it, de-minify it, debug it, patch it, train on it, and share your patches. The one thing you may not do is offer it, or something built from it, as a competing product or service. Two years after each release, that version becomes Apache-2.0. The terms are in [LICENSE](LICENSE); the summary an agent can act on is [LICENSE.agents.yaml](LICENSE.agents.yaml).\n\n## Core Innovations\n\n### 1. Filesystem-First, Event-Sourced Runtime\n\nAll state \u2014 conversations, outputs, jobs, memory \u2014 lives in durable files. Nothing critical is held in process memory. The canonical event log (WAL) is written before any action executes. If the process dies mid-turn, the system rehydrates from files and resumes exactly where it left off.\n\nThis is not a backup strategy. The filesystem is the database. The event log is the source of truth. The process is stateless by default.\n\n### 2. WAL-Before-Execute at the Gateway Boundary\n\nEvery inbound message follows a strict contract: write a canonical event to the append-only log _first_, then enqueue the session, then execute. Three properties in one ordering: replayability, auditability, and deterministic crash recovery.\n\n### 3. One External Identity, Many Internal Sessions\n\nExternally, duoduo presents one coherent agent identity. Internally, it orchestrates multiple concurrent session actors \u2014 one per conversation channel, plus background job sessions and subconscious partitions \u2014 each with explicit lifecycle and concurrency control enforced by lease locks.\n\n### 4. Dual-Loop Cognition: Cortex + Subconscious\n\n**Foreground (Cortex)** responds to live channel messages. Sessions persist across restarts and resume conversation history exactly.\n\n**Background (Subconscious)** runs on a cadence regardless of foreground activity. It consolidates memory, reflects on past sessions, and maintains a broadcast board of curated knowledge automatically loaded into every future session's context \u2014 even when no one is chatting.\n\n### 5. Self-Programming Cognitive Topology\n\nSubconscious behavior is defined by filesystem files \u2014 each partition has its own prompt, schedule, and cooldown. Partiti",
+        "readme_links": [
+          "https://img.shields.io/npm/v/@openduo/duoduo",
+          "https://www.npmjs.com/package/@openduo/duoduo",
+          "https://openduo.ai",
+          "http://localhost:20233/dashboard`",
+          "https://open.feishu.cn/page/openclaw?form=multiAgent",
+          "https://www.npmjs.com/package/@openduo/channel-feishu",
+          "https://www.npmjs.com/package/@openduo/channel-ambient",
+          "https://github.com/openduo/ambient",
+          "https://www.npmjs.com/package/@openduo/channel-tether",
+          "https://github.com/openduo/tether",
+          "https://skills.sh/",
+          "https://github.com/openduo/duoduo",
+          "https://github.com/openduo/duoduo"
+        ],
+        "pushed_days_ago": 5,
+        "archived": false,
+        "stars": 10,
+        "age_days": 244,
+        "repo": "openduo/duoduo",
+        "url": "https://github.com/openduo/duoduo"
+      },
+      "site": {
+        "live": true,
+        "url": "https://openduo.ai/",
+        "title": "DuoDuo: The AI Agent That Keeps Working for You | OpenDuo",
+        "parked": false,
+        "product": false,
+        "dev_product": true,
+        "team": false,
+        "copyright_year": null
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: openduo/duoduo",
+          "url": "https://github.com/openduo/duoduo"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.3,
+    "scores": {
+      "fit": 0.8,
+      "verification": 0.3,
+      "momentum": 0.231,
+      "stealth": 0.851
+    },
+    "rank_score": 0.5146,
+    "flags": []
+  },
+  {
+    "id": "e91001b55e",
+    "name": "NeMo-Relay",
+    "domains": [
+      "nvidia.com"
+    ],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "NVIDIA/NeMo-Relay",
+        "url": "https://github.com/NVIDIA/NeMo-Relay",
+        "domain": "nvidia.com",
+        "ts": "2026-03-31T23:22:24Z",
+        "data": {
+          "full_name": "NVIDIA/NeMo-Relay",
+          "stars": 231,
+          "forks": 104,
+          "description": "Multi-language agent runtime and library for execution scope management, lifecycle events, and middleware on tool and LLM calls.",
+          "language": "Rust",
+          "matched": "agent observability"
+        }
+      },
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "NVIDIA/SkillEvaluator",
+        "url": "https://github.com/NVIDIA/SkillEvaluator",
+        "domain": "nvidia.com",
+        "ts": "2026-06-24T02:32:26Z",
+        "data": {
+          "full_name": "NVIDIA/SkillEvaluator",
+          "stars": 633,
+          "forks": 83,
+          "description": "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+          "language": "Python",
+          "matched": "agent sandbox"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 100,
+        "authors_30d": 10,
+        "errors": [],
+        "last_release": "2026-11-04T01:45:45Z",
+        "owner_followers": 32319,
+        "owner_location": "2788 San Tomas Expressway, Santa Clara, CA, 95051",
+        "owner_blog": "https://nvidia.com",
+        "owner_company": null,
+        "readme_len": 10226,
+        "readme_excerpt": "# SkillEvaluator\n\n![SkillEvaluator wordmark](https://raw.githubusercontent.com/NVIDIA/SkillEvaluator/ad2815fe78c045db91d230681d32863698da08cf/docs/assets/skillevaluator-wordmark.svg)\n\n[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)\n[![Python](https://img.shields.io/badge/Python-3.12%20%7C%203.13%20%7C%203.14-blue.svg)](https://www.python.org/)\n[![Documentation](https://img.shields.io/badge/Documentation-docs.nvidia.com-blue.svg)](https://docs.nvidia.com/skills/skillevaluator/)\n[![Paper](https://img.shields.io/badge/arXiv-2608.20614-b31b1b.svg)](https://arxiv.org/abs/2608.20614)\n[![NVIDIA Developer Blog](https://img.shields.io/badge/Blog-NVIDIA%20Developer-76B900.svg)](https://developer.nvidia.com/blog/evaluating-ai-agent-skill-performance-with-nvidia-skillevaluator/)\n\n> \ud83d\udcfa **Livestream:** [Ask the Experts: Evaluating Agent Skills](https://www.youtube.com/watch?v=4rI0zATFxYI)\n\nSkillEvaluator is an open-source tool that checks AI agent skills and measures their effect on task results:\nstart with quality checks, then compare live runs with and without a skill.\n\nAgent skills are folders of instructions and supporting files defined by the\n[Agent Skills specification](https://agentskills.io/). SkillEvaluator is part of\nthe [NVIDIA Verified Skills pipeline](https://github.com/NVIDIA/skills).\n\n## Bring skill evaluation to your repository\n\nCheck changed skills in GitHub or GitLab with Tier 1 quality checks, SkillSpector\nsecurity scanning and reports. Choose folders and thresholds; no evaluator code\nto import.\n\n**GitHub guided setup:** run inside your checked-out repository:\n\n```bash\npip install --upgrade skillevaluator\nskillevaluator ci init\n```\n\nChoose checks and optional hosted feedback, then review the setup PR.\n[CLI setup guide](docs/cli-onboarding.mdx).\n\n**Manual setup:** copy a filled-in template from\n[CI templates](https://github.com/NVIDIA/SkillEvaluator/tree/main/ci/bundles/0.7.2). No local CLI needed.\n\n| Your repository | Ready-to-use template | Copy destination |\n| --- | --- | --- |\n| GitHub | [Skill checks](https://github.com/NVIDIA/SkillEvaluator/blob/main/ci/bundles/0.7.2/skill-checks.yml) | `.github/workflows/skill-checks.yml` |\n| GitLab | [Skill checks](https://github.com/NVIDIA/SkillEvaluator/blob/main/ci/bundles/0.7.2/gitlab-skill-checks.yml) | `.gitlab-ci.yml`, or merge into your existing pipeline |\n| GitHub reports and PR comments | [Optional publisher](https://github.com/NVIDIA/SkillEvaluator/blob/main/ci/bundles/0.7.2/publish-skill-reports.yml) | Second workflow; complete publisher setup |\n\nSee [GitHub](docs/github-actions.mdx) and [GitLab](docs/gitlab-ci.mdx) setup,\n[template reference](ci/templates/README.md) and [report examples](ci/examples/README.md).\n\n## Quickstart\n\nBoth paths use the bundled `text-analyzer` skill.\n\n| Start here | Requires | First result |\n| --- | --- | --- |\n| [Run without an LLM](#run-without-an-llm) | Git and uv | A deterministic quality score and findings |\n| [Use NVIDIA Build](#use-nvidia-build) | Git, uv, and a Build API key | Model-backed rubric scores and feedback |\n\nInstall [uv](https://docs.astral.sh/uv/getting-started/installation/) and Git,\nthen get the example:\n\n```bash\ngit clone --depth 1 https://github.com/NVIDIA/SkillEvaluator.git\ncd SkillEvaluator\n```\n\nuv provisions Python 3.13 and dependencies. Run from this checkout; for a standalone CLI, see\n[Installation](https://docs.nvidia.com/skills/skillevaluator/installation).\n\n### Run without an LLM\n\n```bash\nuv run --python 3.13 skillevaluator quality-check \\\n  src/skillevaluator/tier3/reference_skills/text-analyzer \\\n  -r cli -r json -o reports/first-quality\n```\n\nNo API key, scanner, GPU or Docker is needed. The example scores **84.5/100 (B)**,\nexits `0` and saves `reports/first-quality/skillevaluator-quality.json`. The\npassing threshold defaults to 70.\n\nThis checks static quality; publication evidence stays `INCOMPLETE`. Security\nneeds scanners; agent impact needs live evaluation. Replace the exa",
+        "readme_links": [
+          "https://raw.githubusercontent.com/NVIDIA/SkillEvaluator/ad2815fe78c045db91d230681d32863698da08cf/docs/assets/skillevaluator-wordmark.svg",
+          "https://img.shields.io/badge/License-Apache%202.0-green.svg",
+          "https://img.shields.io/badge/Python-3.12%20%7C%203.13%20%7C%203.14-blue.svg",
+          "https://www.python.org/",
+          "https://img.shields.io/badge/Documentation-docs.nvidia.com-blue.svg",
+          "https://docs.nvidia.com/skills/skillevaluator/",
+          "https://img.shields.io/badge/arXiv-2608.20614-b31b1b.svg",
+          "https://arxiv.org/abs/2608.20614",
+          "https://img.shields.io/badge/Blog-NVIDIA%20Developer-76B900.svg",
+          "https://developer.nvidia.com/blog/evaluating-ai-agent-skill-performance-with-nvidia-skillevaluator/",
+          "https://www.youtube.com/watch?v=4rI0zATFxYI",
+          "https://agentskills.io/",
+          "https://github.com/NVIDIA/skills",
+          "https://github.com/NVIDIA/SkillEvaluator/tree/main/ci/bundles/0.7.2",
+          "https://github.com/NVIDIA/SkillEvaluator/blob/main/ci/bundles/0.7.2/skill-checks.yml",
+          "https://github.com/NVIDIA/SkillEvaluator/blob/main/ci/bundles/0.7.2/gitlab-skill-checks.yml",
+          "https://github.com/NVIDIA/SkillEvaluator/blob/main/ci/bundles/0.7.2/publish-skill-reports.yml",
+          "https://docs.astral.sh/uv/getting-started/installation/",
+          "https://github.com/NVIDIA/SkillEvaluator.git",
+          "https://docs.nvidia.com/skills/skillevaluator/installation",
+          "https://docs.api.nvidia.com/nim/docs/product",
+          "https://build.nvidia.com/",
+          "https://raw.githubusercontent.com/NVIDIA/SkillEvaluator/ad2815fe78c045db91d230681d32863698da08cf/docs/assets/three-tier-overview.svg",
+          "https://github.com/NVIDIA/SkillSpector",
+          "https://github.com/harbor-framework/harbor",
+          "https://docs.nvidia.com/skills/skillevaluator/"
+        ],
+        "pushed_days_ago": 0,
+        "archived": false,
+        "stars": 633,
+        "age_days": 133,
+        "repo": "NVIDIA/SkillEvaluator",
+        "url": "https://github.com/NVIDIA/SkillEvaluator"
+      },
+      "site": {
+        "live": true,
+        "url": "https://www.nvidia.com/en-us/",
+        "title": "World Leader in Artificial Intelligence Computing | NVIDIA",
+        "parked": false,
+        "product": true,
+        "dev_product": false,
+        "team": false,
+        "copyright_year": null
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [
+          "pricing",
+          "enterprise"
+        ],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
+      "ecosystem": {
+        "registry": "pypi.org",
+        "package": "skillevaluator",
+        "dependent_repos": 0,
+        "dependent_packages": 0,
+        "downloads": 0,
+        "funding_links": []
+      },
+      "links": [
+        {
+          "label": "github: NVIDIA/NeMo-Relay",
+          "url": "https://github.com/NVIDIA/NeMo-Relay"
+        },
+        {
+          "label": "github: NVIDIA/SkillEvaluator",
+          "url": "https://github.com/NVIDIA/SkillEvaluator"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.3,
+    "scores": {
+      "fit": 0.61,
+      "verification": 0.3,
+      "momentum": 0.6,
+      "stealth": 0.6
+    },
+    "rank_score": 0.5058,
+    "flags": []
+  },
+  {
+    "id": "12b76d0d07",
+    "name": "OpenAPPA",
+    "domains": [
+      "openappa.com"
+    ],
+    "signals": [
+      {
+        "source": "hn",
+        "kind": "show_hn",
+        "name": "OpenAPPA",
+        "url": "https://news.ycombinator.com/item?id=49877515",
+        "domain": "openappa.com",
+        "ts": "2026-09-28T13:20:44Z",
+        "data": {
+          "title": "Show HN: OpenAPPA \u2013 open-source deterministic guardrails that don't break agents",
+          "points": 25,
+          "comments": 12,
+          "author": "motakuk",
+          "hn_id": "49877515",
+          "matched": "llm agent evaluation bench"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {},
+      "site": {
+        "live": true,
+        "url": "https://www.openappa.com/",
+        "title": "OpenAPPA",
+        "parked": false,
+        "product": true,
+        "dev_product": true,
+        "team": false,
+        "copyright_year": null
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "hn: OpenAPPA",
+          "url": "https://news.ycombinator.com/item?id=49877515"
+        }
+      ],
+      "families": [
+        "hn"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.3,
+    "scores": {
+      "fit": 0.83,
+      "verification": 0.3,
+      "momentum": 0.017,
+      "stealth": 0.979
+    },
+    "rank_score": 0.4853,
     "flags": []
   },
   {
@@ -1115,33 +1088,298 @@
     "tier": "Unverified",
     "confidence": 0.3,
     "scores": {
-      "fit": 0.64,
+      "fit": 0.58,
       "verification": 0.3,
       "momentum": 0.355,
       "stealth": 0.851
     },
-    "rank_score": 0.5854,
+    "rank_score": 0.4491,
     "flags": []
   },
   {
-    "id": "d9c59c6ae0",
-    "name": "SenWeaverCoding",
-    "domains": [
-      "senweaver.com"
-    ],
+    "id": "6681dd9436",
+    "name": "launch-control",
+    "domains": [],
     "signals": [
       {
         "source": "github",
         "kind": "repo",
-        "name": "senweaver/SenWeaverCoding",
-        "url": "https://github.com/senweaver/SenWeaverCoding",
+        "name": "jamesoleinik/launch-control",
+        "url": "https://github.com/jamesoleinik/launch-control",
         "domain": null,
-        "ts": "2026-04-07T04:35:08Z",
+        "ts": "2026-04-27T22:01:21Z",
         "data": {
-          "full_name": "senweaver/SenWeaverCoding",
-          "stars": 18,
-          "forks": 9,
-          "description": "A Rust-first autonomous AI agent runtime and CLI code editor. Built on SenAgentOS, it applies Harness Engineering to code engineering: orchestrate LLM agents for autonomous exploration, refactoring, testing, and debugging. Performance, stability, security \u2013 fully harnessed.",
+          "full_name": "jamesoleinik/launch-control",
+          "stars": 10,
+          "forks": 0,
+          "description": "Launch Control \u2014 a 12-episode LinkedIn series building a launch-management system on Microsoft Dataverse: data model, agents (declarative + autonomous + code-first), generative Power Apps page, and agentic administration. Open-source companion repo.",
+          "language": "Python",
+          "matched": "autonomous agent runtime"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 28,
+        "authors_30d": 2,
+        "errors": [],
+        "last_release": "2026-06-01T06:18:44Z",
+        "owner_followers": 1,
+        "owner_location": null,
+        "owner_blog": "",
+        "owner_company": "Microsoft",
+        "readme_len": 7717,
+        "readme_excerpt": "# \ud83d\ude80 Launch Control\n\n**A Product Launch Coordinator built with Microsoft Dataverse: from data model to agents to dashboard.**\n\nThis repo is the companion to the **Launch Control** LinkedIn series by [James Oleinik](https://www.linkedin.com/in/james-oleinik/), Product Director for Microsoft Dataverse. Across 17 episodes, we build a complete product launch coordination system from scratch, and open-source every line of code.\n\n## The Problem\n\nEngineering teams are automating code reviews, DRIs, and incident response. But up the stack? Executives still want status. Cross-team projects still mean passing spreadsheets around. **What if we applied the same agentic thinking to project coordination?**\n\n## The Solution: Three Layers\n\n```\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502  LAYER 3: MANAGEMENT & OPERATIONS                    \u2502\n\u2502  Power App Dashboard  \u2502  Python SDK/pandas  \u2502  CLI   \u2502\n\u2502  Admin Skills (agentic administration at scale)      \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502  LAYER 2: INTELLIGENCE                               \u2502\n\u2502  Business Skills  \u2502  Agents (Copilot Studio, Claude) \u2502\n\u2502  Agent Flows  \u2502  Custom Actions  \u2502  BYO MCP Servers  \u2502\n\u2502  MCP Server (universal) \u2502 CLI \u2502 SDK (coding agents)  \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502  LAYER 1: BUSINESS SYSTEM OF RECORD                  \u2502\n\u2502  Dataverse Tables & Relationships \u2502 Prompt Columns   \u2502\n\u2502  Virtual Entities (real-time, no data replication)   \u2502\n\u2502  Dataverse Intelligence (native M365 Copilot)        \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n```\n\n## Episode Guide\n\nFull series index with links to each episode's README, preflight, and scripts: **[`episodes/README.md`](episodes/README.md)**.\n\n| # | Episode | Hero capability |\n|---|---------|------------------|\n| [1](episodes/ep-01-data-modeling/)        | AI-Powered Data Modeling      | Official Dataverse plugins for Copilot & Claude Code \u2192 first Dataverse tables |\n| [2](episodes/ep-02-business-skills/)      | Your Playbook & Ingestion     | Business skills + mapping-driven CLI ingestion |\n| [3](episodes/ep-03-staging-layer/)        | Promoting the Staging Layer   | Python + pandas; staging \u2192 unified |\n| [4](episodes/ep-04-extending-and-enforcing/) | Extending & Enforcing the Model | Virtual entities (custom GitHub Issues) **+ a server-side business rule** the coding agent authors: guardrails every future agent must honor |\n| [5](episodes/ep-05-custom-tools/)         | Custom Tools                  | Custom API + two BYO MCP custom connectors registered with `paconn` |\n| [6](episodes/ep-06-cowork-plugin/)        | Cowork Plugin for Dataverse   | Build & publish a Dataverse-aware Cowork (Teams) plugin |\n| [7](episodes/ep-07-scout-autopilot/)      | Microsoft Scout \ud83d\udfe1            | The Dataverse MCP face-lift (16 tools, `search_data`) driven by an always-on Scout Autopilot agent on a schedule |\n| [8](episodes/ep-08-security/)             | Roles & Reach                 | Four flat roles (Member / Owner / Viewer / Admin) over Eps 1-5 data + tools: same query, four lenses |\n| [9](episodes/ep-09-dataverse-fno/)        | Dataverse + F&O               | CRM and ERP on one platform; the launch record gains budget and supply signal |\n| [10](episodes/ep-10-dataverse-fabriciq/)  | Dataverse + Fabric IQ         | Autonomous agent reasoning over the semantic baseline; is this launch a statistical outlier? |\n| [11](episodes/ep-11-agent-quality-gate/)  | Agent Quality Gate            | A governed Agent 365 worker with its own identity executes a launch approval gate |\n| [12](episodes/ep-12-business-apps-work-iq/) | Business Apps in Work IQ: Copilot Chat + Cowork | Use app evidence directly in Chat and Cowork through Business apps (preview) |\n| [13](episodes/ep-13-cowork/)                    | Business Apps in Work IQ: Declarative + Studio Agents | Extend the same launch scenario with focused agents and controlled follow-up |\n| [15](episodes/ep-15-workiq-api-devtools/)     ",
+        "readme_links": [
+          "https://www.linkedin.com/in/james-oleinik/",
+          "https://learn.microsoft.com/en-us/power-platform/developer/cli/introduction",
+          "https://github.com/jamesoleinik/launch-control.git",
+          "https://www.linkedin.com/in/james-oleinik/"
+        ],
+        "pushed_days_ago": 8,
+        "archived": false,
+        "stars": 10,
+        "age_days": 190,
+        "repo": "jamesoleinik/launch-control",
+        "url": "https://github.com/jamesoleinik/launch-control"
+      },
+      "site": {
+        "live": false,
+        "reason": "no domain found"
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: jamesoleinik/launch-control",
+          "url": "https://github.com/jamesoleinik/launch-control"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.12,
+    "scores": {
+      "fit": 0.75,
+      "verification": 0.12,
+      "momentum": 0.249,
+      "stealth": 0.851
+    },
+    "rank_score": 0.4388,
+    "flags": []
+  },
+  {
+    "id": "f00ff88bc7",
+    "name": "Nerya",
+    "domains": [],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "NeryaAI/Nerya",
+        "url": "https://github.com/NeryaAI/Nerya",
+        "domain": null,
+        "ts": "2026-05-01T06:55:47Z",
+        "data": {
+          "full_name": "NeryaAI/Nerya",
+          "stars": 14,
+          "forks": 5,
+          "description": "Skill-first, trading-native, self-evolving autonomous agent runtime for AgentNetwork workflows.",
+          "language": "Python",
+          "matched": "autonomous agent runtime"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 47,
+        "authors_30d": 1,
+        "errors": [],
+        "last_release": "2026-09-27T15:33:32Z",
+        "owner_followers": 0,
+        "owner_location": null,
+        "owner_blog": "",
+        "owner_company": null,
+        "readme_len": 10236,
+        "readme_excerpt": "<div align=\"center\">\n\n<img src=\"branding/logo.png\" alt=\"Nerya\" width=\"88\" />\n\n# Nerya\n\n### One idea. A team to build it.\n\nYour local Agent strategy workspace \u2014 research, build, backtest and review in one conversation.\n\n**1.0.0 Beta** \u00b7 `1.0.0-beta.1`\n\n[English](README.md) \u00b7 [\u7b80\u4f53\u4e2d\u6587](README.zh-CN.md)\n\n[Website](https://neryaai.github.io/) \u00b7 [Documentation](https://neryaai.github.io/docs.html) \u00b7 [Desktop downloads](https://github.com/NeryaAI/Nerya/releases) \u00b7 [Build status](https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml)\n\n[![Desktop CI](https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml/badge.svg)](https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml)\n[![Version](https://img.shields.io/badge/version-1.0.0--beta.1-7961e8)](VERSION)\n[![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue)](LICENSE)\n\n</div>\n\nDescribe your trading idea and its constraints. Nerya brings researchers, strategy authors and reviewers into the same workspace. Follow the tools as they run, inspect the evidence, open the strategy and backtest details, and decide what happens next.\n\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"branding/screenshots/1.0.0-beta/strategy-en-dark.gif\" />\n  <img src=\"branding/screenshots/1.0.0-beta/strategy-en-light.gif\" alt=\"Nerya strategy conversation and workflow, English\" width=\"100%\" />\n</picture>\n\n*Recorded from the website's isolated product tour. It uses example data, not a live account or verified investment performance. [Recording provenance](branding/screenshots/1.0.0-beta/README.md).*\n\n## From idea to a traceable workflow\n\n**Build a strategy.** Describe the market, entry and exit logic, time horizon and constraints. Agents prepare the strategy package and validate it. Script strategies, script-driven Agent strategies and event-driven Agent strategies share the workspace, with readable workflow nodes, parameters and run history.\n\n**Research as a team.** Delegate market data, news and technical research to specialized Agents. A reviewer can challenge assumptions while the lead combines the evidence. Open source material and research reports without losing the conversation.\n\n**Inspect more than a text reply.** Strategy cards, backtest curves, market charts and research reports are part of the conversation. Open their details in workspace tabs. Backtest views include available candle history, entry/exit markers, protection levels, trades and execution evidence; missing data remains visible rather than being presented as a complete result.\n\n**Review and iterate.** Inspect a particular run and its logs before changing a strategy. Optional review schedules produce evidence-linked recommendations and candidate changes. Review and trading authorization are distinct from editing ordinary Skill or Agent resources: those resources can be edited and saved directly.\n\n**Keep the workspace local.** Strategies, cached market history, reports and configuration live in your workspace. Credentials are stored encrypted in the local Vault and referenced by identifier. Configured model providers, market services and external tools still receive the requests needed to perform your tasks; local storage does not make those services offline.\n\n## What is in 1.0.0 Beta?\n\n| Area | In the workspace |\n| --- | --- |\n| Agent conversation | Streaming replies, available thinking output, tool execution, progress, follow-up messages and recoverable errors |\n| Strategies | Script and Agent execution, timer/event workflow nodes, strategy editing, import/export and run details |\n| Backtesting | Reusable local historical data, preflight checks, coverage information, per-market charts and trade records |\n| Research | Market cards, technical charts, evidence-linked reports and multi-Agent research |\n| Skills & Agents | `SKILL.md` playbooks, lazy-loaded references, reusable scripts and direct resource editing |\n| Integrations | Configurable model providers, exchange/wallet connections,",
+        "readme_links": [
+          "https://neryaai.github.io/",
+          "https://neryaai.github.io/docs.html",
+          "https://github.com/NeryaAI/Nerya/releases",
+          "https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml",
+          "https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml/badge.svg",
+          "https://github.com/NeryaAI/Nerya/actions/workflows/desktop.yml",
+          "https://img.shields.io/badge/version-1.0.0--beta.1-7961e8",
+          "https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue",
+          "https://github.com/NeryaAI/Nerya/releases",
+          "https://github.com/NeryaAI/Nerya.git"
+        ],
+        "pushed_days_ago": 14,
+        "archived": false,
+        "stars": 14,
+        "age_days": 187,
+        "repo": "NeryaAI/Nerya",
+        "url": "https://github.com/NeryaAI/Nerya"
+      },
+      "site": {
+        "live": false,
+        "reason": "no domain found"
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: NeryaAI/Nerya",
+          "url": "https://github.com/NeryaAI/Nerya"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.12,
+    "scores": {
+      "fit": 0.64,
+      "verification": 0.12,
+      "momentum": 0.356,
+      "stealth": 0.832
+    },
+    "rank_score": 0.4151,
+    "flags": []
+  },
+  {
+    "id": "d18f861f4d",
+    "name": "agenttrace",
+    "domains": [],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "Sakshi3027/agenttrace",
+        "url": "https://github.com/Sakshi3027/agenttrace",
+        "domain": null,
+        "ts": "2026-05-26T04:02:42Z",
+        "data": {
+          "full_name": "Sakshi3027/agenttrace",
+          "stars": 1,
+          "forks": 0,
+          "description": "LLM agent observability framework trace every step, eval every output with LLM-as-judge, alert on quality drift. Built for forward deployed engineers.",
+          "language": "Python",
+          "matched": "agent observability framework"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {
+        "commits_30d": 2,
+        "authors_30d": 1,
+        "errors": [],
+        "last_release": null,
+        "owner_followers": 10,
+        "owner_location": "San Francisco",
+        "owner_blog": "",
+        "owner_company": null,
+        "readme_len": 5278,
+        "readme_excerpt": "---\ntitle: AgentTrace\nemoji: \ud83d\udd2d\ncolorFrom: blue\ncolorTo: purple\nsdk: docker\napp_port: 8501\npinned: false\n---\n\n# AgentTrace \u2014 LLM Agent Observability Framework\n\n**Live Demo:** https://agenttrace-by-sakshi.streamlit.app\n\n> Companies deploy LLM agents and they break silently. No evals, no monitoring, no alerts. AgentTrace is the observability layer that fixes that.\n\n---\n\n## The Problem This Solves\n\nTeams ship LLM-powered workflows \u2014 collections agents, research agents, onboarding bots \u2014 and they work in the demo. Three weeks later they're hallucinating, skipping steps, or producing low-quality outputs. Nobody notices until outcomes stop improving.\n\nThere are no evals. No monitoring. No alerts. The agent just silently degrades.\n\nThis is one of the most painful live problems in production AI right now. AgentTrace wraps any LLM agent, traces every step, scores output quality automatically using LLM-as-judge, and alerts when quality drops below threshold.\n\n---\n\n## What AgentTrace Does\n\n- **Step-level tracing** \u2014 every agent step logged with input, output, latency, token estimates\n- **LLM-as-judge evals** \u2014 automatic quality scoring after each run, no human labeling needed\n- **Drift detection** \u2014 compares recent scores to historical baseline, alerts on degradation\n- **Real-time dashboard** \u2014 agent health status, per-step gauges, score trends, active alerts\n- **Run explorer** \u2014 inspect every run step by step, see exactly what the agent produced and why it scored what it scored\n- **Eval analytics** \u2014 aggregate quality metrics across all runs, score distribution by step and company\n\n---\n\n## Screenshots\n\n### Agent Health Dashboard\n![Health](assets/screenshots/health.png)\n*Overall agent status (Healthy/Degraded/Critical), per-step quality gauges, active alerts, and score trend over time. The `find_recent_news` step scored 0.57 avg \u2014 below the 0.70 threshold \u2014 triggering a MEDIUM alert automatically.*\n\n---\n\n### Run Explorer\n![Explorer](assets/screenshots/explorer.png)\n*Inspect any run step by step. See the exact input and output for each step, latency, eval score, and the LLM judge's reasoning.*\n\n---\n\n### Eval Analytics\n![Analytics](assets/screenshots/analytics.png)\n*Score distribution box plots per step, grouped bar chart comparing quality across companies, orange dashed alert threshold at 0.70.*\n\n---\n\n### Run New Agent\n![Run](assets/screenshots/run.png)\n*Run the agent against any company. Choose \"Run + Trace\" or \"Run + Trace + Eval\" to automatically score output quality after the run.*\n\n---\n\n## Architecture\nCompany Name (input)\n\u2192 Lead Research Agent (LangGraph, 4 steps)\n\u2192 research_company\n\u2192 find_recent_news\n\u2192 identify_decision_makers\n\u2192 write_outreach_summary\n\u2192 RunTracer (wraps entire run)\n\u2192 StepTracer (wraps each node)\n\u2192 SQLite (stores runs, steps, evals)\n\u2192 LLM-as-Judge Evaluator (Groq)\n\u2192 Per-step scoring criteria\n\u2192 Score + reasoning logged\n\u2192 Drift Detector\n\u2192 Compares recent vs historical\n\u2192 Fires alerts on degradation\n\u2192 Streamlit Dashboard (4 pages)\n\n---\n\n## Tech Stack\n\n| Layer | Tech |\n|---|---|\n| Agent framework | LangGraph |\n| LLM | Groq API (llama-3.3-70b) \u2014 free tier |\n| Web search | DuckDuckGo (ddgs) \u2014 free, no API key |\n| Tracing storage | SQLite |\n| LLM-as-judge | Groq (same key) |\n| Dashboard | Streamlit + Plotly |\n\n**Total infrastructure cost: $0**\n\n---\n\n## Running Locally\n\n```bash\n# 1. Clone and set up\ngit clone https://github.com/Sakshi3027/agenttrace.git\ncd agenttrace\npython -m venv venv && source venv/bin/activate\npip install langgraph langchain langchain-groq ddgs streamlit plotly pandas httpx python-dotenv\n\n# 2. Set Groq API key (free at console.groq.com)\nexport GROQ_API_KEY=your_key_here\n\n# 3. Run the traced agent (generates initial data)\npython -m agent.traced_agent\n\n# 4. Run evals on the traces\npython -m tracer.evaluator\n\n# 5. Start the dashboard\nstreamlit run dashboard/app.py --server.port 8502\n```\n\nOpen `localhost:8502` to see the dashboard.\n\n---\n\n## Project Structure\nagenttrace/\n\u251c\u2500\u2500 agent/\n\u2502   \u251c\u2500\u2500 config.py           ",
+        "readme_links": [
+          "https://agenttrace-by-sakshi.streamlit.app",
+          "https://github.com/Sakshi3027/agenttrace.git",
+          "https://github.com/Sakshi3027",
+          "https://huggingface.co/spaces/Sakshi3027/edupulse"
+        ],
+        "pushed_days_ago": 13,
+        "archived": false,
+        "stars": 1,
+        "age_days": 162,
+        "repo": "Sakshi3027/agenttrace",
+        "url": "https://github.com/Sakshi3027/agenttrace"
+      },
+      "site": {
+        "live": false,
+        "reason": "no domain found"
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "github: Sakshi3027/agenttrace",
+          "url": "https://github.com/Sakshi3027/agenttrace"
+        }
+      ],
+      "families": [
+        "github"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.12,
+    "scores": {
+      "fit": 0.76,
+      "verification": 0.12,
+      "momentum": 0.018,
+      "stealth": 0.957
+    },
+    "rank_score": 0.3967,
+    "flags": []
+  },
+  {
+    "id": "498d2d2eb9",
+    "name": "zeroclaw",
+    "domains": [],
+    "signals": [
+      {
+        "source": "github",
+        "kind": "repo",
+        "name": "elev8tion/zeroclaw",
+        "url": "https://github.com/elev8tion/zeroclaw",
+        "domain": null,
+        "ts": "2026-02-20T09:33:11Z",
+        "data": {
+          "full_name": "elev8tion/zeroclaw",
+          "stars": 24,
+          "forks": 23,
+          "description": "Zero overhead. Zero compromise. 100% Rust. Autonomous agent runtime.",
           "language": "Rust",
           "matched": "autonomous agent runtime"
         }
@@ -1152,278 +1390,28 @@
         "commits_30d": 0,
         "authors_30d": 0,
         "errors": [],
-        "last_release": "2026-09-02T11:06:52Z",
-        "owner_followers": 9,
-        "owner_location": "China",
-        "owner_blog": "https://www.senweaver.com/",
-        "owner_company": null,
-        "readme_len": 13168,
-        "readme_excerpt": "# SenWeaverCoding\n\n[English](./README.md) \u00b7 [\u7b80\u4f53\u4e2d\u6587](./README.zh-CN.md)\n\n> **AI Code Editor & Autonomous Agent Runtime \u00b7 Rust back-end + Tauri/React desktop**\n\nSenWeaverCoding is a desktop AI code editor that ships the entire agent\nruntime as a single installable application. The back-end is a Rust\nlibrary (`src/`) embedded directly into a Tauri 2 shell; the front-end\nis a React + Vite UI living in `desktop/`. There is no sidecar process,\nno remote service to talk to, and no separate CLI install \u2014 one\ninstaller gives you the full IDE **and** a terminal-callable `sen`\ncommand.\n\n---\n\n## Highlights\n\n| Area | What you get |\n| --- | --- |\n| **Desktop-first** | Tauri 2 shell with native menus, multi-tab sessions, in-app PTY terminal, file browser, and an embedded browser dock for live web/UI work. |\n| **Embedded Rust runtime** | The same crate that runs headless is loaded in-process via `crate-type = [\"cdylib\", \"staticlib\", \"rlib\"]`. The UI talks to it over a loopback WebSocket/HTTP gateway \u2014 no serialization-heavy IPC, no external daemon. |\n| **Intent-routed coding modes** | `Auto` routes each turn to the best fit; or pin any of the 14 modes explicitly \u2014 **Agent** (default, full autonomy), **Vibe**, **Spec**, **Plan** (read-only plan authoring), **Ask** (read-only Q&A with citations), **TDD**, **Debug** (4-stage root-cause + in-app browser QA), **Architect**, **Pair**, **Context**, **MVAI**, **Harness**, **Curator** (research \u2192 DOCX / implementation blueprint), **Designer** (ten UI/design surfaces). Each mode rewires the system prompt, tool allowlist, approval policy, and auto-verify behavior. |\n| **130+ tools** | File ops, PTY-mirrored shell, Git, ripgrep/content search, glob/multi-edit/patch-apply, **code intelligence** (tree-sitter outline + symbol graph for callers/implementors/uses + heuristic lexical code index), multi-engine web search/fetch, headless & embedded browser, SQLite + vector memory, todo/plan tracking, image generation, office docs (xlsx/pdf/docx), MCP tools, Skills, and Subagent delegation. |\n| **Multi-provider** | OpenAI-compatible (incl. DeepSeek / Gemini-compatible endpoints), Anthropic, OpenRouter, GitHub Copilot, Claude Code, Ollama, Azure OpenAI, AWS Bedrock, Telnyx, and local CLI bridges. Provider keys and per-session model routing are configured in-app. |\n| **Persistent memory & checkpoints** | SQLite + Markdown backends with vector embeddings, per-session work-dir isolation, and rewind/restore checkpoints. Interrupted turns are repaired and resumed against the *most recent* task on \"continue\". |\n| **Automations & extensibility** | Cron-driven automations, Hooks, user Rules, Skills, MCP servers, multi-channel adapters (Slack / Telegram / Discord / Lark / \u2026 plus feature-gated Matrix), and first-party TypeScript & Python SDKs over the JSON-RPC 2.0 server. |\n| **Performance-tuned** | Virtualized message list, rAF-coalesced streaming flushes, prioritized WebSocket heartbeats, content-aware context compaction, and `spawn_blocking` on IO hot paths. Hard constraints live in `AGENTS.md`. |\n\n---\n\n## Install\n\nPre-built installers are published on the\n[Releases](https://github.com/senweaver/SenWeaverCoding/releases) page.\n**Every installer ships both the desktop app and the `sen` CLI** so a\nsingle install gives you the GUI and a terminal-callable `sen` command.\n\n| Platform | Asset | What lands on your system |\n| --- | --- | --- |\n| **Windows x64** | `SenWeaverCoding_<ver>_x64-setup.exe` (NSIS) | Lets you pick install scope (per-user / per-machine) **and the install directory**. Adds the install dir to `HKCU\\Environment\\Path` so `sen.exe` is callable from any cmd / PowerShell / Windows Terminal session immediately after install. Removed cleanly on uninstall. |\n| **Windows x64** | `SenWeaverCoding_<ver>_x64_en-US.msi` | For silent / group-policy deployment. |\n| **macOS (universal)** | `SenWeaverCoding_<ver>_universal.dmg` | One drag-to-Applications package that runs natively on both Apple Silicon and Intel Macs (the bu",
-        "readme_links": [
-          "https://github.com/senweaver/SenWeaverCoding/releases",
-          "https://rustup.rs",
-          "https://bun.sh",
-          "https://v2.tauri.app/start/prerequisites/"
-        ],
-        "pushed_days_ago": 62,
-        "archived": false,
-        "stars": 18,
-        "age_days": 211,
-        "repo": "senweaver/SenWeaverCoding",
-        "url": "https://github.com/senweaver/SenWeaverCoding"
-      },
-      "site": {
-        "live": false,
-        "reason": "HTTP 404"
-      },
-      "hiring": {},
-      "registry": {
-        "matched": false,
-        "manual_lookup": true
-      },
-      "signals": {
-        "accelerator": [],
-        "funding": [],
-        "hiring_text": false,
-        "commercial": [],
-        "legal_entity_text": false,
-        "customers": [],
-        "backed": false
-      },
-      "ecosystem": {},
-      "links": [
-        {
-          "label": "github: senweaver/SenWeaverCoding",
-          "url": "https://github.com/senweaver/SenWeaverCoding"
-        }
-      ],
-      "families": [
-        "github"
-      ]
-    },
-    "tier": "Unverified",
-    "confidence": 0.12,
-    "scores": {
-      "fit": 0.86,
-      "verification": 0.12,
-      "momentum": 0.007,
-      "stealth": 0.817
-    },
-    "rank_score": 0.5794,
-    "flags": [
-      "domain-from-owner-blog"
-    ]
-  },
-  {
-    "id": "080fc2247b",
-    "name": "Atlas-AI-Platform",
-    "domains": [],
-    "signals": [
-      {
-        "source": "github",
-        "kind": "repo",
-        "name": "mirofadlalla/Atlas-AI-Platform",
-        "url": "https://github.com/mirofadlalla/Atlas-AI-Platform",
-        "domain": null,
-        "ts": "2026-02-18T12:23:18Z",
-        "data": {
-          "full_name": "mirofadlalla/Atlas-AI-Platform",
-          "stars": 18,
-          "forks": 5,
-          "description": "Atlas AI Platform \u2013 an enterprise-grade, multi-tenant Agentic RAG (Retrieval-Augmented Generation) infrastructure. The platform enables SaaS companies to provide secure, intelligent, and scalable AI-powered knowledge access to their customers.",
-          "language": "Python",
-          "matched": "agent evaluation harness"
-        }
-      }
-    ],
-    "evidence": {
-      "github": {
-        "commits_30d": 0,
-        "authors_30d": 0,
-        "errors": [],
         "last_release": null,
         "owner_followers": 0,
-        "owner_location": "Mansoura , Egypt",
-        "owner_blog": "https://omar-yaser-portfolio.vercel.app/",
-        "owner_company": "Evolutionary Mobile Coding",
-        "readme_len": 58619,
-        "readme_excerpt": "# \ud83e\udde0 Atlas AI Platform\n\n> A production-grade, multi-tenant AI platform that combines agentic reasoning,\n> retrieval-augmented generation, and a three-layer memory system to answer complex\n> questions over organizational knowledge.\n\n---\n\n## \ud83d\udccb Table of Contents\n\n- [The Problem](#the-problem)\n- [Why Simpler Approaches Fall Short](#why-simpler-approaches-fall-short)\n- [What Atlas AI Is](#what-atlas-ai-is)\n- [High-Level Architecture](#high-level-architecture)\n- [How It Works: A Request End to End](#how-it-works-a-request-end-to-end)\n- [Core Components](#core-components)\n- [Agent Architecture Deep Dive](#agent-architecture-deep-dive)\n- [RAG Architecture Deep Dive](#rag-architecture-deep-dive)\n- [Memory Architecture Deep Dive](#memory-architecture-deep-dive)\n- [Memory vs. RAG: Understanding the Distinction](#memory-vs-rag-understanding-the-distinction)\n- [Multi-Tenancy](#multi-tenancy)\n- [Knowledge Ingestion Flow](#knowledge-ingestion-flow)\n- [Why These Components Exist Together](#why-these-components-exist-together)\n- [Example: A User Asking a Question](#example-a-user-asking-a-question)\n- [Technology Stack](#technology-stack)\n- [Repository Structure](#repository-structure)\n- [Operational Overview](#operational-overview)\n- [Security and Isolation](#security-and-isolation)\n- [Observability](#observability)\n- [Design Principles](#design-principles)\n- [What Makes Atlas AI Architecturally Interesting](#what-makes-atlas-ai-architecturally-interesting)\n- [Architecture Map](#architecture-map)\n- [Documentation Navigation](#documentation-navigation)\n\n---\n\n## \ud83d\udd25 The Problem\n\nOrganizations accumulate knowledge across many sources: PDF reports, relational databases,\nhistorical records, policies, and conversation history. When someone needs to find an answer,\nthey face several compounding challenges:\n\n- **Knowledge is scattered.** The information needed to answer a real question rarely lives in\n  one place. It may span a document, a database table, and context from a previous conversation.\n- **Traditional search is too shallow.** Keyword search finds documents that contain the right\n  words, not documents that contain the right answers. The user then has to read, interpret, and\n  synthesize those documents themselves.\n- **Queries are often complex and multi-step.** A question like *\"Compare our Q3 revenue to the\n  targets in the planning document, and remind me what we decided last week\"* requires database\n  access, document retrieval, and memory of a prior conversation \u2014 all synthesized into one answer.\n- **Context is lost between sessions.** A stateless AI treats every conversation as a fresh start.\n  It cannot remember that a user prefers concise bullet points, or that a key term carries a\n  domain-specific meaning in this organization.\n- **Multiple organizations cannot safely share a system.** In a multi-tenant deployment, Tenant A's\n  data must be completely invisible to Tenant B \u2014 across documents, conversations, database access,\n  and long-term memory.\n- **LLM calls are expensive.** Without caching, budget controls, and cost tracking, an AI platform\n  can consume enormous compute resources on redundant or runaway queries.\n\nSimple Retrieval-Augmented Generation (RAG) partially addresses the first two problems. But it cannot\nhandle multi-step reasoning, has no memory of prior interactions, and does not know when to query\na database versus a document store.\n\nAtlas AI is designed to solve all of these problems together.\n\n---\n\n## \u26a0\ufe0f Why Simpler Approaches Fall Short\n\nA minimal AI system might look like this:\n\n```\nUser --> Vector Search --> LLM --> Answer\n```\n\nThis works for simple, isolated questions. It breaks down quickly when:\n\n| Challenge | Why minimal RAG fails |\n|---|---|\n| Multi-step question | RAG retrieves once and answers. It cannot try a different source if insufficient. |\n| Structured data question | RAG searches documents. It cannot query a relational database. |\n| Conversational context | RAG has no memory of previous turns. The us",
-        "readme_links": [],
-        "pushed_days_ago": 40,
-        "archived": false,
-        "stars": 18,
-        "age_days": 258,
-        "repo": "mirofadlalla/Atlas-AI-Platform",
-        "url": "https://github.com/mirofadlalla/Atlas-AI-Platform"
-      },
-      "site": {
-        "live": false,
-        "reason": "no domain found"
-      },
-      "hiring": {},
-      "registry": {
-        "matched": false,
-        "manual_lookup": true
-      },
-      "signals": {
-        "accelerator": [],
-        "funding": [],
-        "hiring_text": false,
-        "commercial": [],
-        "legal_entity_text": false,
-        "customers": [],
-        "backed": false
-      },
-      "ecosystem": {},
-      "links": [
-        {
-          "label": "github: mirofadlalla/Atlas-AI-Platform",
-          "url": "https://github.com/mirofadlalla/Atlas-AI-Platform"
-        }
-      ],
-      "families": [
-        "github"
-      ]
-    },
-    "tier": "Unverified",
-    "confidence": 0.12,
-    "scores": {
-      "fit": 0.86,
-      "verification": 0.12,
-      "momentum": 0.006,
-      "stealth": 0.817
-    },
-    "rank_score": 0.5793,
-    "flags": []
-  },
-  {
-    "id": "da0c1e635a",
-    "name": "Agent-Observability-Platform-SDK",
-    "domains": [],
-    "signals": [
-      {
-        "source": "github",
-        "kind": "repo",
-        "name": "yuki-2025/Agent-Observability-Platform-SDK",
-        "url": "https://github.com/yuki-2025/Agent-Observability-Platform-SDK",
-        "domain": null,
-        "ts": "2026-05-18T04:51:58Z",
-        "data": {
-          "full_name": "yuki-2025/Agent-Observability-Platform-SDK",
-          "stars": 1,
-          "forks": 0,
-          "description": "Agent Observability Platform SDK",
-          "language": "Python",
-          "matched": "agent observability platform"
-        }
-      }
-    ],
-    "evidence": {
-      "github": {
-        "commits_30d": 0,
-        "authors_30d": 0,
-        "errors": [],
-        "last_release": null,
-        "owner_followers": 8,
-        "owner_location": "Chicago",
-        "owner_blog": "",
-        "owner_company": "University of Chicago",
-        "readme_len": 16685,
-        "readme_excerpt": "# Agent Observability Platform SDK (Obs_SDK)\n\nUnified observability SDK for Any agents. One Python package, one config file, one verb interface \u2014 fan-out to LangSmith / Datadog / Postgres without each agent importing vendor SDKs directly.\n\n> **Status: v0.0.1** \u2014 validated in production. Supports LangSmith, Datadog APM, Datadog Logs, Postgres event-mirror.\n\n---\n\n## Who is this for?\n\nAny agent that wants to observability-enable its calls:\n\n| Agent type | `modality` | What you track |\n|---|---|---|\n| Voice / Realtime agent | `voice` | STT latency, TTS latency, turn audio, LLM response time |\n| Chat / Text agent | `text` | User message, LLM calls, tool actions, response quality |\n| Tool-calling agent | `tool_agent` | Each tool invocation (input, output, error, duration) |\n| Batch / Workflow | `batch` / `workflow` | Job-level spans, per-step metrics |\n\n**Three signal types, three backends:**\n\n- **Traces** (OTel spans) \u2192 LangSmith + Datadog APM\n- **Logs** (Python `logger.*`) \u2192 Datadog Logs\n- **Business events** (async Postgres writes) \u2192 internal DB\n\n## High Level Design\nv1 transport: OpenTelemetry (OTel) \u2014 agent emits OTel spans / logs / metrics; an OTel Collector (in-process or sidecar) fans out to backends. Audio is out-of-band \u2014 uploaded directly to S3, with a metadata pointer in Postgres + a span attribute referencing the S3 key.\n```bash\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502                  Agent code (any framework)                 \u2502\n\u2502   import obs_sdk as obs                                  \u2502\n\u2502   obs.init_agent(...)                                       \u2502\n\u2502   req = obs.start_request(...)                              \u2502\n\u2502   obs.record_tool(req, ...)                                 \u2502\n\u2502   obs.record_voice_event(req, ..., audio_wav=...)           \u2502\n\u2502   obs.finish_request(req)                                   \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n                              \u2502\n                  \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25bc\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n                  \u2502     obs_sdk (SDK)    \u2502\n                  \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n                  \u2502  verb layer             \u2502\n                  \u2502  \u2193                      \u2502\n                  \u2502  channel router         \u2502\n                  \u2502  \u251c\u2500\u2192 OTel emit (spans/logs/metrics)\n                  \u2502  \u2514\u2500\u2192 S3 audio uploader  \u2502 (only for audio channel)\n                  \u2514\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2518\n                    \u2502                   \u2502\n       \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25bc\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510    \u250c\u2500\u2500\u2500\u2500\u25bc\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n       \u2502   OTel Collector     \u2502    \u2502  S3 (audio blobs) \u2502\n       \u2502  (per-process or     \u2502    \u2502  + Postgres       \u2502\n       \u2502   sidecar deployment)\u2502    \u2502  (metadata index) \u2502\n       \u2514\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518    \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n         \u2502     \u2502     \u2502\n   \u250c\u2500\u2500\u2500\u2500\u2500\u25bc\u2510 \u250c\u2500\u2500\u25bc\u2500\u2500\u2510 \u250c\u25bc\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n   \u2502Lang- \u2502 \u2502 DD  \u2502 \u2502  DB \u2502\n   \u2502Smith \u2502 \u2502     \u2502 \u2502 (events)  \u2502\n   \u2502OTLP  \u2502 \u2502OTLP \u2502 \u2502 Postgres  \u2502\n   \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2518 \u2514\u2500\u2500\u2500\u2500\u2500\u2518 \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n```\n---\n\n## Install\n\n```bash\npip install obs-sdk\n```\n\nOr inside the monorepo as an editable workspace dependency:\n\n```bash\nuv add --editable ../obs_sdk\n```\n\n---\n\n## Architecture\n\n```\nYour agent\n    \u2502\n    \u251c\u2500\u2500 obs.start_request()           \u2190 opens OTel span (parent)\n    \u2502       \u251c\u2500\u2500 obs.record_voice_event() / obs.record_tool()\n    \u2502       \u2502       \u2514\u2500\u2500 child OTel spans (nest under parent)\n    \u2502       \u251c\u2500\u2500 obs.wrap_llm_client()  \u2190 OpenAI auto-instrumentation\n    \u2502       \u2502       \u2514\u2500\u2500 gen_ai.* attributes on every LLM call\n    \u2502       \u2514\u2500\u2500 obs.finish_request()   \u2190 closes parent span\n    \u2502\n    \u251c\u2500\u2500 Python logger.* / logger.error()  \u2190 Datadog Logs\n    \u2502\n    \u2514\u2500\u2500 obs.broadcast_event()         \u2190 asyncpg \u2192 Postgres `logs` table\n            \u2514\u2500\u2500 obs.start_session()   \u2190 session heartbeat (Postgres)\n\nAll spans/logs:\n    \u2502\n    \u2514\u2500\u2500 OTel Collector (localhost:4318)\n            \u251c\u2500\u2500 \u2192 LangSmith (https://api.smith.langchain.com/otel)\n            \u2514\u2500\u2500 \u2192 Datadog APM\n```\n\n---\n\n## Quick Start\n\n### 1. Create `observability.yml`\n\n```yaml\nagent:\n  agent_id: my_agent\n  agent_name: My Example Agent\n ",
-        "readme_links": [
-          "https://api.smith.langchain.com/otel",
-          "http://localhost:4318"
-        ],
-        "pushed_days_ago": 167,
-        "archived": false,
-        "stars": 1,
-        "age_days": 170,
-        "repo": "yuki-2025/Agent-Observability-Platform-SDK",
-        "url": "https://github.com/yuki-2025/Agent-Observability-Platform-SDK"
-      },
-      "site": {
-        "live": false,
-        "reason": "no domain found"
-      },
-      "hiring": {},
-      "registry": {
-        "matched": false,
-        "manual_lookup": true
-      },
-      "signals": {
-        "accelerator": [],
-        "funding": [],
-        "hiring_text": false,
-        "commercial": [],
-        "legal_entity_text": false,
-        "customers": [],
-        "backed": false
-      },
-      "ecosystem": {},
-      "links": [
-        {
-          "label": "github: yuki-2025/Agent-Observability-Platform-SDK",
-          "url": "https://github.com/yuki-2025/Agent-Observability-Platform-SDK"
-        }
-      ],
-      "families": [
-        "github"
-      ]
-    },
-    "tier": "Unverified",
-    "confidence": 0.0,
-    "scores": {
-      "fit": 0.83,
-      "verification": 0.0,
-      "momentum": 0.0,
-      "stealth": 0.957
-    },
-    "rank_score": 0.577,
-    "flags": []
-  },
-  {
-    "id": "e37699280f",
-    "name": "MiMo-CodeHarness",
-    "domains": [],
-    "signals": [
-      {
-        "source": "github",
-        "kind": "repo",
-        "name": "hongzuoj-pixel/MiMo-CodeHarness",
-        "url": "https://github.com/hongzuoj-pixel/MiMo-CodeHarness",
-        "domain": null,
-        "ts": "2026-05-27T10:31:37Z",
-        "data": {
-          "full_name": "hongzuoj-pixel/MiMo-CodeHarness",
-          "stars": 96,
-          "forks": 0,
-          "description": "A Xiaomi MiMo-powered multi-agent evaluation harness for real-world code repositories.",
-          "language": "Python",
-          "matched": "agent evaluation harness"
-        }
-      }
-    ],
-    "evidence": {
-      "github": {
-        "commits_30d": 14,
-        "authors_30d": 1,
-        "errors": [],
-        "last_release": null,
-        "owner_followers": 3,
         "owner_location": null,
         "owner_blog": "",
         "owner_company": null,
-        "readme_len": 19477,
-        "readme_excerpt": "# MiMo-CodeHarness: Multi-Agent Evaluation Harness for Real-World Code Repositories\n\n> A repository-level CodeAgent evaluation harness powered by Xiaomi MiMo Pro API.  \n> It scans real code repositories, reasons over cross-file dependencies, generates coding tasks, runs model-based agents, checks patches/build signals, records token usage, and produces dashboards and technical reports.\n\n[\u4e2d\u6587\u8bf4\u660e](README_CN.md)\n\n**Current status: v0.12.0 beta.** The installable CLI supports independent patch verification, bounded external-Agent repair, Python/Node/JUnit acceptance, recovery and portable evidence. Start with [Quick Start](#6-quick-start) or the [independent-user kit](docs/INDEPENDENT_USER_KIT_CN.md). Live-model validation, three independent user walkthroughs and maintainer license/final sign-off remain pending; this is not a stable release. See [project status](PROJECT_STATUS.md) and the [product plan](docs/PRODUCT_PLAN.md).\n\n---\n\n## 1. Why this project?\n\nMost LLM coding evaluations focus on isolated algorithm problems or short code snippets. However, real engineering work requires much more than writing one function:\n\n- understanding a real repository structure;\n- locating relevant files across modules;\n- reasoning about cross-file dependencies;\n- generating repository-level tasks;\n- applying or checking patch-style modifications;\n- running lightweight build/test checks;\n- recording token usage and evaluation evidence;\n- producing reproducible reports.\n\n**MiMo-CodeHarness** was built to evaluate these repository-level CodeAgent capabilities in a more engineering-oriented workflow.\n\nThis project is especially designed for **AI + Software Engineering + IoT/Embedded/Tooling scenarios**. It uses Xiaomi **MiMo Pro API** as the main model backend and applies the harness to real repositories such as an STM32 RFID access control project and a Python SlideNotes GUI tool.\n\n---\n\n## 2. What is an Agent Harness?\n\nThis project is not just a single LLM API demo.\n\nA simple API demo usually looks like:\n\n```text\nPrompt -> LLM response\n```\n\nMiMo-CodeHarness runs a structured evaluation pipeline:\n\n```text\nReal Repository\n-> Repository Scanner\n-> Dependency Reasoner\n-> Task Generator\n-> Model Runner\n-> Patch Checker\n-> Build/Test Checker\n-> Evidence-aware Scorer\n-> Dashboard / Technical Report / Token Log\n```\n\nIn other words, this project works as a **harness**: it provides the task environment, execution pipeline, evidence collection, scoring logic, and reproducible report generation for CodeAgent evaluation.\n\n---\n\n## 3. Core Features\n\n### Repository scanning\n\n- Counts files, languages, suffixes, and source/documentation roles.\n- Extracts representative files from the target repository.\n- Supports multiple code types including C/C++/embedded C, Python, JavaScript/TypeScript, ArkTS, Markdown, JSON, and shell scripts.\n\n### Dependency reasoning\n\n- Extracts cross-file relations such as C includes, Python imports, Markdown links, and symbol-level references.\n- Produces dependency summaries and structured dependency files.\n\n### Task generation\n\nGenerates repository-level tasks such as:\n\n- repository architecture understanding;\n- cross-file dependency explanation;\n- bug localization;\n- test plan generation;\n- patch-style maintainability improvement;\n- engineering risk analysis.\n\n### Model execution\n\n- Uses Xiaomi MiMo Pro API through environment variables.\n- Records model outputs, response time, and token usage.\n- API keys are never stored in source code.\n- A shared runtime supports mock, OpenAI-compatible, Anthropic and mapped generic HTTP final-text responses, with explicit usage/completion states, bounded deadlines/retries and recovery-aware budgets. See [provider configuration](docs/MODEL_PROVIDERS.md).\n\n### Patch and build/test checks\n\n- Extracts patch-style outputs when available.\n- Applies patch checks in isolated worktrees.\n- Runs lightweight build/test signals such as Python syntax check, JSON parsing, and C/C++ brace scan.\n- For embedded projects,",
+        "readme_len": 26151,
+        "readme_excerpt": "<p align=\"center\">\n  <img src=\"zeroclaw.png\" alt=\"ZeroClaw\" width=\"200\" />\n</p>\n\n<h1 align=\"center\">ZeroClaw \ud83e\udd80</h1>\n\n<p align=\"center\">\n  <strong>Zero overhead. Zero compromise. 100% Rust. 100% Agnostic.</strong><br>\n  \u26a1\ufe0f <strong>Runs on $10 hardware with <5MB RAM: That's 99% less memory than OpenClaw and 98% cheaper than a Mac mini!</strong>\n</p>\n\n<p align=\"center\">\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\" alt=\"License: MIT\" /></a>\n  <a href=\"NOTICE\"><img src=\"https://img.shields.io/badge/contributors-27+-green.svg\" alt=\"Contributors\" /></a>\n</p>\n\nFast, small, and fully autonomous AI assistant infrastructure \u2014 deploy anywhere, swap anything.\n\n```\n~3.4MB binary \u00b7 <10ms startup \u00b7 1,017 tests \u00b7 23+ providers \u00b7 8 traits \u00b7 Pluggable everything\n```\n\n### \u2728 Features\n\n- \ud83c\udfce\ufe0f **Ultra-Lightweight:** <5MB Memory footprint \u2014 99% smaller than OpenClaw core.\n- \ud83d\udcb0 **Minimal Cost:** Efficient enough to run on $10 Hardware \u2014 98% cheaper than a Mac mini.\n- \u26a1 **Lightning Fast:** 400X Faster startup time, boot in <10ms (under 1s even on 0.6GHz cores).\n- \ud83c\udf0d **True Portability:** Single self-contained binary across ARM, x86, and RISC-V.\n\n### Why teams pick ZeroClaw\n\n- **Lean by default:** small Rust binary, fast startup, low memory footprint.\n- **Secure by design:** pairing, strict sandboxing, explicit allowlists, workspace scoping.\n- **Fully swappable:** core systems are traits (providers, channels, tools, memory, tunnels).\n- **No lock-in:** OpenAI-compatible provider support + pluggable custom endpoints.\n\n## Benchmark Snapshot (ZeroClaw vs OpenClaw)\n\nLocal machine quick benchmark (macOS arm64, Feb 2026) normalized for 0.8GHz edge hardware.\n\n| | OpenClaw | NanoBot | PicoClaw | ZeroClaw \ud83e\udd80 |\n|---|---|---|---|---|\n| **Language** | TypeScript | Python | Go | **Rust** |\n| **RAM** | > 1GB | > 100MB | < 10MB | **< 5MB** |\n| **Startup (0.8GHz core)** | > 500s | > 30s | < 1s | **< 10ms** |\n| **Binary Size** | ~28MB (dist) | N/A (Scripts) | ~8MB | **3.4 MB** |\n| **Cost** | Mac Mini $599 | Linux SBC ~$50 | Linux Board $10 | **Any hardware $10** |\n\n> Notes: ZeroClaw results measured with `/usr/bin/time -l` on release builds. OpenClaw requires Node.js runtime (~390MB overhead). PicoClaw and ZeroClaw are static binaries.\n\n<p align=\"center\">\n  <img src=\"zero-claw.jpeg\" alt=\"ZeroClaw vs OpenClaw Comparison\" width=\"800\" />\n</p>\n\nReproduce ZeroClaw numbers locally:\n\n```bash\ncargo build --release\nls -lh target/release/zeroclaw\n\n/usr/bin/time -l target/release/zeroclaw --help\n/usr/bin/time -l target/release/zeroclaw status\n```\n\n## Prerequisites\n\n<details>\n<summary><strong>Windows</strong></summary>\n\n#### Required\n\n1. **Visual Studio Build Tools** (provides the MSVC linker and Windows SDK):\n   ```powershell\n   winget install Microsoft.VisualStudio.2022.BuildTools\n   ```\n   During installation (or via the Visual Studio Installer), select the **\"Desktop development with C++\"** workload.\n\n2. **Rust toolchain:**\n   ```powershell\n   winget install Rustlang.Rustup\n   ```\n   After installation, open a new terminal and run `rustup default stable` to ensure the stable toolchain is active.\n\n3. **Verify** both are working:\n   ```powershell\n   rustc --version\n   cargo --version\n   ```\n\n#### Optional\n\n- **Docker Desktop** \u2014 required only if using the [Docker sandboxed runtime](#runtime-support-current) (`runtime.kind = \"docker\"`). Install via `winget install Docker.DockerDesktop`.\n\n</details>\n\n<details>\n<summary><strong>Linux / macOS</strong></summary>\n\n#### Required\n\n1. **Build essentials:**\n   - **Linux (Debian/Ubuntu):** `sudo apt install build-essential pkg-config`\n   - **Linux (Fedora/RHEL):** `sudo dnf groupinstall \"Development Tools\" && sudo dnf install pkg-config`\n   - **macOS:** Install Xcode Command Line Tools: `xcode-select --install`\n\n2. **Rust toolchain:**\n   ```bash\n   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh\n   ```\n   See [rustup.rs](https://rustup.rs) for details.\n\n3. **Verify** both are working:\n   ```bash\n",
         "readme_links": [
-          "https://github.com/hongzuoj-pixel/MiMo-CodeHarness.git"
+          "https://img.shields.io/badge/license-MIT-blue.svg",
+          "https://img.shields.io/badge/contributors-27+-green.svg",
+          "https://sh.rustup.rs",
+          "https://rustup.rs",
+          "https://docs.docker.com/engine/install/",
+          "https://github.com/zeroclaw-labs/zeroclaw.git",
+          "https://your-api.com`"
         ],
-        "pushed_days_ago": 15,
+        "pushed_days_ago": 3,
         "archived": false,
-        "stars": 96,
-        "age_days": 160,
-        "repo": "hongzuoj-pixel/MiMo-CodeHarness",
-        "url": "https://github.com/hongzuoj-pixel/MiMo-CodeHarness"
+        "stars": 24,
+        "age_days": 256,
+        "repo": "elev8tion/zeroclaw",
+        "url": "https://github.com/elev8tion/zeroclaw"
       },
       "site": {
         "live": false,
@@ -1446,8 +1434,8 @@
       "ecosystem": {},
       "links": [
         {
-          "label": "github: hongzuoj-pixel/MiMo-CodeHarness",
-          "url": "https://github.com/hongzuoj-pixel/MiMo-CodeHarness"
+          "label": "github: elev8tion/zeroclaw",
+          "url": "https://github.com/elev8tion/zeroclaw"
         }
       ],
       "families": [
@@ -1457,12 +1445,87 @@
     "tier": "Unverified",
     "confidence": 0.12,
     "scores": {
-      "fit": 0.86,
+      "fit": 0.76,
       "verification": 0.12,
-      "momentum": 0.172,
-      "stealth": 0.716
+      "momentum": 0.008,
+      "stealth": 0.8
     },
-    "rank_score": 0.5712,
+    "rank_score": 0.3889,
+    "flags": []
+  },
+  {
+    "id": "9448b38e51",
+    "name": "Traccia",
+    "domains": [
+      "traccia.ai"
+    ],
+    "signals": [
+      {
+        "source": "hn",
+        "kind": "show_hn",
+        "name": "Traccia",
+        "url": "https://news.ycombinator.com/item?id=49391995",
+        "domain": "traccia.ai",
+        "ts": "2026-08-21T18:20:16Z",
+        "data": {
+          "title": "Show HN: Traccia - Observability, Runtime Control & Audit for agents",
+          "points": 4,
+          "comments": 0,
+          "author": "vijaypoudel",
+          "hn_id": "49391995",
+          "matched": "agent observability framework"
+        }
+      }
+    ],
+    "evidence": {
+      "github": {},
+      "site": {
+        "live": true,
+        "url": "https://traccia.ai/",
+        "title": "AI Agent Control Plane: Observability &amp; Governance | Traccia",
+        "parked": false,
+        "product": true,
+        "dev_product": true,
+        "team": false,
+        "copyright_year": 2026
+      },
+      "hiring": {},
+      "registry": {
+        "matched": false,
+        "manual_lookup": true
+      },
+      "signals": {
+        "accelerator": [],
+        "funding": [],
+        "hiring_text": false,
+        "commercial": [
+          "pricing",
+          "enterprise"
+        ],
+        "legal_entity_text": false,
+        "customers": [],
+        "backed": false
+      },
+      "ecosystem": {},
+      "links": [
+        {
+          "label": "hn: Traccia",
+          "url": "https://news.ycombinator.com/item?id=49391995"
+        }
+      ],
+      "families": [
+        "hn"
+      ]
+    },
+    "tier": "Unverified",
+    "confidence": 0.3,
+    "scores": {
+      "fit": 0.6,
+      "verification": 0.3,
+      "momentum": 0.003,
+      "stealth": 0.997
+    },
+    "rank_score": 0.3863,
     "flags": []
   }
 ]

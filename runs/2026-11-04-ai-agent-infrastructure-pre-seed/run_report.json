@@ -3,17 +3,17 @@
   "sources": {
     "github": {
       "status": "ok",
-      "signals": 205,
+      "signals": 204,
       "maturity": "tested"
     },
     "hn": {
       "status": "ok",
-      "signals": 359,
+      "signals": 394,
       "maturity": "experimental"
     },
     "producthunt": {
       "status": "ok",
-      "signals": 3,
+      "signals": 19,
       "maturity": "experimental"
     },
     "companies_house": {
@@ -26,41 +26,21 @@
       "maturity": "experimental"
     }
   },
-  "signals": 567,
-  "companies": 553,
+  "signals": 617,
+  "companies": 602,
   "verified_attempted": 40,
-  "filtered_out": 4,
+  "filtered_out": 3,
   "llm_status": "ok, model gemini-3.6-flash",
   "review_queue": [
     {
-      "a": "awesome-agents",
-      "b": "awesome-ai-agents",
+      "a": "agent-me",
+      "b": "agent-mem",
       "ratio": 0.93
-    },
-    {
-      "a": "awesome-agents",
-      "b": "awesome-ai-agents",
-      "ratio": 0.93
-    },
-    {
-      "a": "Zengram",
-      "b": "engram",
-      "ratio": 0.92
-    },
-    {
-      "a": "ai-agent-observability-platform",
-      "b": "agent-observability-platform",
-      "ratio": 0.96
-    },
-    {
-      "a": "I built a RAG and knowledge graph agent that runs locally",
-      "b": "I built a powerful RAG and knowledge graph agent that runs locally",
-      "ratio": 0.92
     }
   ],
   "tiers": {
     "Verified-operating": 0,
-    "Likely": 3,
-    "Unverified": 37
+    "Likely": 1,
+    "Unverified": 39
   }
 }

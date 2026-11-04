@@ -13,42 +13,41 @@
   "statement": "Pre-Seed AI agent infrastructure startups with emphasis on verifiable early traction, found through indirect signals before wide press coverage.",
   "keywords": {
     "core": [
-      "agent orchestration framework",
-      "agentic workflow infrastructure",
-      "multi-agent memory layer",
-      "agent execution environment",
+      "agent observability framework",
+      "multi-agent orchestration",
+      "llm tool calling infrastructure",
+      "agentic workflow engine",
+      "ai agent memory layer",
+      "agent sandbox execution engine",
       "autonomous agent runtime",
-      "agent observability platform",
-      "llm tool calling framework",
-      "agent evaluation harness",
-      "agent sandboxing infrastructure",
-      "agent state management",
-      "code interpreter sandbox",
-      "secure agent runtime",
-      "air-gapped agent runtime",
-      "enterprise llm gateway",
-      "vpc agent deployment",
-      "stealth ai infrastructure",
-      "core agent protocol"
+      "llm agent evaluation bench",
+      "agent state persistence",
+      "ai agent browser automation sdk",
+      "state graph engine",
+      "agent flow control",
+      "open-source core",
+      "self-hosted sdk",
+      "hierarchical agent mesh",
+      "deterministic agent graph"
     ],
     "adjacent": [
-      "vector database",
-      "semantic caching",
-      "llm proxy gateway",
-      "prompt management engine",
-      "rag orchestration",
-      "synthetic data generation for llms",
-      "function calling api"
+      "vector database context retrieval",
+      "semantic prompt router",
+      "llm guardrails middleware",
+      "rag pipeline optimization",
+      "function calling api gateway",
+      "synthetic dataset generation for llms",
+      "fine-tuning telemetry"
     ],
     "negative": [
       "tutorial",
       "course",
       "bootcamp",
-      "homework",
-      "getting started with langchain",
-      "beginner guide",
-      "medium post",
       "udemy",
+      "homework",
+      "beginner guide",
+      "medium article",
+      "capstone project",
       "awesome",
       "template",
       "boilerplate",
@@ -61,23 +60,23 @@
     ]
   },
   "search_terms": [
-    "agent orchestration framework",
-    "agentic workflow infrastructure",
-    "multi-agent memory layer",
-    "agent execution environment",
+    "agent observability framework",
+    "multi-agent orchestration",
+    "llm tool calling infrastructure",
+    "agentic workflow engine",
+    "ai agent memory layer",
+    "agent sandbox execution engine",
     "autonomous agent runtime",
-    "agent observability platform",
-    "llm tool calling framework",
-    "agent evaluation harness"
+    "llm agent evaluation bench"
   ],
   "anchors": [
     {
       "registry": "pypi.org",
-      "package": "crewai"
+      "package": "langchain"
     },
     {
       "registry": "pypi.org",
-      "package": "autogen"
+      "package": "crewai"
     },
     {
       "registry": "pypi.org",
@@ -85,7 +84,7 @@
     },
     {
       "registry": "pypi.org",
-      "package": "agentops"
+      "package": "instructor"
     },
     {
       "registry": "npmjs.org",
@@ -94,28 +93,28 @@
   ],
   "must_have": [],
   "anti_signals": [
-    "public saas"
+    "closed source api only"
   ],
   "weights": {
-    "fit": 0.385,
-    "verification": 0.231,
-    "momentum": 0.115,
-    "stealth": 0.269
+    "fit": 0.42,
+    "verification": 0.326,
+    "momentum": 0.217,
+    "stealth": 0.036
   },
   "design_provider": "gemini",
   "llm_status": "ok, model gemini-3.6-flash",
   "qa": [
     {
-      "question": "Which layer of the AI agent infrastructure stack is the company building?",
-      "answer": "Runtime & Execution Sandboxing"
+      "question": "Which primary layer of the AI agent stack is your core focus?",
+      "answer": "Control Plane & Orchestration (State Graphs, Workflows)"
     },
     {
-      "question": "What is the primary target deployment and commercial model?",
-      "answer": "Enterprise VPC / Air-gapped Infra"
+      "question": "What is your open-source strategy and developer distribution model?",
+      "answer": "Open-Source Core SDK with Enterprise Managed Cloud"
     },
     {
-      "question": "What stage of technical disclosure is preferred?",
-      "answer": "Stealth / Pre-release technical protocol"
+      "question": "What multi-agent communication pattern does your architecture leverage?",
+      "answer": "Deterministic DAGs / Hierarchical Orchestration"
     }
   ]
 }
