@@ -1,0 +1,66 @@
+{
+  "thesis_id": "2026-11-04-ai-agent-infrastructure-pre-seed",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "signals": 205,
+      "maturity": "tested"
+    },
+    "hn": {
+      "status": "ok",
+      "signals": 359,
+      "maturity": "experimental"
+    },
+    "producthunt": {
+      "status": "ok",
+      "signals": 3,
+      "maturity": "experimental"
+    },
+    "companies_house": {
+      "status": "skipped",
+      "reason": "only for UK"
+    },
+    "ecosystems": {
+      "status": "ok",
+      "signals": 0,
+      "maturity": "experimental"
+    }
+  },
+  "signals": 567,
+  "companies": 553,
+  "verified_attempted": 40,
+  "filtered_out": 4,
+  "llm_status": "ok, model gemini-3.6-flash",
+  "review_queue": [
+    {
+      "a": "awesome-agents",
+      "b": "awesome-ai-agents",
+      "ratio": 0.93
+    },
+    {
+      "a": "awesome-agents",
+      "b": "awesome-ai-agents",
+      "ratio": 0.93
+    },
+    {
+      "a": "Zengram",
+      "b": "engram",
+      "ratio": 0.92
+    },
+    {
+      "a": "ai-agent-observability-platform",
+      "b": "agent-observability-platform",
+      "ratio": 0.96
+    },
+    {
+      "a": "I built a RAG and knowledge graph agent that runs locally",
+      "b": "I built a powerful RAG and knowledge graph agent that runs locally",
+      "ratio": 0.92
+    }
+  ],
+  "tiers": {
+    "Verified-operating": 0,
+    "Likely": 3,
+    "Unverified": 37
+  }
+}

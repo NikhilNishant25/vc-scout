@@ -1,0 +1,121 @@
+{
+  "id": "2026-11-04-ai-agent-infrastructure-pre-seed",
+  "created": "2026-11-04",
+  "inputs": {
+    "industry": "AI agent infrastructure",
+    "stage": "pre-seed",
+    "location": "global"
+  },
+  "geo": {
+    "country": "GLOBAL",
+    "query": "global"
+  },
+  "statement": "Pre-Seed AI agent infrastructure startups with emphasis on verifiable early traction, found through indirect signals before wide press coverage.",
+  "keywords": {
+    "core": [
+      "agent orchestration framework",
+      "agentic workflow infrastructure",
+      "multi-agent memory layer",
+      "agent execution environment",
+      "autonomous agent runtime",
+      "agent observability platform",
+      "llm tool calling framework",
+      "agent evaluation harness",
+      "agent sandboxing infrastructure",
+      "agent state management",
+      "code interpreter sandbox",
+      "secure agent runtime",
+      "air-gapped agent runtime",
+      "enterprise llm gateway",
+      "vpc agent deployment",
+      "stealth ai infrastructure",
+      "core agent protocol"
+    ],
+    "adjacent": [
+      "vector database",
+      "semantic caching",
+      "llm proxy gateway",
+      "prompt management engine",
+      "rag orchestration",
+      "synthetic data generation for llms",
+      "function calling api"
+    ],
+    "negative": [
+      "tutorial",
+      "course",
+      "bootcamp",
+      "homework",
+      "getting started with langchain",
+      "beginner guide",
+      "medium post",
+      "udemy",
+      "awesome",
+      "template",
+      "boilerplate",
+      "portfolio",
+      "demo app",
+      "landscape",
+      "leaderboard",
+      "cheatsheet",
+      "curated list"
+    ]
+  },
+  "search_terms": [
+    "agent orchestration framework",
+    "agentic workflow infrastructure",
+    "multi-agent memory layer",
+    "agent execution environment",
+    "autonomous agent runtime",
+    "agent observability platform",
+    "llm tool calling framework",
+    "agent evaluation harness"
+  ],
+  "anchors": [
+    {
+      "registry": "pypi.org",
+      "package": "crewai"
+    },
+    {
+      "registry": "pypi.org",
+      "package": "autogen"
+    },
+    {
+      "registry": "pypi.org",
+      "package": "langgraph"
+    },
+    {
+      "registry": "pypi.org",
+      "package": "agentops"
+    },
+    {
+      "registry": "npmjs.org",
+      "package": "@langchain/core"
+    }
+  ],
+  "must_have": [],
+  "anti_signals": [
+    "public saas"
+  ],
+  "weights": {
+    "fit": 0.385,
+    "verification": 0.231,
+    "momentum": 0.115,
+    "stealth": 0.269
+  },
+  "design_provider": "gemini",
+  "llm_status": "ok, model gemini-3.6-flash",
+  "qa": [
+    {
+      "question": "Which layer of the AI agent infrastructure stack is the company building?",
+      "answer": "Runtime & Execution Sandboxing"
+    },
+    {
+      "question": "What is the primary target deployment and commercial model?",
+      "answer": "Enterprise VPC / Air-gapped Infra"
+    },
+    {
+      "question": "What stage of technical disclosure is preferred?",
+      "answer": "Stealth / Pre-release technical protocol"
+    }
+  ]
+}
