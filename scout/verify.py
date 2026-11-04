@@ -42,8 +42,8 @@ def check_site(domain):
 
 
 def check_hiring(domain, name):
-    base = domain.split(".")[0] if domain else ""
-    slugs = [s for s in dict.fromkeys([base, re.sub(r"[^a-z0-9]", "", name.lower()), re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")]) if len(s) >= 3]
+    base = re.sub(r"[^a-z0-9-]", "", domain.split(".")[0].lower()) if domain else ""
+    slugs = [base] if len(base) >= 3 else []  # name-derived slugs collide with unrelated companies (e.g. "hive")
     for s in slugs:
         for board, url, count in BOARDS:
             try:
@@ -126,6 +126,9 @@ def anti_flags(c, ev, thesis):
         flags.append("parked-domain")
     if ev["github"].get("archived"):
         flags.append("archived-repo")
+    ceiling = 3000 if thesis["inputs"]["stage"] in ("idea", "pre-seed") else 10000
+    if (ev["github"].get("owner_followers") or 0) >= ceiling:
+        flags.append("established-org")
     text = " ".join([c.name, ev["site"].get("title", "")] + [str(s.data.get("description") or s.data.get("tagline") or "") for s in c.signals]).lower()
     for w in thesis["keywords"]["negative"] + thesis.get("anti_signals", []):
         if re.search(rf"\b{re.escape(w)}\b", text):

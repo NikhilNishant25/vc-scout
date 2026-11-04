@@ -270,3 +270,28 @@ def test_ecosystems_falls_back_and_filters_client_side(monkeypatch):
     monkeypatch.setattr(http, "request", fake)
     sigs = ecosystems.collect({"inputs": {"stage": "pre-seed"}, "anchors": [{"registry": "pypi.org", "package": "x"}]})
     assert [s.name for s in sigs] == ["newpkg"]
+
+
+def test_memo_prompt_formats_and_memo_is_written(monkeypatch):
+    from scout import llm, memo
+    assert "FACTS" in memo.PROMPT.format(thesis="t", facts="f")  # regression: literal braces once crashed str.format
+    c = Company("a", "Acme", domains=["acme.dev"], signals=[_s("github", "x/acme", "acme.dev", full_name="x/acme")])
+    c.evidence = {"links": [{"label": "repo", "url": "https://github.com/x/acme"}]}
+    monkeypatch.setattr(llm, "complete", lambda p, **k: "## One-liner\nok [source: https://github.com/x/acme]")
+    out = memo.write(c, {"statement": "stmt"})
+    assert "One-liner" in out and "No LLM memo" not in out
+
+
+def test_job_board_slug_uses_domain_label_only(monkeypatch):
+    seen = []
+    monkeypatch.setattr(verify.http, "request", lambda m, url, **k: (seen.append(url), (_ for _ in ()).throw(RuntimeError("x")))[1])
+    verify.check_hiring("hivecli.sh", "hive")
+    assert seen and all("/hivecli" in u or "hivecli?" in u or u.endswith("hivecli") for u in seen)
+    assert not any("/hive/" in u or u.endswith("/hive") for u in seen)
+
+
+def test_established_org_flagged():
+    c = Company("a", "NeMo-Relay", domains=["nvidia.com"], signals=[_s("github", "NVIDIA/NeMo-Relay", full_name="NVIDIA/NeMo-Relay")])
+    ev = {"site": {"live": True, "title": "x"}, "github": {"owner_followers": 40000}}
+    t = {"inputs": {"stage": "pre-seed"}, "keywords": {"negative": []}, "anti_signals": []}
+    assert "established-org" in verify.anti_flags(c, ev, t)

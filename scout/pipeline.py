@@ -67,7 +67,7 @@ def run(thesis, outdir, top=15, memos=5, verify_top=40):
     for c in to_verify:
         if c.scores.get("fit", 0) < 0.1 and "off-thesis" not in c.flags:
             c.flags.append("off-thesis")
-    DROP = ("negative-keyword", "off-thesis", "site-name-mismatch", "parked", "archived")
+    DROP = ("negative-keyword", "off-thesis", "site-name-mismatch", "parked", "archived", "established-org")
     filtered = [c for c in to_verify if any(f.startswith(DROP) for f in c.flags)]
     keep = [c for c in to_verify if c not in filtered]
     ranked = rank.order(keep)[:top]

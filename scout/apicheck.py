@@ -77,6 +77,21 @@ def run():
                 out.append(f"{label}: HTTP {e.code} {e.body[:80]}")
             except Exception as e:
                 out.append(f"{label}: ERR {str(e)[:80]}")
+        for label, params in [("order asc", {"sort": "created_at", "order": "asc"}), ("sort updated_at desc", {"sort": "updated_at", "order": "desc"}),
+                              ("created_after 2024-01-01", {"created_after": "2024-01-01"}), ("updated_after 2026-03-01", {"updated_after": "2026-03-01"}),
+                              ("page 30 (no sort)", {"page": 30})]:
+            try:
+                r = http.request("GET", base, params={"per_page": 3, **params}, ttl=0, retries=0, timeout=90)
+                dates = [(x.get("created_at") or "")[:10] for x in r]
+                out.append(f"{label}: {len(r)} items, created dates={dates}")
+            except Exception as e:
+                out.append(f"{label}: ERR {str(e)[:80]}")
+        try:
+            import requests as _rq
+            h = _rq.get(base, params={"per_page": 1}, headers={"User-Agent": http.UA}, timeout=60).headers
+            out.append("response headers of interest: " + str({k: v for k, v in h.items() if k.lower() in ("link", "x-total", "x-total-count", "total", "x-per-page", "x-page")}))
+        except Exception as e:
+            out.append(f"headers: ERR {str(e)[:80]}")
         return "\n  " + "\n  ".join(out)
     L.append(_try("ecosyste.ms dependent_packages query variants (pypi langgraph)", eco_variants))
 

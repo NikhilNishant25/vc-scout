@@ -26,7 +26,7 @@ def _fetch(url, after):
                 {"per_page": 100, "created_after": after + "T00:00:00Z", "sort": "created_at", "order": "desc"},
                 {"per_page": 100, "sort": "created_at", "order": "desc"},
                 {"per_page": 100}]
-    for params in variants:
+    for params in variants[:2]:  # server-side date filters, if they work
         try:
             items = http.request("GET", url, params=params, ttl=24 * 3600, timeout=90, retries=1)
         except http.HttpError as e:
@@ -35,7 +35,18 @@ def _fetch(url, after):
             raise
         if isinstance(items, list) and items:
             return items, params
-    return [], None
+    paged, params = [], {"per_page": 100, "sort": "created_at", "order": "desc"}
+    for page in range(1, 9):  # fallback: up to 800 dependents, filtered by date on our side
+        try:
+            items = http.request("GET", url, params={**params, "page": page}, ttl=24 * 3600, timeout=90, retries=1)
+        except http.HttpError as e:
+            if e.code in (400, 422):
+                break
+            raise
+        if not isinstance(items, list) or not items:
+            break
+        paged += items
+    return paged, params
 
 
 def collect(thesis):
