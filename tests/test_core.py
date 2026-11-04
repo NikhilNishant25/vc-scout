@@ -229,3 +229,44 @@ def test_ecosystems_skipped_without_anchors():
     t = {"inputs": {"stage": "pre-seed"}, "geo": {"country": "GLOBAL"}, "anchors": []}
     p = {x["source"]: x for x in planner.plan(t)}
     assert not p["ecosystems"]["enabled"] and "anchor" in p["ecosystems"]["reason"]
+
+
+def test_gemini_rate_limit_cools_down_then_recovers_instead_of_blacklisting(monkeypatch):
+    from scout import http, llm
+    monkeypatch.setenv("GEMINI_API_KEY", "k"); monkeypatch.delenv("SCOUT_GEMINI_MODEL", raising=False)
+    llm._BAD.clear(); llm._COOL.clear()
+    t = {"now": 1000.0}
+    monkeypatch.setattr(llm, "_clock", lambda: t["now"])
+    monkeypatch.setattr(llm, "_sleep", lambda s: t.__setitem__("now", t["now"] + s))
+    calls = {"n": 0}
+
+    def fake(method, url, **kw):
+        if url.endswith("/models"):
+            return {"models": [{"name": "models/gemini-3.8-flash", "supportedGenerationMethods": ["generateContent"]}]}
+        calls["n"] += 1
+        if calls["n"] == 1:
+            raise http.HttpError(429, url, "quota")
+        return {"candidates": [{"content": {"parts": [{"text": "hello"}]}}]}
+    monkeypatch.setattr(http, "request", fake)
+    assert llm._gemini("hi", False) == "hello" and "gemini-3.8-flash" not in llm._BAD
+
+
+def test_meta_repos_skipped_and_claims_tightened():
+    from scout.company_signals import company_signals
+    assert not company_signals("Powered by Postgres, backed by Redis. Used by developers.")["backed"]
+    assert company_signals("We are backed by Sequoia Capital and Y Combinator.")["backed"]
+    assert company_signals("Used by 200 teams worldwide")["customers"]
+    assert not company_signals("Used by developers")["customers"]
+
+
+def test_ecosystems_falls_back_and_filters_client_side(monkeypatch):
+    from scout import http
+    from scout.collectors import ecosystems
+    old = {"name": "old", "ecosystem": "pypi", "first_release_published_at": "2020-01-01T00:00:00Z"}
+    new = {"name": "newpkg", "ecosystem": "pypi", "homepage": "https://newpkg.dev", "first_release_published_at": "2099-01-01T00:00:00Z"}
+
+    def fake(method, url, params=None, **kw):
+        return [] if "created_after" in params else [old, new]  # server-side filter returns nothing; unfiltered works
+    monkeypatch.setattr(http, "request", fake)
+    sigs = ecosystems.collect({"inputs": {"stage": "pre-seed"}, "anchors": [{"registry": "pypi.org", "package": "x"}]})
+    assert [s.name for s in sigs] == ["newpkg"]

@@ -27,8 +27,9 @@ def collect(thesis):
                 continue
             time.sleep(2.1)  # GitHub search allows ~30 requests/minute
             for r in items:
-                if r["full_name"] in seen:
-                    continue
+                owner, name = r["full_name"].split("/")
+                if r["full_name"] in seen or name.startswith(".github") or name.lower() == owner.lower():
+                    continue  # GitHub special/profile repos are not companies
                 seen.add(r["full_name"])
                 got += 1
                 out.append(RawSignal("github", "repo", r["full_name"], r["html_url"], reg_domain(r.get("homepage")), r["created_at"],

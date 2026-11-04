@@ -15,32 +15,51 @@ def _gh_repo(url):
     return f"{m.group(1)}/{m.group(2)}" if m else None
 
 
+def _ts(p):
+    return p.get("first_release_published_at") or p.get("created_at")
+
+
+def _fetch(url, after):
+    """Try progressively simpler queries; returns (items, params used). Server-side date filters may behave unexpectedly,
+    so unfiltered variants are filtered client-side by the caller."""
+    variants = [{"per_page": 100, "created_after": after, "sort": "created_at", "order": "desc"},
+                {"per_page": 100, "created_after": after + "T00:00:00Z", "sort": "created_at", "order": "desc"},
+                {"per_page": 100, "sort": "created_at", "order": "desc"},
+                {"per_page": 100}]
+    for params in variants:
+        try:
+            items = http.request("GET", url, params=params, ttl=24 * 3600, timeout=90, retries=1)
+        except http.HttpError as e:
+            if e.code in (400, 422):
+                continue
+            raise
+        if isinstance(items, list) and items:
+            return items, params
+    return [], None
+
+
 def collect(thesis):
     after = (dt.date.today() - dt.timedelta(days=WINDOW[thesis["inputs"]["stage"]])).isoformat()
     out, seen, errors, tried = [], set(), [], 0
     for a in (thesis.get("anchors") or [])[:5]:
         tried += 1
         url = f"{BASE}/{a['registry']}/packages/{a['package']}/dependent_packages"
-        params = {"per_page": 100, "created_after": after, "sort": "created_at", "order": "desc"}
         try:
-            try:
-                items = http.request("GET", url, params=params, ttl=24 * 3600, timeout=90, retries=1)
-            except http.HttpError as e:
-                if e.code not in (400, 422):
-                    raise
-                params.pop("sort"); params.pop("order")  # unknown sort value: fall back to the default ordering
-                items = http.request("GET", url, params=params, ttl=24 * 3600, timeout=90, retries=1)
+            items, used = _fetch(url, after)
         except Exception as e:
             errors.append(f"{a['package']}: {str(e)[:120]}")
             print(f"[warn] ecosystems anchor {a['package']} failed: {e}")
             continue
-        for p in items if isinstance(items, list) else []:
+        print(f"[info] ecosystems {a['package']}: {len(items)} items via {sorted((used or {}).keys())}")
+        for p in items:
+            if (used or {}).get("created_after") is None and not ((_ts(p) or "")[:10] >= after):
+                continue  # unfiltered query: keep only packages first published inside the window
             key = (p.get("ecosystem"), p.get("name"))
             if key in seen:
                 continue
             seen.add(key)
             out.append(RawSignal("ecosystems", "package", p.get("name", ""), p.get("registry_url") or p.get("homepage") or "",
-                                 reg_domain(p.get("homepage")), p.get("first_release_published_at") or p.get("created_at"),
+                                 reg_domain(p.get("homepage")), _ts(p),
                                  {"description": p.get("description"), "github_repo": _gh_repo(p.get("repository_url")),
                                   "downloads": p.get("downloads") or 0, "dependent_repos": p.get("dependent_repos_count") or 0,
                                   "keywords": p.get("keywords_array"), "anchor": a["package"], "funding_links": p.get("funding_links")}))

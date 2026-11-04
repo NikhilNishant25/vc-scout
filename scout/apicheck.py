@@ -62,6 +62,24 @@ def run():
         return f"WORKS; type={type(r).__name__}; n={len(r) if isinstance(r, list) else '?'}; first item keys={sorted(r[0].keys())[:25] if isinstance(r, list) and r else r}"
     L.append(_try("ecosyste.ms dependent_packages (pypi instructor)", eco_dep))
 
+    def eco_variants():
+        base = "https://packages.ecosyste.ms/api/v1/registries/pypi.org/packages/langgraph/dependent_packages"
+        out = []
+        for label, params in [("no filters", {}), ("created_after date", {"created_after": "2026-03-01"}),
+                              ("created_after datetime", {"created_after": "2026-03-01T00:00:00Z"}),
+                              ("sort created_at desc", {"sort": "created_at", "order": "desc"}),
+                              ("date + sort", {"created_after": "2026-03-01", "sort": "created_at", "order": "desc"})]:
+            try:
+                r = http.request("GET", base, params={"per_page": 3, **params}, ttl=0, retries=0, timeout=90)
+                first = (r[0].get("name"), (r[0].get("created_at") or "")[:10], (r[0].get("first_release_published_at") or "")[:10]) if r else None
+                out.append(f"{label}: {len(r)} items, first(name, created, first_release)={first}")
+            except http.HttpError as e:
+                out.append(f"{label}: HTTP {e.code} {e.body[:80]}")
+            except Exception as e:
+                out.append(f"{label}: ERR {str(e)[:80]}")
+        return "\n  " + "\n  ".join(out)
+    L.append(_try("ecosyste.ms dependent_packages query variants (pypi langgraph)", eco_variants))
+
     def repos_eco():
         r = http.request("GET", "https://repos.ecosyste.ms/api/v1/hosts/GitHub/repositories/facebook%2Freact", ttl=0, retries=0)
         return "WORKS; " + _keys(r, ["full_name", "stargazers_count", "pushed_at", "owner", "topics"])

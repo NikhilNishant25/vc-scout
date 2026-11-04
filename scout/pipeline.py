@@ -1,7 +1,7 @@
 from __future__ import annotations
-import dataclasses, json, pathlib
+import dataclasses, json, pathlib, time
 import yaml
-from . import known as known_mod, memo, planner, rank, resolve, verify
+from . import known as known_mod, llm, memo, planner, rank, resolve, verify
 from .collectors import companies_house, ecosystems, github, hn, producthunt
 
 COLLECTORS = {"ecosystems": ecosystems, "github": github, "hn": hn, "producthunt": producthunt, "companies_house": companies_house}
@@ -74,6 +74,8 @@ def run(thesis, outdir, top=15, memos=5, verify_top=40):
     for i, c in enumerate(ranked[:memos]):
         if c.tier != "Unverified":
             (out / "memos" / f"{i+1:02d}-{c.id}.md").write_text(memo.write(c, thesis))
+            if llm.provider() == "gemini":
+                time.sleep(6)  # stay under free-tier requests-per-minute limits
     (out / "candidates.json").write_text(json.dumps([_clean(c) for c in ranked], indent=2, default=str))
     report = {"thesis_id": thesis["id"], "sources": status, "signals": len(signals), "companies": len(companies),
               "verified_attempted": len(to_verify), "filtered_out": len(filtered), "llm_status": thesis.get("llm_status"), "review_queue": review,

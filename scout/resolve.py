@@ -72,7 +72,9 @@ def resolve(signals):
                 if other and other != nm:
                     ratio = SequenceMatcher(None, nm, other).ratio()
                     if ratio >= 0.92:
-                        review.append({"a": c.name, "b": _display(s), "ratio": round(ratio, 2)})
+                        pair = {"a": c.name, "b": _display(s), "ratio": round(ratio, 2)}
+                        if pair not in review:
+                            review.append(pair)
                         break
         if cid is None:
             cid = hashlib.sha1((dkey or gkey or nkey or s.url).encode()).hexdigest()[:10]

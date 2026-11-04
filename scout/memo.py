@@ -31,13 +31,14 @@ def facts(c):
 
 def write(c, thesis):
     f = facts(c)
-    body = None
+    body, why = None, "no LLM key set"
     try:
         body = llm.complete(PROMPT.format(thesis=thesis["statement"], facts=json.dumps(f, indent=2, default=str)))
     except Exception as e:
+        why = f"LLM call failed: {str(e)[:300]}"
         print(f"[warn] memo failed for {c.name}: {e}")
     head = f"# {c.name}  ({c.tier}, rank {c.rank_score})\n" + "\n".join(f"- {l['label']}: {l['url']}" for l in f["links"]) + "\n\n"
     if body is None:
         slim = {k: v for k, v in f.items() if k != "site_excerpt"}
-        return head + "(No LLM memo: no key set or call failed. Facts only.)\n\n```json\n" + json.dumps(slim, indent=2, default=str) + "\n```\n"
+        return head + "(No LLM memo: " + why + ". Facts only.)\n\n```json\n" + json.dumps(slim, indent=2, default=str) + "\n```\n"
     return head + body + "\n"

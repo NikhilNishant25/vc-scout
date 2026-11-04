@@ -1,7 +1,7 @@
 """Provider-agnostic LLM calls. Order: Anthropic, Gemini (free AI Studio key), OpenRouter (free models).
 With no key set, callers get None and must use their deterministic fallback."""
 from __future__ import annotations
-import json, os, re
+import json, os, re, time
 from . import http
 
 MONTH = 30 * 86400
@@ -22,7 +22,10 @@ GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta"
 _SKIP = ("tts", "image", "live", "audio", "transcribe", "omni", "embed", "lyria", "veo", "imagen", "robotics",
          "computer-use", "deep-research", "gemma", "aqa", "learnlm", "vision")
 LAST_MODEL = None
-_BAD = set()
+_BAD = set()          # permanent failures (404/400/403): model gone or not allowed
+_COOL = {}            # transient failures (429/5xx/timeouts): model -> time it may be retried
+TRANSIENT = (408, 429, 500, 502, 503, 504)
+_clock, _sleep = time.time, time.sleep
 
 
 def _version(name):
@@ -58,21 +61,31 @@ def _gemini(prompt, json_mode):
     if json_mode:
         body["generationConfig"] = {"responseMimeType": "application/json"}
     errors = []
-    for model in cands:
-        if model in _BAD:
+    for _ in range(3):
+        now = _clock()
+        live = [m for m in cands if m not in _BAD and _COOL.get(m, 0) <= now]
+        if not live:
+            waits = [_COOL[m] - now for m in cands if m not in _BAD and m in _COOL]
+            if not waits:
+                break
+            _sleep(min(60, max(1, min(waits))))
             continue
-        try:
-            r = http.request("POST", f"{GEMINI_BASE}/models/{model}:generateContent", headers={"x-goog-api-key": key},
-                             json_body=body, ttl=MONTH, timeout=90, retries=1)
-            LAST_MODEL = model
-            return "".join(p.get("text", "") for p in r["candidates"][0]["content"]["parts"])
-        except http.HttpError as e:
-            _BAD.add(model)
-            errors.append(f"{model}: HTTP {e.code} {e.body[:140]}")
-        except (RuntimeError, KeyError, IndexError) as e:
-            _BAD.add(model)
-            errors.append(f"{model}: {str(e)[:140]}")
-    raise RuntimeError(("no Gemini model worked. " + " | ".join(errors)) if errors else "no usable Gemini model found for this key")
+        for model in live:
+            try:
+                r = http.request("POST", f"{GEMINI_BASE}/models/{model}:generateContent", headers={"x-goog-api-key": key},
+                                 json_body=body, ttl=MONTH, timeout=90, retries=1)
+                LAST_MODEL = model
+                return "".join(p.get("text", "") for p in r["candidates"][0]["content"]["parts"])
+            except http.HttpError as e:
+                if e.code in TRANSIENT:
+                    _COOL[model] = _clock() + (45 if e.code == 429 else 15)
+                else:
+                    _BAD.add(model)
+                errors.append(f"{model}: HTTP {e.code} {e.body[:120]}")
+            except (RuntimeError, KeyError, IndexError) as e:
+                _COOL[model] = _clock() + 15
+                errors.append(f"{model}: {str(e)[:120]}")
+    raise RuntimeError(("no Gemini model worked. " + " | ".join(errors[-6:])) if errors else "no usable Gemini model found for this key")
 
 
 def _openrouter(prompt, json_mode):
