@@ -157,3 +157,7 @@ Known gaps: SEC Form D check is best-effort; ecosyste.ms endpoint shape is infer
 Focus: AI / agent infrastructure and AI-adjacent dev tooling. Dropped by owner: hardware, space, deeptech, health-tech, and non-AI dev tools
 (Hadrian, PhysicsX, Lindus Health, Sarvam AI, Dodo Payments, Atomicwork, Rocketlane, Sprinto, Pixxel, Agnikul, Skyroot, Resend, Dub, Cal.com, Mintlify, Trigger.dev, Pydantic).
 16 approved; 14 proposed additions in benchmark/candidates.csv pending approval. Negative controls still to be drafted (target ~20 look-alikes that never raised).
+
+### Benchmark decision (Nov 4)
+Narrowed to agent-specific infrastructure: approved = CrewAI (framework), Mem0 and Letta (memory), Composio (tool integration). All other previously approved names dropped.
+The 14 proposed additions remain pending. 4 positives is too few for a lead-time backtest; expand with agent-specific names before building the eval harness.
