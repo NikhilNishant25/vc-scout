@@ -161,3 +161,6 @@ Focus: AI / agent infrastructure and AI-adjacent dev tooling. Dropped by owner: 
 ### Benchmark decision (Nov 4)
 Narrowed to agent-specific infrastructure: approved = CrewAI (framework), Mem0 and Letta (memory), Composio (tool integration). All other previously approved names dropped.
 The 14 proposed additions remain pending. 4 positives is too few for a lead-time backtest; expand with agent-specific names before building the eval harness.
+
+### Benchmark decision (Nov 4, later)
+Added Mastra, Portia AI, Zep, Arcade.dev, Browser Use, AgentOps; the other 8 proposals dropped. 10 positives approved. Negative controls still to draft.
