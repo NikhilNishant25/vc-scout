@@ -146,3 +146,9 @@ Notes:
 | M5 eval harness (E1 to E6) | NOT built; needs approved benchmark + negative controls |
 | M6 feedback loop + web UI | NOT built |
 Known gaps: SEC Form D check is best-effort; ecosyste.ms endpoint shape is inferred; no fuzzy review UI; Gemini-designed MCQs not yet reviewed on real runs.
+
+### Update (Nov 3)
+- Live-verified by diagnostics: GitHub, HN, Product Hunt, Greenhouse/Lever/Ashby, ecosyste.ms package lookup + dependent_packages, SEC EDGAR full-text, YC directory mirror, Hugging Face, Wayback CDX, GH Archive reachability.
+- Still unverified live: Companies House (no key set), ecosystems collector end to end, Gemini-designed anchor libraries.
+- Added: ecosyste.ms reverse-dependency discovery (anchors proposed by the thesis builder), company-signal detection, dev-tool product evidence, owner-blog domain strictness.
+- Next: M5 eval harness (needs approved benchmark + negative controls).

@@ -7,6 +7,7 @@ from .resolve import norm_name, reg_domain
 
 PARKED = ["domain is for sale", "buy this domain", "this domain may be for sale", "domain for sale", "parked free"]
 PRODUCT = re.compile(r"\b(pricing|sign up|get started|book a demo|request a demo|waitlist|free trial|early access|download)\b", re.I)
+DEV = re.compile(r"\b(npm install|pip install|pipx install|brew install|cargo install|go install|docker run|quickstart|quick start|getting started|documentation|api reference|read the docs|install)\b", re.I)
 TEAM = re.compile(r"\b(about us|our team|meet the team|founders?|co-founder|who we are)\b", re.I)
 BOARDS = [("greenhouse", "https://boards-api.greenhouse.io/v1/boards/{s}/jobs", lambda j: len(j.get("jobs", []))),
           ("lever", "https://api.lever.co/v0/postings/{s}?mode=json", lambda j: len(j) if isinstance(j, list) else 0),
@@ -35,7 +36,7 @@ def check_site(domain):
         low = (title + " " + text).lower()
         years = [int(y) for y in re.findall(r"(?:©|&copy;|copyright)[^0-9]{0,20}((?:19|20)\d\d)", html, flags=re.I)]
         return {"live": True, "url": r["url"], "title": title, "text": text,
-                "parked": any(p in low for p in PARKED), "product": bool(PRODUCT.search(text)),
+                "parked": any(p in low for p in PARKED), "product": bool(PRODUCT.search(text)), "dev_product": bool(DEV.search(text)),
                 "team": bool(TEAM.search(text)), "copyright_year": max(years) if years else None}
     return {"live": False, "reason": err}
 
@@ -144,7 +145,7 @@ def assess(f):
     entity = f["registry"] or (f["hiring"] and f["team"] and f["families"] >= 2)
     if entity and f["product"] and f["recent"] and f["families"] >= 2:
         return "Verified-operating", conf
-    if f["product"] and (f["team"] or f["hiring"] or backed) and f["recent"]:
+    if f["product"] and (f["team"] or f["hiring"] or backed or cust) and f["recent"]:
         return "Likely", conf
     return "Unverified", conf
 
@@ -179,6 +180,7 @@ def verify(c, thesis):
             return False
     recent = ((ev["github"].get("commits_30d") or 0) > 0 or bool(ev["hiring"])
               or any(s.source in ("hn", "producthunt") and s.ts and within(s.ts, 180) for s in c.signals)
+              or (ev["github"].get("pushed_days_ago") is not None and ev["github"]["pushed_days_ago"] <= 90)
               or (ev["site"].get("copyright_year") or 0) >= now.year - 1)
     families = {s.source for s in c.signals}
     if ev["hiring"]:
@@ -189,11 +191,14 @@ def verify(c, thesis):
     if ev["site"].get("live"):
         site_norm = re.sub(r"[^a-z0-9]", "", (ev["site"].get("title", "") + " " + ev["site"].get("text", "")[:8000]).lower())
         owners = [s.data["full_name"].split("/")[0] for s in c.signals if s.source == "github" and s.data.get("full_name")]
-        tokens = {norm_name(c.name), norm_name(dom.split(".")[0] if dom else ""), *[norm_name(o) for o in owners]} - {""}
+        if "domain-from-owner-blog" in c.flags:  # the owner's blog contains its own domain name, so require the PROJECT name
+            tokens = {norm_name(c.name)} - {""}
+        else:
+            tokens = {norm_name(c.name), norm_name(dom.split(".")[0] if dom else ""), *[norm_name(o) for o in owners]} - {""}
         if tokens and not any(t in site_norm for t in tokens if len(t) >= 4):
             flags.append("site-name-mismatch")
     tier, conf = assess({"live": ev["site"].get("live", False), "parked": ev["site"].get("parked", False),
-                         "product": ev["site"].get("product", False), "team": ev["site"].get("team", False),
+                         "product": bool(ev["site"].get("product") or ev["site"].get("dev_product")), "team": ev["site"].get("team", False),
                          "recent": recent, "hiring": hiring_any, "registry": bool(ev["registry"].get("matched")),
                          "families": len(families), "flags": flags, "backed": ev["signals"]["backed"],
                          "legal_text": ev["signals"]["legal_entity_text"], "customers": bool(ev["signals"]["customers"])})

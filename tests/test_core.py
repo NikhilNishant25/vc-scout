@@ -195,3 +195,37 @@ def test_backed_claim_opens_likely_but_not_verified():
     assert verify.assess(base)[0] == "Unverified"
     assert verify.assess({**base, "backed": True})[0] == "Likely"
     assert verify.assess({**base, "backed": True, "families": 3})[0] != "Verified-operating"  # claims alone are never proof
+
+
+def test_dev_tool_site_counts_as_product_and_pushed_recently_counts_as_recent():
+    f = _f(team=False, hiring=True, backed=False)  # product from install/quickstart text, hiring evidence, recent
+    assert verify.assess(f)[0] == "Likely"
+    assert verify.assess({**_f(team=False, hiring=False), "customers": True})[0] == "Likely"
+
+
+def test_anchors_validated():
+    d = thesis.validate_design({"keywords": {"core": ["x y"], "adjacent": [], "negative": []},
+                                "anchors": [{"registry": "pypi.org", "package": "langgraph"}, {"registry": "cargo", "package": "x"},
+                                            {"registry": "npmjs.org", "package": "bad name!"}, {"registry": "npmjs.org", "package": "@modelcontextprotocol/sdk"}],
+                                "questions": [{"text": "q", "options": [{"label": "a", "adds_keywords": ["k"]}, {"label": "b", "adds_keywords": ["j"]}]}]})
+    assert d["anchors"] == [{"registry": "pypi.org", "package": "langgraph"}, {"registry": "npmjs.org", "package": "@modelcontextprotocol/sdk"}]
+
+
+def test_ecosystems_collector_parses_packages_and_links_to_github(monkeypatch):
+    from scout import http
+    from scout.collectors import ecosystems
+    pkg = {"name": "agentkit", "ecosystem": "pypi", "homepage": "https://agentkit.dev", "repository_url": "https://github.com/acme/agentkit",
+           "description": "d", "first_release_published_at": "2026-09-01T00:00:00Z", "downloads": 50, "dependent_repos_count": 2}
+    monkeypatch.setattr(http, "request", lambda *a, **k: [pkg])
+    t = {"inputs": {"stage": "pre-seed"}, "anchors": [{"registry": "pypi.org", "package": "langgraph"}]}
+    sigs = ecosystems.collect(t)
+    assert len(sigs) == 1 and sigs[0].domain == "agentkit.dev" and sigs[0].data["github_repo"] == "acme/agentkit"
+    companies, _ = resolve.resolve(sigs + [_s("github", "acme/agentkit", None, full_name="acme/agentkit", stars=3)])
+    assert len(companies) == 1
+
+
+def test_ecosystems_skipped_without_anchors():
+    from scout import planner
+    t = {"inputs": {"stage": "pre-seed"}, "geo": {"country": "GLOBAL"}, "anchors": []}
+    p = {x["source"]: x for x in planner.plan(t)}
+    assert not p["ecosystems"]["enabled"] and "anchor" in p["ecosystems"]["reason"]

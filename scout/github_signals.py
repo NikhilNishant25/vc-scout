@@ -51,6 +51,7 @@ def enrich(repo):
         "readme_len": len(rd.get("text", "")) if rd.get("status") == 200 else 0,
         "readme_excerpt": rd.get("text", "")[:4000] if rd.get("status") == 200 else "",
         "readme_links": re.findall(r"https?://[^\s)>\"'\]]+", rd.get("text", "")[:8000])[:40] if rd.get("status") == 200 else [],
+        "pushed_days_ago": (now - dt.datetime.fromisoformat(repo["pushed_at"].replace("Z", "+00:00"))).days if repo.get("pushed_at") else None,
         "archived": bool(repo.get("archived")), "stars": repo.get("stargazers_count", 0),
         "age_days": max(1, (now - created).days),
     }

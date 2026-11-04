@@ -2,9 +2,9 @@ from __future__ import annotations
 import dataclasses, json, pathlib
 import yaml
 from . import known as known_mod, memo, planner, rank, resolve, verify
-from .collectors import companies_house, github, hn, producthunt
+from .collectors import companies_house, ecosystems, github, hn, producthunt
 
-COLLECTORS = {"github": github, "hn": hn, "producthunt": producthunt, "companies_house": companies_house}
+COLLECTORS = {"ecosystems": ecosystems, "github": github, "hn": hn, "producthunt": producthunt, "companies_house": companies_house}
 REG = pathlib.Path(__file__).resolve().parent.parent / "config" / "registries.yaml"
 
 

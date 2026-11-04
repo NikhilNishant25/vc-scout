@@ -16,6 +16,7 @@ Location: {location}
 Return ONLY JSON with this shape:
 {{"keywords": {{"core": [8-12 specific search phrases a real startup in this space would use],
  "adjacent": [6-10 related phrases], "negative": [6-10 words that signal NOT a real startup, e.g. tutorial, course]}},
+ "anchors": [up to 5 of {{"registry": "pypi.org" or "npmjs.org", "package": "exact real package name"}}: popular open-source SDKs/libraries that startups in this space build on. Only include packages you are certain exist],
  "questions": [up to 3 of {{"id": "q1", "text": "...", "options": [{{"label": "...", "adds_keywords": [], "anti_signals": [],
    "must_have": "", "weight_shift": {{"fit": 0, "verification": 0, "momentum": 0, "stealth": 0}}}}]}}]}}
 
@@ -87,7 +88,11 @@ def validate_design(d):
             questions.append({"id": q.get("id") or f"q{len(questions)+1}", "text": q["text"], "options": opts})
     if not questions:
         return None
-    return {"keywords": clean_kw, "questions": questions}
+    anchors = []
+    for a in (d.get("anchors") or [])[:5]:
+        if isinstance(a, dict) and a.get("registry") in ("pypi.org", "npmjs.org") and re.fullmatch(r"[@A-Za-z0-9][\w./@-]{0,80}", str(a.get("package", ""))):
+            anchors.append({"registry": a["registry"], "package": str(a["package"])})
+    return {"keywords": clean_kw, "questions": questions, "anchors": anchors}
 
 
 def design(industry, stage, location):
@@ -143,7 +148,7 @@ def build(industry, stage, location, dsn, answers, provider, llm_status=""):
             f"found through indirect signals before wide press coverage.")
     return {"id": f"{dt.date.today()}-{re.sub(r'[^a-z0-9]+', '-', industry.lower()).strip('-')}-{stage}",
             "created": dt.date.today().isoformat(), "inputs": {"industry": industry, "stage": stage, "location": location},
-            "geo": g, "statement": stmt, "keywords": kws, "search_terms": search_terms, "must_have": must, "anti_signals": _dedupe(anti),
+            "geo": g, "statement": stmt, "keywords": kws, "search_terms": search_terms, "anchors": dsn.get("anchors", []), "must_have": must, "anti_signals": _dedupe(anti),
             "weights": w, "design_provider": provider, "llm_status": llm_status,
             "qa": [{"question": q["text"], "answer": q["options"][a - 1]["label"]} for q, a in zip(dsn["questions"], answers)]}
 

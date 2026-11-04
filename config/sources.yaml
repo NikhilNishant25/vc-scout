@@ -3,3 +3,4 @@ github:          {stages: [idea, pre-seed, seed, series-a], countries: [any], ne
 hn:              {stages: [idea, pre-seed, seed], countries: [any], needs_env: [], status: experimental}
 producthunt:     {stages: [pre-seed, seed, series-a], countries: [any], needs_env: [PRODUCTHUNT_TOKEN], status: experimental}
 companies_house: {stages: [pre-seed, seed, series-a], countries: [UK], needs_env: [COMPANIES_HOUSE_KEY], status: experimental}
+ecosystems:     {stages: [idea, pre-seed, seed, series-a], countries: [any], needs_env: [], status: experimental}

@@ -18,5 +18,7 @@ def plan(thesis):
             missing = [e for e in s["needs_env"] if not os.getenv(e)]
             if missing:
                 reason = f"missing env {','.join(missing)}"
+            elif name == "ecosystems" and not thesis.get("anchors"):
+                reason = "no anchor packages in this thesis (needs an LLM-designed thesis)"
         out.append({"source": name, "enabled": reason is None, "reason": reason or "ok", "status": s["status"]})
     return out
