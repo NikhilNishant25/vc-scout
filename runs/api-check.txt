@@ -1,4 +1,4 @@
-github rate limit: core 4864/5000, search 30/30
+github rate limit: core 5000/5000, search 30/30
 hn algolia: 3 hits
 ecosyste.ms package (react): WORKS; keys present=repository_url,dependent_repos_count,dependent_packages_count,downloads,funding_links | missing=
 ecosyste.ms openapi spec: HTTP 200; paths mentioning 'dependent': ['/registries/{registryName}/packages/{packageName}/dependent_package_kinds', '/registries/{registryName}/packages/{packageName}/dependent_packages']
@@ -17,12 +17,18 @@ ecosyste.ms dependent_packages query variants (pypi langgraph):
   created_after datetime: 0 items, first(name, created, first_release)=None
   sort created_at desc: 3 items, first(name, created, first_release)=('arxiv-agent', '2024-06-12', '2024-06-12')
   date + sort: 0 items, first(name, created, first_release)=None
+  order asc: 3 items, created dates=['2024-02-20', '2024-03-08', '2024-03-09']
+  sort updated_at desc: 3 items, created dates=['2024-03-08', '2024-02-20', '2024-05-27']
+  created_after 2024-01-01: 3 items, created dates=['2024-06-12', '2024-05-26', '2024-04-09']
+  updated_after 2026-03-01: 3 items, created dates=['2024-06-12', '2024-05-26', '2024-04-09']
+  page 30 (no sort): 0 items, created dates=[]
+  response headers of interest: {'link': '<https://packages.ecosyste.ms/api/v1/registries/pypi.org/packages/langgraph/dependent_packages?per_page=1&page=1>; rel="first", <https://packages.ecosyste.ms/api/v1/registries/pypi.org/packages/langgraph/dependent_packages?per_page=1&page=2>; rel="next"'}
 repos.ecosyste.ms repo (facebook/react): HTTP 404 {"error":"Repository not found"}
-job board greenhouse: stripe=748, airbnb=209, figma=145
-job board lever: palantir=307, spotify=86, netflix=HTTP 404
+job board greenhouse: stripe=754, airbnb=210, figma=145
+job board lever: palantir=ERR GET https://api.lever.co/v0/postings/pal, spotify=85, netflix=HTTP 404
 job board ashby: openai=813, ramp=168, notion=146
 yc directory mirror: 6364 companies; has website field=True; sample=https://circuithub.com
-product hunt: WORKS; node keys=['createdAt', 'name', 'tagline', 'url', 'votesCount', 'website']; website sample=https://www.producthunt.com/r/WX2AGIJLDIZD4A?utm_campaign=pr
+product hunt: WORKS; node keys=['createdAt', 'name', 'tagline', 'url', 'votesCount', 'website']; website sample=https://www.producthunt.com/r/BQXRXOSDL3HRME?utm_campaign=pr
 companies house: skipped (no COMPANIES_HOUSE_KEY)
 sec edgar full-text: WORKS; 47 hits; source keys=['adsh', 'biz_locations', 'biz_states', 'ciks', 'display_names', 'file_date', 'file_description', 'file_num']
 hugging face api: HTTP 200; 2 models
